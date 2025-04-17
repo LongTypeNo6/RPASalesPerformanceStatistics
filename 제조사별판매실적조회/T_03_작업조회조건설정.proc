@@ -1,0 +1,180 @@
+<Process id="e0cb2b4a-16a9-4bf0-8849-1eab1db3dccd" type="task" workType="foreground" name="T_03_작업조회조건설정" version="" designerVersion="3.1.125.00226" lastPublishedServer="" readonly="false" isValid="true" DesignedBy="Designer" Template="" StepCount="6" Orientation="horizontal">
+  <Properties>
+    <Property key="Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="onBefore" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="onAfter" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="onError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="Timeout" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="0" />
+    <Property key="RunningTime" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="0" />
+    <Property key="Os" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="Microsoft Windows 10 Pro64비트" />
+    <Property key="Resolution" controlType="String" valueType="System.String" formatType="String_Size" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="1920x1080" />
+    <Property key="CreatedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2025-04-17 11:47:38" />
+    <Property key="CreatedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+    <Property key="LastModifiedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2025-04-17 12:28:26" />
+    <Property key="LastModifiedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="" />
+    <Property key="LastPublishedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+    <Property key="LastPublishedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+  </Properties>
+  <LinkItems />
+  <Variables>
+    <Variable name="i_str_InputPeriod" scope="Input" valueType="Any" formatType="Any" initValue="" desc="" colorValue="#FFE49393" showMarker="True" />
+    <Variable name="i_str_InputBrandNames" scope="Input" valueType="Any" formatType="Any" initValue="" desc="" colorValue="#FF7AA874" showMarker="True" />
+  </Variables>
+  <Steps>
+    <Step id="S0981d1a661784412972f1d4850525c71" ver="311241220" createVer="311241220" type="Flow" name="DecisionThen" dpName="IfThen" dpValue="this.i_str_InputBrandNames!=''" dpValue2="" dpImage="" tag="" depth="1" stmttype="OpenBlock" enabled="True" mainSet="0">
+      <Properties id="97e8b876-2d8e-4d60-ac43-5d4307129bfd" type="Flow">
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_Expression" controlType="PropertyItemTextEditorView" valueType="System.Object" formatType="Condition" required="True" visible="False" readonly="True" encrypted="False" isChanged="N" value="this.i_str_InputBrandNames!=''" order="1" />
+        <Property type="Flow" key="Conditions_CombineCondition" controlType="PropertyItemCombineConditionView" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="True" order="2" />
+        <Property type="Flow" key="Conditions_Expression1" controlType="PropertyItemExpressionView" valueType="System.Object" formatType="Condition" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="this.i_str_InputBrandNames!=''" order="3" />
+        <Property type="Flow" key="Conditions_AddCondition" controlType="PropertyItemAddConditionView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+      </Properties>
+      <RelatedSteps>
+        <RelatedStep id="Sf6a95bd3197e4d3998c5b5770375dd19" type="Flow" name="EndDecisionThen" />
+      </RelatedSteps>
+      <Script><![CDATA[if (this.i_str_InputBrandNames!='') {]]></Script>
+    </Step>
+    <Step id="S10454e54ad35483393084b22fa7216dc" ver="311241220" createVer="311241220" type="Flow" name="ExecuteScript" dpName="ExecuteScript" dpValue="" dpValue2="" dpImage="" tag="" depth="2" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="5261952b-459c-4a55-a457-117d66c76d08" type="Flow">
+        <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_Title" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="인풋값을 조회조건에 추가" />
+        <Property type="Flow" key="Key_Script" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="&#xD;&#xA;&#xD;&#xA;arr1_InputBrandNames = this.i_str_InputBrandNames.split(',')&#xD;&#xA;&#xD;&#xA;for(i=0;i&lt;arr1_InputBrandNames.length;i++){&#xD;&#xA;    Global.arr1_BrandNames.push(arr1_InputBrandNames[i].replace(' ',''))&#xD;&#xA;}" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[
+
+arr1_InputBrandNames = this.i_str_InputBrandNames.split(',')
+
+for(i=0;i<arr1_InputBrandNames.length;i++){
+    Global.arr1_BrandNames.push(arr1_InputBrandNames[i].replace(' ',''))
+}]]></Script>
+    </Step>
+    <Step id="Sf6a95bd3197e4d3998c5b5770375dd19" ver="311241220" createVer="311241220" type="Flow" name="EndDecisionThen" dpName="End-IfThen" dpValue="" dpValue2="" dpImage="" tag="" depth="2" stmttype="CloseBlock" enabled="True" mainSet="0">
+      <Properties id="22b6312b-fb9e-4230-8839-52d08b696fdc" type="Flow">
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+      </Properties>
+      <RelatedSteps>
+        <RelatedStep id="S0981d1a661784412972f1d4850525c71" type="Flow" name="DecisionThen" />
+      </RelatedSteps>
+      <Script><![CDATA[}]]></Script>
+    </Step>
+    <Step id="S548b548d5b53477fb30cf5216c1cd226" ver="311241220" createVer="311241220" type="Flow" name="DecisionThen" dpName="IfThen" dpValue="this.i_str_InputPeriod!=''" dpValue2="" dpImage="" tag="" depth="1" stmttype="OpenBlock" enabled="True" mainSet="0">
+      <Properties id="97e8b876-2d8e-4d60-ac43-5d4307129bfd" type="Flow">
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_Expression" controlType="PropertyItemTextEditorView" valueType="System.Object" formatType="Condition" required="True" visible="False" readonly="True" encrypted="False" isChanged="N" value="this.i_str_InputPeriod!=''" order="1" />
+        <Property type="Flow" key="Conditions_CombineCondition" controlType="PropertyItemCombineConditionView" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="True" order="2" />
+        <Property type="Flow" key="Conditions_Expression1" controlType="PropertyItemExpressionView" valueType="System.Object" formatType="Condition" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="this.i_str_InputPeriod!=''" order="3" />
+        <Property type="Flow" key="Conditions_AddCondition" controlType="PropertyItemAddConditionView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+      </Properties>
+      <RelatedSteps>
+        <RelatedStep id="Sf64fd7057c1741788a68ca21916b18c3" type="Flow" name="EndDecisionThen" />
+      </RelatedSteps>
+      <Script><![CDATA[if (this.i_str_InputPeriod!='') {]]></Script>
+    </Step>
+    <Step id="S20ef88b6b52f40219379c0b9bf8a9c37" ver="311241220" createVer="311241220" type="Flow" name="ExecuteScript" dpName="ExecuteScript" dpValue="" dpValue2="" dpImage="" tag="" depth="2" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="5261952b-459c-4a55-a457-117d66c76d08" type="Flow">
+        <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_Title" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="인풋값으로 조회 조건 변경" />
+        <Property type="Flow" key="Key_Script" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="&#xD;&#xA;&#xD;&#xA;int_IndexYear = this.i_str_InputPeriod.indexOf('년');&#xD;&#xA;int_Year = this.i_str_InputPeriod.slice((int_IndexYear-4),int_IndexYear);&#xD;&#xA;&#xD;&#xA;int_IndexMonth = this.i_str_InputPeriod.indexOf('월');&#xD;&#xA;int_Month = this.i_str_InputPeriod.slice((int_IndexMonth-2),int_IndexMonth);&#xD;&#xA;&#xD;&#xA;Global.arr1_Period[0]=int_Year;&#xD;&#xA;Global.arr1_Period[1]=int_Month;&#xD;&#xA;" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[
+
+int_IndexYear = this.i_str_InputPeriod.indexOf('년');
+int_Year = this.i_str_InputPeriod.slice((int_IndexYear-4),int_IndexYear);
+
+int_IndexMonth = this.i_str_InputPeriod.indexOf('월');
+int_Month = this.i_str_InputPeriod.slice((int_IndexMonth-2),int_IndexMonth);
+
+Global.arr1_Period[0]=int_Year;
+Global.arr1_Period[1]=int_Month;
+]]></Script>
+    </Step>
+    <Step id="Sf64fd7057c1741788a68ca21916b18c3" ver="311241220" createVer="311241220" type="Flow" name="EndDecisionThen" dpName="End-IfThen" dpValue="" dpValue2="" dpImage="" tag="" depth="2" stmttype="CloseBlock" enabled="True" mainSet="0">
+      <Properties id="22b6312b-fb9e-4230-8839-52d08b696fdc" type="Flow">
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+      </Properties>
+      <RelatedSteps>
+        <RelatedStep id="S548b548d5b53477fb30cf5216c1cd226" type="Flow" name="DecisionThen" />
+      </RelatedSteps>
+      <Script><![CDATA[}]]></Script>
+    </Step>
+  </Steps>
+  <JScript><![CDATA[function T_03_작업조회조건설정(args) {
+
+    this.i_str_InputPeriod = (typeof args != 'undefined') ? args.i_str_InputPeriod : null;
+    this.i_str_InputBrandNames = (typeof args != 'undefined') ? args.i_str_InputBrandNames : null;
+
+    this.RPAGOTOENABLE = false;
+    this.GotoStepRetryCntMap = {};
+    this.GotoBlockMap = {1:[3],4:[6]};
+    this.GotoReverseBlockMap = {3:1,6:4};
+    this.GotoStepBlockTypeMap = {1:'DecisionThen',3:'EndDecisionThen',4:'DecisionThen',6:'EndDecisionThen'};
+
+
+    this.run = function() {
+
+        //------------------------------------------------
+        STEP('S0981d1a661784412972f1d4850525c71', '[1] IfThen');
+        if (this.i_str_InputBrandNames!='') {
+
+            //------------------------------------------------
+            STEP('S10454e54ad35483393084b22fa7216dc', '[2] ExecuteScript');
+
+
+            arr1_InputBrandNames = this.i_str_InputBrandNames.split(',')
+
+            for(i=0;i<arr1_InputBrandNames.length;i++){
+                Global.arr1_BrandNames.push(arr1_InputBrandNames[i].replace(' ',''))
+            }
+
+        //------------------------------------------------
+        }
+        STEP('Sf6a95bd3197e4d3998c5b5770375dd19', '[3] End-IfThen');
+
+        //------------------------------------------------
+        STEP('S548b548d5b53477fb30cf5216c1cd226', '[4] IfThen');
+        if (this.i_str_InputPeriod!='') {
+
+            //------------------------------------------------
+            STEP('S20ef88b6b52f40219379c0b9bf8a9c37', '[5] ExecuteScript');
+
+
+            int_IndexYear = this.i_str_InputPeriod.indexOf('년');
+            int_Year = this.i_str_InputPeriod.slice((int_IndexYear-4),int_IndexYear);
+
+            int_IndexMonth = this.i_str_InputPeriod.indexOf('월');
+            int_Month = this.i_str_InputPeriod.slice((int_IndexMonth-2),int_IndexMonth);
+
+            Global.arr1_Period[0]=int_Year;
+            Global.arr1_Period[1]=int_Month;
+
+
+        //------------------------------------------------
+        }
+        STEP('Sf64fd7057c1741788a68ca21916b18c3', '[6] End-IfThen');
+
+
+    }
+
+    this.execute = function() {
+        var result = null;
+        result = this.run()
+        if (result != null)
+            return result;
+    }
+}
+]]></JScript>
+  <Diagram version="1.300" nodesize="Normal">
+    <StepNodes>
+      <StepNode step_id="S0981d1a661784412972f1d4850525c71" group_name="" folded="False" color="" />
+      <StepNode step_id="S10454e54ad35483393084b22fa7216dc" group_name="1247a3e7-435d-4a2a-b3dd-14f45e90261b_인풋값을 조회조건에 추가" folded="False" color="" />
+      <StepNode step_id="Sf6a95bd3197e4d3998c5b5770375dd19" group_name="" folded="False" color="" />
+      <StepNode step_id="S548b548d5b53477fb30cf5216c1cd226" group_name="" folded="False" color="" />
+      <StepNode step_id="S20ef88b6b52f40219379c0b9bf8a9c37" group_name="1da66a54-efef-40b8-bc50-471971812ed8_인풋값을 조회조건에 추가" folded="False" color="" />
+      <StepNode step_id="Sf64fd7057c1741788a68ca21916b18c3" group_name="" folded="False" color="" />
+    </StepNodes>
+  </Diagram>
+</Process>

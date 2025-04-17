@@ -1,0 +1,131 @@
+<Process id="6da16fe6-8512-42fb-84d0-8acc0f2ca471" type="task" workType="foreground" name="T_00_Init" version="" designerVersion="3.1.125.00226" lastPublishedServer="" readonly="false" isValid="true" DesignedBy="Designer" Template="" StepCount="5" Orientation="horizontal">
+  <Properties>
+    <Property key="Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="onBefore" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="onAfter" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="onError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="Timeout" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="0" />
+    <Property key="RunningTime" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="0" />
+    <Property key="Os" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="Microsoft Windows 10 Pro64비트" />
+    <Property key="Resolution" controlType="String" valueType="System.String" formatType="String_Size" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="1920x1080" />
+    <Property key="CreatedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2025-04-17 10:12:31" />
+    <Property key="CreatedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+    <Property key="LastModifiedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2025-04-17 12:03:33" />
+    <Property key="LastModifiedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="" />
+    <Property key="LastPublishedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+    <Property key="LastPublishedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+  </Properties>
+  <LinkItems />
+  <Variables />
+  <Steps>
+    <Step id="Sf328ddc954244fd898085cae8aaf493e" ver="311241220" createVer="311241220" type="Flow" name="Assign" dpName="Assign" dpValue="Global.arr1_BrandNames=['현대', '기아', '제네시스', '쉐보레', 'KGM', '르노코리아']" dpValue2="" dpImage="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="3b87ba97-4792-4557-8be4-6fca262a377a" type="Flow">
+        <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_Variable" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="Global.arr1_BrandNames" />
+        <Property type="Flow" key="Conditions_Value" controlType="PropertyItemTextView" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="['현대', '기아', '제네시스', '쉐보레', 'KGM', '르노코리아']" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[Global.arr1_BrandNames = ['현대', '기아', '제네시스', '쉐보레', 'KGM', '르노코리아'];]]></Script>
+    </Step>
+    <Step id="S8e5cd97d1a3c425c907cf5577a8ca333" ver="311241220" createVer="311241220" type="Flow" name="ExecuteScript" dpName="ExecuteScript" dpValue="" dpValue2="" dpImage="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="daead368-6e44-4aab-b136-fabde553c955" type="Flow">
+        <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_Title" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="기본 조회 조건 설정-기간" />
+        <Property type="Flow" key="Key_Script" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="&#xD;&#xA;Global.arr1_Period = [&#xD;&#xA;    DateTime.Now.AddYears(-1).ToString('yyyy'), //작년 연도&#xD;&#xA;    DateTime.Now.ToString('MM') //현재 월&#xD;&#xA;]" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[
+Global.arr1_Period = [
+    DateTime.Now.AddYears(-1).ToString('yyyy'), //작년 연도
+    DateTime.Now.ToString('MM') //현재 월
+]]]></Script>
+    </Step>
+    <Step id="S800e0e06e8964091944bd4670f03b43a" ver="311241220" createVer="311241220" type="Flow" name="Assign" dpName="Assign" dpValue="Global.str_LocalFolderPath='C:\RPA교육'" dpValue2="" dpImage="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="3e85c215-5bd1-4f3b-8254-32a20bddb877" type="Flow">
+        <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_Variable" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="Global.str_LocalFolderPath" />
+        <Property type="Flow" key="Conditions_Value" controlType="PropertyItemTextView" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="'C:\\RPA교육\\'" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[Global.str_LocalFolderPath = 'C:\\RPA교육\\';]]></Script>
+    </Step>
+    <Step id="S7cae0d822f1a4e659a5ab4372d656731" ver="311241220" createVer="311241220" type="Flow" name="Assign" dpName="Assign" dpValue="Global.str_TempFileName='보고서_Template.xlsx'" dpValue2="" dpImage="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="beec59b8-474e-44fd-b87e-1848a177c309" type="Flow">
+        <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_Variable" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="Global.str_TempFileName" />
+        <Property type="Flow" key="Conditions_Value" controlType="PropertyItemTextView" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="'보고서_Template.xlsx'" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[Global.str_TempFileName = '보고서_Template.xlsx';]]></Script>
+    </Step>
+    <Step id="S5758f86369d94d2bacc00f4fd264bbbc" ver="311241220" createVer="311241220" type="Flow" name="Assign" dpName="Assign" dpValue="Global.str_TempFilePath=Global.str_LocalFolderPath+Global.str_TempFileName" dpValue2="" dpImage="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="ce367cae-6cf0-4666-9a3b-5fa2a068d102" type="Flow">
+        <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_Variable" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="Global.str_TempFilePath" />
+        <Property type="Flow" key="Conditions_Value" controlType="PropertyItemTextView" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="Global.str_LocalFolderPath+Global.str_TempFileName" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[Global.str_TempFilePath = Global.str_LocalFolderPath+Global.str_TempFileName;]]></Script>
+    </Step>
+  </Steps>
+  <JScript><![CDATA[function T_00_Init() {
+
+    this.RPAGOTOENABLE = false;
+    this.GotoStepRetryCntMap = {};
+    this.GotoBlockMap = {};
+    this.GotoReverseBlockMap = {};
+    this.GotoStepBlockTypeMap = {};
+
+
+    this.run = function() {
+
+        //------------------------------------------------
+        STEP('Sf328ddc954244fd898085cae8aaf493e', '[1] Assign');
+        Global.arr1_BrandNames = ['현대', '기아', '제네시스', '쉐보레', 'KGM', '르노코리아'];
+
+        //------------------------------------------------
+        STEP('S8e5cd97d1a3c425c907cf5577a8ca333', '[2] ExecuteScript');
+
+        Global.arr1_Period = [
+            DateTime.Now.AddYears(-1).ToString('yyyy'), //작년 연도
+            DateTime.Now.ToString('MM') //현재 월
+        ]
+
+        //------------------------------------------------
+        STEP('S800e0e06e8964091944bd4670f03b43a', '[3] Assign');
+        Global.str_LocalFolderPath = 'C:\\RPA교육\\';
+
+        //------------------------------------------------
+        STEP('S7cae0d822f1a4e659a5ab4372d656731', '[4] Assign');
+        Global.str_TempFileName = '보고서_Template.xlsx';
+
+        //------------------------------------------------
+        STEP('S5758f86369d94d2bacc00f4fd264bbbc', '[5] Assign');
+        Global.str_TempFilePath = Global.str_LocalFolderPath+Global.str_TempFileName;
+
+
+    }
+
+    this.execute = function() {
+        var result = null;
+        result = this.run()
+        if (result != null)
+            return result;
+    }
+}
+]]></JScript>
+  <Diagram version="1.300" nodesize="Normal">
+    <StepNodes>
+      <StepNode step_id="Sf328ddc954244fd898085cae8aaf493e" group_name="9c5f0022-cfe3-43e8-a6fb-255266cab1f7_기본 조회 조건 설정-브랜드" folded="False" color="" />
+      <StepNode step_id="S8e5cd97d1a3c425c907cf5577a8ca333" group_name="9b7e6b60-24d7-43bd-b35e-983dedc7c932_기본 조회 조건 설정-기간" folded="False" color="" />
+      <StepNode step_id="S800e0e06e8964091944bd4670f03b43a" group_name="14261d54-27a2-4c87-ba97-c1235e283c36_기준폴더경로설정" folded="False" color="" />
+      <StepNode step_id="S7cae0d822f1a4e659a5ab4372d656731" group_name="bd4fecfb-73b1-4b3b-aa14-ec8bc20dd370_양식파일 이름 및 최초경로설정" folded="False" color="" />
+      <StepNode step_id="S5758f86369d94d2bacc00f4fd264bbbc" group_name="bd4fecfb-73b1-4b3b-aa14-ec8bc20dd370_양식파일 이름 및 최초경로설정" folded="False" color="" />
+    </StepNodes>
+  </Diagram>
+</Process>

@@ -1,0 +1,181 @@
+<Process id="dfb0b0f6-49d5-4cfd-be4f-115e2bcc71fe" type="task" workType="foreground" name="T_01_폴더및파일설정" version="" designerVersion="3.1.125.00226" lastPublishedServer="" readonly="false" isValid="true" DesignedBy="Designer" Template="" StepCount="6" Orientation="horizontal">
+  <Properties>
+    <Property key="Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="onBefore" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="onAfter" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="onError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="Timeout" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="0" />
+    <Property key="RunningTime" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="0" />
+    <Property key="Os" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="Microsoft Windows 10 Pro64비트" />
+    <Property key="Resolution" controlType="String" valueType="System.String" formatType="String_Size" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="1920x1080" />
+    <Property key="CreatedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2025-04-17 11:20:16" />
+    <Property key="CreatedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+    <Property key="LastModifiedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2025-04-17 12:28:48" />
+    <Property key="LastModifiedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="" />
+    <Property key="LastPublishedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+    <Property key="LastPublishedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+  </Properties>
+  <LinkItems />
+  <Variables>
+    <Variable name="is_TempFileInTempFolder" scope="Normal" valueType="Any" formatType="Any" initValue="" desc="확인: 템프폴더 내 양식파일 있는 지 확인" colorValue="#FFFFB100" showMarker="False" />
+  </Variables>
+  <Steps>
+    <Step id="S798f45cec321464fadea346cd5c217c4" ver="311241220" createVer="311241220" type="Flow" name="ExecuteScript" dpName="ExecuteScript" dpValue="" dpValue2="" dpImage="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="10af3987-942b-4ce7-a0c4-328e4e16fadb" type="Flow">
+        <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_Title" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="작업 폴더 생성" />
+        <Property type="Flow" key="Key_Script" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="&#xD;&#xA;&#xD;&#xA;str_ProjectFolderPath = Global.str_LocalFolderPath + Bot.ProjectName + '\\';&#xD;&#xA;//기준 프로젝트 내의 프로젝트 폴더 경로 설정&#xD;&#xA;&#xD;&#xA;Global.str_TempFolderPath = str_ProjectFolderPath + 'Temp\\';&#xD;&#xA;Global.str_InputFolderPath = str_ProjectFolderPath + 'Input\\';&#xD;&#xA;Global.str_OutputFolderPath = str_ProjectFolderPath + 'Output\\';&#xD;&#xA;//프로젝트 폴더 내의 Temp, Input, Output 폴더 경로 설정&#xD;&#xA;&#xD;&#xA;Directory.CreateDirectory(Global.str_TempFolderPath);&#xD;&#xA;Directory.CreateDirectory(Global.str_InputFolderPath);&#xD;&#xA;Directory.CreateDirectory(Global.str_OutputFolderPath);&#xD;&#xA;//프로젝트 폴더 내의 Temp, Input, Output 폴더 경로 생성&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[
+
+str_ProjectFolderPath = Global.str_LocalFolderPath + Bot.ProjectName + '\\';
+//기준 프로젝트 내의 프로젝트 폴더 경로 설정
+
+Global.str_TempFolderPath = str_ProjectFolderPath + 'Temp\\';
+Global.str_InputFolderPath = str_ProjectFolderPath + 'Input\\';
+Global.str_OutputFolderPath = str_ProjectFolderPath + 'Output\\';
+//프로젝트 폴더 내의 Temp, Input, Output 폴더 경로 설정
+
+Directory.CreateDirectory(Global.str_TempFolderPath);
+Directory.CreateDirectory(Global.str_InputFolderPath);
+Directory.CreateDirectory(Global.str_OutputFolderPath);
+//프로젝트 폴더 내의 Temp, Input, Output 폴더 경로 생성
+
+
+
+
+]]></Script>
+    </Step>
+    <Step id="S1134970c004d4e28bca93f41f78bed1d" ver="311241220" createVer="311241220" type="Desktop" name="IsFileExist" dpName="IsFileExist" dpValue="this.is_TempFileInTempFolder" dpValue2="" dpImage="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="d6c57986-5da1-4f10-89da-b52ad0b346a2" type="Desktop">
+        <Property type="Desktop" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Desktop" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Desktop" key="Command_Path" controlType="File" valueType="System.String" formatType="String_FilePath" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="Global.str_TempFolderPath+Global.str_TempFileName" />
+        <Property type="Desktop" key="Command_Output" controlType="OutputControlType" valueType="System.Boolean" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="this.is_TempFileInTempFolder" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[this.is_TempFileInTempFolder = StepPlayer.Run('Desktop.IsFileExist', this.isfileexist_info_2);]]></Script>
+    </Step>
+    <Step id="Se61b19c8c15b4592a60a8b53b6e546d6" ver="311241220" createVer="311241220" type="Flow" name="DecisionThen" dpName="IfThen" dpValue="!(this.is_TempFileInTempFolder)" dpValue2="" dpImage="" tag="" depth="1" stmttype="OpenBlock" enabled="True" mainSet="0">
+      <Properties id="58743f1e-0e31-49cc-9746-6f5764348c6b" type="Flow">
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_Expression" controlType="PropertyItemTextEditorView" valueType="System.Object" formatType="Condition" required="True" visible="False" readonly="True" encrypted="False" isChanged="N" value="!(this.is_TempFileInTempFolder)" order="1" />
+        <Property type="Flow" key="Conditions_CombineCondition" controlType="PropertyItemCombineConditionView" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="True" order="2" />
+        <Property type="Flow" key="Conditions_Expression1" controlType="PropertyItemExpressionView" valueType="System.Object" formatType="Condition" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="!(this.is_TempFileInTempFolder)" order="3" />
+        <Property type="Flow" key="Conditions_AddCondition" controlType="PropertyItemAddConditionView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+      </Properties>
+      <RelatedSteps>
+        <RelatedStep id="S2e16940931ab4a1599b75d6d0687dee8" type="Flow" name="EndDecisionThen" />
+      </RelatedSteps>
+      <Script><![CDATA[if (!(this.is_TempFileInTempFolder)) {]]></Script>
+    </Step>
+    <Step id="S4f16b9c3ab234c9d8e54eb49131f58b7" ver="311241220" createVer="311241220" type="Desktop" name="MoveFile" dpName="MoveFile" dpValue="from Global.str_TempFilePath &#xA;to Global.str_TempFolderPath+Global.str_TempFileName" dpValue2="" dpImage="" tag="" depth="2" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="29923c39-0bdf-4e23-b48a-149def2da675" type="Desktop">
+        <Property type="Desktop" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Desktop" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Desktop" key="Command_SrcFilePath" controlType="File" valueType="System.String" formatType="String_FilePath" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="Global.str_TempFilePath" />
+        <Property type="Desktop" key="Command_DestFilePath" controlType="File" valueType="System.String" formatType="String_FilePath" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="Global.str_TempFolderPath+Global.str_TempFileName" />
+        <Property type="Desktop" key="Command_Overwrite" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[StepPlayer.Run('Desktop.MoveFile', this.movefile_info_4);]]></Script>
+    </Step>
+    <Step id="S2e16940931ab4a1599b75d6d0687dee8" ver="311241220" createVer="311241220" type="Flow" name="EndDecisionThen" dpName="End-IfThen" dpValue="" dpValue2="" dpImage="" tag="" depth="2" stmttype="CloseBlock" enabled="True" mainSet="0">
+      <Properties id="01870dab-e750-4d9a-8e9f-be0fbceaf4c6" type="Flow">
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+      </Properties>
+      <RelatedSteps>
+        <RelatedStep id="Se61b19c8c15b4592a60a8b53b6e546d6" type="Flow" name="DecisionThen" />
+      </RelatedSteps>
+      <Script><![CDATA[}]]></Script>
+    </Step>
+    <Step id="S3bd987af43784501a293782d58f99659" ver="311241220" createVer="311241220" type="Flow" name="Assign" dpName="Assign" dpValue="Global.str_TempFilePath=Global.str_TempFolderPath+Global.str_TempFileName" dpValue2="" dpImage="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="f3cd5120-bd5e-4116-a31c-c40b9060a2f4" type="Flow">
+        <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_Variable" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="Global.str_TempFilePath" />
+        <Property type="Flow" key="Conditions_Value" controlType="PropertyItemTextView" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="Global.str_TempFolderPath+Global.str_TempFileName" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[Global.str_TempFilePath = Global.str_TempFolderPath+Global.str_TempFileName;]]></Script>
+    </Step>
+  </Steps>
+  <JScript><![CDATA[function T_01_폴더및파일설정() {
+
+    this.is_TempFileInTempFolder;
+
+    this.RPAGOTOENABLE = false;
+    this.GotoStepRetryCntMap = {};
+    this.GotoBlockMap = {3:[5]};
+    this.GotoReverseBlockMap = {5:3};
+    this.GotoStepBlockTypeMap = {3:'DecisionThen',5:'EndDecisionThen'};
+
+
+    this.run = function() {
+
+        //------------------------------------------------
+        STEP('S798f45cec321464fadea346cd5c217c4', '[1] ExecuteScript');
+
+
+        str_ProjectFolderPath = Global.str_LocalFolderPath + Bot.ProjectName + '\\';
+        //기준 프로젝트 내의 프로젝트 폴더 경로 설정
+
+        Global.str_TempFolderPath = str_ProjectFolderPath + 'Temp\\';
+        Global.str_InputFolderPath = str_ProjectFolderPath + 'Input\\';
+        Global.str_OutputFolderPath = str_ProjectFolderPath + 'Output\\';
+        //프로젝트 폴더 내의 Temp, Input, Output 폴더 경로 설정
+
+        Directory.CreateDirectory(Global.str_TempFolderPath);
+        Directory.CreateDirectory(Global.str_InputFolderPath);
+        Directory.CreateDirectory(Global.str_OutputFolderPath);
+        //프로젝트 폴더 내의 Temp, Input, Output 폴더 경로 생성
+
+
+
+
+
+
+        //------------------------------------------------
+        STEP('S1134970c004d4e28bca93f41f78bed1d', '[2] IsFileExist');
+        this.is_TempFileInTempFolder = StepPlayer.Run('Desktop.IsFileExist', this.isfileexist_info_2);
+
+        //------------------------------------------------
+        STEP('Se61b19c8c15b4592a60a8b53b6e546d6', '[3] IfThen');
+        if (!(this.is_TempFileInTempFolder)) {
+
+            //------------------------------------------------
+            STEP('S4f16b9c3ab234c9d8e54eb49131f58b7', '[4] MoveFile');
+            StepPlayer.Run('Desktop.MoveFile', this.movefile_info_4);
+
+        //------------------------------------------------
+        }
+        STEP('S2e16940931ab4a1599b75d6d0687dee8', '[5] End-IfThen');
+
+        //------------------------------------------------
+        STEP('S3bd987af43784501a293782d58f99659', '[6] Assign');
+        Global.str_TempFilePath = Global.str_TempFolderPath+Global.str_TempFileName;
+
+
+    }
+
+    this.execute = function() {
+        var result = null;
+        result = this.run()
+        if (result != null)
+            return result;
+    }
+}
+]]></JScript>
+  <Diagram version="1.300" nodesize="Normal">
+    <StepNodes>
+      <StepNode step_id="S798f45cec321464fadea346cd5c217c4" group_name="74f8d8ba-ee48-4d91-9e25-95999ad3942f_작업 폴더 생성" folded="False" color="" />
+      <StepNode step_id="S1134970c004d4e28bca93f41f78bed1d" group_name="a70e76cb-884e-419b-856d-67f6af6417d4_Temp폴더 내 양식파일 확인" folded="False" color="" />
+      <StepNode step_id="Se61b19c8c15b4592a60a8b53b6e546d6" group_name="" folded="False" color="" />
+      <StepNode step_id="S4f16b9c3ab234c9d8e54eb49131f58b7" group_name="1c276932-80b3-4a9f-9ad9-eace565ef04a_Temp폴더로 양식파일 이동" folded="False" color="" />
+      <StepNode step_id="S2e16940931ab4a1599b75d6d0687dee8" group_name="" folded="False" color="" />
+      <StepNode step_id="S3bd987af43784501a293782d58f99659" group_name="d7905d8e-882c-4a01-84e1-2f70ce11fbec_양식파일경로설정" folded="False" color="" />
+    </StepNodes>
+  </Diagram>
+</Process>

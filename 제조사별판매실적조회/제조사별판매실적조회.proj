@@ -1,0 +1,63 @@
+<Project id="15fc358a-8ea9-453c-894f-3247e2514f87" namespace="" name="제조사별판매실적조회" category="project" workType="foreground" version="1.00" lastPublishedDate="" lastPublishedBy="" createdDate="2025-04-17 10:12:14" createdBy="" latestProcess="P_제조사별판매실적조회" designerVersion="3.1.125.00226" DesignedBy="">
+  <SharedTask isExpended="false" />
+  <NormalTask isExpended="true">
+    <LinkItem id="6da16fe6-8512-42fb-84d0-8acc0f2ca471" category="NormalTask" isChanged="Y" desc="" stepCount="5" name="T_00_Init">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="dfb0b0f6-49d5-4cfd-be4f-115e2bcc71fe" category="NormalTask" isChanged="Y" desc="" stepCount="6" name="T_01_폴더및파일설정">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="affe1dc6-3022-423e-bf5c-e5648d3635c6" category="NormalTask" isChanged="Y" desc="" stepCount="2" name="T_02_추가조회조건입력">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="e0cb2b4a-16a9-4bf0-8849-1eab1db3dccd" category="NormalTask" isChanged="Y" desc="" stepCount="6" name="T_03_작업조회조건설정">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="a06d3084-2a26-4094-996b-2cba08c14d49" category="NormalTask" isChanged="Y" desc="" stepCount="1" name="T_04_웹사이트접속">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="2d0c4bb8-5b51-4cb3-83fd-ae89737d3adb" category="NormalTask" isChanged="Y" desc="" stepCount="1" name="T_05_데이터조회">
+      <Properties />
+    </LinkItem>
+  </NormalTask>
+  <Event isExpended="false" />
+  <Process isExpended="true">
+    <LinkItem id="1129b78b-ed75-4df3-af8f-d08bae3583f3" category="Process" isChanged="Y" desc="default process" stepCount="10" name="P_제조사별판매실적조회">
+      <Properties />
+    </LinkItem>
+  </Process>
+  <CustomLibraries isExpended="false" />
+  <LibraryTemplate isExpended="false" />
+  <Resources isExpended="false" />
+  <RemoteProcess isExpended="false" />
+  <RecorderData isExpended="false" />
+  <Asset />
+  <Library />
+  <Variables>
+    <Variable name="ChromeBrowser" scope="Global" valueType="Any" formatType="Any" initValue="" desc="브라우저: 현재 작업중인 브라우저" colorValue="#FF6C00FF" showMarker="False" />
+    <Variable name="str_TempFileName" scope="Global" valueType="Any" formatType="Any" initValue="'보고서_Template.xlsx'" desc="초_파일이름: 양식파일" colorValue="#FF3C79F5" showMarker="False" />
+    <Variable name="str_LocalFolderPath" scope="Global" valueType="Any" formatType="Any" initValue="'C:\\RPA교육\\'" desc="초_폴더경로: 기준폴더" colorValue="#FF00E7FF" showMarker="False" />
+    <Variable name="str_TempFilePath" scope="Global" valueType="Any" formatType="Any" initValue="'C:\\RPA교육\\보고서_Template.xlsx'" desc="초_파일경로: 양식파일" colorValue="#FF243763" showMarker="False" />
+    <Variable name="str_InputFolderPath" scope="Global" valueType="Any" formatType="Any" initValue="'C:\\RPA교육\\Input\\'" desc="초_폴더경로: 인풋폴더" colorValue="#FFF7DB6A" showMarker="False" />
+    <Variable name="str_OutputFolderPath" scope="Global" valueType="Any" formatType="Any" initValue="'C:\\RPA교육\\Output\\'" desc="초_폴더경로: 아웃풋폴더" colorValue="#FFFC2947" showMarker="False" />
+    <Variable name="str_TempFolderPath" scope="Global" valueType="Any" formatType="Any" initValue="'C:\\RPA교육\\Temp\\'" desc="초_폴더경로: 템프폴더" colorValue="#FF0E8388" showMarker="False" />
+    <Variable name="arr1_Period" scope="Global" valueType="Any" formatType="Any" initValue="['2024', '04']" desc="초_조회기간: ['연도','월']" colorValue="#FF62CDFF" showMarker="False" />
+    <Variable name="arr1_BrandNames" scope="Global" valueType="Any" formatType="Any" initValue="['제네시스','쉐보레']" desc="초_브랜드명: 배열" colorValue="#FF7149C6" showMarker="False" />
+  </Variables>
+  <Properties>
+    <Property key="PlayOption_StepInterval" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="1" />
+    <Property key="PlayOption_DisableDrawBounds" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" />
+    <Property key="PlayOption_InvokeFirst" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" />
+    <Property key="PlayOption_AllowUploadDumpScreenResult" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" />
+  </Properties>
+  <DisplayLibraries>
+    <string>Flow</string>
+    <string>Win</string>
+    <string>Net</string>
+    <string>Excel</string>
+    <string>Desktop</string>
+    <string>Chrome</string>
+    <string>ImageRecognition</string>
+    <string>DataConverter</string>
+  </DisplayLibraries>
+</Project>

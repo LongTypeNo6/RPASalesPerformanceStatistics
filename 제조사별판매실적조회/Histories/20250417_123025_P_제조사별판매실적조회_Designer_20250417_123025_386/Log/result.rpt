@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Result id="1129b78b-ed75-4df3-af8f-d08bae3583f3" name="P_제조사별판매실적조회" result="Stop" detail="Process: P_제조사별판매실적조회&#xA;Step: Debugger (7/7)&#xA;&#xA;Stopped by User" start="2025-04-17T03:30:29.621" end="2025-04-17T03:30:35.109" jobId="Designer_20250417_123025_386">
+  <Step id="S814878b5e5f64d8cae482ee54f51a2f1" taskName="P_제조사별판매실적조회" type="Flow" name="RunTask" displayName="RunTask ('T_01_폴더및파일설정')" callDepth="1" depth="1" num="2" result="Pass" start="2025-04-17T03:30:29.694" end="2025-04-17T03:30:29.784" displayTime="0s">
+    <Variables />
+    <Properties setIndex="0">
+      <Property value="" runtimeType="String" key="Options_OnError" displayKey="On Error" visible="true" required="false" />
+      <Property value="" runtimeType="String" key="Key_Description" displayKey="Description" visible="true" required="false" />
+      <Property value="T_01_폴더및파일설정" runtimeType="String" key="Conditions_TaskName" displayKey="Task Name" visible="true" required="false" />
+    </Properties>
+  </Step>
+  <Step id="S798f45cec321464fadea346cd5c217c4" taskName="T_01_폴더및파일설정" type="Flow" name="ExecuteScript" displayName="ExecuteScript" callDepth="2" depth="1" num="1" result="Pass" start="2025-04-17T03:30:29.792" end="2025-04-17T03:30:29.810" displayTime="0s">
+    <Variables>
+      <Variable name="str_LocalFolderPath" scope="Global" declareType="Any" isChanged="false" isChangable="true" runtimeType="String" value="'C:\\RPA교육\\'" />
+      <Variable name="str_InputFolderPath" scope="Global" declareType="Any" isChanged="false" isChangable="true" runtimeType="String" value="'C:\\RPA교육\\Input\\'" />
+      <Variable name="str_OutputFolderPath" scope="Global" declareType="Any" isChanged="false" isChangable="true" runtimeType="String" value="'C:\\RPA교육\\Output\\'" />
+      <Variable name="str_TempFolderPath" scope="Global" declareType="Any" isChanged="false" isChangable="true" runtimeType="String" value="'C:\\RPA교육\\Temp\\'" />
+    </Variables>
+    <Properties setIndex="0">
+      <Property value="" runtimeType="String" key="Options_OnError" displayKey="On Error" visible="true" required="false" />
+      <Property value="" runtimeType="String" key="Key_Description" displayKey="Description" visible="true" required="false" />
+      <Property value="작업 폴더 생성" runtimeType="String" key="Conditions_Title" displayKey="Title" visible="true" required="true" />
+      <Property value="&lt;Too Long&gt; &#xD;&#xA;&#xD;&#xA;str_ProjectFolderPath = Global.str_LocalFolderPath + Bot.ProjectName + '\\';&#xD;&#xA;//기준 프로젝트 내의 프로젝트  ... 471 more" runtimeType="String" key="Key_Script" displayKey="Script" visible="true" required="false" />
+    </Properties>
+  </Step>
+  <Step id="S1134970c004d4e28bca93f41f78bed1d" taskName="T_01_폴더및파일설정" type="Desktop" name="IsFileExist" displayName="IsFileExist" callDepth="2" depth="1" num="2" result="Pass" start="2025-04-17T03:30:29.823" end="2025-04-17T03:30:29.850" displayTime="0s">
+    <Variables>
+      <Variable name="str_TempFileName" scope="Global" declareType="Any" isChanged="false" isChangable="false" runtimeType="String" value="'보고서_Template.xlsx'" />
+      <Variable name="str_TempFolderPath" scope="Global" declareType="Any" isChanged="false" isChangable="false" runtimeType="String" value="'C:\\RPA교육\\제조사별판매실적조회\\Temp\\'" />
+      <Variable name="is_TempFileInTempFolder" scope="Normal" owner="T_01_폴더및파일설정" declareType="Any" isChanged="false" isChangable="true" runtimeType="Undefined" value="&lt;undefined&gt;" />
+    </Variables>
+    <Properties setIndex="0">
+      <Property value="" runtimeType="String" key="Options_OnError" displayKey="On Error" visible="true" required="false" />
+      <Property value="" runtimeType="String" key="Key_Description" displayKey="Description" visible="true" required="false" />
+      <Property value="'C:\\RPA교육\\제조사별판매실적조회\\Temp\\보고서_Template.xlsx'" runtimeType="String" key="Command_Path" displayKey="Path" visible="true" required="true" />
+      <Property value="this.is_TempFileInTempFolder : true" runtimeType="Boolean" key="Command_Output" displayKey="Output" visible="true" required="true" />
+    </Properties>
+  </Step>
+  <Step id="Se61b19c8c15b4592a60a8b53b6e546d6" taskName="T_01_폴더및파일설정" type="Flow" name="DecisionThen" displayName="IfThen" callDepth="2" depth="1" num="3" result="Pass" start="2025-04-17T03:30:29.854" end="2025-04-17T03:30:29.858" displayTime="0s">
+    <Variables>
+      <Variable name="is_TempFileInTempFolder" scope="Normal" owner="T_01_폴더및파일설정" declareType="Any" isChanged="false" isChangable="false" runtimeType="Boolean" value="true" />
+    </Variables>
+    <Properties setIndex="0">
+      <Property value="" runtimeType="String" key="Key_Description" displayKey="Description" visible="true" required="false" />
+      <Property value="!(this.is_TempFileInTempFolder)" runtimeType="String" key="Conditions_Expression" displayKey="IfThen Condition" visible="false" required="true" />
+      <Property value="true" runtimeType="Boolean" key="Conditions_CombineCondition" displayKey="Combine Condition" visible="false" required="false" />
+      <Property value="false" runtimeType="Boolean" key="Conditions_Expression1" displayKey="Condition" visible="true" required="true" />
+      <Property value="" runtimeType="String" key="Conditions_AddCondition" displayKey="Add Condition" visible="true" required="false" />
+    </Properties>
+  </Step>
+  <Step id="S2e16940931ab4a1599b75d6d0687dee8" taskName="T_01_폴더및파일설정" type="Flow" name="EndDecisionThen" displayName="End-IfThen" callDepth="2" depth="2" num="5" result="Pass" start="2025-04-17T03:30:29.870" end="2025-04-17T03:30:29.871" displayTime="0s">
+    <Variables />
+    <Properties setIndex="0">
+      <Property value="" runtimeType="String" key="Key_Description" displayKey="Description" visible="true" required="false" />
+    </Properties>
+  </Step>
+  <Step id="S3bd987af43784501a293782d58f99659" taskName="T_01_폴더및파일설정" type="Flow" name="Assign" displayName="Assign" callDepth="2" depth="1" num="6" result="Pass" start="2025-04-17T03:30:29.886" end="2025-04-17T03:30:29.892" displayTime="0s">
+    <Variables>
+      <Variable name="str_TempFileName" scope="Global" declareType="Any" isChanged="false" isChangable="true" runtimeType="String" value="'보고서_Template.xlsx'" />
+      <Variable name="str_TempFilePath" scope="Global" declareType="Any" isChanged="false" isChangable="true" runtimeType="String" value="'C:\\RPA교육\\보고서_Template.xlsx'" />
+      <Variable name="str_TempFolderPath" scope="Global" declareType="Any" isChanged="false" isChangable="true" runtimeType="String" value="'C:\\RPA교육\\제조사별판매실적조회\\Temp\\'" />
+    </Variables>
+    <Properties setIndex="0">
+      <Property value="" runtimeType="String" key="Options_OnError" displayKey="On Error" visible="true" required="false" />
+      <Property value="" runtimeType="String" key="Key_Description" displayKey="Description" visible="true" required="false" />
+      <Property value="Global.str_TempFilePath : &lt;undefined&gt;" runtimeType="Undefined" key="Conditions_Variable" displayKey="Variable" visible="true" required="true" />
+      <Property value="'C:\\RPA교육\\제조사별판매실적조회\\Temp\\보고서_Template.xlsx'" runtimeType="String" key="Conditions_Value" displayKey="Value" visible="true" required="true" />
+    </Properties>
+  </Step>
+  <Step id="Sa01b1b551e4f438489e86b6dc96c74a0" taskName="T_01_폴더및파일설정" type="Flow" name="InternalData" displayName="End-RunTask ('T_01_폴더및파일설정') / Return To 'P_제조사별판매실적조회'" callDepth="2" depth="1" num="" result="Internal" start="2025-04-17T03:30:29.906" end="2025-04-17T03:30:29.906" displayTime="0s" />
+  <Step id="S4d097b026fb74951834b7f2b5f6e375b" taskName="P_제조사별판매실적조회" type="Flow" name="RunTask" displayName="RunTask ('T_02_추가조회조건입력')" callDepth="1" depth="1" num="3" result="Pass" start="2025-04-17T03:30:29.917" end="2025-04-17T03:30:29.922" displayTime="0s">
+    <Variables>
+      <Variable name="str_InputPeriod" scope="Normal" owner="P_제조사별판매실적조회" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="str_InputBrandNames" scope="Normal" owner="P_제조사별판매실적조회" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+    </Variables>
+    <Properties setIndex="0">
+      <Property value="" runtimeType="String" key="Options_OnError" displayKey="On Error" visible="true" required="false" />
+      <Property value="" runtimeType="String" key="Key_Description" displayKey="Description" visible="true" required="false" />
+      <Property value="T_02_추가조회조건입력" runtimeType="String" key="Conditions_TaskName" displayKey="Task Name" visible="true" required="false" />
+      <Property value="this.str_InputPeriod : &lt;undefined&gt;" runtimeType="Undefined" key="Output_o_str_InputPeriod" displayKey="o_str_InputPeriod" visible="true" required="false" />
+      <Property value="this.str_InputBrandNames : &lt;undefined&gt;" runtimeType="Undefined" key="Output_o_str_InputBrandNames" displayKey="o_str_InputBrandNames" visible="true" required="false" />
+    </Properties>
+  </Step>
+  <Step id="Sa3711ec6b31f4b6db32f29e6bdb914a1" taskName="T_02_추가조회조건입력" type="Desktop" name="InputBox" displayName="InputBox" callDepth="2" depth="1" num="1" result="Pass" start="2025-04-17T03:30:29.933" end="2025-04-17T03:30:31.211" displayTime="1.3s">
+    <Variables>
+      <Variable name="o_str_InputBrandNames" scope="Output" owner="T_02_추가조회조건입력" declareType="Any" isChanged="false" isChangable="true" runtimeType="Undefined" value="&lt;undefined&gt;" />
+    </Variables>
+    <Properties setIndex="0">
+      <Property value="" runtimeType="String" key="Options_OnError" displayKey="On Error" visible="true" required="false" />
+      <Property value="" runtimeType="String" key="Key_Description" displayKey="Description" visible="true" required="false" />
+      <Property value="this.o_str_InputBrandNames : ''" runtimeType="String" key="Conditions_Variable" displayKey="Variable" visible="true" required="true" />
+      <Property value="Text" runtimeType="String" key="Conditions_PromptType" displayKey="Prompt Type" visible="true" required="true" />
+      <Property value="''" runtimeType="String" key="Conditions_DefaultValue" displayKey="Default Value" visible="true" required="false" />
+      <Property value="''" runtimeType="String" key="Conditions_DefaultItem" displayKey="Default Value" visible="false" required="false" />
+      <Property value="'현대, 기아, 제네시스, 쉐보레, KG모빌리티, 르노코리아'" runtimeType="String" key="Conditions_PromptMessage" displayKey="Guide Message" visible="true" required="false" />
+      <Property value="600" runtimeType="Integer" key="Conditions_TimeoutSec" displayKey="Timeout(Sec)" visible="true" required="true" />
+    </Properties>
+  </Step>
+  <Step id="Sbb0cbb97e5f14cc1b8bb3b19e5cf130a" taskName="T_02_추가조회조건입력" type="Desktop" name="InputBox" displayName="InputBox" callDepth="2" depth="1" num="2" result="Pass" start="2025-04-17T03:30:31.214" end="2025-04-17T03:30:31.954" displayTime="0.7s">
+    <Variables>
+      <Variable name="o_str_InputPeriod" scope="Output" owner="T_02_추가조회조건입력" declareType="Any" isChanged="false" isChangable="true" runtimeType="Undefined" value="&lt;undefined&gt;" />
+    </Variables>
+    <Properties setIndex="0">
+      <Property value="" runtimeType="String" key="Options_OnError" displayKey="On Error" visible="true" required="false" />
+      <Property value="" runtimeType="String" key="Key_Description" displayKey="Description" visible="true" required="false" />
+      <Property value="this.o_str_InputPeriod : ''" runtimeType="String" key="Conditions_Variable" displayKey="Variable" visible="true" required="true" />
+      <Property value="Text" runtimeType="String" key="Conditions_PromptType" displayKey="Prompt Type" visible="true" required="true" />
+      <Property value="''" runtimeType="String" key="Conditions_DefaultValue" displayKey="Default Value" visible="true" required="false" />
+      <Property value="''" runtimeType="String" key="Conditions_DefaultItem" displayKey="Default Value" visible="false" required="false" />
+      <Property value="'조회 기간을 입력해주세요. 예&gt; 2023년 02월'" runtimeType="String" key="Conditions_PromptMessage" displayKey="Guide Message" visible="true" required="false" />
+      <Property value="600" runtimeType="Integer" key="Conditions_TimeoutSec" displayKey="Timeout(Sec)" visible="true" required="true" />
+    </Properties>
+  </Step>
+  <Step id="Sf4b64daae20d4ff189f46ac9ba7e3604" taskName="T_02_추가조회조건입력" type="Flow" name="InternalData" displayName="End-RunTask ('T_02_추가조회조건입력') / Return To 'P_제조사별판매실적조회'" callDepth="2" depth="1" num="" result="Internal" start="2025-04-17T03:30:31.959" end="2025-04-17T03:30:31.959" displayTime="0s" />
+  <Step id="S1b38b34f87a3471392c558db865172f1" taskName="P_제조사별판매실적조회" type="Flow" name="DecisionThen" displayName="IfThen" callDepth="1" depth="1" num="4" result="Pass" start="2025-04-17T03:30:31.970" end="2025-04-17T03:30:31.976" displayTime="0s">
+    <Variables>
+      <Variable name="str_InputPeriod" scope="Normal" owner="P_제조사별판매실적조회" declareType="Any" isChanged="false" isChangable="false" runtimeType="String" value="''" />
+      <Variable name="str_InputBrandNames" scope="Normal" owner="P_제조사별판매실적조회" declareType="Any" isChanged="false" isChangable="false" runtimeType="String" value="''" />
+    </Variables>
+    <Properties setIndex="0">
+      <Property value="" runtimeType="String" key="Key_Description" displayKey="Description" visible="true" required="false" />
+      <Property value="(this.str_InputBrandNames!='') || (this.str_InputPeriod!='')" runtimeType="String" key="Conditions_Expression" displayKey="IfThen Condition" visible="true" required="true" />
+      <Property value="false" runtimeType="Boolean" key="Conditions_CombineCondition" displayKey="Combine Condition" visible="true" required="false" />
+      <Property value="false" runtimeType="Boolean" key="Conditions_Expression1" displayKey="Condition" visible="true" required="true" />
+      <Property value="" runtimeType="String" key="Conditions_AddCondition" displayKey="Add Condition" visible="true" required="false" />
+      <Property value="false" runtimeType="Boolean" key="IfThen_Condition2" displayKey="Condition2" visible="true" required="true" />
+    </Properties>
+  </Step>
+  <Step id="S13828561742b4e59b9d1ab3f7475b9d8" taskName="P_제조사별판매실적조회" type="Flow" name="EndDecisionThen" displayName="End-IfThen" callDepth="1" depth="2" num="6" result="Pass" start="2025-04-17T03:30:31.986" end="2025-04-17T03:30:31.987" displayTime="0s">
+    <Variables />
+    <Properties setIndex="0">
+      <Property value="" runtimeType="String" key="Key_Description" displayKey="Description" visible="true" required="false" />
+    </Properties>
+  </Step>
+  <Step id="Sb9f6f76233a241c8a7ca592cfc7dcc6a" taskName="P_제조사별판매실적조회" type="Flow" name="Debugger" displayName="Debugger" callDepth="1" depth="1" num="7" result="Stop" start="2025-04-17T03:30:32.001" end="2025-04-17T03:30:35.109" displayTime="3.1s">
+    <Variables>
+      <Variable name="RESULT" scope="System" declareType="Any" isChanged="false" isChangable="true" runtimeType="Any" value="&lt;null&gt;" />
+    </Variables>
+    <Properties setIndex="0">
+      <Property value="" runtimeType="String" key="Options_OnError" displayKey="On Error" visible="true" required="false" />
+      <Property value="" runtimeType="String" key="Key_Description" displayKey="Description" visible="true" required="false" />
+      <Property runtimeType="String" key="Conditions_Message" displayKey="Message" visible="true" required="false" />
+    </Properties>
+  </Step>
+  <JobInfo>
+    <Info name="Bot Version" value="3.1.125.00226" />
+    <Info name="Resolution" value="1920 x 1080" />
+    <Info name="Language" value="한국어 (대한민국)" />
+    <Info name="BotID" value="S-DESIGNER-25EE6" />
+  </JobInfo>
+</Result>

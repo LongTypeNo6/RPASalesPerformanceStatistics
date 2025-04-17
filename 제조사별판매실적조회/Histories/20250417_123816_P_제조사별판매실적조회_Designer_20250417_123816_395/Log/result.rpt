@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Result id="1129b78b-ed75-4df3-af8f-d08bae3583f3" name="P_제조사별판매실적조회" result="Pass" detail="{}" start="2025-04-17T03:38:19.166" end="2025-04-17T03:38:34.569" jobId="Designer_20250417_123816_395">
+  <Step id="S5f6b31e7f979439fa2921908cf531ba2" taskName="P_제조사별판매실적조회" type="Flow" name="RunTask" displayName="RunTask ('T_04_웹사이트접속')" callDepth="1" depth="1" num="7" result="Pass" start="2025-04-17T03:38:19.233" end="2025-04-17T03:38:19.323" displayTime="0s">
+    <Variables />
+    <Properties setIndex="0">
+      <Property value="" runtimeType="String" key="Options_OnError" displayKey="On Error" visible="true" required="false" />
+      <Property value="" runtimeType="String" key="Key_Description" displayKey="Description" visible="true" required="false" />
+      <Property value="T_04_웹사이트접속" runtimeType="String" key="Conditions_TaskName" displayKey="Task Name" visible="true" required="false" />
+    </Properties>
+  </Step>
+  <Step id="Sca0bd5df68404c93a3b75aa6bbc2feb9" taskName="T_04_웹사이트접속" type="Chrome" name="ChromeOpen" displayName="ChromeOpen" callDepth="2" depth="1" num="1" result="Pass" start="2025-04-17T03:38:19.331" end="2025-04-17T03:38:29.843" displayTime="10.5s">
+    <Variables>
+      <Variable name="ChromeBrowser" scope="Global" declareType="Any" isChanged="false" isChangable="true" runtimeType="Undefined" value="&lt;undefined&gt;" />
+    </Variables>
+    <Properties setIndex="0">
+      <Property value="" runtimeType="String" key="Options_OnError" displayKey="On Error" visible="true" required="false" />
+      <Property value="" runtimeType="String" key="Key_Description" displayKey="Description" visible="true" required="false" />
+      <Property value="Global.ChromeBrowser : &lt;undefined&gt;" runtimeType="Undefined" key="CHROME_Browser" displayKey="Browser" visible="true" required="true" />
+      <Property value="Chrome" runtimeType="String" key="CHROME_TypeOfBrowser" displayKey="Browser Type" visible="true" required="false" />
+      <Property value="false" runtimeType="Boolean" key="CHROME_BrowserType" displayKey="Headless Mode" visible="true" required="false" />
+      <Property value="'https://auto.danawa.com/'" runtimeType="String" key="CHROME_URL" displayKey="URL" visible="true" required="true" />
+      <Property value="" runtimeType="String" key="CHROME_ChromePath" displayKey="Browser Path" visible="true" required="false" />
+      <Property value="true" runtimeType="Boolean" key="CHROME_Maximize" displayKey="Maximize" visible="true" required="false" />
+      <Property value="60" runtimeType="Integer" key="CHROME_WaitTimeSec" displayKey="Page Load Timeout" visible="true" required="false" />
+      <Property value="" runtimeType="String" key="CHROME_ExtensionList" displayKey="Included Extensions" visible="true" required="false" />
+      <Property value="" runtimeType="String" key="CHROME_DownloadPath" displayKey="Download Path" visible="true" required="false" />
+      <Property value="false" runtimeType="Boolean" key="CHROME_WindowsAccountPermissions" displayKey="Windows Account Permissions" visible="true" required="false" />
+      <Property value="" runtimeType="String" key="CHROME_UserAgent" displayKey="User Agent" visible="true" required="false" />
+      <Property value="false" runtimeType="Boolean" key="CHROME_DisableAutomationControl" displayKey="Disable AutomationControl" visible="true" required="false" />
+      <Property value="" runtimeType="String" key="CHROME_UserLaunchOptions" displayKey="Launch Options" visible="true" required="false" />
+    </Properties>
+  </Step>
+  <Step id="S3126d5f25ca54b6bb31a629e58028fe1" taskName="T_04_웹사이트접속" type="Flow" name="InternalData" displayName="End-RunTask ('T_04_웹사이트접속') / Return To 'P_제조사별판매실적조회'" callDepth="2" depth="1" num="" result="Internal" start="2025-04-17T03:38:29.849" end="2025-04-17T03:38:29.849" displayTime="0s" />
+  <Step id="Sb83c4d62b44c4134a65527eca0e682e7" taskName="P_제조사별판매실적조회" type="Flow" name="Foreach" displayName="Foreach" callDepth="1" depth="1" num="8" result="Pass" start="2025-04-17T03:38:29.871" end="2025-04-17T03:38:29.928" displayTime="0.1s">
+    <Variables>
+      <Variable name="arr1_BrandNames" scope="Global" declareType="Any" isChanged="false" isChangable="true" runtimeType="Array1D" value="['제네시스', '쉐보레']" />
+      <Variable name="str_BrandName" scope="Normal" owner="P_제조사별판매실적조회" declareType="Any" isChanged="false" isChangable="true" runtimeType="Undefined" value="&lt;undefined&gt;" />
+    </Variables>
+    <Properties setIndex="0">
+      <Property value="" runtimeType="String" key="Key_Description" displayKey="Description" visible="true" required="false" />
+      <Property value="['제네시스', '쉐보레']" runtimeType="Array1D" key="Conditions_ForList" displayKey="For List" visible="true" required="true" />
+      <Property value="&lt;undefined&gt;" runtimeType="Undefined" key="Conditions_EachItem" displayKey="Each Item" visible="true" required="true" />
+      <Property value="true" runtimeType="Boolean" key="Conditions_ForOfOrIn" displayKey="For-of / For-in" visible="true" required="false" />
+    </Properties>
+  </Step>
+  <Step id="S890f1e53a9584a45a52a910079f84042" taskName="P_제조사별판매실적조회" type="Flow" name="RunTask" displayName="RunTask ('T_05_데이터조회')" callDepth="1" depth="2" num="9" result="Pass" start="2025-04-17T03:38:29.932" end="2025-04-17T03:38:29.942" displayTime="0s">
+    <Variables>
+      <Variable name="str_BrandName" scope="Normal" owner="P_제조사별판매실적조회" declareType="Any" isChanged="false" isChangable="false" runtimeType="String" value="'제네시스'" />
+    </Variables>
+    <Properties setIndex="0">
+      <Property value="" runtimeType="String" key="Options_OnError" displayKey="On Error" visible="true" required="false" />
+      <Property value="" runtimeType="String" key="Key_Description" displayKey="Description" visible="true" required="false" />
+      <Property value="T_05_데이터조회" runtimeType="String" key="Conditions_TaskName" displayKey="Task Name" visible="true" required="false" />
+      <Property value="'제네시스'" runtimeType="String" key="Input_i_str_BrandName" displayKey="i_str_BrandName" visible="true" required="false" />
+    </Properties>
+  </Step>
+  <Step id="S358d6b5c2724401c8a56df356093faf5" taskName="T_05_데이터조회" type="Desktop" name="MessageBox" displayName="MessageBox" callDepth="2" depth="1" num="1" result="Pass" start="2025-04-17T03:38:29.948" end="2025-04-17T03:38:33.753" displayTime="3.8s">
+    <Variables>
+      <Variable name="i_str_BrandName" scope="Input" owner="T_05_데이터조회" declareType="Any" isChanged="false" isChangable="true" runtimeType="String" value="'제네시스'" />
+    </Variables>
+    <Properties setIndex="0">
+      <Property value="" runtimeType="String" key="Options_OnError" displayKey="On Error" visible="true" required="false" />
+      <Property value="" runtimeType="String" key="Key_Description" displayKey="Description" visible="true" required="false" />
+      <Property value="'제네시스'" runtimeType="String" key="Conditions_Arguments" displayKey="Arguments" visible="true" required="false" />
+      <Property value="0" runtimeType="Integer" key="Command_Timeout" displayKey="Timeout (Sec)" visible="true" required="false" />
+    </Properties>
+  </Step>
+  <Step id="S55e0e2dc900f454bb1b78388c48f461c" taskName="T_05_데이터조회" type="Flow" name="InternalData" displayName="End-RunTask ('T_05_데이터조회') / Return To 'P_제조사별판매실적조회'" callDepth="2" depth="1" num="" result="Internal" start="2025-04-17T03:38:33.754" end="2025-04-17T03:38:33.754" displayTime="0s" />
+  <Step id="S890f1e53a9584a45a52a910079f84042" taskName="P_제조사별판매실적조회" type="Flow" name="RunTask" displayName="RunTask ('T_05_데이터조회')" callDepth="1" depth="2" num="9" result="Pass" start="2025-04-17T03:38:33.765" end="2025-04-17T03:38:33.768" displayTime="0s">
+    <Variables>
+      <Variable name="str_BrandName" scope="Normal" owner="P_제조사별판매실적조회" declareType="Any" isChanged="false" isChangable="false" runtimeType="String" value="'쉐보레'" />
+    </Variables>
+    <Properties setIndex="0">
+      <Property value="" runtimeType="String" key="Options_OnError" displayKey="On Error" visible="true" required="false" />
+      <Property value="" runtimeType="String" key="Key_Description" displayKey="Description" visible="true" required="false" />
+      <Property value="T_05_데이터조회" runtimeType="String" key="Conditions_TaskName" displayKey="Task Name" visible="true" required="false" />
+      <Property value="'쉐보레'" runtimeType="String" key="Input_i_str_BrandName" displayKey="i_str_BrandName" visible="true" required="false" />
+    </Properties>
+  </Step>
+  <Step id="S358d6b5c2724401c8a56df356093faf5" taskName="T_05_데이터조회" type="Desktop" name="MessageBox" displayName="MessageBox" callDepth="2" depth="1" num="1" result="Pass" start="2025-04-17T03:38:33.780" end="2025-04-17T03:38:34.553" displayTime="0.8s">
+    <Variables>
+      <Variable name="i_str_BrandName" scope="Input" owner="T_05_데이터조회" declareType="Any" isChanged="false" isChangable="true" runtimeType="String" value="'쉐보레'" />
+    </Variables>
+    <Properties setIndex="0">
+      <Property value="" runtimeType="String" key="Options_OnError" displayKey="On Error" visible="true" required="false" />
+      <Property value="" runtimeType="String" key="Key_Description" displayKey="Description" visible="true" required="false" />
+      <Property value="'쉐보레'" runtimeType="String" key="Conditions_Arguments" displayKey="Arguments" visible="true" required="false" />
+      <Property value="0" runtimeType="Integer" key="Command_Timeout" displayKey="Timeout (Sec)" visible="true" required="false" />
+    </Properties>
+  </Step>
+  <Step id="S7086a8f8c86740c4a0c2d1e238817e42" taskName="T_05_데이터조회" type="Flow" name="InternalData" displayName="End-RunTask ('T_05_데이터조회') / Return To 'P_제조사별판매실적조회'" callDepth="2" depth="1" num="" result="Internal" start="2025-04-17T03:38:34.555" end="2025-04-17T03:38:34.555" displayTime="0s" />
+  <Step id="Sea684049f7de426d81d433fa31854272" taskName="P_제조사별판매실적조회" type="Flow" name="EndLoop" displayName="End-Foreach" callDepth="1" depth="2" num="10" result="Pass" start="2025-04-17T03:38:34.568" end="2025-04-17T03:38:34.569" displayTime="0s">
+    <Variables />
+    <Properties setIndex="0">
+      <Property value="" runtimeType="String" key="Key_Description" displayKey="Description" visible="true" required="false" />
+    </Properties>
+  </Step>
+  <JobInfo>
+    <Info name="Bot Version" value="3.1.125.00226" />
+    <Info name="Resolution" value="1920 x 1080" />
+    <Info name="Language" value="한국어 (대한민국)" />
+    <Info name="BotID" value="S-DESIGNER-25EE6" />
+  </JobInfo>
+</Result>

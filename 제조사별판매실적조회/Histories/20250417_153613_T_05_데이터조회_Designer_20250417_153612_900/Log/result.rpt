@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Result id="2d0c4bb8-5b51-4cb3-83fd-ae89737d3adb" name="T_05_데이터조회" result="Fail" detail="'ExecuteQuery' is NOT assigned.&#xA;&#xA;''&#xA;=&gt; ReferenceError: Invalid left-hand side expression in postfix operation&#xA;&#xA;-- Recent Warning Messages --&#xA;Process: T_05_데이터조회&#xA;Step: ChromeClick (5/5)&#xA;&#xA;Error: 'ExecuteQuery' is NOT assigned.&#xA;&#xA;''&#xA;=&gt; ReferenceError: Invalid left-hand side expression in postfix operation" start="2025-04-17T06:36:15.774" end="2025-04-17T06:36:38.952" jobId="Designer_20250417_153612_900">
+  <Step id="S4eb3af5e63524fd2ac1ef2ffdaf594e1" taskName="T_05_데이터조회" type="Chrome" name="ChromeClick" displayName="ChromeClick" callDepth="1" depth="1" num="5" result="Fail" detail="'ExecuteQuery' is NOT assigned.&#xA;&#xA;''&#xA;=&gt; ReferenceError: Invalid left-hand side expression in postfix operation" start="2025-04-17T06:36:15.857" end="2025-04-17T06:36:38.935" displayTime="23.1s" />
+  <JobInfo>
+    <Info name="Bot Version" value="3.1.125.00226" />
+    <Info name="Resolution" value="1920 x 1080" />
+    <Info name="Language" value="한국어 (대한민국)" />
+    <Info name="BotID" value="S-DESIGNER-25EE6" />
+  </JobInfo>
+</Result>

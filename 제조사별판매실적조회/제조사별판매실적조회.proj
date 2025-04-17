@@ -16,7 +16,10 @@
     <LinkItem id="a06d3084-2a26-4094-996b-2cba08c14d49" category="NormalTask" isChanged="Y" desc="" stepCount="1" name="T_04_웹사이트접속">
       <Properties />
     </LinkItem>
-    <LinkItem id="2d0c4bb8-5b51-4cb3-83fd-ae89737d3adb" category="NormalTask" isChanged="Y" desc="" stepCount="3" name="T_05_데이터조회">
+    <LinkItem id="2d0c4bb8-5b51-4cb3-83fd-ae89737d3adb" category="NormalTask" isChanged="Y" desc="" stepCount="5" name="T_05_데이터조회">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="95a5f8e4-2921-4d9a-b571-9f593666192c" category="NormalTask" isChanged="Y" desc="" stepCount="0" name="T_06_이미지추출및저장">
       <Properties />
     </LinkItem>
   </NormalTask>
@@ -41,8 +44,8 @@
     <Variable name="str_InputFolderPath" scope="Global" valueType="Any" formatType="Any" initValue="'C:\\RPA교육\\Input\\'" desc="초_폴더경로: 인풋폴더" colorValue="#FFF7DB6A" showMarker="False" />
     <Variable name="str_OutputFolderPath" scope="Global" valueType="Any" formatType="Any" initValue="'C:\\RPA교육\\Output\\'" desc="초_폴더경로: 아웃풋폴더" colorValue="#FFFC2947" showMarker="False" />
     <Variable name="str_TempFolderPath" scope="Global" valueType="Any" formatType="Any" initValue="'C:\\RPA교육\\Temp\\'" desc="초_폴더경로: 템프폴더" colorValue="#FF0E8388" showMarker="False" />
-    <Variable name="arr1_Period" scope="Global" valueType="Any" formatType="Any" initValue="['2024년', '04월']" desc="초_조회기간: ['연도','월']" colorValue="#FF62CDFF" showMarker="False" />
-    <Variable name="arr1_BrandNames" scope="Global" valueType="Any" formatType="Any" initValue="['제네시스','쉐보레']" desc="초_브랜드명: 배열" colorValue="#FF7149C6" showMarker="False" />
+    <Variable name="arr1_Period" scope="Global" valueType="Any" formatType="Any" initValue="['2023년', '10월']" desc="초_조회기간: ['연도','월']" colorValue="#FF62CDFF" showMarker="False" />
+    <Variable name="arr1_BrandNames" scope="Global" valueType="Any" formatType="Any" initValue="['제네시스','쉐보레','기아']" desc="초_브랜드명: 배열" colorValue="#FF7149C6" showMarker="False" />
   </Variables>
   <Properties>
     <Property key="PlayOption_StepInterval" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="1" />

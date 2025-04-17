@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Result id="e0cb2b4a-16a9-4bf0-8849-1eab1db3dccd" name="T_03_작업조회조건설정" result="Stop" detail="TypeError: Cannot read property 'split' of null&#xA;&#xA;Process: T_03_작업조회조건설정&#xA;&#xA;Process: T_03_작업조회조건설정&#xA;Step: ExecuteScript (2/6)&#xA;TypeError: Cannot read property 'split' of null&#xA;&#xA;-- Recent Warning Messages --&#xA;Process: T_03_작업조회조건설정&#xA;Step: ExecuteScript (2/6)&#xA;&#xA;TypeError: Cannot read property 'split' of null" start="2025-04-17T05:36:38.069" end="2025-04-17T05:36:40.931" jobId="Designer_20250417_143635_321">
+  <Step id="S0981d1a661784412972f1d4850525c71" taskName="T_03_작업조회조건설정" type="Flow" name="DecisionThen" displayName="IfThen" callDepth="1" depth="1" num="1" result="Pass" start="2025-04-17T05:36:38.130" end="2025-04-17T05:36:38.233" displayTime="0.1s">
+    <Variables>
+      <Variable name="i_str_InputBrandNames" scope="Input" owner="T_03_작업조회조건설정" declareType="Any" isChanged="false" isChangable="false" runtimeType="Any" value="&lt;null&gt;" />
+    </Variables>
+    <Properties setIndex="0">
+      <Property value="" runtimeType="String" key="Key_Description" displayKey="Description" visible="true" required="false" />
+      <Property value="this.i_str_InputBrandNames!=''" runtimeType="String" key="Conditions_Expression" displayKey="IfThen Condition" visible="false" required="true" />
+      <Property value="true" runtimeType="Boolean" key="Conditions_CombineCondition" displayKey="Combine Condition" visible="false" required="false" />
+      <Property value="true" runtimeType="Boolean" key="Conditions_Expression1" displayKey="Condition" visible="true" required="true" />
+      <Property value="" runtimeType="String" key="Conditions_AddCondition" displayKey="Add Condition" visible="true" required="false" />
+    </Properties>
+  </Step>
+  <Step id="S10454e54ad35483393084b22fa7216dc" taskName="T_03_작업조회조건설정" type="Flow" name="ExecuteScript" displayName="ExecuteScript" callDepth="1" depth="2" num="2" result="Fail" start="2025-04-17T05:36:38.246" end="2025-04-17T05:36:40.899" displayTime="2.7s">
+    <Variables>
+      <Variable name="arr1_BrandNames" scope="Global" declareType="Any" isChanged="false" isChangable="true" runtimeType="Array1D" value="['제네시스', '쉐보레']" />
+      <Variable name="i_str_InputBrandNames" scope="Input" owner="T_03_작업조회조건설정" declareType="Any" isChanged="false" isChangable="false" runtimeType="Any" value="&lt;null&gt;" />
+    </Variables>
+    <Properties setIndex="0">
+      <Property value="" runtimeType="String" key="Options_OnError" displayKey="On Error" visible="true" required="false" />
+      <Property value="" runtimeType="String" key="Key_Description" displayKey="Description" visible="true" required="false" />
+      <Property value="인풋값을 조회조건에 추가" runtimeType="String" key="Conditions_Title" displayKey="Title" visible="true" required="true" />
+      <Property value="&lt;Too Long&gt; &#xD;&#xA;&#xD;&#xA;arr1_InputBrandNames = this.i_str_InputBrandNames.split(',')&#xD;&#xA;&#xD;&#xA;for(i=0;i&lt;arr1_InputBrandNames.l ... 88 more" runtimeType="String" key="Key_Script" displayKey="Script" visible="true" required="false" />
+    </Properties>
+  </Step>
+  <JobInfo>
+    <Info name="Bot Version" value="3.1.125.00226" />
+    <Info name="Resolution" value="1920 x 1080" />
+    <Info name="Language" value="한국어 (대한민국)" />
+    <Info name="BotID" value="S-DESIGNER-25EE6" />
+  </JobInfo>
+</Result>

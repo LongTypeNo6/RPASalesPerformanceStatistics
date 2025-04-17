@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Result id="6da16fe6-8512-42fb-84d0-8acc0f2ca471" name="T_00_Init" result="Stop" detail="Process: T_00_Init&#xA;Step: Debugger (6/6)&#xA;&#xA;Stopped by User" start="2025-04-17T05:34:51.265" end="2025-04-17T05:34:53.738" jobId="Designer_20250417_143448_515">
+  <Step id="Sf328ddc954244fd898085cae8aaf493e" taskName="T_00_Init" type="Flow" name="Assign" displayName="Assign" callDepth="1" depth="1" num="1" result="Pass" start="2025-04-17T05:34:51.331" end="2025-04-17T05:34:51.464" displayTime="0.1s">
+    <Variables>
+      <Variable name="arr1_BrandNames" scope="Global" declareType="Any" isChanged="false" isChangable="true" runtimeType="Array1D" value="['제네시스', '쉐보레']" />
+    </Variables>
+    <Properties setIndex="0">
+      <Property value="" runtimeType="String" key="Options_OnError" displayKey="On Error" visible="true" required="false" />
+      <Property value="" runtimeType="String" key="Key_Description" displayKey="Description" visible="true" required="false" />
+      <Property value="Global.arr1_BrandNames : &lt;undefined&gt;" runtimeType="Undefined" key="Conditions_Variable" displayKey="Variable" visible="true" required="true" />
+      <Property value="['현대', '기아', '제네시스', '쉐보레', 'KGM', '르노코리아']" runtimeType="Array1D" key="Conditions_Value" displayKey="Value" visible="true" required="true" />
+    </Properties>
+  </Step>
+  <Step id="S8e5cd97d1a3c425c907cf5577a8ca333" taskName="T_00_Init" type="Flow" name="ExecuteScript" displayName="ExecuteScript" callDepth="1" depth="1" num="2" result="Pass" start="2025-04-17T05:34:51.476" end="2025-04-17T05:34:51.494" displayTime="0s">
+    <Variables>
+      <Variable name="arr1_Period" scope="Global" declareType="Any" isChanged="false" isChangable="true" runtimeType="Array1D" value="['2024', '04']" />
+    </Variables>
+    <Properties setIndex="0">
+      <Property value="" runtimeType="String" key="Options_OnError" displayKey="On Error" visible="true" required="false" />
+      <Property value="" runtimeType="String" key="Key_Description" displayKey="Description" visible="true" required="false" />
+      <Property value="기본 조회 조건 설정-기간" runtimeType="String" key="Conditions_Title" displayKey="Title" visible="true" required="true" />
+      <Property value="&lt;Too Long&gt; &#xD;&#xA;Global.arr1_Period = [&#xD;&#xA;    DateTime.Now.AddYears(-1).ToString('yyyy')+'년', //작년 연도&#xD;&#xA;    DateTime. ... 32 more" runtimeType="String" key="Key_Script" displayKey="Script" visible="true" required="false" />
+    </Properties>
+  </Step>
+  <Step id="S800e0e06e8964091944bd4670f03b43a" taskName="T_00_Init" type="Flow" name="Assign" displayName="Assign" callDepth="1" depth="1" num="3" result="Pass" start="2025-04-17T05:34:51.507" end="2025-04-17T05:34:51.508" displayTime="0s">
+    <Variables>
+      <Variable name="str_LocalFolderPath" scope="Global" declareType="Any" isChanged="false" isChangable="true" runtimeType="String" value="'C:\\RPA교육\\'" />
+    </Variables>
+    <Properties setIndex="0">
+      <Property value="" runtimeType="String" key="Options_OnError" displayKey="On Error" visible="true" required="false" />
+      <Property value="" runtimeType="String" key="Key_Description" displayKey="Description" visible="true" required="false" />
+      <Property value="Global.str_LocalFolderPath : &lt;undefined&gt;" runtimeType="Undefined" key="Conditions_Variable" displayKey="Variable" visible="true" required="true" />
+      <Property value="'C:\\RPA교육\\'" runtimeType="String" key="Conditions_Value" displayKey="Value" visible="true" required="true" />
+    </Properties>
+  </Step>
+  <Step id="S7cae0d822f1a4e659a5ab4372d656731" taskName="T_00_Init" type="Flow" name="Assign" displayName="Assign" callDepth="1" depth="1" num="4" result="Pass" start="2025-04-17T05:34:51.523" end="2025-04-17T05:34:51.524" displayTime="0s">
+    <Variables>
+      <Variable name="str_TempFileName" scope="Global" declareType="Any" isChanged="false" isChangable="true" runtimeType="String" value="'보고서_Template.xlsx'" />
+    </Variables>
+    <Properties setIndex="0">
+      <Property value="" runtimeType="String" key="Options_OnError" displayKey="On Error" visible="true" required="false" />
+      <Property value="" runtimeType="String" key="Key_Description" displayKey="Description" visible="true" required="false" />
+      <Property value="Global.str_TempFileName : &lt;undefined&gt;" runtimeType="Undefined" key="Conditions_Variable" displayKey="Variable" visible="true" required="true" />
+      <Property value="'보고서_Template.xlsx'" runtimeType="String" key="Conditions_Value" displayKey="Value" visible="true" required="true" />
+    </Properties>
+  </Step>
+  <Step id="S5758f86369d94d2bacc00f4fd264bbbc" taskName="T_00_Init" type="Flow" name="Assign" displayName="Assign" callDepth="1" depth="1" num="5" result="Pass" start="2025-04-17T05:34:51.539" end="2025-04-17T05:34:51.540" displayTime="0s">
+    <Variables>
+      <Variable name="str_TempFileName" scope="Global" declareType="Any" isChanged="false" isChangable="true" runtimeType="String" value="'보고서_Template.xlsx'" />
+      <Variable name="str_LocalFolderPath" scope="Global" declareType="Any" isChanged="false" isChangable="true" runtimeType="String" value="'C:\\RPA교육\\'" />
+      <Variable name="str_TempFilePath" scope="Global" declareType="Any" isChanged="false" isChangable="true" runtimeType="String" value="'C:\\RPA교육\\보고서_Template.xlsx'" />
+    </Variables>
+    <Properties setIndex="0">
+      <Property value="" runtimeType="String" key="Options_OnError" displayKey="On Error" visible="true" required="false" />
+      <Property value="" runtimeType="String" key="Key_Description" displayKey="Description" visible="true" required="false" />
+      <Property value="Global.str_TempFilePath : &lt;undefined&gt;" runtimeType="Undefined" key="Conditions_Variable" displayKey="Variable" visible="true" required="true" />
+      <Property value="'C:\\RPA교육\\보고서_Template.xlsx'" runtimeType="String" key="Conditions_Value" displayKey="Value" visible="true" required="true" />
+    </Properties>
+  </Step>
+  <Step id="Sa469009d6d3b484baa9ca9e15deee13b" taskName="T_00_Init" type="Flow" name="Debugger" displayName="Debugger" callDepth="1" depth="1" num="6" result="Stop" start="2025-04-17T05:34:51.555" end="2025-04-17T05:34:53.738" displayTime="2.2s">
+    <Variables>
+      <Variable name="RESULT" scope="System" declareType="Any" isChanged="false" isChangable="true" runtimeType="Any" value="&lt;null&gt;" />
+    </Variables>
+    <Properties setIndex="0">
+      <Property value="" runtimeType="String" key="Options_OnError" displayKey="On Error" visible="true" required="false" />
+      <Property value="" runtimeType="String" key="Key_Description" displayKey="Description" visible="true" required="false" />
+      <Property runtimeType="String" key="Conditions_Message" displayKey="Message" visible="true" required="false" />
+    </Properties>
+  </Step>
+  <JobInfo>
+    <Info name="Bot Version" value="3.1.125.00226" />
+    <Info name="Resolution" value="1920 x 1080" />
+    <Info name="Language" value="한국어 (대한민국)" />
+    <Info name="BotID" value="S-DESIGNER-25EE6" />
+  </JobInfo>
+</Result>

@@ -10,7 +10,7 @@
     <Property key="Resolution" controlType="String" valueType="System.String" formatType="String_Size" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="1920x1080" />
     <Property key="CreatedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2025-04-17 11:47:38" />
     <Property key="CreatedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
-    <Property key="LastModifiedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2025-04-17 12:28:26" />
+    <Property key="LastModifiedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2025-04-17 14:39:38" />
     <Property key="LastModifiedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="" />
     <Property key="LastPublishedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
     <Property key="LastPublishedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
@@ -77,19 +77,19 @@ for(i=0;i<arr1_InputBrandNames.length;i++){
         <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
         <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
         <Property type="Flow" key="Conditions_Title" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="인풋값으로 조회 조건 변경" />
-        <Property type="Flow" key="Key_Script" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="&#xD;&#xA;&#xD;&#xA;int_IndexYear = this.i_str_InputPeriod.indexOf('년');&#xD;&#xA;int_Year = this.i_str_InputPeriod.slice((int_IndexYear-4),int_IndexYear);&#xD;&#xA;&#xD;&#xA;int_IndexMonth = this.i_str_InputPeriod.indexOf('월');&#xD;&#xA;int_Month = this.i_str_InputPeriod.slice((int_IndexMonth-2),int_IndexMonth);&#xD;&#xA;&#xD;&#xA;Global.arr1_Period[0]=int_Year;&#xD;&#xA;Global.arr1_Period[1]=int_Month;&#xD;&#xA;" />
+        <Property type="Flow" key="Key_Script" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="&#xD;&#xA;&#xD;&#xA;int_IndexYear = this.i_str_InputPeriod.indexOf('년');&#xD;&#xA;str_Year = this.i_str_InputPeriod.slice((int_IndexYear-4),(int_IndexYear+1));&#xD;&#xA;&#xD;&#xA;int_IndexMonth = this.i_str_InputPeriod.indexOf('월');&#xD;&#xA;str_Month = this.i_str_InputPeriod.slice((int_IndexMonth-2),int_IndexMonth+1);&#xD;&#xA;&#xD;&#xA;Global.arr1_Period[0]=str_Year;&#xD;&#xA;Global.arr1_Period[1]=str_Month;&#xD;&#xA;" />
       </Properties>
       <RelatedSteps />
       <Script><![CDATA[
 
 int_IndexYear = this.i_str_InputPeriod.indexOf('년');
-int_Year = this.i_str_InputPeriod.slice((int_IndexYear-4),int_IndexYear);
+str_Year = this.i_str_InputPeriod.slice((int_IndexYear-4),(int_IndexYear+1));
 
 int_IndexMonth = this.i_str_InputPeriod.indexOf('월');
-int_Month = this.i_str_InputPeriod.slice((int_IndexMonth-2),int_IndexMonth);
+str_Month = this.i_str_InputPeriod.slice((int_IndexMonth-2),int_IndexMonth+1);
 
-Global.arr1_Period[0]=int_Year;
-Global.arr1_Period[1]=int_Month;
+Global.arr1_Period[0]=str_Year;
+Global.arr1_Period[1]=str_Month;
 ]]></Script>
     </Step>
     <Step id="Sf64fd7057c1741788a68ca21916b18c3" ver="311241220" createVer="311241220" type="Flow" name="EndDecisionThen" dpName="End-IfThen" dpValue="" dpValue2="" dpImage="" tag="" depth="2" stmttype="CloseBlock" enabled="True" mainSet="0">
@@ -143,13 +143,13 @@ Global.arr1_Period[1]=int_Month;
 
 
             int_IndexYear = this.i_str_InputPeriod.indexOf('년');
-            int_Year = this.i_str_InputPeriod.slice((int_IndexYear-4),int_IndexYear);
+            str_Year = this.i_str_InputPeriod.slice((int_IndexYear-4),(int_IndexYear+1));
 
             int_IndexMonth = this.i_str_InputPeriod.indexOf('월');
-            int_Month = this.i_str_InputPeriod.slice((int_IndexMonth-2),int_IndexMonth);
+            str_Month = this.i_str_InputPeriod.slice((int_IndexMonth-2),int_IndexMonth+1);
 
-            Global.arr1_Period[0]=int_Year;
-            Global.arr1_Period[1]=int_Month;
+            Global.arr1_Period[0]=str_Year;
+            Global.arr1_Period[1]=str_Month;
 
 
         //------------------------------------------------

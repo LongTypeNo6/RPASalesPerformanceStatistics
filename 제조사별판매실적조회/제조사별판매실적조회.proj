@@ -1,4 +1,4 @@
-<Project id="15fc358a-8ea9-453c-894f-3247e2514f87" namespace="" name="제조사별판매실적조회" category="project" workType="foreground" version="1.00" lastPublishedDate="" lastPublishedBy="" createdDate="2025-04-17 10:12:14" createdBy="" latestProcess="P_제조사별판매실적조회" designerVersion="3.1.125.00226" DesignedBy="">
+<Project id="15fc358a-8ea9-453c-894f-3247e2514f87" namespace="" name="제조사별판매실적조회" category="project" workType="foreground" version="1.00" lastPublishedDate="" lastPublishedBy="" createdDate="2025-04-17 10:12:14" createdBy="" latestProcess="T_07_테이블데이터추출" designerVersion="3.1.125.00226" DesignedBy="">
   <SharedTask isExpended="false" />
   <NormalTask isExpended="true">
     <LinkItem id="6da16fe6-8512-42fb-84d0-8acc0f2ca471" category="NormalTask" isChanged="Y" desc="" stepCount="5" name="T_00_Init">
@@ -19,13 +19,19 @@
     <LinkItem id="2d0c4bb8-5b51-4cb3-83fd-ae89737d3adb" category="NormalTask" isChanged="Y" desc="" stepCount="5" name="T_05_데이터조회">
       <Properties />
     </LinkItem>
-    <LinkItem id="95a5f8e4-2921-4d9a-b571-9f593666192c" category="NormalTask" isChanged="Y" desc="" stepCount="0" name="T_06_이미지추출및저장">
+    <LinkItem id="95a5f8e4-2921-4d9a-b571-9f593666192c" category="NormalTask" isChanged="Y" desc="" stepCount="19" name="T_06_이미지추출및저장">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="0fceb893-2120-4d30-b13f-298222c1c71e" category="NormalTask" isChanged="Y" desc="" stepCount="3" name="T_07_테이블데이터추출">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="cac1c9bf-045f-49b6-9d07-f350c676b104" category="NormalTask" isChanged="Y" desc="" stepCount="3" name="T_08_엑셀에데이터입력">
       <Properties />
     </LinkItem>
   </NormalTask>
   <Event isExpended="false" />
   <Process isExpended="true">
-    <LinkItem id="1129b78b-ed75-4df3-af8f-d08bae3583f3" category="Process" isChanged="Y" desc="default process" stepCount="10" name="P_제조사별판매실적조회">
+    <LinkItem id="1129b78b-ed75-4df3-af8f-d08bae3583f3" category="Process" isChanged="Y" desc="default process" stepCount="13" name="P_제조사별판매실적조회">
       <Properties />
     </LinkItem>
   </Process>
@@ -41,11 +47,11 @@
     <Variable name="str_TempFileName" scope="Global" valueType="Any" formatType="Any" initValue="'보고서_Template.xlsx'" desc="초_파일이름: 양식파일" colorValue="#FF3C79F5" showMarker="False" />
     <Variable name="str_LocalFolderPath" scope="Global" valueType="Any" formatType="Any" initValue="'C:\\RPA교육\\'" desc="초_폴더경로: 기준폴더" colorValue="#FF00E7FF" showMarker="False" />
     <Variable name="str_TempFilePath" scope="Global" valueType="Any" formatType="Any" initValue="'C:\\RPA교육\\보고서_Template.xlsx'" desc="초_파일경로: 양식파일" colorValue="#FF243763" showMarker="False" />
-    <Variable name="str_InputFolderPath" scope="Global" valueType="Any" formatType="Any" initValue="'C:\\RPA교육\\Input\\'" desc="초_폴더경로: 인풋폴더" colorValue="#FFF7DB6A" showMarker="False" />
-    <Variable name="str_OutputFolderPath" scope="Global" valueType="Any" formatType="Any" initValue="'C:\\RPA교육\\Output\\'" desc="초_폴더경로: 아웃풋폴더" colorValue="#FFFC2947" showMarker="False" />
-    <Variable name="str_TempFolderPath" scope="Global" valueType="Any" formatType="Any" initValue="'C:\\RPA교육\\Temp\\'" desc="초_폴더경로: 템프폴더" colorValue="#FF0E8388" showMarker="False" />
+    <Variable name="str_InputFolderPath" scope="Global" valueType="Any" formatType="Any" initValue="'C:\\RPA교육\\제조사별판매실적조회\\Input\\'" desc="초_폴더경로: 인풋폴더" colorValue="#FFF7DB6A" showMarker="False" />
+    <Variable name="str_OutputFolderPath" scope="Global" valueType="Any" formatType="Any" initValue="'C:\\RPA교육\\제조사별판매실적조회\\Output\\'" desc="초_폴더경로: 아웃풋폴더" colorValue="#FFFC2947" showMarker="False" />
+    <Variable name="str_TempFolderPath" scope="Global" valueType="Any" formatType="Any" initValue="'C:\\RPA교육\\제조사별판매실적조회\\Temp\\'" desc="초_폴더경로: 템프폴더" colorValue="#FF0E8388" showMarker="False" />
     <Variable name="arr1_Period" scope="Global" valueType="Any" formatType="Any" initValue="['2023년', '10월']" desc="초_조회기간: ['연도','월']" colorValue="#FF62CDFF" showMarker="False" />
-    <Variable name="arr1_BrandNames" scope="Global" valueType="Any" formatType="Any" initValue="['제네시스','쉐보레','기아']" desc="초_브랜드명: 배열" colorValue="#FF7149C6" showMarker="False" />
+    <Variable name="arr1_BrandNames" scope="Global" valueType="Any" formatType="Any" initValue="['쉐보레','기아']" desc="초_브랜드명: 배열" colorValue="#FF7149C6" showMarker="False" />
   </Variables>
   <Properties>
     <Property key="PlayOption_StepInterval" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="1" />

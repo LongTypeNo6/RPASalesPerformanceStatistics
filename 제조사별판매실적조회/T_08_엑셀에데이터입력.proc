@@ -1,0 +1,110 @@
+<Process id="cac1c9bf-045f-49b6-9d07-f350c676b104" type="task" workType="foreground" name="T_08_엑셀에데이터입력" version="" designerVersion="3.1.125.00226" lastPublishedServer="" readonly="false" isValid="true" DesignedBy="Designer" Template="" StepCount="3" Orientation="horizontal">
+  <Properties>
+    <Property key="Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="onBefore" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="onAfter" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="onError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="Timeout" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="0" />
+    <Property key="RunningTime" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="7" />
+    <Property key="Os" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="Microsoft Windows 10 Pro64비트" />
+    <Property key="Resolution" controlType="String" valueType="System.String" formatType="String_Size" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="1920x1080" />
+    <Property key="CreatedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2025-04-22 12:12:06" />
+    <Property key="CreatedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+    <Property key="LastModifiedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2025-04-22 12:44:58" />
+    <Property key="LastModifiedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="" />
+    <Property key="LastPublishedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+    <Property key="LastPublishedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+  </Properties>
+  <LinkItems />
+  <Variables>
+    <Variable name="i_arr1_EngineRawData" scope="Input" valueType="Any" formatType="Any" initValue="" desc="" colorValue="#FF9E4784" showMarker="False" />
+    <Variable name="i_arr2_ModelData" scope="Input" valueType="Any" formatType="Any" initValue="" desc="" colorValue="#FF38E54D" showMarker="False" />
+  </Variables>
+  <Steps>
+    <Step id="Se5a15c94a3d644cab674ba0ea2ce05e9" ver="311241220" createVer="311241220" type="Excel" name="OpenExcel" dpName="OpenExcel" dpValue="Global.str_TempFilePath" dpValue2="" dpImage="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="41bb3ec6-6711-4adf-a7a0-b6bc46c32c88" type="Excel">
+        <Property type="Excel" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Excel" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Excel" key="Output_OutputExcel" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="RESULT" />
+        <Property type="Excel" key="File_Path" controlType="Excel" valueType="System.String" formatType="String_FilePath" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="Global.str_TempFilePath" order="11" />
+        <Property type="Excel" key="File_Invisible" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" order="12" />
+        <Property type="Excel" key="File_ReadOnly" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" order="16" />
+        <Property type="Excel" key="File_Maximize" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="True" order="13" />
+        <Property type="Excel" key="File_ExecuteShell" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" order="14" />
+        <Property type="Excel" key="File_Timeout" controlType="Int32" valueType="System.Int32" formatType="Integer" required="True" visible="False" readonly="False" encrypted="False" isChanged="N" value="60" order="15" />
+        <Property type="Excel" key="File_UsePassword" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" order="17" />
+        <Property type="Excel" key="File_OpenPassword" controlType="PropertyItemPasswordView" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="" order="18" />
+        <Property type="Excel" key="File_WritePassword" controlType="PropertyItemPasswordView" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="Y" value="" order="19" />
+        <Property type="Excel" key="File_TextDelimiter" controlType="PropertyItemDropDownView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="Comma(,)" valuelist="Comma(,);Colon(:);Semicolon(;;);Caret(^);Pipe(|);Tab(&#x9;);Space( );Ampersand(&amp;);Ampersat(@);Asterisk(*);Backslash(\);Dollar($);Dot(.);Equals(=);Exclamation(!);Hyphen(-);Percent(%);Plus(+);Question(?);Sharp(#);Slash(/);Tilde(~);Underscore(_);SystemDynamic(System)" order="20" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[RESULT = StepPlayer.Run('Excel.OpenExcel', this.openexcel_info_1);]]></Script>
+    </Step>
+    <Step id="Sc20bf500ab934daab22fd379fa21ad49" ver="311241220" createVer="311241220" type="Excel" name="WriteRange" dpName="WriteRange" dpValue="ACTIVE_SHEET" dpValue2="" dpImage="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="c70fb5f6-72f6-4b98-acd1-0f1b03d31d33" type="Excel">
+        <Property type="Excel" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Excel" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Excel" key="Input_InputExcel" controlType="InputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="ACTIVE_EXCEL" />
+        <Property type="Excel" key="Input_DataArray" controlType="Object[][]" valueType="System.Object[][]" formatType="Array2D" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="this.i_arr2_ModelData" />
+        <Property type="Excel" key="Sheet_SheetName" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="ACTIVE_SHEET" />
+        <Property type="Excel" key="Sheet_StartCell" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="'A4'" />
+        <Property type="Excel" key="File_AutoSave" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[StepPlayer.Run('Excel.WriteRange', this.writerange_info_2);]]></Script>
+    </Step>
+    <Step id="S166b8ca11fb149a988246557cf00dcda" ver="311241220" createVer="311241220" type="Flow" name="Debugger" dpName="Debugger" dpValue="RESULT" dpValue2="" dpImage="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="ac77b714-6e48-4a0f-98e4-19f41acd95d2" type="Flow">
+        <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_Message" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="RESULT" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[OpenDebugger(RESULT);]]></Script>
+    </Step>
+  </Steps>
+  <JScript><![CDATA[function T_08_엑셀에데이터입력(args) {
+
+    this.i_arr1_EngineRawData = (typeof args != 'undefined') ? args.i_arr1_EngineRawData : null;
+    this.i_arr2_ModelData = (typeof args != 'undefined') ? args.i_arr2_ModelData : null;
+
+    this.RPAGOTOENABLE = false;
+    this.GotoStepRetryCntMap = {};
+    this.GotoBlockMap = {};
+    this.GotoReverseBlockMap = {};
+    this.GotoStepBlockTypeMap = {};
+
+
+    this.run = function() {
+
+        //------------------------------------------------
+        STEP('Se5a15c94a3d644cab674ba0ea2ce05e9', '[1] OpenExcel');
+        RESULT = StepPlayer.Run('Excel.OpenExcel', this.openexcel_info_1);
+
+        //------------------------------------------------
+        STEP('Sc20bf500ab934daab22fd379fa21ad49', '[2] WriteRange');
+        StepPlayer.Run('Excel.WriteRange', this.writerange_info_2);
+
+        //------------------------------------------------
+        STEP('S166b8ca11fb149a988246557cf00dcda', '[3] Debugger');
+        OpenDebugger(RESULT);
+
+
+    }
+
+    this.execute = function() {
+        var result = null;
+        result = this.run()
+        if (result != null)
+            return result;
+    }
+}
+]]></JScript>
+  <Diagram version="1.300" nodesize="Normal">
+    <StepNodes>
+      <StepNode step_id="Se5a15c94a3d644cab674ba0ea2ce05e9" group_name="42db6d64-9ee2-4017-9276-aeb36d2f5839_Untitled" folded="False" color="" />
+      <StepNode step_id="Sc20bf500ab934daab22fd379fa21ad49" group_name="0ce07feb-7298-48f4-b22b-a5c39d33d746_Untitled" folded="False" color="" />
+      <StepNode step_id="S166b8ca11fb149a988246557cf00dcda" group_name="3a1b85d5-06c0-410c-ab4b-a39d401a17b5_Untitled" folded="False" color="" />
+    </StepNodes>
+  </Diagram>
+</Process>

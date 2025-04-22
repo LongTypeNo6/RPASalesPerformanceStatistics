@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Result id="0fceb893-2120-4d30-b13f-298222c1c71e" name="T_07_테이블데이터추출" result="Stop" detail="Process: T_07_테이블데이터추출&#xA;Step: Debugger (4/4)&#xA;&#xA;Stopped by User" start="2025-04-22T02:48:30.030" end="2025-04-22T02:49:44.123" jobId="Designer_20250422_114826_508">
+  <Step id="S6f8e02708bbc47e997d7e5a4381efb82" taskName="T_07_테이블데이터추출" type="Flow" name="Delay" displayName="Delay" callDepth="1" depth="1" num="1" result="Pass" start="2025-04-22T02:48:30.100" end="2025-04-22T02:48:31.211" displayTime="1.1s">
+    <Variables />
+    <Properties setIndex="0">
+      <Property value="" runtimeType="String" key="Options_OnError" displayKey="On Error" visible="true" required="false" />
+      <Property value="" runtimeType="String" key="Key_Description" displayKey="Description" visible="true" required="false" />
+      <Property value="1" runtimeType="Integer" key="Conditions_Second" displayKey="Second" visible="true" required="true" />
+      <Property value="0" runtimeType="Integer" key="Conditions_Millisecond" displayKey="Millisecond" visible="true" required="true" />
+    </Properties>
+  </Step>
+  <Step id="Sa2b9639aa331458dbac22669604f5620" taskName="T_07_테이블데이터추출" type="Chrome" name="ChromeGetMultipleElements" displayName="ChromeGetMultipleElements" callDepth="1" depth="1" num="3" result="Pass" start="2025-04-22T02:48:31.235" end="2025-04-22T02:48:32.296" displayTime="1.1s">
+    <Variables>
+      <Variable name="RESULT" scope="System" declareType="Any" isChanged="false" isChangable="true" runtimeType="Any" value="&lt;null&gt;" />
+    </Variables>
+    <Properties setIndex="0">
+      <Property value="" runtimeType="String" key="Options_OnError" displayKey="On Error" visible="true" required="false" />
+      <Property value="" runtimeType="String" key="Key_Description" displayKey="Description" visible="true" required="false" />
+      <Property value="&lt;LatestBrowser&gt;" runtimeType="Any" key="CHROME_Browser" displayKey="Browser" visible="true" required="true" />
+      <Property value="10" runtimeType="Integer" key="CHROME_WaitTimeSec" displayKey="Page Load Timeout" visible="true" required="true" />
+      <Property value="'https://auto.danawa.com/auto/'" runtimeType="String" key="CHROME_PageUrl" displayKey="Page Url" visible="true" required="false" />
+      <Property value="false" runtimeType="Boolean" key="CHROME_UsePageUrl" displayKey="UsePageUrl" visible="false" required="false" />
+      <Property value="https://auto.danawa.com/auto/?Work=record&amp;Tab=Top10&amp;Brand=304&amp;Month=2023-10-00&amp;MonthTo=" runtimeType="String" key="CHROME_FullPageUrl" displayKey="FullPageUrl" visible="false" required="false" />
+      <Property value="" runtimeType="String" key="CHROME_IframeSrc" displayKey="Iframe Source" visible="true" required="false" />
+      <Property value="" runtimeType="String" key="CHROME_IframeIndexes" displayKey="Iframe Index" visible="true" required="false" />
+      <Property value="'/html/body/div[1]/section/div/div/div[3]/article/main/div/table[2]/tbody/tr[10]/td[5]'" runtimeType="String" key="CHROME_ElementPath" displayKey="Element Path" visible="true" required="false" />
+      <Property value="'/html/body/div[1]/section/div/div/div[3]/article/main/div/table[2]/tbody/tr/td'" runtimeType="String" key="CHROME_ExecuteQuery" displayKey="ExecuteQuery" visible="true" required="true" />
+      <Property value="true" runtimeType="Boolean" key="CHROME_QueryType" displayKey="Query Type" visible="true" required="false" />
+      <Property value="&lt;Too Long&gt; H4sIAAAAAAAEAOy9aZfb1pUo+tn9K3jV617bj5IwT44kPxKc53lavVYFBEASJAiAGDjddXt5kLNkS2k73XJHSSRf+bU8JE+5rdhy ... 57324 more" runtimeType="String" key="CHROME_FullHTML" displayKey="FullHTML" visible="false" required="false" />
+      <Property value="" runtimeType="String" key="CHROME_Element" displayKey="Element" visible="false" required="false" />
+      <Property value="Text" runtimeType="String" key="CHROME_DataType" displayKey="Data Type" visible="true" required="false" />
+      <Property value="858그래프로 보기" runtimeType="String" key="CHROME_ExpectedValue" displayKey="Expected Value" visible="true" required="false" />
+      <Property value="2" runtimeType="Integer" key="CHROME_Scope" displayKey="Scope" visible="false" required="false" />
+      <Property value="&lt;Too Long&gt; RESULT : [&quot;&quot;,&quot;1&quot;,&quot;등급별 보기&quot;,&quot;GV70&quot;,&quot;3,467\n그래프로 보기&quot;,&quot;45.6%&quot;,&quot;2,743\n724▲&quot;,&quot;2,413\n1,054▲&quot;,&quot;&quot;,&quot;가솔린 2.5&quot; ... 1143 more" runtimeType="Array1D" key="CHROME_Data" displayKey="Data" visible="true" required="true" />
+      <Property value="0" runtimeType="String" key="CHROME_ColumnCnt" displayKey="ColumnCnt" visible="false" required="false" />
+      <Property value="&lt;Too Long&gt; [{&quot;Index&quot;:0,&quot;Tag&quot;:&quot;TD&quot;,&quot;Data&quot;:[{&quot;Name&quot;:&quot;index&quot;,&quot;Value&quot;:&quot;5&quot;,&quot;IsUse&quot;:true},{&quot;Name&quot;:&quot;class&quot;,&quot;Value&quot;:&quot;nu ... 1591 more" runtimeType="String" key="CHROME_ChromeElements" displayKey="ChromeElements" visible="false" required="false" />
+      <Property value="''" runtimeType="String" key="CHROME_SingleQueryForMultiple" displayKey="SingleQueryForMultiple" visible="false" required="false" />
+      <Property value="https://auto.danawa.com/auto/?Work=record&amp;Tab=Top10&amp;Brand=304&amp;Month=2023-10-00&amp;MonthTo=" runtimeType="String" key="CHROME_PagesearchUrl" displayKey="PagesearchUrl" visible="false" required="false" />
+      <Property value="" runtimeType="String" key="CHROME_IframeFullSrc" displayKey="IframeFullSrc" visible="false" required="false" />
+      <Property value="" runtimeType="String" key="CHROME_IframeSearchSrc" displayKey="IframeSearchSrc" visible="false" required="false" />
+      <Property value="iVBORw0KGgoAAAANSUhEUgAAAMgAAABkCAYAAADDhn8LAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPJSURBVHhe7d09buNGGIBh3oZpAuQsAQIVKYIcZKscgGWArQIkd/ABchAdIK5kw53N6IcjkcPhJ9KJbGn1PMBgJYpyxdejkRecqgUmCQQCtx/Iumnrqmqr0qibdt2dtvewys5ZtQ/7w3XbbE9M/0LybQSy2l3muYd2VQikLhQgEKbcbyCD2UQglJlBtswgTLm7QIZrkKrdvVUgTLmvRTosdPuB9O1iORvFdmYpxbQfZhCG7jCQaT5ikbvhQKKZIBuDNYoZhPm+rRlkll0ghz8Qwjl3Gkhp9jiM0tfA3K87DATmEwgEBAIBgUBAIBAQCASqzWbTGoZRHmYQCAgEAgKBgEAgIBAICAQCAoGAQCAgEAgIBAICgYBAICAQCAgEAgKBgEAgIBAIvDOQddvU+U3XhncrfFgdjo93Jkjvrdvm7+k7s6cbuK2bunfcrUH5WMsDKeyx0R/HOxOmbQnym0n3j09uXXAIYRhHGm4bysdZFkjvgs5v0Zku5tPx3kzRO3V8Xk+Kbz/tpFuEnt6fZqXie+ECFgWy9AKdG81B9lppBkrHijtKwf9vQSDRxT0hv8gHM0Qmf60UQykauKD/HEhxnXC8qIfvmbVwTz9bIFyBRR+xSuuHUiCDj2DdzFA3TbemKCyySzNLKYZSNHBB716kjy7S42t5ANl+HKOLe+qjm0U6n+2fhYHspN/2E6P0yz1d2MXXg3VJ8eObr3n5QMsD2Uu/9WdeuMeoxuest6/Vo9njpB/XeJaBy3pnIHAfBAIBgUBAIBAQCAQEAgGBQEAgEBAIBAQCAYFAQCAQEAgEBAIBgUBAIBAQCAQEAoFqs9m0hmGUhxkEAgKBgEAgIBAICAQCAoGAQCAgEAgIBAICgYBAICAQCAgEAgKBgEAgIBAICAQC7wxk7iaewy2gh9s3Zz+jvx86XInlgZzZBvoUQbY/+uD1UmDbUdpDGj5R9fj42D2cYd20dXcx55v5pz3Nj8fTuWlm6D9PkR1njRSTbZ65LtUff/7VPTwv7Vmex1E0Fch2lhjFtJWOmUS4JtXPv/zavr29dU8j6WPR/N/yKajTOLy3FEMpGvhs1Xff/9A+Pz93TyPlQNKFPRj7K7+8BunPIALh2lU//rRqX19fu6ex0kVcCmT3epo9ThGcAvvyZfrn9KOBz1b9/vVr93CG3iJ99I3T8bXD173TgWyP/WaRzm2oXl5euocznfmaNwVRmlkOYxeQr3m5DRf9Q+E4kv452RrlOJvA9fBfTSAgEAgsX4PAHamenp66h0DORywICAQCAoFJbfsvzOqwEWD24ksAAAAASUVORK5CYII=" runtimeType="Bitmap" key="Target_Capture" displayKey="Image" visible="true" required="false" />
+      <Property value="false" runtimeType="Boolean" key="CHROME_IsTextEdit" displayKey="IsTextEdit" visible="false" required="false" />
+      <Property value="TD" runtimeType="String" key="CHROME_HTMLTagName" displayKey="HTMLTagName" visible="false" required="false" />
+      <Property value="Designer" runtimeType="String" key="Target_CapturedBy" displayKey="CapturedBy" visible="false" required="false" />
+      <Property value="6564" runtimeType="Integer" key="Application_PID" displayKey="PID" visible="false" required="false" />
+      <Property value="chrome" runtimeType="String" key="Application_ProcessName" displayKey="ProcessName" visible="true" required="true" />
+      <Property value="'자동차 판매실적 : 다나와 자동차 - Chrome'" runtimeType="String" key="Application_Title" displayKey="Title" visible="true" required="true" />
+      <Property value="Pane" runtimeType="String" key="Application_ClassType" displayKey="ClassType" visible="false" required="false" />
+      <Property value="-8,-8,1936,1056" runtimeType="Rect" key="Application_Bounds" displayKey="Bounds" visible="false" required="false" />
+      <Property value="Chrome_WidgetWin_1" runtimeType="String" key="Application_ClassName" displayKey="ClassName" visible="false" required="false" />
+      <Property value="'Pane|Chrome_WidgetWin_1||Win32/Document|Chrome_RenderWidgetHostHWND|16253248|Chrome'" runtimeType="String" key="Target_ObjectPath" displayKey="ObjectPath" visible="false" required="true" />
+      <Property value="&lt;Too Long&gt; 'Pane|Chrome_WidgetWin_1||Win32|False||1|자동차 판매실적 : 다나와 자동차 - Chrome/Document|Chrome_RenderWidgetHos ... 50 more" runtimeType="String" key="Target_ObjectPathEx" displayKey="ObjectPathEx" visible="true" required="true" />
+      <Property value="" runtimeType="String" key="Target_RelativePath" displayKey="RelativePath" visible="true" required="false" />
+      <Property value="Document" runtimeType="String" key="Target_ClassType" displayKey="ClassType" visible="true" required="true" />
+      <Property value="8,95,1920,953" runtimeType="Rect" key="Target_Bounds" displayKey="Bounds" visible="true" required="false" />
+      <Property value="'자동차 판매실적 : 다나와 자동차'" runtimeType="String" key="Target_Name" displayKey="Name" visible="true" required="true" />
+      <Property value="'https://auto.danawa.com/auto/?Work=record&amp;Tab=Top10&amp;Brand=304&amp;Month=2023-10-00&amp;MonthTo='" runtimeType="String" key="Target_Value" displayKey="Value" visible="true" required="true" />
+      <Property value="'자동차 판매실적 : 다나와 자동차'" runtimeType="String" key="Target_LegacyName" displayKey="LegacyName" visible="true" required="false" />
+      <Property value="'https://auto.danawa.com/auto/?Work=record&amp;Tab=Top10&amp;Brand=304&amp;Month=2023-10-00&amp;MonthTo='" runtimeType="String" key="Target_LegacyValue" displayKey="LegacyValue" visible="true" required="false" />
+      <Property value="''" runtimeType="String" key="Target_LegacyDesc" displayKey="LegacyDesc" visible="true" required="false" />
+      <Property value="''" runtimeType="String" key="Target_LegacyHelp" displayKey="LegacyHelp" visible="true" required="false" />
+      <Property value="Chrome_RenderWidgetHostHWND" runtimeType="String" key="Target_ClassName" displayKey="ClassName" visible="false" required="false" />
+      <Property value="16253248" runtimeType="String" key="Target_AutomationID" displayKey="AutomationID" visible="false" required="false" />
+      <Property value="Chrome" runtimeType="String" key="Target_FrameworkID" displayKey="FrameworkID" visible="false" required="false" />
+      <Property value="42.10947152.4.-6892" runtimeType="String" key="Target_RuntimeID" displayKey="RuntimeID" visible="false" required="false" />
+      <Property value="false" runtimeType="Boolean" key="Target_UseSearchAround" displayKey="UseSearchAround" visible="false" required="false" />
+      <Property value="NotUse" runtimeType="String" key="Target_UseImageMatch" displayKey="UseImageMatch" visible="true" required="false" />
+      <Property value="JustBest" runtimeType="String" key="Target_ImageIndexMethod" displayKey="ImageIndexMethod" visible="true" required="false" />
+      <Property value="0" runtimeType="Integer" key="Target_SelectImageIndex" displayKey="SelectImageIndex" visible="true" required="false" />
+      <Property value="576,142" runtimeType="Size" key="Target_SizeTolerance" displayKey="SizeTolerance" visible="false" required="false" />
+      <Property value="Scroll;Value;Text;ScrollItem;LegacyIAccessible" runtimeType="String" key="Target_SupportedPatterns" displayKey="SupportedPatterns" visible="true" required="false" />
+      <Property value="" runtimeType="String" key="Target_RemoteAppName" displayKey="RemoteAppName" visible="false" required="false" />
+      <Property value="817,571" runtimeType="Point" key="Mouse_WinPoint" displayKey="WinPoint" visible="false" required="false" />
+      <Property value="825,579" runtimeType="Point" key="Mouse_AppPoint" displayKey="AppPoint" visible="false" required="false" />
+      <Property value="'817, 484'" runtimeType="String" key="Mouse_Point" displayKey="Click Point" visible="false" required="false" />
+      <Property value="Center" runtimeType="String" key="Mouse_OriginPoint" displayKey="Origin Point" visible="false" required="false" />
+      <Property value="'0, 0'" runtimeType="String" key="Mouse_OffsetPoint" displayKey="OffsetPoint" visible="false" required="false" />
+    </Properties>
+  </Step>
+  <Step id="S8c68545568f647b197310c9c1c057c70" taskName="T_07_테이블데이터추출" type="Flow" name="Debugger" displayName="Debugger" callDepth="1" depth="1" num="4" result="Stop" start="2025-04-22T02:48:32.308" end="2025-04-22T02:49:44.123" displayTime="71.8s">
+    <Variables>
+      <Variable name="RESULT" scope="System" declareType="Any" isChanged="false" isChangable="true" runtimeType="Array1D" value="&lt;Too Long&gt; [&quot;&quot;,&quot;1&quot;,&quot;등급별 보기&quot;,&quot;GV70&quot;,&quot;3,467\n그래프로 보기&quot;,&quot;45.6%&quot;,&quot;2,743\n724▲&quot;,&quot;2,413\n1,054▲&quot;,&quot;&quot;,&quot;가솔린 2.5&quot;,&quot;3,304&quot;, ... 1134 more" />
+    </Variables>
+    <Properties setIndex="0">
+      <Property value="" runtimeType="String" key="Options_OnError" displayKey="On Error" visible="true" required="false" />
+      <Property value="" runtimeType="String" key="Key_Description" displayKey="Description" visible="true" required="false" />
+      <Property value="&lt;Too Long&gt; [&quot;&quot;,&quot;1&quot;,&quot;등급별 보기&quot;,&quot;GV70&quot;,&quot;3,467\n그래프로 보기&quot;,&quot;45.6%&quot;,&quot;2,743\n724▲&quot;,&quot;2,413\n1,054▲&quot;,&quot;&quot;,&quot;가솔린 2.5&quot;,&quot;3,304&quot;, ... 1134 more" runtimeType="Array1D" key="Conditions_Message" displayKey="Message" visible="true" required="false" />
+    </Properties>
+  </Step>
+  <JobInfo>
+    <Info name="Bot Version" value="3.1.125.00226" />
+    <Info name="Resolution" value="1920 x 1080" />
+    <Info name="Language" value="한국어 (대한민국)" />
+    <Info name="BotID" value="S-DESIGNER-X5673" />
+  </JobInfo>
+</Result>

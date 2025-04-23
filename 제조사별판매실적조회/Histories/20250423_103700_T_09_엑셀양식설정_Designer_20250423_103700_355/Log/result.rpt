@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Result id="2113ca58-c446-408b-ab7d-4a0df87ed1a7" name="T_09_엑셀양식설정" result="Pass" detail="{}" start="2025-04-23T01:37:03.070" end="2025-04-23T01:37:03.817" jobId="Designer_20250423_103700_355">
+  <Step id="Sb56b65aedee641adbe6764d88c9bae27" taskName="T_09_엑셀양식설정" type="Excel" name="WriteString" displayName="WriteString" callDepth="1" depth="1" num="1" result="Pass" start="2025-04-23T01:37:03.147" end="2025-04-23T01:37:03.813" displayTime="0.7s">
+    <Variables>
+      <Variable name="arr1_Period" scope="Global" declareType="Any" isChanged="false" isChangable="false" runtimeType="Array1D" value="['2024년', '08월']" />
+      <Variable name="arr1_BrandNames" scope="Global" declareType="Any" isChanged="false" isChangable="false" runtimeType="Array1D" value="['제네시스', '쉐보레', '기아']" />
+      <Variable name="i_Index" scope="Normal" owner="T_09_엑셀양식설정" declareType="Any" isChanged="false" isChangable="true" runtimeType="Integer" value="1" />
+    </Variables>
+    <Properties setIndex="0">
+      <Property value="" runtimeType="String" key="Options_OnError" displayKey="On Error" visible="true" required="false" />
+      <Property value="" runtimeType="String" key="Key_Description" displayKey="Description" visible="true" required="false" />
+      <Property value="&lt;ActiveExcel&gt;" runtimeType="Any" key="Input_InputExcel" displayKey="Excel" visible="true" required="true" />
+      <Property value="&lt;ActiveSheet&gt;" runtimeType="Any" key="Sheet_SheetName" displayKey="SheetName" visible="true" required="true" />
+      <Property value="'A1'" runtimeType="String" key="Sheet_Range" displayKey="Range" visible="true" required="true" />
+      <Property value="'쉐보레 2024년 08월 판매실적'" runtimeType="String" key="Sheet_InputString" displayKey="InputString" visible="true" required="true" />
+      <Property value="false" runtimeType="Boolean" key="File_AutoSave" displayKey="AutoSave" visible="true" required="false" />
+    </Properties>
+  </Step>
+  <JobInfo>
+    <Info name="Bot Version" value="3.1.125.00226" />
+    <Info name="Resolution" value="1920 x 1080" />
+    <Info name="Language" value="한국어 (대한민국)" />
+    <Info name="BotID" value="S-DESIGNER-X5673" />
+  </JobInfo>
+</Result>

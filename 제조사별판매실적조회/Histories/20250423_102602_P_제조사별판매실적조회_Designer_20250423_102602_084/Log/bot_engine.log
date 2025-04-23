@@ -1,0 +1,2106 @@
+﻿2025-04-23 10:22:49,733 [T1] INFO  EngineStarter
+BOT Engine Start - v3.1.125.00226 at 2025-04-23 오전 10:22:49
+EngineID: D_20250423_102248_661
+PID : 6148
+PPID: 2208
+Working Directory: C:\Users\1Class_03\AppData\Roaming\Brity RPA Designer
+
+2025-04-23 10:22:49,754 [T1] INFO  EngineStarter
+System Language: ko-KR
+Resolution: 1920 x 1080
+
+2025-04-23 10:22:50,025 [T1] INFO  Config
+Initialize Config
+
+2025-04-23 10:22:50,085 [T1] DEBUG Config
+Config Loaded
+
+2025-04-23 10:22:50,086 [T1] DEBUG Config
+Backup config file.
+
+2025-04-23 10:22:50,096 [T1] INFO  Config
+Orchestrator Service => https://bwrpa.samsungsds.com:8777
+
+2025-04-23 10:22:50,100 [T1] INFO  Config
+Initialize Resource Config
+
+2025-04-23 10:22:50,134 [T1] DEBUG Config
+Refresh Language Information
+
+2025-04-23 10:22:50,316 [T1] INFO  Config
+All Config Initialized.
+
+2025-04-23 10:22:50,325 [T1] DEBUG KeyManager
+Initialize KeyManager
+
+2025-04-23 10:22:50,328 [T1] DEBUG KeyManager
+Load device unique id.
+
+2025-04-23 10:22:50,335 [T1] DEBUG KeyManager
+Device ID is initialized.
+
+2025-04-23 10:22:50,343 [T1] INFO  Config
+Activated License Type : StandAloneDesigner
+
+2025-04-23 10:22:50,459 [T4] DEBUG JobService
+Connect to agent service
+
+2025-04-23 10:22:50,484 [T4] DEBUG JobService
+JobService URL : net.tcp://127.0.0.1:59001/rpa/agent
+
+2025-04-23 10:22:50,486 [T4] DEBUG JobService
+Open connection
+
+2025-04-23 10:22:50,487 [T1] DEBUG ApplicationInitializer
+InitMode: Thread
+
+2025-04-23 10:22:50,504 [T1] INFO  LibraryManager
+Load Libraries - Started
+
+2025-04-23 10:22:50,506 [T4] DEBUG JobService
+Register engine to agent
+
+2025-04-23 10:22:50,517 [T1] DEBUG AddInLoader
+Load Assembly : IPA.Lib.Abbyy
+
+2025-04-23 10:22:50,518 [T4] DEBUG JobService
+Engine is connected to agent service.
+
+2025-04-23 10:22:50,518 [T4] DEBUG JobService
+Owner Process PID: 2208
+
+2025-04-23 10:22:50,521 [T4] INFO  JobService
+Start monitoring owner process is terminated.
+
+2025-04-23 10:22:50,614 [T1] DEBUG AddInLoader
+Load Assembly : IPA.Lib.Chrome
+
+2025-04-23 10:22:50,842 [T1] DEBUG AddInLoader
+Load Assembly : IPA.Lib.Desktop
+
+2025-04-23 10:22:51,009 [T1] DEBUG AddInLoader
+Load Assembly : IPA.Lib.Excel
+
+2025-04-23 10:22:51,178 [T1] DEBUG AddInLoader
+Load Assembly : IPA.Lib.Flow
+
+2025-04-23 10:22:51,303 [T1] DEBUG AddInLoader
+Load Assembly : IPA.Lib.IE
+
+2025-04-23 10:22:51,393 [T1] DEBUG AddInLoader
+Load Assembly : IPA.Lib.ImageConverter
+
+2025-04-23 10:22:51,451 [T1] DEBUG AddInLoader
+Load Assembly : IPA.Lib.ImageRecognition
+
+2025-04-23 10:22:51,635 [T1] DEBUG AddInLoader
+Load Assembly : IPA.Lib.KnoxPortal
+
+2025-04-23 10:22:51,700 [T1] DEBUG AddInLoader
+Load Assembly : IPA.Lib.MicrosoftOCR
+
+2025-04-23 10:22:51,756 [T1] DEBUG AddInLoader
+Load Assembly : IPA.Lib.Net
+
+2025-04-23 10:22:51,844 [T1] DEBUG AddInLoader
+Load Assembly : IPA.Lib.Orchestra
+
+2025-04-23 10:22:51,930 [T1] DEBUG AddInLoader
+Load Assembly : IPA.Lib.ProcessFlow
+
+2025-04-23 10:22:52,022 [T1] DEBUG AddInLoader
+Load Assembly : IPA.Lib.PushMessage
+
+2025-04-23 10:22:52,072 [T1] DEBUG AddInLoader
+Load Assembly : IPA.Lib.SAP
+
+2025-04-23 10:22:52,159 [T1] DEBUG AddInLoader
+Load Assembly : IPA.Lib.Web
+
+2025-04-23 10:22:52,282 [T1] DEBUG AddInLoader
+Load Assembly : IPA.Lib.Win
+
+2025-04-23 10:22:52,408 [T1] INFO  ScreenCapture
+Default Screen Capture Bounds: 0,0,1920,1080
+
+2025-04-23 10:22:52,435 [T1] DEBUG AddInLoader
+Load Assembly : BrityRPA.AddIn.Android
+
+2025-04-23 10:22:52,494 [T1] DEBUG AddInLoader
+Load Assembly : BrityRPA.AddIn.HancomEx
+
+2025-04-23 10:22:52,634 [T1] DEBUG AddInLoader
+Load Assembly : BrityRPA.AddIn.NativeApp
+
+2025-04-23 10:22:52,696 [T1] DEBUG AddInLoader
+Load Assembly : BrityRPA.AddIn.Python
+
+2025-04-23 10:22:52,699 [T1] DEBUG AddInLoader
+Load Assembly : BrityRPA.AddIn.SynapOCR
+
+2025-04-23 10:22:52,732 [T1] DEBUG AddInLoader
+Load Assembly : BrityWorks.AddIn.CognitiveLibrary
+
+2025-04-23 10:22:52,780 [T1] DEBUG AddInLoader
+Load Assembly : BrityWorks.AddIn.Drive
+
+2025-04-23 10:22:52,824 [T1] DEBUG ActivityLibraryItem
+Drive.FindDriveItem - No resource for property description : REQUEST_REQUEST_SpreadsheetIDd
+
+2025-04-23 10:22:52,826 [T1] DEBUG ActivityLibraryItem
+Drive.CreateDriveFolder - No resource for property description : REQUEST_REQUEST_SpreadsheetIDd
+
+2025-04-23 10:22:52,828 [T1] DEBUG ActivityLibraryItem
+Drive.DownloadDriveFile - No resource for property description : REQUEST_REQUEST_SpreadsheetIDd
+
+2025-04-23 10:22:52,830 [T1] DEBUG ActivityLibraryItem
+Drive.UploadDriveFile - No resource for property description : REQUEST_REQUEST_SpreadsheetIDd
+
+2025-04-23 10:22:52,833 [T1] DEBUG ActivityLibraryItem
+Drive.CopyDriveItem - No resource for property description : REQUEST_REQUEST_SpreadsheetIDd, REQUEST_REQUEST_SpreadsheetIDdTarget
+
+2025-04-23 10:22:52,836 [T1] DEBUG ActivityLibraryItem
+Drive.MoveDriveItem - No resource for property description : REQUEST_REQUEST_SpreadsheetIDd, REQUEST_REQUEST_SpreadsheetIDdTarget
+
+2025-04-23 10:22:52,837 [T1] DEBUG ActivityLibraryItem
+Drive.DeleteDriveItem - No resource for property description : REQUEST_REQUEST_SpreadsheetIDd
+
+2025-04-23 10:22:52,841 [T1] DEBUG ActivityLibraryItem
+Drive.ShareDriveItem - No resource for property description : REQUEST_REQUEST_SpreadsheetIDd
+
+2025-04-23 10:22:52,841 [T1] DEBUG AddInLoader
+Load Assembly : BrityWorks.AddIn.FTP
+
+2025-04-23 10:22:52,886 [T1] DEBUG AddInLoader
+Load Assembly : BrityWorks.AddIn.GoogleCalendar
+
+2025-04-23 10:22:52,938 [T1] DEBUG ActivityLibraryItem
+GoogleCalendar.CreateEvent - No resource for property description : REQUEST_UpdateEndsOccurences, REQUEST_UpdateEndsDate
+
+2025-04-23 10:22:52,947 [T1] DEBUG ActivityLibraryItem
+GoogleCalendar.UpdateEvent - No resource for property description : REQUEST_UpdateEvent, REQUEST_UpdateStartDate, REQUEST_UpdateEndDate, REQUEST_UpdateEndsOccurences, REQUEST_UpdateEndsDate, REQUEST_UpdateAttendeeList, REQUEST_UpdateDescription
+
+2025-04-23 10:22:52,957 [T1] DEBUG AddInLoader
+Load Assembly : BrityWorks.AddIn.GoogleDocs
+
+2025-04-23 10:22:53,006 [T1] DEBUG ActivityLibraryItem
+GoogleDocs.CreateGoogleDocs - No resource for property description : REQUEST_Dummy
+
+2025-04-23 10:22:53,010 [T1] DEBUG ActivityLibraryItem
+GoogleDocs.OpenGoogleDocs - No resource for property description : REQUEST_Dummy
+
+2025-04-23 10:22:53,012 [T1] DEBUG ActivityLibraryItem
+GoogleDocs.GetTextIndex - No resource for property description : REQUEST_Dummy
+
+2025-04-23 10:22:53,016 [T1] DEBUG ActivityLibraryItem
+GoogleDocs.InsertText - No resource for property description : REQUEST_Dummy
+
+2025-04-23 10:22:53,018 [T1] DEBUG ActivityLibraryItem
+GoogleDocs.ReadAllText - No resource for property description : REQUEST_Dummy
+
+2025-04-23 10:22:53,021 [T1] DEBUG ActivityLibraryItem
+GoogleDocs.ReplaceText - No resource for property description : REQUEST_Dummy
+
+2025-04-23 10:22:53,021 [T1] DEBUG AddInLoader
+Load Assembly : BrityWorks.AddIn.GoogleSheet
+
+2025-04-23 10:22:53,074 [T1] DEBUG ActivityLibraryItem
+GoogleSheet.CreateSpreadsheet - No resource for property description : REQUEST_FOlderIDD
+
+2025-04-23 10:22:53,077 [T1] DEBUG ActivityLibraryItem
+GoogleSheet.OpenSpreadSheet - No resource for property description : REQUEST_SpreadsheetIdd
+
+2025-04-23 10:22:53,082 [T1] DEBUG ActivityLibraryItem
+GoogleSheet.ReadRange - No resource for property description : REQUEST_SpreadsheetIdd
+
+2025-04-23 10:22:53,101 [T1] DEBUG ActivityLibraryItem
+GoogleSheet.WriteRange - No resource for property description : REQUEST_SpreadsheetIdd
+
+2025-04-23 10:22:53,111 [T1] DEBUG ActivityLibraryItem
+GoogleSheet.CopySheet - No resource for property description : REQUEST_SpreadsheetIdd
+
+2025-04-23 10:22:53,115 [T1] DEBUG ActivityLibraryItem
+GoogleSheet.DeleteRange - No resource for property description : REQUEST_SpreadsheetIdd
+
+2025-04-23 10:22:53,121 [T1] DEBUG AddInLoader
+Load Assembly : BrityWorks.AddIn.Jira
+
+2025-04-23 10:22:53,169 [T1] DEBUG AddInLoader
+Load Assembly : BrityWorks.AddIn.OpenAI
+
+2025-04-23 10:22:53,204 [T1] DEBUG AddInLoader
+Load Assembly : BrityWorks.AddIn.Outlook
+
+2025-04-23 10:22:53,279 [T1] DEBUG AddInLoader
+Load Assembly : BrityWorks.AddIn.Pdf
+
+2025-04-23 10:22:53,349 [T1] DEBUG AddInLoader
+Load Assembly : BrityWorks.AddIn.Powerpoint
+
+2025-04-23 10:22:53,407 [T1] DEBUG AddInLoader
+Load Assembly : BrityWorks.AddIn.Word
+
+2025-04-23 10:22:53,500 [T1] DEBUG LibraryManager
+Load Library - Abbyy
+
+2025-04-23 10:22:53,516 [T1] DEBUG LibraryManager
+Load Library - Android
+
+2025-04-23 10:22:53,532 [T1] DEBUG LibraryManager
+Load Library - Chrome
+
+2025-04-23 10:22:53,548 [T1] DEBUG LibraryManager
+Load Library - CognitiveLibrary
+
+2025-04-23 10:22:53,563 [T1] DEBUG LibraryManager
+Load Library - Desktop
+
+2025-04-23 10:22:53,579 [T1] DEBUG LibraryManager
+Load Library - Drive
+
+2025-04-23 10:22:53,594 [T1] DEBUG LibraryManager
+Load Library - Excel
+
+2025-04-23 10:22:53,610 [T1] DEBUG LibraryManager
+Load Library - Flow
+
+2025-04-23 10:22:53,625 [T1] DEBUG LibraryManager
+Load Library - FTP
+
+2025-04-23 10:22:53,640 [T1] DEBUG LibraryManager
+Load Library - GoogleCalendar
+
+2025-04-23 10:22:53,655 [T1] DEBUG LibraryManager
+Load Library - GoogleDocs
+
+2025-04-23 10:22:53,670 [T1] DEBUG LibraryManager
+Load Library - GoogleSheet
+
+2025-04-23 10:22:53,686 [T1] DEBUG LibraryManager
+Load Library - HancomEx
+
+2025-04-23 10:22:53,702 [T1] DEBUG LibraryManager
+Load Library - IE
+
+2025-04-23 10:22:53,717 [T1] DEBUG LibraryManager
+Load Library - ImageConverter
+
+2025-04-23 10:22:53,733 [T1] DEBUG LibraryManager
+Load Library - ImageRecognition
+
+2025-04-23 10:22:53,748 [T1] DEBUG LibraryManager
+Load Library - Jira
+
+2025-04-23 10:22:53,763 [T1] DEBUG LibraryManager
+Load Library - KnoxPortal
+
+2025-04-23 10:22:53,778 [T1] DEBUG LibraryManager
+Load Library - MicrosoftOCR
+
+2025-04-23 10:22:53,793 [T1] DEBUG LibraryManager
+Load Library - NativeApp
+
+2025-04-23 10:22:53,809 [T1] DEBUG LibraryManager
+Load Library - Net
+
+2025-04-23 10:22:53,825 [T1] DEBUG LibraryManager
+Load Library - OpenAI
+
+2025-04-23 10:22:53,840 [T1] DEBUG LibraryManager
+Load Library - Orchestra
+
+2025-04-23 10:22:53,856 [T1] DEBUG LibraryManager
+Load Library - Outlook
+
+2025-04-23 10:22:53,871 [T1] DEBUG LibraryManager
+Load Library - Pdf
+
+2025-04-23 10:22:53,887 [T1] DEBUG LibraryManager
+Load Library - Powerpoint
+
+2025-04-23 10:22:53,902 [T1] DEBUG LibraryManager
+Load Library - PushMessage
+
+2025-04-23 10:22:53,917 [T1] DEBUG LibraryManager
+Load Library - Python
+
+2025-04-23 10:22:53,933 [T1] DEBUG LibraryManager
+Load Library - SAP
+
+2025-04-23 10:22:53,948 [T1] DEBUG LibraryManager
+Load Library - SynapOCR
+
+2025-04-23 10:22:53,963 [T1] DEBUG LibraryManager
+Load Library - Web
+
+2025-04-23 10:22:53,979 [T1] DEBUG LibraryManager
+Load Library - Win
+
+2025-04-23 10:22:53,995 [T1] DEBUG LibraryManager
+Load Library - Word
+
+2025-04-23 10:22:54,011 [T1] DEBUG LibraryManager
+Load Library - WorkFlow
+
+2025-04-23 10:22:54,016 [T1] DEBUG LibraryManager
+Load built-in script libraries
+
+2025-04-23 10:22:54,286 [T1] INFO  LibraryManager
+Load Libraries - Completed.
+
+2025-04-23 10:22:54,299 [T1] INFO  App
+Launch Arguments: Total: 6 |  -eid D_20250423_102248_661 -runtype ProcRunner -ppid 2208
+
+2025-04-23 10:22:54,299 [T1] DEBUG Config
+Refresh Language Information
+
+2025-04-23 10:22:54,300 [T1] DEBUG LibraryManager
+LibraryManager Initialized.
+
+2025-04-23 10:26:02,472 [T8] INFO  JobService
+Start Job: P_제조사별판매실적조회 (Foreground)
+{
+  "JobType": 1,
+  "State": 0,
+  "IsRunning": false,
+  "ResultMessage": null,
+  "StartTime": "2025-04-23 10:26:02",
+  "EndTime": null,
+  "JobId": "Designer_20250423_102602_084",
+  "UserAuthentication": null,
+  "ProcessPath": "C:\\Users\\1Class_03\\Documents\\Brity RPA Projects\\RPASalesPerformanceStatistics\\제조사별판매실적조회\\P_제조사별판매실적조회.proc",
+  "ProcessId": "1129b78b-ed75-4df3-af8f-d08bae3583f3",
+  "ProcessVer": "",
+  "ProcessArgs": null,
+  "RequesterType": 3,
+  "RequesterId": "designer",
+  "RequesterPID": 2208,
+  "OptionsJsonString": null,
+  "TimeoutSec": 0,
+  "EngineID": "D_20250423_102248_661",
+  "EnginePID": 0,
+  "EngineRecommededVersion": "",
+  "JobWorkDir": "C:\\Users\\1Class_03\\Documents\\Brity RPA Projects\\RPASalesPerformanceStatistics\\제조사별판매실적조회\\Histories\\20250423_102602_P_제조사별판매실적조회_Designer_20250423_102602_084",
+  "JobLogDir": "C:\\Users\\1Class_03\\Documents\\Brity RPA Projects\\RPASalesPerformanceStatistics\\제조사별판매실적조회\\Histories\\20250423_102602_P_제조사별판매실적조회_Designer_20250423_102602_084\\Log",
+  "JobScreenshotDir": "C:\\Users\\1Class_03\\Documents\\Brity RPA Projects\\RPASalesPerformanceStatistics\\제조사별판매실적조회\\Histories\\20250423_102602_P_제조사별판매실적조회_Designer_20250423_102602_084\\Log\\Screenshot"
+}
+
+2025-04-23 10:26:02,600 [T10] DEBUG JobService
+Waiting library loading...
+
+2025-04-23 10:26:02,602 [T10] DEBUG Config
+Reload User Settings
+
+2025-04-23 10:26:02,605 [T10] INFO  Config
+UserSettings Reloaded =>
+ - LastExecution : sC1vuy1LIn0Lht9YcpH13AjlpiGHoze+zxAJGE9+lU8= -> SyXd/lspFUaSf++ujV8eJTOmtwcA9m4iod2klrjta4c=
+
+2025-04-23 10:26:02,605 [T10] INFO  JobService
+Config Loading Completed.
+
+2025-04-23 10:26:02,605 [T10] DEBUG JobService
+Config Loading Time: 4 ms.
+
+2025-04-23 10:26:02,610 [T10] DEBUG JobService
+Check Shared Token
+
+2025-04-23 10:26:02,613 [T10] DEBUG TokenManager
+Load connection token
+
+2025-04-23 10:26:02,614 [T10] DEBUG TokenManager
+Clear Connection Token - No Shared Token
+
+2025-04-23 10:26:02,623 [T10] DEBUG ServerInformationClient
+get server features for engine bot from config.
+
+2025-04-23 10:26:02,625 [T10] INFO  Config
+Try to load server features from config.
+
+2025-04-23 10:26:02,629 [T10] INFO  TokenManager
+SecurityType : v2
+
+2025-04-23 10:26:02,632 [T10] INFO  JobService
+Shared Token - No Token
+
+2025-04-23 10:26:02,639 [T10] INFO  JobManager
+Create JobManager instance for job P_제조사별판매실적조회(Designer_20250423_102602_084)
+
+2025-04-23 10:26:02,650 [T10] INFO  JobRequest
+Job ID : Designer_20250423_102602_084
+Project Path  : C:\Users\1Class_03\Documents\Brity RPA Projects\RPASalesPerformanceStatistics\제조사별판매실적조회\제조사별판매실적조회.proj
+Process Name  : P_제조사별판매실적조회
+Engine Mode   : Designer
+Requester Type: Designer
+Requester PID : 2208
+
+2025-04-23 10:26:02,653 [T9] INFO  JobRequest
+Start Callback Sender
+
+2025-04-23 10:26:02,653 [T9] DEBUG JobRequest
+Step Callback Interval: 500
+
+2025-04-23 10:26:02,702 [T10] DEBUG ProjectManager
+Set Project Information
+
+2025-04-23 10:26:02,725 [T10] INFO  PlayOptionManager
+PlayOption
+- Step Interval : 1
+- Disable DrawBounds : False
+- Invoke First : False
+- Allow Upload of DumpScreen results : False
+
+2025-04-23 10:26:02,726 [T10] INFO  JobRunner
+Initialize Script Engine
+
+2025-04-23 10:26:02,743 [T12-ScriptEngine] INFO  JobRequest
+##############################################################
+### STATE: Initializing
+##############################################################
+
+
+2025-04-23 10:26:02,760 [T9] DEBUG JobRequest
+Callback - State: Initializing
+
+
+2025-04-23 10:26:03,608 [T12-ScriptEngine] INFO  JobRequest
+##############################################################
+### STATE: Ready
+##############################################################
+
+
+2025-04-23 10:26:03,621 [T10] INFO  JobRunnerHook
+HotKey Hook Started
+
+2025-04-23 10:26:03,622 [T10] INFO  JobRequest
+##############################################################
+### STATE: Starting
+##############################################################
+
+
+2025-04-23 10:26:03,623 [T9] DEBUG JobRequest
+Callback - State: Ready
+
+
+2025-04-23 10:26:03,624 [T12-ScriptEngine] INFO  JobRunner
+RunProcess start
+
+2025-04-23 10:26:03,625 [T9] DEBUG JobRequest
+Callback - State: Starting
+
+
+2025-04-23 10:26:03,626 [T12-ScriptEngine] INFO  JobRequest
+##############################################################
+### STATE: Running
+##############################################################
+
+
+2025-04-23 10:26:03,626 [T12-ScriptEngine] INFO  JobRequest
+Last job life cycle state: Running
+
+2025-04-23 10:26:03,639 [T9] DEBUG JobRequest
+Callback - State: Running
+
+
+2025-04-23 10:26:04,661 [T12-ScriptEngine] DEBUG ScreenCapture
+DirectX Screen Capture Initialized.
+
+2025-04-23 10:26:04,696 [T12-ScriptEngine] DEBUG JobRunner
+DirectX ScreenCapture Checked.
+
+2025-04-23 10:26:04,726 [T12-ScriptEngine] INFO  JobRequest
+##############################################################
+### STATE: StartProcess - P_제조사별판매실적조회
+##############################################################
+1129b78b-ed75-4df3-af8f-d08bae3583f3
+P_제조사별판매실적조회
+
+
+2025-04-23 10:26:04,790 [T12-ScriptEngine] INFO  JobRequest
+**************************************************************
+*** TASK: P_제조사별판매실적조회
+**************************************************************
+ - STEP 1: S5f6b31e7f979439fa2921908cf531ba2 (7/13) - (1/53)
+ - [7] RunTask
+
+
+2025-04-23 10:26:04,874 [T12-ScriptEngine] INFO  JobRequest
+##############################################################
+### STATE: StartTask - T_04_웹사이트접속
+##############################################################
+a06d3084-2a26-4094-996b-2cba08c14d49
+T_04_웹사이트접속
+
+
+2025-04-23 10:26:04,891 [T12-ScriptEngine] INFO  JobRequest
+**************************************************************
+*** TASK: T_04_웹사이트접속
+**************************************************************
+ - STEP 2: Sca0bd5df68404c93a3b75aa6bbc2feb9 (1/1) - (2/53)
+ - [1] ChromeOpen
+
+
+2025-04-23 10:26:07,826 [T11] DEBUG ChromeRemoteConnect
+GetRemoteBrowserUsingEndPoint Fail : 하나 이상의 오류가 발생했습니다.
+
+2025-04-23 10:26:15,445 [T12-ScriptEngine] INFO  JobRunner
+[PASS] TASK: T_04_웹사이트접속
+
+2025-04-23 10:26:15,464 [T12-ScriptEngine] INFO  JobRequest
+##############################################################
+### STATE: EndTask - T_04_웹사이트접속
+##############################################################
+a06d3084-2a26-4094-996b-2cba08c14d49
+T_04_웹사이트접속
+
+
+2025-04-23 10:26:15,471 [T12-ScriptEngine] INFO  JobRequest
+**************************************************************
+*** TASK: P_제조사별판매실적조회
+**************************************************************
+ - STEP 3: S315c404463b047e4b283d8f1ed1f03b8 (8/13) - (3/53)
+ - [8] For
+
+
+2025-04-23 10:26:15,534 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 4: S890f1e53a9584a45a52a910079f84042 (9/13) - (4/53)
+ - [9] RunTask
+
+
+2025-04-23 10:26:15,542 [T12-ScriptEngine] INFO  JobRequest
+##############################################################
+### STATE: StartTask - T_05_데이터조회
+##############################################################
+2d0c4bb8-5b51-4cb3-83fd-ae89737d3adb
+T_05_데이터조회
+
+
+2025-04-23 10:26:15,549 [T12-ScriptEngine] INFO  JobRequest
+**************************************************************
+*** TASK: T_05_데이터조회
+**************************************************************
+ - STEP 5: Sf115cb55dc5d45a3bfe94857ddd43f47 (1/5) - (5/53)
+ - [1] MouseHover
+
+
+2025-04-23 10:26:15,727 [T10] DEBUG UIAEventHandler
+Start UIA event handler
+
+2025-04-23 10:26:15,926 [T10] DEBUG UIAEventHandler
+UI Structure Changed Count: 0
+
+2025-04-23 10:26:15,926 [T10] DEBUG UIAEventHandler
+Waiting additional time 158 msec for the screen structure is changing. Requested interval: 200 msec.
+
+2025-04-23 10:26:15,955 [T10] INFO  WinFinder
+Finding Object In App... Try: 1, IsLastTry: False. AppCount: 1
+
+2025-04-23 10:26:15,963 [T10] DEBUG WinElementTargetFinder
+## Object Find In App (name: '다나와 자동차 : 자동차 전문 견적, 가격비교 NO.1...')
+
+2025-04-23 10:26:16,541 [T10] INFO  WinFinder
+ . Finding Object by 'RelativePoint Search' (Try: 1) ... 
+
+2025-04-23 10:26:16,678 [T12-ScriptEngine] INFO  WinFinder
+Finding Result: Found by 'BottomUpV2' method. (Total: 1)
+ - name: '자동차백과'
+ - value: 'https://auto.danawa.com/auto/'
+
+2025-04-23 10:26:17,417 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 6: Sd2a4d3f04e16409e8ef356213fc54dde (2/5) - (6/53)
+ - [2] ChromeClick
+
+
+2025-04-23 10:26:17,529 [T12-ScriptEngine] DEBUG RestorePuppeteer
+Restore Session Start
+
+2025-04-23 10:26:17,621 [T12-ScriptEngine] DEBUG RestorePuppeteer
+Restore Session Start
+
+2025-04-23 10:26:17,668 [T12-ScriptEngine] DEBUG RestorePuppeteer
+Restore Session Start
+
+2025-04-23 10:26:17,680 [T12-ScriptEngine] DEBUG RestorePuppeteer
+Restore Session Start
+
+2025-04-23 10:26:17,682 [T12-ScriptEngine] DEBUG RestorePuppeteer
+Restore Session Start
+
+2025-04-23 10:26:18,239 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 7: Sa8d3279067a94e95adb0c7fd9ba00049 (3/5) - (7/53)
+ - [3] SelectComboBox
+
+
+2025-04-23 10:26:18,598 [T11] INFO  WinFinder
+Finding Object In App... Try: 1, IsLastTry: False. AppCount: 1
+
+2025-04-23 10:26:18,599 [T11] DEBUG WinElementTargetFinder
+## Object Find In App (name: '자동차 판매실적 : 다나와 자동차 - Chrome')
+
+2025-04-23 10:26:19,376 [T12-ScriptEngine] INFO  WinFinder
+Finding Result: Found by 'BottomUpV2' method. (Total: 1)
+ - name: ''
+ - value: '2025년'
+
+2025-04-23 10:26:20,407 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 8: Sf002983af3d24a98b337bc1d7bfa2b82 (4/5) - (8/53)
+ - [4] SelectComboBox
+
+
+2025-04-23 10:26:20,442 [T22] INFO  WinFinder
+Finding Object In App... Try: 1, IsLastTry: False. AppCount: 2
+
+2025-04-23 10:26:20,444 [T22] DEBUG WinElementTargetFinder
+## Object Find In App (Foreground) (name: '자동차 판매실적 : 다나와 자동차 - Chrome')
+
+2025-04-23 10:26:20,541 [T12-ScriptEngine] INFO  WinFinder
+Finding Result: Found by 'ObjectPathEx' method. (Total: 1)
+ - name: ''
+ - value: '03월'
+
+2025-04-23 10:26:21,559 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 9: S4eb3af5e63524fd2ac1ef2ffdaf594e1 (5/5) - (9/53)
+ - [5] ChromeClick
+
+
+2025-04-23 10:26:21,651 [T12-ScriptEngine] DEBUG RestorePuppeteer
+Restore Session Start
+
+2025-04-23 10:26:21,839 [T12-ScriptEngine] DEBUG RestorePuppeteer
+Restore Session Start
+
+2025-04-23 10:26:21,844 [T12-ScriptEngine] DEBUG RestorePuppeteer
+Restore Session Start
+
+2025-04-23 10:26:21,854 [T12-ScriptEngine] DEBUG RestorePuppeteer
+Restore Session Start
+
+2025-04-23 10:26:21,854 [T12-ScriptEngine] DEBUG RestorePuppeteer
+Restore Session Start
+
+2025-04-23 10:26:22,224 [T12-ScriptEngine] INFO  JobRunner
+[PASS] TASK: T_05_데이터조회
+
+2025-04-23 10:26:22,226 [T12-ScriptEngine] INFO  JobRequest
+##############################################################
+### STATE: EndTask - T_05_데이터조회
+##############################################################
+2d0c4bb8-5b51-4cb3-83fd-ae89737d3adb
+T_05_데이터조회
+
+
+2025-04-23 10:26:22,241 [T12-ScriptEngine] INFO  JobRequest
+**************************************************************
+*** TASK: P_제조사별판매실적조회
+**************************************************************
+ - STEP 10: S6f12e2705b16421ebd8b8bac2ea5ca59 (10/13) - (10/53)
+ - [10] RunTask
+
+
+2025-04-23 10:26:22,370 [T12-ScriptEngine] INFO  JobRequest
+##############################################################
+### STATE: StartTask - T_06_이미지추출및저장
+##############################################################
+95a5f8e4-2921-4d9a-b571-9f593666192c
+T_06_이미지추출및저장
+
+
+2025-04-23 10:26:22,385 [T12-ScriptEngine] INFO  JobRequest
+**************************************************************
+*** TASK: T_06_이미지추출및저장
+**************************************************************
+ - STEP 11: S0baf62232e214672a877a0eabcc8333c (1/21) - (11/53)
+ - [1] Delay
+
+
+2025-04-23 10:26:25,443 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 12: S65769974399f460385e011efcbf98c98 (2/21) - (12/53)
+ - [2] KeyInput
+
+
+2025-04-23 10:26:27,462 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 13: Sda04fa7cbb704886b3a5c738054a57ac (3/21) - (13/53)
+ - [3] Foreach
+
+
+2025-04-23 10:26:27,491 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 14: Sccb235ea67924a33aed08675a0dade38 (4/21) - (14/53)
+ - [4] Delay
+
+
+2025-04-23 10:26:28,525 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 15: Sfb013237310b4df48940cb848294de2b (5/21) - (15/53)
+ - [5] KeyInput
+
+
+2025-04-23 10:26:30,681 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 16: S1d116dc87b7d4f858749d56a2fc5821d (6/21) - (16/53)
+ - [6] SetText
+
+
+2025-04-23 10:26:30,758 [T25] INFO  WinFinder
+Finding Object In App... Try: 1, IsLastTry: False. AppCount: 1
+
+2025-04-23 10:26:30,759 [T25] DEBUG WinElementTargetFinder
+## Object Find In App (name: '자동차 판매실적 : 다나와 자동차 - Chrome')
+
+2025-04-23 10:26:30,880 [T12-ScriptEngine] INFO  WinFinder
+Finding Result: Found by 'ObjectPathEx' method. (Total: 1)
+ - name: 'Find by string, selector, or XPath'
+ - value: ''
+
+2025-04-23 10:26:31,040 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 17: Se39355b95cff4494bc6222725b8f2282 (7/21) - (17/53)
+ - [7] IfThen
+
+
+2025-04-23 10:26:31,055 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 18: Se40f6eda6c0143f9a8bf188c4d22246f (8/21) - (18/53)
+ - [8] Assign
+
+
+2025-04-23 10:26:31,087 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 19: S9f0c07664c094e49acb313df7166c6c4 (9/21) - (19/53)
+ - [9] RightClick
+
+
+2025-04-23 10:26:31,162 [T25] INFO  WinFinder
+Finding Object In App... Try: 1, IsLastTry: False. AppCount: 1
+
+2025-04-23 10:26:31,162 [T25] DEBUG WinElementTargetFinder
+## Object Find In App (name: '자동차 판매실적 : 다나와 자동차 - Chrome')
+
+2025-04-23 10:26:31,520 [T25] INFO  WinFinder
+ . Finding Object by 'RelativePoint Search' (Try: 1) ... 
+
+2025-04-23 10:26:31,716 [T12-ScriptEngine] INFO  WinFinder
+Finding Result: Found by 'ObjectPathEx' method. (Total: 1)
+ - name: 'recordBrand'
+ - value: ''
+
+2025-04-23 10:26:32,145 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 20: S341ad4a12665425588a29db15c70a99e (10/21) - (20/53)
+ - [10] Click
+
+
+2025-04-23 10:26:32,220 [T25] INFO  WinFinder
+Finding Object In App... Try: 1, IsLastTry: False. AppCount: 1
+
+2025-04-23 10:26:32,220 [T25] DEBUG WinElementTargetFinder
+## Object Find In App (name: '자동차 판매실적 : 다나와 자동차 - Chrome')
+
+2025-04-23 10:26:32,283 [T25] INFO  WinFinder
+ . Finding Object by 'RelativePoint Search' (Try: 1) ... 
+
+2025-04-23 10:26:32,359 [T12-ScriptEngine] INFO  WinFinder
+Finding Result: Found by 'ObjectPathEx' method. (Total: 1)
+ - name: 'Capture node screenshot'
+ - value: ''
+
+2025-04-23 10:26:32,782 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 21: Sbc7009c0dbd2465e927a3c6cdd482a41 (11/21) - (21/53)
+ - [11] SetText
+
+
+2025-04-23 10:26:32,833 [T24] INFO  WinFinder
+Finding Object In App... Try: 1, IsLastTry: False. AppCount: 1
+
+2025-04-23 10:26:32,833 [T24] DEBUG WinElementTargetFinder
+## Object Find In App (name: '자동차 판매실적 : 다나와 자동차 - Chrome')
+
+2025-04-23 10:26:34,413 [T12-ScriptEngine] INFO  WinFinder
+Finding Result: Found by 'TopDownV2' method. (Total: 1)
+ - name: '파일 이름:'
+ - value: 'auto.danawa.com_auto__Work=record&Tab=Top10&Brand=...'
+
+2025-04-23 10:26:34,546 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 22: S9f399d5084e545af99876a98fe9bd9bd (12/21) - (22/53)
+ - [12] End-IfThen
+
+
+2025-04-23 10:26:34,562 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 23: S778026fd447141e98ff9380c98f4ee68 (13/21) - (23/53)
+ - [13] IfThen
+
+
+2025-04-23 10:26:34,578 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 24: Sb2c13b18832342b58cae06037f9d5855 (18/21) - (28/53)
+ - [18] End-IfThen
+
+
+2025-04-23 10:26:34,593 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 25: S9bb6cafa34ab4b78ad9710051ada2797 (19/21) - (29/53)
+ - [19] Click
+
+
+2025-04-23 10:26:34,634 [T22] INFO  WinFinder
+Finding Object In App... Try: 1, IsLastTry: False. AppCount: 1
+
+2025-04-23 10:26:34,814 [T22] DEBUG WinElementTargetFinder
+## Object Find In App (name: '자동차 판매실적 : 다나와 자동차 - Chrome')
+
+2025-04-23 10:26:34,830 [T22] INFO  WinFinder
+ . Finding Object by 'RelativePoint Search' (Try: 1) ... 
+
+2025-04-23 10:26:34,887 [T12-ScriptEngine] INFO  WinFinder
+Finding Result: Found by 'ObjectPathEx' method. (Total: 1)
+ - name: '저장(S)'
+ - value: ''
+
+2025-04-23 10:26:35,568 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 26: Sccb235ea67924a33aed08675a0dade38 (4/21) - (29/53)
+ - [4] Delay
+
+
+2025-04-23 10:26:36,610 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 27: Sfb013237310b4df48940cb848294de2b (5/21) - (29/53)
+ - [5] KeyInput
+
+
+2025-04-23 10:26:38,755 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 28: S1d116dc87b7d4f858749d56a2fc5821d (6/21) - (29/53)
+ - [6] SetText
+
+
+2025-04-23 10:26:38,820 [T28] INFO  WinFinder
+Finding Object In App... Try: 1, IsLastTry: False. AppCount: 1
+
+2025-04-23 10:26:38,821 [T28] DEBUG WinElementTargetFinder
+## Object Find In App (name: '자동차 판매실적 : 다나와 자동차 - Chrome')
+
+2025-04-23 10:26:39,162 [T12-ScriptEngine] INFO  WinFinder
+Finding Result: Found by 'ObjectPathEx' method. (Total: 1)
+ - name: 'Find by string, selector, or XPath'
+ - value: 'recordBrand'
+
+2025-04-23 10:26:39,355 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 29: Se39355b95cff4494bc6222725b8f2282 (7/21) - (29/53)
+ - [7] IfThen
+
+
+2025-04-23 10:26:39,371 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 30: S9f399d5084e545af99876a98fe9bd9bd (12/21) - (29/53)
+ - [12] End-IfThen
+
+
+2025-04-23 10:26:39,387 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 31: S778026fd447141e98ff9380c98f4ee68 (13/21) - (29/53)
+ - [13] IfThen
+
+
+2025-04-23 10:26:39,403 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 32: S41c75a1d74e74839a79fad0d07cc9392 (14/21) - (29/53)
+ - [14] Assign
+
+
+2025-04-23 10:26:39,419 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 33: S66c73d11ac80400b8eedfc42cd48cd21 (15/21) - (29/53)
+ - [15] RightClick
+
+
+2025-04-23 10:26:39,503 [T10] INFO  WinFinder
+Finding Object In App... Try: 1, IsLastTry: False. AppCount: 1
+
+2025-04-23 10:26:39,506 [T10] DEBUG WinElementTargetFinder
+## Object Find In App (name: '자동차 판매실적 : 다나와 자동차 - Chrome')
+
+2025-04-23 10:26:40,319 [T10] INFO  WinFinder
+ . Finding Object by 'RelativePoint Search' (Try: 1) ... 
+
+2025-04-23 10:26:40,447 [T12-ScriptEngine] INFO  WinFinder
+Finding Result: Found by 'ObjectPathEx' method. (Total: 1)
+ - name: 'recordMonth'
+ - value: ''
+
+2025-04-23 10:26:40,872 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 34: S63601c69e66d4b5cb2a293fc6e5e5dbd (16/21) - (29/53)
+ - [16] Click
+
+
+2025-04-23 10:26:40,939 [T28] INFO  WinFinder
+Finding Object In App... Try: 1, IsLastTry: False. AppCount: 1
+
+2025-04-23 10:26:40,940 [T28] DEBUG WinElementTargetFinder
+## Object Find In App (name: '자동차 판매실적 : 다나와 자동차 - Chrome')
+
+2025-04-23 10:26:41,008 [T28] INFO  WinFinder
+ . Finding Object by 'RelativePoint Search' (Try: 1) ... 
+
+2025-04-23 10:26:41,084 [T12-ScriptEngine] INFO  WinFinder
+Finding Result: Found by 'ObjectPathEx' method. (Total: 1)
+ - name: 'Capture node screenshot'
+ - value: ''
+
+2025-04-23 10:26:41,505 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 35: Sd3fa3672cde84392b9e2c9d4dd9f2017 (17/21) - (29/53)
+ - [17] SetText
+
+
+2025-04-23 10:26:41,576 [T28] INFO  WinFinder
+Finding Object In App... Try: 1, IsLastTry: False. AppCount: 1
+
+2025-04-23 10:26:41,577 [T28] DEBUG WinElementTargetFinder
+## Object Find In App (name: '자동차 판매실적 : 다나와 자동차 - Chrome')
+
+2025-04-23 10:26:43,549 [T12-ScriptEngine] INFO  WinFinder
+Finding Result: Found by 'TopDownV2' method. (Total: 1)
+ - name: '파일 이름:'
+ - value: 'auto.danawa.com_auto__Work=record&Tab=Top10&Brand=...'
+
+2025-04-23 10:26:43,671 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 36: Sb2c13b18832342b58cae06037f9d5855 (18/21) - (29/53)
+ - [18] End-IfThen
+
+
+2025-04-23 10:26:43,687 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 37: S9bb6cafa34ab4b78ad9710051ada2797 (19/21) - (29/53)
+ - [19] Click
+
+
+2025-04-23 10:26:43,728 [T22] INFO  WinFinder
+Finding Object In App... Try: 1, IsLastTry: False. AppCount: 1
+
+2025-04-23 10:26:43,894 [T22] DEBUG WinElementTargetFinder
+## Object Find In App (name: '자동차 판매실적 : 다나와 자동차 - Chrome')
+
+2025-04-23 10:26:43,910 [T22] INFO  WinFinder
+ . Finding Object by 'RelativePoint Search' (Try: 1) ... 
+
+2025-04-23 10:26:43,971 [T12-ScriptEngine] INFO  WinFinder
+Finding Result: Found by 'ObjectPathEx' method. (Total: 1)
+ - name: '저장(S)'
+ - value: ''
+
+2025-04-23 10:26:44,658 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 38: Saa0c9da2bb2740b28db9bc8734f1de5b (20/21) - (30/53)
+ - [20] End-Foreach
+
+
+2025-04-23 10:26:44,668 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 39: S90ffd3bae51c4bac976fe4695c7d7db5 (21/21) - (31/53)
+ - [21] KeyInput
+
+
+2025-04-23 10:26:46,548 [T12-ScriptEngine] INFO  JobRunner
+[PASS] TASK: T_06_이미지추출및저장 => Microsoft.ClearScript.V8.V8ScriptItem
+
+2025-04-23 10:26:46,550 [T12-ScriptEngine] INFO  JobRequest
+##############################################################
+### STATE: EndTask - T_06_이미지추출및저장
+##############################################################
+95a5f8e4-2921-4d9a-b571-9f593666192c
+T_06_이미지추출및저장
+
+
+2025-04-23 10:26:46,580 [T12-ScriptEngine] INFO  JobRequest
+**************************************************************
+*** TASK: P_제조사별판매실적조회
+**************************************************************
+ - STEP 40: S99f168d9565e4f389982971206a5f462 (11/13) - (32/53)
+ - [11] RunTask
+
+
+2025-04-23 10:26:46,589 [T12-ScriptEngine] INFO  JobRequest
+##############################################################
+### STATE: StartTask - T_07_데이터추출및가공
+##############################################################
+0fceb893-2120-4d30-b13f-298222c1c71e
+T_07_데이터추출및가공
+
+
+2025-04-23 10:26:46,596 [T12-ScriptEngine] INFO  JobRequest
+**************************************************************
+*** TASK: T_07_데이터추출및가공
+**************************************************************
+ - STEP 41: S0cccce61f2d84480b991d7643f8bfcfa (1/4) - (33/53)
+ - [1] GetGridItems
+
+
+2025-04-23 10:26:46,661 [T10] INFO  WinFinder
+Finding Object In App... Try: 1, IsLastTry: False. AppCount: 1
+
+2025-04-23 10:26:46,662 [T10] DEBUG WinElementTargetFinder
+## Object Find In App (name: '자동차 판매실적 : 다나와 자동차 - Chrome')
+
+2025-04-23 10:26:50,043 [T12-ScriptEngine] INFO  WinFinder
+Finding Result: Found by 'ObjectPathEx' method. (Total: 1)
+ - name: '1'
+ - value: ''
+
+2025-04-23 10:26:50,360 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 42: Sfa103e47800d4740b1ba9b6dced88ca0 (2/4) - (34/53)
+ - [2] ExecuteScript
+
+
+2025-04-23 10:26:50,391 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 43: Sc4b1014c695843a0b766136ce0c3a000 (3/4) - (35/53)
+ - [3] ChromeGetListData
+
+
+2025-04-23 10:26:50,455 [T22] DEBUG RestorePuppeteer
+Restore Session Start
+
+2025-04-23 10:26:50,461 [T22] DEBUG RestorePuppeteer
+Restore Session Start
+
+2025-04-23 10:26:50,614 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 44: S0ae2cdf45c014ee9a7450d6142e76315 (4/4) - (36/53)
+ - [4] ExecuteScript
+
+
+2025-04-23 10:26:50,648 [T12-ScriptEngine] INFO  JobRunner
+[PASS] TASK: T_07_데이터추출및가공 => Microsoft.ClearScript.V8.V8ScriptItem
+
+2025-04-23 10:26:50,648 [T12-ScriptEngine] INFO  JobRequest
+##############################################################
+### STATE: EndTask - T_07_데이터추출및가공
+##############################################################
+0fceb893-2120-4d30-b13f-298222c1c71e
+T_07_데이터추출및가공
+
+
+2025-04-23 10:26:50,662 [T12-ScriptEngine] INFO  JobRequest
+**************************************************************
+*** TASK: P_제조사별판매실적조회
+**************************************************************
+ - STEP 45: Sa42936680124418989d9905c47dbc19f (12/13) - (37/53)
+ - [12] RunTask
+
+
+2025-04-23 10:26:50,709 [T12-ScriptEngine] INFO  JobRequest
+##############################################################
+### STATE: StartTask - T_08_엑셀에데이터입력
+##############################################################
+cac1c9bf-045f-49b6-9d07-f350c676b104
+T_08_엑셀에데이터입력
+
+
+2025-04-23 10:26:50,725 [T12-ScriptEngine] INFO  JobRequest
+**************************************************************
+*** TASK: T_08_엑셀에데이터입력
+**************************************************************
+ - STEP 46: Se5a15c94a3d644cab674ba0ea2ce05e9 (1/15) - (38/53)
+ - [1] OpenExcel
+
+
+2025-04-23 10:26:53,911 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 47: Sc20bf500ab934daab22fd379fa21ad49 (2/15) - (39/53)
+ - [2] WriteRange
+
+
+2025-04-23 10:26:54,114 [T12-ScriptEngine] DEBUG WriteRange
+START - '보고서_Template.xlsx', Init  startCell: (A4), total 8 rows, chuck 10000. 
+
+2025-04-23 10:26:54,225 [T12-ScriptEngine] DEBUG WriteRange
+END   - '보고서_Template.xlsx', Final startCell: (A12)
+
+2025-04-23 10:26:54,232 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 48: Sdbd248a43e4349b6a9d62849aabaa4b3 (3/15) - (40/53)
+ - [3] WriteRange
+
+
+2025-04-23 10:26:54,326 [T12-ScriptEngine] DEBUG WriteRange
+START - '보고서_Template.xlsx', Init  startCell: (I4), total 1 rows, chuck 10000. 
+
+2025-04-23 10:26:54,335 [T12-ScriptEngine] DEBUG WriteRange
+END   - '보고서_Template.xlsx', Final startCell: (I5)
+
+2025-04-23 10:26:54,339 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 49: S39e9316401904368a22e72df64ae39be (4/15) - (41/53)
+ - [4] SelectRange
+
+
+2025-04-23 10:26:54,780 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 50: S52ec4d613eb346d19c3202b4147b677b (5/15) - (42/53)
+ - [5] Click
+
+
+2025-04-23 10:26:54,814 [T23] INFO  WinFinder
+Finding Object In App... Try: 1, IsLastTry: False. AppCount: 1
+
+2025-04-23 10:26:54,815 [T23] DEBUG WinElementTargetFinder
+## Object Find In App (name: '보고서_Template.xlsx - Excel')
+
+2025-04-23 10:26:54,869 [T23] INFO  WinFinder
+ . Finding Object by 'RelativePoint Search' (Try: 1) ... 
+
+2025-04-23 10:26:54,949 [T12-ScriptEngine] INFO  WinFinder
+Finding Result: Found by 'ObjectPathEx' method. (Total: 1)
+ - name: '삽입'
+ - value: ''
+
+2025-04-23 10:26:55,361 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 51: Sc0894bfd8b164378baf7e51191d33b12 (6/15) - (43/53)
+ - [6] Click
+
+
+2025-04-23 10:26:55,407 [T25] INFO  WinFinder
+Finding Object In App... Try: 1, IsLastTry: False. AppCount: 1
+
+2025-04-23 10:26:55,407 [T25] DEBUG WinElementTargetFinder
+## Object Find In App (name: '보고서_Template.xlsx - Excel')
+
+2025-04-23 10:26:55,491 [T25] INFO  WinFinder
+ . Finding Object by 'RelativePoint Search' (Try: 1) ... 
+
+2025-04-23 10:26:55,561 [T12-ScriptEngine] INFO  WinFinder
+Finding Result: Found by 'ObjectPathEx' method. (Total: 1)
+ - name: '그림'
+ - value: ''
+
+2025-04-23 10:26:55,973 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 52: Sb425a710a388418fb8be98c43de43bac (7/15) - (44/53)
+ - [7] Click
+
+
+2025-04-23 10:26:56,010 [T8] INFO  WinFinder
+Finding Object In App... Try: 1, IsLastTry: False. AppCount: 1
+
+2025-04-23 10:26:56,011 [T8] DEBUG WinElementTargetFinder
+## Object Find In App (name: '보고서_Template.xlsx - Excel')
+
+2025-04-23 10:26:56,102 [T8] INFO  WinFinder
+ . Finding Object by 'RelativePoint Search' (Try: 1) ... 
+
+2025-04-23 10:26:56,175 [T12-ScriptEngine] INFO  WinFinder
+Finding Result: Found by 'ObjectPathEx' method. (Total: 1)
+ - name: '이 디바이스...'
+ - value: ''
+
+2025-04-23 10:26:56,601 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 53: S340858679b5f44e18fc128d43f529424 (8/15) - (45/53)
+ - [8] TextInput
+
+
+2025-04-23 10:26:56,695 [T28] INFO  WinFinder
+Finding Object In App... Try: 1, IsLastTry: False. AppCount: 1
+
+2025-04-23 10:26:56,695 [T28] DEBUG WinElementTargetFinder
+## Object Find In App (name: '보고서_Template.xlsx - Excel')
+
+2025-04-23 10:26:58,065 [T28] INFO  WinFinder
+Finding Object In App... Try: 2, IsLastTry: False. AppCount: 1
+
+2025-04-23 10:26:59,216 [T10] WARN  WinApi
+SetForeground Failed.
+ Attach ThreadInput - True
+ Foreground Window - HWND: 918824, Title: 그림 삽입, PID: 11324, ProcessName: EXCEL
+ Target Window - HWND: 1508768, Title: 보고서_Template.xlsx - Excel, PID: 11324, ProcessName: EXCEL
+
+2025-04-23 10:26:59,332 [T28] DEBUG WinElementTargetFinder
+## Object Find In App (name: '보고서_Template.xlsx - Excel')
+
+2025-04-23 10:26:59,366 [T28] INFO  WinFinder
+ . Finding Object by 'RelativePoint Search' (Try: 2) ... 
+
+2025-04-23 10:26:59,428 [T12-ScriptEngine] INFO  WinFinder
+Finding Result: Found by 'ObjectPathEx' method. (Total: 1)
+ - name: '파일 이름(N):'
+ - value: ''
+
+2025-04-23 10:27:03,302 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 54: Sd7fd87705cc548bd834cb561ef525903 (9/15) - (46/53)
+ - [9] Click
+
+
+2025-04-23 10:27:03,476 [T23] DEBUG UIAEventHandler
+UI Structure Changed Count: 0
+
+2025-04-23 10:27:03,476 [T23] DEBUG UIAEventHandler
+Waiting additional time 152 msec for the screen structure is changing. Requested interval: 200 msec.
+
+2025-04-23 10:27:03,483 [T23] INFO  WinFinder
+Finding Object In App... Try: 1, IsLastTry: False. AppCount: 1
+
+2025-04-23 10:27:04,512 [T22] WARN  WinApi
+SetForeground Failed.
+ Attach ThreadInput - True
+ Foreground Window - HWND: 918824, Title: 그림 삽입, PID: 11324, ProcessName: EXCEL
+ Target Window - HWND: 1508768, Title: 보고서_Template.xlsx - Excel, PID: 11324, ProcessName: EXCEL
+
+2025-04-23 10:27:04,626 [T23] DEBUG WinElementTargetFinder
+## Object Find In App (name: '보고서_Template.xlsx - Excel')
+
+2025-04-23 10:27:04,702 [T23] INFO  WinFinder
+ . Finding Object by 'RelativePoint Search' (Try: 1) ... 
+
+2025-04-23 10:27:04,766 [T12-ScriptEngine] INFO  WinFinder
+Finding Result: Found by 'ObjectPathEx' method. (Total: 1)
+ - name: '삽입(S)'
+ - value: ''
+
+2025-04-23 10:27:05,396 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 55: Sb0bd8783e7194c929e25fbc74fcec2de (10/15) - (47/53)
+ - [10] SelectRange
+
+
+2025-04-23 10:27:06,766 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 56: S9ec301a706564d7497c2446ff8839975 (11/15) - (48/53)
+ - [11] Click
+
+
+2025-04-23 10:27:06,796 [T28] INFO  WinFinder
+Finding Object In App... Try: 1, IsLastTry: False. AppCount: 1
+
+2025-04-23 10:27:06,797 [T28] DEBUG WinElementTargetFinder
+## Object Find In App (name: '보고서_Template.xlsx - Excel')
+
+2025-04-23 10:27:06,848 [T28] INFO  WinFinder
+ . Finding Object by 'RelativePoint Search' (Try: 1) ... 
+
+2025-04-23 10:27:06,917 [T12-ScriptEngine] INFO  WinFinder
+Finding Result: Found by 'ObjectPathEx' method. (Total: 1)
+ - name: '삽입'
+ - value: ''
+
+2025-04-23 10:27:07,331 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 57: S2e48591ea7c04d75a37f0ac2a015d27c (12/15) - (49/53)
+ - [12] Click
+
+
+2025-04-23 10:27:07,368 [T25] INFO  WinFinder
+Finding Object In App... Try: 1, IsLastTry: False. AppCount: 1
+
+2025-04-23 10:27:07,369 [T25] DEBUG WinElementTargetFinder
+## Object Find In App (name: '보고서_Template.xlsx - Excel')
+
+2025-04-23 10:27:07,471 [T25] INFO  WinFinder
+ . Finding Object by 'RelativePoint Search' (Try: 1) ... 
+
+2025-04-23 10:27:07,533 [T12-ScriptEngine] INFO  WinFinder
+Finding Result: Found by 'ObjectPathEx' method. (Total: 1)
+ - name: '그림'
+ - value: ''
+
+2025-04-23 10:27:07,961 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 58: S4faebef086034c1db0a0d926be96679f (13/15) - (50/53)
+ - [13] Click
+
+
+2025-04-23 10:27:08,210 [T23] DEBUG UIAEventHandler
+UI Structure Changed Count: 3
+
+2025-04-23 10:27:08,512 [T23] DEBUG UIAEventHandler
+Waiting additional time 518 msec for the screen structure is changing. Requested interval: 200 msec.
+
+2025-04-23 10:27:08,553 [T23] INFO  WinFinder
+Finding Object In App... Try: 1, IsLastTry: False. AppCount: 1
+
+2025-04-23 10:27:08,554 [T23] DEBUG WinElementTargetFinder
+## Object Find In App (name: '보고서_Template.xlsx - Excel')
+
+2025-04-23 10:27:08,634 [T23] INFO  WinFinder
+ . Finding Object by 'RelativePoint Search' (Try: 1) ... 
+
+2025-04-23 10:27:08,727 [T12-ScriptEngine] INFO  WinFinder
+Finding Result: Found by 'ObjectPathEx' method. (Total: 1)
+ - name: '이 디바이스...'
+ - value: ''
+
+2025-04-23 10:27:09,156 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 59: S9d27115ec8974c11811cc5a39c3dca7e (14/15) - (51/53)
+ - [14] TextInput
+
+
+2025-04-23 10:27:09,615 [T24] INFO  WinFinder
+Finding Object In App... Try: 1, IsLastTry: False. AppCount: 1
+
+2025-04-23 10:27:10,644 [T11] WARN  WinApi
+SetForeground Failed.
+ Attach ThreadInput - True
+ Foreground Window - HWND: 984350, Title: 그림 삽입, PID: 11324, ProcessName: EXCEL
+ Target Window - HWND: 1508768, Title: 보고서_Template.xlsx - Excel, PID: 11324, ProcessName: EXCEL
+
+2025-04-23 10:27:10,758 [T24] DEBUG WinElementTargetFinder
+## Object Find In App (name: '보고서_Template.xlsx - Excel')
+
+2025-04-23 10:27:10,825 [T24] INFO  WinFinder
+ . Finding Object by 'RelativePoint Search' (Try: 1) ... 
+
+2025-04-23 10:27:10,889 [T12-ScriptEngine] INFO  WinFinder
+Finding Result: Found by 'ObjectPathEx' method. (Total: 1)
+ - name: '파일 이름(N):'
+ - value: ''
+
+2025-04-23 10:27:14,807 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 60: Sb55f00a54a2d497fafb8d35de4cc0591 (15/15) - (52/53)
+ - [15] Click
+
+
+2025-04-23 10:27:14,964 [T8] DEBUG UIAEventHandler
+UI Structure Changed Count: 0
+
+2025-04-23 10:27:14,964 [T8] DEBUG UIAEventHandler
+Waiting additional time 116 msec for the screen structure is changing. Requested interval: 200 msec.
+
+2025-04-23 10:27:14,980 [T8] INFO  WinFinder
+Finding Object In App... Try: 1, IsLastTry: False. AppCount: 1
+
+2025-04-23 10:27:16,004 [T28] WARN  WinApi
+SetForeground Failed.
+ Attach ThreadInput - True
+ Foreground Window - HWND: 984350, Title: 그림 삽입, PID: 11324, ProcessName: EXCEL
+ Target Window - HWND: 1508768, Title: 보고서_Template.xlsx - Excel, PID: 11324, ProcessName: EXCEL
+
+2025-04-23 10:27:16,107 [T8] DEBUG WinElementTargetFinder
+## Object Find In App (name: '보고서_Template.xlsx - Excel')
+
+2025-04-23 10:27:16,133 [T8] INFO  WinFinder
+ . Finding Object by 'RelativePoint Search' (Try: 1) ... 
+
+2025-04-23 10:27:16,193 [T12-ScriptEngine] INFO  WinFinder
+Finding Result: Found by 'ObjectPathEx' method. (Total: 1)
+ - name: '삽입(S)'
+ - value: ''
+
+2025-04-23 10:27:16,798 [T12-ScriptEngine] INFO  JobRunner
+[PASS] TASK: T_08_엑셀에데이터입력
+
+2025-04-23 10:27:16,800 [T12-ScriptEngine] INFO  JobRequest
+##############################################################
+### STATE: EndTask - T_08_엑셀에데이터입력
+##############################################################
+cac1c9bf-045f-49b6-9d07-f350c676b104
+T_08_엑셀에데이터입력
+
+
+2025-04-23 10:27:16,824 [T12-ScriptEngine] INFO  JobRequest
+**************************************************************
+*** TASK: P_제조사별판매실적조회
+**************************************************************
+ - STEP 61: S890f1e53a9584a45a52a910079f84042 (9/13) - (52/53)
+ - [9] RunTask
+
+
+2025-04-23 10:27:16,868 [T12-ScriptEngine] INFO  JobRequest
+##############################################################
+### STATE: StartTask - T_05_데이터조회
+##############################################################
+2d0c4bb8-5b51-4cb3-83fd-ae89737d3adb
+T_05_데이터조회
+
+
+2025-04-23 10:27:16,938 [T12-ScriptEngine] INFO  JobRequest
+**************************************************************
+*** TASK: T_05_데이터조회
+**************************************************************
+ - STEP 62: Sf115cb55dc5d45a3bfe94857ddd43f47 (1/5) - (52/53)
+ - [1] MouseHover
+
+
+2025-04-23 10:27:17,288 [T23] INFO  WinFinder
+Finding Object In App... Try: 1, IsLastTry: False. AppCount: 1
+
+2025-04-23 10:27:17,441 [T23] DEBUG WinElementTargetFinder
+## Object Find In App (name: '자동차 판매실적 : 다나와 자동차 - Chrome')
+
+2025-04-23 10:27:18,762 [T23] INFO  WinFinder
+Finding Object In App... Try: 2, IsLastTry: False. AppCount: 1
+
+2025-04-23 10:27:18,763 [T23] DEBUG WinElementTargetFinder
+## Object Find In App (name: '자동차 판매실적 : 다나와 자동차 - Chrome')
+
+2025-04-23 10:27:20,247 [T23] INFO  WinFinder
+Finding Object In App... Try: 3, IsLastTry: False. AppCount: 1
+
+2025-04-23 10:27:20,250 [T23] DEBUG WinElementTargetFinder
+## Object Find In App (name: '자동차 판매실적 : 다나와 자동차 - Chrome')
+
+2025-04-23 10:27:21,632 [T23] INFO  WinFinder
+Finding Object In App... Try: 4, IsLastTry: False. AppCount: 1
+
+2025-04-23 10:27:21,632 [T23] DEBUG WinElementTargetFinder
+## Object Find In App (name: '자동차 판매실적 : 다나와 자동차 - Chrome')
+
+2025-04-23 10:27:22,003 [T23] INFO  WinFinder
+ . Finding Object by 'RelativePoint Search' (Try: 4) ... 
+
+2025-04-23 10:27:22,099 [T12-ScriptEngine] INFO  WinFinder
+Finding Result: Found by 'BottomUpV2' method. (Total: 1)
+ - name: '자동차백과'
+ - value: 'https://auto.danawa.com/auto/'
+
+2025-04-23 10:27:22,814 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 63: Sd2a4d3f04e16409e8ef356213fc54dde (2/5) - (52/53)
+ - [2] ChromeClick
+
+
+2025-04-23 10:27:22,821 [T12-ScriptEngine] DEBUG RestorePuppeteer
+Restore Session Start
+
+2025-04-23 10:27:22,828 [T12-ScriptEngine] DEBUG RestorePuppeteer
+Restore Session Start
+
+2025-04-23 10:27:22,830 [T12-ScriptEngine] DEBUG RestorePuppeteer
+Restore Session Start
+
+2025-04-23 10:27:22,834 [T12-ScriptEngine] DEBUG RestorePuppeteer
+Restore Session Start
+
+2025-04-23 10:27:22,835 [T12-ScriptEngine] DEBUG RestorePuppeteer
+Restore Session Start
+
+2025-04-23 10:27:23,235 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 64: Sa8d3279067a94e95adb0c7fd9ba00049 (3/5) - (52/53)
+ - [3] SelectComboBox
+
+
+2025-04-23 10:27:23,510 [T22] INFO  WinFinder
+Finding Object In App... Try: 1, IsLastTry: False. AppCount: 1
+
+2025-04-23 10:27:23,510 [T22] DEBUG WinElementTargetFinder
+## Object Find In App (name: '자동차 판매실적 : 다나와 자동차 - Chrome')
+
+2025-04-23 10:27:24,336 [T22] DEBUG UIAEventHandler
+UI Structure Changed Count: 0
+
+2025-04-23 10:27:24,336 [T22] DEBUG UIAEventHandler
+Waiting additional time 46 msec for the screen structure is changing. Requested interval: 100 msec.
+
+2025-04-23 10:27:24,336 [T12-ScriptEngine] INFO  WinFinder
+Finding Result: Found by 'BottomUpV2' method. (Total: 1)
+ - name: ''
+ - value: '2025년'
+
+2025-04-23 10:27:25,343 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 65: Sf002983af3d24a98b337bc1d7bfa2b82 (4/5) - (52/53)
+ - [4] SelectComboBox
+
+
+2025-04-23 10:27:25,378 [T24] INFO  WinFinder
+Finding Object In App... Try: 1, IsLastTry: False. AppCount: 3
+
+2025-04-23 10:27:25,378 [T24] DEBUG WinElementTargetFinder
+## Object Find In App (Foreground) (name: '자동차 판매실적 : 다나와 자동차 - Chrome')
+
+2025-04-23 10:27:25,486 [T12-ScriptEngine] INFO  WinFinder
+Finding Result: Found by 'ObjectPathEx' method. (Total: 1)
+ - name: ''
+ - value: '03월'
+
+2025-04-23 10:27:26,523 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 66: S4eb3af5e63524fd2ac1ef2ffdaf594e1 (5/5) - (52/53)
+ - [5] ChromeClick
+
+
+2025-04-23 10:27:26,714 [T12-ScriptEngine] DEBUG RestorePuppeteer
+Restore Session Start
+
+2025-04-23 10:27:26,878 [T12-ScriptEngine] DEBUG RestorePuppeteer
+Restore Session Start
+
+2025-04-23 10:27:26,888 [T12-ScriptEngine] DEBUG RestorePuppeteer
+Restore Session Start
+
+2025-04-23 10:27:26,891 [T12-ScriptEngine] DEBUG RestorePuppeteer
+Restore Session Start
+
+2025-04-23 10:27:26,892 [T12-ScriptEngine] DEBUG RestorePuppeteer
+Restore Session Start
+
+2025-04-23 10:27:27,293 [T12-ScriptEngine] INFO  JobRunner
+[PASS] TASK: T_05_데이터조회
+
+2025-04-23 10:27:27,295 [T12-ScriptEngine] INFO  JobRequest
+##############################################################
+### STATE: EndTask - T_05_데이터조회
+##############################################################
+2d0c4bb8-5b51-4cb3-83fd-ae89737d3adb
+T_05_데이터조회
+
+
+2025-04-23 10:27:27,305 [T12-ScriptEngine] INFO  JobRequest
+**************************************************************
+*** TASK: P_제조사별판매실적조회
+**************************************************************
+ - STEP 67: S6f12e2705b16421ebd8b8bac2ea5ca59 (10/13) - (52/53)
+ - [10] RunTask
+
+
+2025-04-23 10:27:27,351 [T12-ScriptEngine] INFO  JobRequest
+##############################################################
+### STATE: StartTask - T_06_이미지추출및저장
+##############################################################
+95a5f8e4-2921-4d9a-b571-9f593666192c
+T_06_이미지추출및저장
+
+
+2025-04-23 10:27:27,412 [T12-ScriptEngine] INFO  JobRequest
+**************************************************************
+*** TASK: T_06_이미지추출및저장
+**************************************************************
+ - STEP 68: S0baf62232e214672a877a0eabcc8333c (1/21) - (52/53)
+ - [1] Delay
+
+
+2025-04-23 10:27:30,433 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 69: S65769974399f460385e011efcbf98c98 (2/21) - (52/53)
+ - [2] KeyInput
+
+
+2025-04-23 10:27:32,332 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 70: Sda04fa7cbb704886b3a5c738054a57ac (3/21) - (52/53)
+ - [3] Foreach
+
+
+2025-04-23 10:27:32,349 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 71: Sccb235ea67924a33aed08675a0dade38 (4/21) - (52/53)
+ - [4] Delay
+
+
+2025-04-23 10:27:33,379 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 72: Sfb013237310b4df48940cb848294de2b (5/21) - (52/53)
+ - [5] KeyInput
+
+
+2025-04-23 10:27:35,516 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 73: S1d116dc87b7d4f858749d56a2fc5821d (6/21) - (52/53)
+ - [6] SetText
+
+
+2025-04-23 10:27:35,556 [T28] INFO  WinFinder
+Finding Object In App... Try: 1, IsLastTry: False. AppCount: 1
+
+2025-04-23 10:27:35,557 [T28] DEBUG WinElementTargetFinder
+## Object Find In App (name: '자동차 판매실적 : 다나와 자동차 - Chrome')
+
+2025-04-23 10:27:35,697 [T12-ScriptEngine] INFO  WinFinder
+Finding Result: Found by 'ObjectPathEx' method. (Total: 1)
+ - name: 'Find by string, selector, or XPath'
+ - value: ''
+
+2025-04-23 10:27:35,832 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 74: Se39355b95cff4494bc6222725b8f2282 (7/21) - (52/53)
+ - [7] IfThen
+
+
+2025-04-23 10:27:35,848 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 75: Se40f6eda6c0143f9a8bf188c4d22246f (8/21) - (52/53)
+ - [8] Assign
+
+
+2025-04-23 10:27:35,864 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 76: S9f0c07664c094e49acb313df7166c6c4 (9/21) - (52/53)
+ - [9] RightClick
+
+
+2025-04-23 10:27:35,920 [T25] INFO  WinFinder
+Finding Object In App... Try: 1, IsLastTry: False. AppCount: 1
+
+2025-04-23 10:27:35,921 [T25] DEBUG WinElementTargetFinder
+## Object Find In App (name: '자동차 판매실적 : 다나와 자동차 - Chrome')
+
+2025-04-23 10:27:37,029 [T25] INFO  WinFinder
+ . Finding Object by 'RelativePoint Search' (Try: 1) ... 
+
+2025-04-23 10:27:37,163 [T12-ScriptEngine] INFO  WinFinder
+Finding Result: Found by 'ObjectPathEx' method. (Total: 1)
+ - name: 'recordBrand'
+ - value: ''
+
+2025-04-23 10:27:37,584 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 77: S341ad4a12665425588a29db15c70a99e (10/21) - (52/53)
+ - [10] Click
+
+
+2025-04-23 10:27:37,641 [T24] INFO  WinFinder
+Finding Object In App... Try: 1, IsLastTry: False. AppCount: 1
+
+2025-04-23 10:27:37,641 [T24] DEBUG WinElementTargetFinder
+## Object Find In App (name: '자동차 판매실적 : 다나와 자동차 - Chrome')
+
+2025-04-23 10:27:37,689 [T24] INFO  WinFinder
+ . Finding Object by 'RelativePoint Search' (Try: 1) ... 
+
+2025-04-23 10:27:37,762 [T12-ScriptEngine] INFO  WinFinder
+Finding Result: Found by 'ObjectPathEx' method. (Total: 1)
+ - name: 'Capture node screenshot'
+ - value: ''
+
+2025-04-23 10:27:38,168 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 78: Sbc7009c0dbd2465e927a3c6cdd482a41 (11/21) - (52/53)
+ - [11] SetText
+
+
+2025-04-23 10:27:38,232 [T10] INFO  WinFinder
+Finding Object In App... Try: 1, IsLastTry: False. AppCount: 1
+
+2025-04-23 10:27:38,233 [T10] DEBUG WinElementTargetFinder
+## Object Find In App (name: '자동차 판매실적 : 다나와 자동차 - Chrome')
+
+2025-04-23 10:27:39,804 [T12-ScriptEngine] INFO  WinFinder
+Finding Result: Found by 'TopDown' method. (Total: 1)
+ - name: '파일 이름:'
+ - value: 'auto.danawa.com_auto__Work=record&Tab=Top10&Brand=...'
+
+2025-04-23 10:27:39,924 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 79: S9f399d5084e545af99876a98fe9bd9bd (12/21) - (52/53)
+ - [12] End-IfThen
+
+
+2025-04-23 10:27:39,940 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 80: S778026fd447141e98ff9380c98f4ee68 (13/21) - (52/53)
+ - [13] IfThen
+
+
+2025-04-23 10:27:39,955 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 81: Sb2c13b18832342b58cae06037f9d5855 (18/21) - (52/53)
+ - [18] End-IfThen
+
+
+2025-04-23 10:27:39,971 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 82: S9bb6cafa34ab4b78ad9710051ada2797 (19/21) - (52/53)
+ - [19] Click
+
+
+2025-04-23 10:27:40,004 [T10] INFO  WinFinder
+Finding Object In App... Try: 1, IsLastTry: False. AppCount: 1
+
+2025-04-23 10:27:40,178 [T10] DEBUG WinElementTargetFinder
+## Object Find In App (name: '자동차 판매실적 : 다나와 자동차 - Chrome')
+
+2025-04-23 10:27:40,194 [T10] INFO  WinFinder
+ . Finding Object by 'RelativePoint Search' (Try: 1) ... 
+
+2025-04-23 10:27:40,256 [T12-ScriptEngine] INFO  WinFinder
+Finding Result: Found by 'ObjectPathEx' method. (Total: 1)
+ - name: '저장(S)'
+ - value: ''
+
+2025-04-23 10:27:40,937 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 83: Sccb235ea67924a33aed08675a0dade38 (4/21) - (52/53)
+ - [4] Delay
+
+
+2025-04-23 10:27:41,974 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 84: Sfb013237310b4df48940cb848294de2b (5/21) - (52/53)
+ - [5] KeyInput
+
+
+2025-04-23 10:27:44,125 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 85: S1d116dc87b7d4f858749d56a2fc5821d (6/21) - (52/53)
+ - [6] SetText
+
+
+2025-04-23 10:27:44,186 [T10] INFO  WinFinder
+Finding Object In App... Try: 1, IsLastTry: False. AppCount: 1
+
+2025-04-23 10:27:44,187 [T10] DEBUG WinElementTargetFinder
+## Object Find In App (name: '자동차 판매실적 : 다나와 자동차 - Chrome')
+
+2025-04-23 10:27:44,517 [T12-ScriptEngine] INFO  WinFinder
+Finding Result: Found by 'ObjectPathEx' method. (Total: 1)
+ - name: 'Find by string, selector, or XPath'
+ - value: 'recordBrand'
+
+2025-04-23 10:27:44,680 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 86: Se39355b95cff4494bc6222725b8f2282 (7/21) - (52/53)
+ - [7] IfThen
+
+
+2025-04-23 10:27:44,696 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 87: S9f399d5084e545af99876a98fe9bd9bd (12/21) - (52/53)
+ - [12] End-IfThen
+
+
+2025-04-23 10:27:44,712 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 88: S778026fd447141e98ff9380c98f4ee68 (13/21) - (52/53)
+ - [13] IfThen
+
+
+2025-04-23 10:27:44,728 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 89: S41c75a1d74e74839a79fad0d07cc9392 (14/21) - (52/53)
+ - [14] Assign
+
+
+2025-04-23 10:27:44,744 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 90: S66c73d11ac80400b8eedfc42cd48cd21 (15/21) - (52/53)
+ - [15] RightClick
+
+
+2025-04-23 10:27:44,856 [T22] INFO  WinFinder
+Finding Object In App... Try: 1, IsLastTry: False. AppCount: 1
+
+2025-04-23 10:27:44,858 [T22] DEBUG WinElementTargetFinder
+## Object Find In App (name: '자동차 판매실적 : 다나와 자동차 - Chrome')
+
+2025-04-23 10:27:45,694 [T22] INFO  WinFinder
+ . Finding Object by 'RelativePoint Search' (Try: 1) ... 
+
+2025-04-23 10:27:45,839 [T12-ScriptEngine] INFO  WinFinder
+Finding Result: Found by 'ObjectPathEx' method. (Total: 1)
+ - name: 'recordMonth'
+ - value: ''
+
+2025-04-23 10:27:46,246 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 91: S63601c69e66d4b5cb2a293fc6e5e5dbd (16/21) - (52/53)
+ - [16] Click
+
+
+2025-04-23 10:27:46,314 [T10] INFO  WinFinder
+Finding Object In App... Try: 1, IsLastTry: False. AppCount: 1
+
+2025-04-23 10:27:46,314 [T10] DEBUG WinElementTargetFinder
+## Object Find In App (name: '자동차 판매실적 : 다나와 자동차 - Chrome')
+
+2025-04-23 10:27:46,380 [T10] INFO  WinFinder
+ . Finding Object by 'RelativePoint Search' (Try: 1) ... 
+
+2025-04-23 10:27:46,454 [T12-ScriptEngine] INFO  WinFinder
+Finding Result: Found by 'ObjectPathEx' method. (Total: 1)
+ - name: 'Capture node screenshot'
+ - value: ''
+
+2025-04-23 10:27:46,873 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 92: Sd3fa3672cde84392b9e2c9d4dd9f2017 (17/21) - (52/53)
+ - [17] SetText
+
+
+2025-04-23 10:27:46,933 [T10] INFO  WinFinder
+Finding Object In App... Try: 1, IsLastTry: False. AppCount: 1
+
+2025-04-23 10:27:46,933 [T10] DEBUG WinElementTargetFinder
+## Object Find In App (name: '자동차 판매실적 : 다나와 자동차 - Chrome')
+
+2025-04-23 10:27:48,910 [T12-ScriptEngine] INFO  WinFinder
+Finding Result: Found by 'TopDownV2' method. (Total: 1)
+ - name: '파일 이름:'
+ - value: 'auto.danawa.com_auto__Work=record&Tab=Top10&Brand=...'
+
+2025-04-23 10:27:49,031 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 93: Sb2c13b18832342b58cae06037f9d5855 (18/21) - (52/53)
+ - [18] End-IfThen
+
+
+2025-04-23 10:27:49,047 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 94: S9bb6cafa34ab4b78ad9710051ada2797 (19/21) - (52/53)
+ - [19] Click
+
+
+2025-04-23 10:27:49,104 [T22] INFO  WinFinder
+Finding Object In App... Try: 1, IsLastTry: False. AppCount: 1
+
+2025-04-23 10:27:49,269 [T22] DEBUG WinElementTargetFinder
+## Object Find In App (name: '자동차 판매실적 : 다나와 자동차 - Chrome')
+
+2025-04-23 10:27:49,283 [T22] INFO  WinFinder
+ . Finding Object by 'RelativePoint Search' (Try: 1) ... 
+
+2025-04-23 10:27:49,349 [T12-ScriptEngine] INFO  WinFinder
+Finding Result: Found by 'ObjectPathEx' method. (Total: 1)
+ - name: '저장(S)'
+ - value: ''
+
+2025-04-23 10:27:50,029 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 95: Saa0c9da2bb2740b28db9bc8734f1de5b (20/21) - (52/53)
+ - [20] End-Foreach
+
+
+2025-04-23 10:27:50,044 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 96: S90ffd3bae51c4bac976fe4695c7d7db5 (21/21) - (52/53)
+ - [21] KeyInput
+
+
+2025-04-23 10:27:51,945 [T12-ScriptEngine] INFO  JobRunner
+[PASS] TASK: T_06_이미지추출및저장 => Microsoft.ClearScript.V8.V8ScriptItem
+
+2025-04-23 10:27:51,946 [T12-ScriptEngine] INFO  JobRequest
+##############################################################
+### STATE: EndTask - T_06_이미지추출및저장
+##############################################################
+95a5f8e4-2921-4d9a-b571-9f593666192c
+T_06_이미지추출및저장
+
+
+2025-04-23 10:27:51,959 [T12-ScriptEngine] INFO  JobRequest
+**************************************************************
+*** TASK: P_제조사별판매실적조회
+**************************************************************
+ - STEP 97: S99f168d9565e4f389982971206a5f462 (11/13) - (52/53)
+ - [11] RunTask
+
+
+2025-04-23 10:27:51,966 [T12-ScriptEngine] INFO  JobRequest
+##############################################################
+### STATE: StartTask - T_07_데이터추출및가공
+##############################################################
+0fceb893-2120-4d30-b13f-298222c1c71e
+T_07_데이터추출및가공
+
+
+2025-04-23 10:27:51,975 [T12-ScriptEngine] INFO  JobRequest
+**************************************************************
+*** TASK: T_07_데이터추출및가공
+**************************************************************
+ - STEP 98: S0cccce61f2d84480b991d7643f8bfcfa (1/4) - (52/53)
+ - [1] GetGridItems
+
+
+2025-04-23 10:27:52,007 [T10] INFO  WinFinder
+Finding Object In App... Try: 1, IsLastTry: False. AppCount: 1
+
+2025-04-23 10:27:52,008 [T10] DEBUG WinElementTargetFinder
+## Object Find In App (name: '자동차 판매실적 : 다나와 자동차 - Chrome')
+
+2025-04-23 10:27:55,390 [T12-ScriptEngine] INFO  WinFinder
+Finding Result: Found by 'ObjectPathEx' method. (Total: 1)
+ - name: '1'
+ - value: ''
+
+2025-04-23 10:27:55,610 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 99: Sfa103e47800d4740b1ba9b6dced88ca0 (2/4) - (52/53)
+ - [2] ExecuteScript
+
+
+2025-04-23 10:27:55,626 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 100: Sc4b1014c695843a0b766136ce0c3a000 (3/4) - (52/53)
+ - [3] ChromeGetListData
+
+
+2025-04-23 10:27:55,736 [T25] DEBUG RestorePuppeteer
+Restore Session Start
+
+2025-04-23 10:27:55,748 [T25] DEBUG RestorePuppeteer
+Restore Session Start
+
+2025-04-23 10:27:55,862 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 101: S0ae2cdf45c014ee9a7450d6142e76315 (4/4) - (52/53)
+ - [4] ExecuteScript
+
+
+2025-04-23 10:27:55,868 [T12-ScriptEngine] INFO  JobRunner
+[PASS] TASK: T_07_데이터추출및가공 => Microsoft.ClearScript.V8.V8ScriptItem
+
+2025-04-23 10:27:55,869 [T12-ScriptEngine] INFO  JobRequest
+##############################################################
+### STATE: EndTask - T_07_데이터추출및가공
+##############################################################
+0fceb893-2120-4d30-b13f-298222c1c71e
+T_07_데이터추출및가공
+
+
+2025-04-23 10:27:55,878 [T12-ScriptEngine] INFO  JobRequest
+**************************************************************
+*** TASK: P_제조사별판매실적조회
+**************************************************************
+ - STEP 102: Sa42936680124418989d9905c47dbc19f (12/13) - (52/53)
+ - [12] RunTask
+
+
+2025-04-23 10:27:55,896 [T12-ScriptEngine] INFO  JobRequest
+##############################################################
+### STATE: StartTask - T_08_엑셀에데이터입력
+##############################################################
+cac1c9bf-045f-49b6-9d07-f350c676b104
+T_08_엑셀에데이터입력
+
+
+2025-04-23 10:27:55,910 [T12-ScriptEngine] INFO  JobRequest
+**************************************************************
+*** TASK: T_08_엑셀에데이터입력
+**************************************************************
+ - STEP 103: Se5a15c94a3d644cab674ba0ea2ce05e9 (1/15) - (52/53)
+ - [1] OpenExcel
+
+
+2025-04-23 10:27:57,305 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 104: Sc20bf500ab934daab22fd379fa21ad49 (2/15) - (52/53)
+ - [2] WriteRange
+
+
+2025-04-23 10:27:57,396 [T12-ScriptEngine] DEBUG WriteRange
+START - '보고서_Template.xlsx', Init  startCell: (A4), total 5 rows, chuck 10000. 
+
+2025-04-23 10:27:57,464 [T12-ScriptEngine] DEBUG WriteRange
+END   - '보고서_Template.xlsx', Final startCell: (A9)
+
+2025-04-23 10:27:57,478 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 105: Sdbd248a43e4349b6a9d62849aabaa4b3 (3/15) - (52/53)
+ - [3] WriteRange
+
+
+2025-04-23 10:27:57,596 [T12-ScriptEngine] DEBUG WriteRange
+START - '보고서_Template.xlsx', Init  startCell: (I4), total 1 rows, chuck 10000. 
+
+2025-04-23 10:27:57,614 [T12-ScriptEngine] DEBUG WriteRange
+END   - '보고서_Template.xlsx', Final startCell: (I5)
+
+2025-04-23 10:27:57,621 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 106: S39e9316401904368a22e72df64ae39be (4/15) - (52/53)
+ - [4] SelectRange
+
+
+2025-04-23 10:27:58,056 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 107: S52ec4d613eb346d19c3202b4147b677b (5/15) - (52/53)
+ - [5] Click
+
+
+2025-04-23 10:27:58,127 [T10] INFO  WinFinder
+Finding Object In App... Try: 1, IsLastTry: False. AppCount: 1
+
+2025-04-23 10:27:58,128 [T10] DEBUG WinElementTargetFinder
+## Object Find In App (name: '보고서_Template.xlsx - Excel')
+
+2025-04-23 10:27:58,207 [T10] INFO  WinFinder
+ . Finding Object by 'RelativePoint Search' (Try: 1) ... 
+
+2025-04-23 10:27:58,332 [T12-ScriptEngine] INFO  WinFinder
+Finding Result: Found by 'ObjectPathEx' method. (Total: 1)
+ - name: '삽입'
+ - value: ''
+
+2025-04-23 10:27:58,743 [T12-ScriptEngine] INFO  JobRequest
+ - STEP 108: Sc0894bfd8b164378baf7e51191d33b12 (6/15) - (52/53)
+ - [6] Click
+
+
+2025-04-23 10:27:58,813 [T22] INFO  WinFinder
+Finding Object In App... Try: 1, IsLastTry: False. AppCount: 1
+
+2025-04-23 10:27:58,813 [T22] DEBUG WinElementTargetFinder
+## Object Find In App (name: '보고서_Template.xlsx - Excel')
+
+2025-04-23 10:28:01,290 [T22] INFO  WinFinder
+Finding Object In App... Try: 2, IsLastTry: False. AppCount: 1
+
+2025-04-23 10:28:01,291 [T22] DEBUG WinElementTargetFinder
+## Object Find In App (name: '보고서_Template.xlsx - Excel')
+
+2025-04-23 10:28:04,061 [T22] INFO  WinFinder
+Finding Object In App... Try: 3, IsLastTry: False. AppCount: 1
+
+2025-04-23 10:28:04,062 [T22] DEBUG WinElementTargetFinder
+## Object Find In App (name: '보고서_Template.xlsx - Excel')
+
+2025-04-23 10:28:07,145 [T6] INFO  JobService
+Stop Job
+
+2025-04-23 10:28:07,147 [T6] INFO  JobRunner
+Stop Job Runner - Cause: LocalUser / Message: stop by user
+
+2025-04-23 10:28:07,148 [T6] INFO  JobRequest
+##############################################################
+### STATE: Stopping
+##############################################################
+stop by user
+
+
+2025-04-23 10:28:07,160 [T9] DEBUG JobRequest
+Callback - State: Stopping
+stop by user
+
+2025-04-23 10:28:07,318 [T12-ScriptEngine] INFO  WinFinder
+Finding Result: NotFound
+
+2025-04-23 10:28:07,331 [T12-ScriptEngine] DEBUG JobRunner
+RunTask Interrupted. TASK: T_08_엑셀에데이터입력 => Script execution interrupted by host
+
+2025-04-23 10:28:07,367 [T12-ScriptEngine] DEBUG JobRunner
+RunTask Interrupted. TASK: P_제조사별판매실적조회 => 스레드가 대기 상태에서 인터럽트되었습니다.
+
+2025-04-23 10:28:07,437 [T12-ScriptEngine] DEBUG JobManager
+Set Result State: Stopped
+
+2025-04-23 10:28:07,448 [T12-ScriptEngine] INFO  JobRunner
+Make report.
+
+2025-04-23 10:28:07,523 [T12-ScriptEngine] INFO  JobRunner
+Start to clean up resources.
+
+2025-04-23 10:28:07,524 [T10] DEBUG JobRunner
+Start timer for checking the job to be completed.
+
+2025-04-23 10:28:07,524 [T12-ScriptEngine] DEBUG JobRunner
+OnProcessCompleted
+
+2025-04-23 10:28:07,529 [T12-ScriptEngine] DEBUG ExcelBase
+DisposeExcel
+
+2025-04-23 10:28:07,548 [T12-ScriptEngine] INFO  JobRunner
+Start to clean up resources.
+
+2025-04-23 10:28:07,549 [T12-ScriptEngine] DEBUG JobRunner
+Remove all Process Stack: 2
+
+2025-04-23 10:28:07,549 [T12-ScriptEngine] INFO  JobRequest
+##############################################################
+### STATE: EndTask - T_08_엑셀에데이터입력
+##############################################################
+cac1c9bf-045f-49b6-9d07-f350c676b104
+T_08_엑셀에데이터입력
+
+
+2025-04-23 10:28:07,551 [T12-ScriptEngine] INFO  JobRequest
+##############################################################
+### STATE: EndProcess - P_제조사별판매실적조회
+##############################################################
+1129b78b-ed75-4df3-af8f-d08bae3583f3
+P_제조사별판매실적조회
+
+
+2025-04-23 10:28:07,552 [T12-ScriptEngine] DEBUG JobRunner
+Remove all libraries
+
+2025-04-23 10:28:07,554 [T12-ScriptEngine] DEBUG NetPlayer
+WebPlayer OnDispose
+
+2025-04-23 10:28:07,556 [T12-ScriptEngine] DEBUG WebPlayer
+WebPlayer OnDispose : Do Nothing
+
+2025-04-23 10:28:07,557 [T12-ScriptEngine] DEBUG UIAEventHandler
+Stop UIA event handler
+
+2025-04-23 10:28:07,558 [T12-ScriptEngine] DEBUG UIAEventHandler
+Stop UIA event handler
+
+2025-04-23 10:28:07,575 [T12-ScriptEngine] DEBUG UiaAppHelper
+WinHelper DisposeAppList Count: 0
+
+2025-04-23 10:28:07,576 [T12-ScriptEngine] INFO  JobRunner
+All Resources Clear
+
+2025-04-23 10:28:07,579 [T12-ScriptEngine] DEBUG JobRunner
+OnCompleted
+
+2025-04-23 10:28:07,579 [T12-ScriptEngine] DEBUG JobRunner
+SendJobResult: Stopped
+
+2025-04-23 10:28:07,579 [T12-ScriptEngine] INFO  JobRequest
+##############################################################
+### STATE: Stopped
+##############################################################
+Process: P_제조사별판매실적조회
+Task: T_08_엑셀에데이터입력
+Step: Click (6/15)
+
+Stopped by User
+
+
+2025-04-23 10:28:07,579 [T12-ScriptEngine] INFO  JobRequest
+Last job life cycle state: Stopped
+
+2025-04-23 10:28:07,579 [T12-ScriptEngine] INFO  JobRequest
+Update skipped current step informations.
+
+2025-04-23 10:28:07,588 [T12-ScriptEngine] INFO  JobRequest
+##############################################################
+### JOB COMPLETED
+##############################################################
+
+
+2025-04-23 10:28:07,601 [T9] DEBUG JobRequest
+Callback - State: Stopped
+Process: P_제조사별판매실적조회
+Task: T_08_엑셀에데이터입력
+Step: Click (6/15)
+
+Stopped by User
+
+2025-04-23 10:28:07,602 [T9] INFO  JobRequest
+Callback - EngineClosed
+
+2025-04-23 10:28:07,603 [T9] INFO  JobService
+Disconnect agent service
+
+2025-04-23 10:28:07,605 [T9] DEBUG JobRequest
+End of Callback Sender
+

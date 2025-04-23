@@ -1,4 +1,4 @@
-<Process id="95a5f8e4-2921-4d9a-b571-9f593666192c" type="task" workType="foreground" name="T_06_이미지추출및저장" version="" designerVersion="3.1.125.00226" lastPublishedServer="" readonly="false" isValid="true" DesignedBy="Designer" Template="" StepCount="19" Orientation="horizontal">
+<Process id="95a5f8e4-2921-4d9a-b571-9f593666192c" type="task" workType="foreground" name="T_06_이미지추출및저장" version="" designerVersion="3.1.125.00226" lastPublishedServer="" readonly="false" isValid="true" DesignedBy="Designer" Template="" StepCount="21" Orientation="horizontal">
   <Properties>
     <Property key="Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
     <Property key="onBefore" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
@@ -10,13 +10,15 @@
     <Property key="Resolution" controlType="String" valueType="System.String" formatType="String_Size" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="1920x1080" />
     <Property key="CreatedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2025-04-17 15:40:05" />
     <Property key="CreatedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
-    <Property key="LastModifiedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2025-04-22 12:16:45" />
+    <Property key="LastModifiedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2025-04-23 10:25:19" />
     <Property key="LastModifiedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="" />
     <Property key="LastPublishedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
     <Property key="LastPublishedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
   </Properties>
   <LinkItems />
   <Variables>
+    <Variable name="o_str_ImageTablePath" scope="Output" valueType="Any" formatType="Any" initValue="" desc="" colorValue="#FF0E8388" showMarker="False" />
+    <Variable name="o_str_ImageGraphPath" scope="Output" valueType="Any" formatType="Any" initValue="" desc="" colorValue="#FF3C79F5" showMarker="False" />
     <Variable name="str_SearchKeyword" scope="Normal" valueType="Any" formatType="Any" initValue="" desc="" colorValue="#FFD27685" showMarker="False" />
     <Variable name="arr1_SearchKeyword" scope="Normal" valueType="Any" formatType="Any" initValue="['recordBrand','recordMonth']" desc="" colorValue="#FF62B6B7" showMarker="False" />
     <Variable name="i_Index" scope="Input" valueType="Any" formatType="Any" initValue="" desc="" colorValue="#FFF07DEA" showMarker="False" />
@@ -164,6 +166,16 @@
       </RelatedSteps>
       <Script><![CDATA[if (this.str_SearchKeyword=='recordBrand') {]]></Script>
     </Step>
+    <Step id="Se40f6eda6c0143f9a8bf188c4d22246f" ver="311241220" createVer="311241220" type="Flow" name="Assign" dpName="Assign" dpValue="this.o_str_ImageGraphPath=Global.str_InputFolderPath + Global.arr1_BrandNames[this.i_Index] + ' ' +  Global.arr1_Period[0] + ' '  +  Global.arr1_Period[1] + ' 그래프.png'" dpValue2="" dpImage="" tag="" depth="3" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="74a35151-2618-4d2e-bfc1-bc7dbe513dae" type="Flow">
+        <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_Variable" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="this.o_str_ImageGraphPath" />
+        <Property type="Flow" key="Conditions_Value" controlType="PropertyItemTextView" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="Global.str_InputFolderPath + Global.arr1_BrandNames[this.i_Index] + ' ' +  Global.arr1_Period[0] + ' '  +  Global.arr1_Period[1] + ' 그래프.png'" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[this.o_str_ImageGraphPath = Global.str_InputFolderPath + Global.arr1_BrandNames[this.i_Index] + ' ' +  Global.arr1_Period[0] + ' '  +  Global.arr1_Period[1] + ' 그래프.png';]]></Script>
+    </Step>
     <Step id="S9f0c07664c094e49acb313df7166c6c4" ver="311241220" createVer="311241220" type="Win" name="RightClick" dpName="RightClick" dpValue="recordBrand" dpValue2="자동차 판매실적 : 다나와 자동차 - Chrome" dpImage="Target_Capture" tag="" depth="3" stmttype="Normal" enabled="True" mainSet="0">
       <Properties id="9d1fc02f-ac81-4f1c-a0d1-478594608511" type="Win">
         <Property type="Win" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
@@ -228,7 +240,7 @@
         <Property type="Win" key="Target_PointOnImage" controlType="String" valueType="System.String" formatType="String_Point" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="'33, 6.5'" />
       </Properties>
       <RelatedSteps />
-      <Script><![CDATA[StepPlayer.Run('Win.RightClick', this.rightclick_info_8);]]></Script>
+      <Script><![CDATA[StepPlayer.Run('Win.RightClick', this.rightclick_info_9);]]></Script>
     </Step>
     <Step id="S341ad4a12665425588a29db15c70a99e" ver="311241220" createVer="311241220" type="Win" name="Click" dpName="Click" dpValue="Capture node screenshot" dpValue2="자동차 판매실적 : 다나와 자동차 - Chrome" dpImage="Target_Capture" tag="" depth="3" stmttype="Normal" enabled="True" mainSet="0">
       <Properties id="41631cdc-6af3-4527-aadc-57d6e67e3df4" type="Win">
@@ -295,9 +307,9 @@
         <Property type="Win" key="Target_PointOnImage" controlType="String" valueType="System.String" formatType="String_Point" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="'100, 50'" />
       </Properties>
       <RelatedSteps />
-      <Script><![CDATA[StepPlayer.Run('Win.Click', this.click_info_9);]]></Script>
+      <Script><![CDATA[StepPlayer.Run('Win.Click', this.click_info_10);]]></Script>
     </Step>
-    <Step id="Sbc7009c0dbd2465e927a3c6cdd482a41" ver="311241220" createVer="311241220" type="Win" name="SetText" dpName="SetText" dpValue="Global.str_InputFolderPath + Global.arr1_BrandNames[this.i_Index] + ' ' +  Global.arr1_Period[0] + ' '  +  Global.arr1_Period[1] + ' 그래프.png'" dpValue2="자동차 판매실적 : 다나와 자동차 - Chrome" dpImage="Target_Capture" tag="" depth="3" stmttype="Normal" enabled="True" mainSet="0">
+    <Step id="Sbc7009c0dbd2465e927a3c6cdd482a41" ver="311241220" createVer="311241220" type="Win" name="SetText" dpName="SetText" dpValue="this.o_str_ImageGraphPath" dpValue2="자동차 판매실적 : 다나와 자동차 - Chrome" dpImage="Target_Capture" tag="" depth="3" stmttype="Normal" enabled="True" mainSet="0">
       <Properties id="dcb444ae-bcdd-4a2d-b00d-b94a6d2d2096" type="Win">
         <Property type="Win" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
         <Property type="Win" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
@@ -357,7 +369,7 @@
         <Property type="Win" key="Target_TimeStamp" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="2025-04-22 11:03:44.562" />
         <Property type="Win" key="Target_RelativePoint" controlType="String" valueType="System.String" formatType="String_Point" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="'0, 0'" order="13" />
         <Property type="Win" key="Target_RelativeOrigin" controlType="PropertyItemDropDownView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="Center" valuelist="Center;LeftTop;RightTop;LeftBottom;RightBottom" order="14" />
-        <Property type="Win" key="Keyboard_NewText" controlType="PropertyItemTextView" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="Global.str_InputFolderPath + Global.arr1_BrandNames[this.i_Index] + ' ' +  Global.arr1_Period[0] + ' '  +  Global.arr1_Period[1] + ' 그래프.png'" />
+        <Property type="Win" key="Keyboard_NewText" controlType="PropertyItemTextView" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="this.o_str_ImageGraphPath" />
         <Property type="Win" key="Keyboard_UseDone" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" />
         <Property type="Win" key="Target_CapturedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="Designer" />
         <Property type="Win" key="Target_Capture" controlType="Bitmap" valueType="System.Drawing.Bitmap" formatType="Bitmap" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="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" />
@@ -366,7 +378,7 @@
         <Property type="Win" key="Target_IsPassword" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
       </Properties>
       <RelatedSteps />
-      <Script><![CDATA[StepPlayer.Run('Win.SetText', this.settext_info_10);]]></Script>
+      <Script><![CDATA[StepPlayer.Run('Win.SetText', this.settext_info_11);]]></Script>
     </Step>
     <Step id="S9f399d5084e545af99876a98fe9bd9bd" ver="311241220" createVer="311241220" type="Flow" name="EndDecisionThen" dpName="End-IfThen" dpValue="" dpValue2="" dpImage="" tag="" depth="3" stmttype="CloseBlock" enabled="True" mainSet="0">
       <Properties id="bb300dea-2ed0-4c17-8488-c17aea550e7a" type="Flow">
@@ -389,6 +401,16 @@
         <RelatedStep id="Sb2c13b18832342b58cae06037f9d5855" type="Flow" name="EndDecisionThen" />
       </RelatedSteps>
       <Script><![CDATA[if (this.str_SearchKeyword=='recordMonth') {]]></Script>
+    </Step>
+    <Step id="S41c75a1d74e74839a79fad0d07cc9392" ver="311241220" createVer="311241220" type="Flow" name="Assign" dpName="Assign" dpValue="this.o_str_ImageTablePath=Global.str_InputFolderPath + Global.arr1_BrandNames[this.i_Index] + ' ' +  Global.arr1_Period[0] + ' '  +  Global.arr1_Period[1] + ' 누적판매량.png'" dpValue2="" dpImage="" tag="" depth="3" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="58dbd355-78a7-4042-aefa-f03ba85a6997" type="Flow">
+        <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_Variable" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="this.o_str_ImageTablePath" />
+        <Property type="Flow" key="Conditions_Value" controlType="PropertyItemTextView" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="Global.str_InputFolderPath + Global.arr1_BrandNames[this.i_Index] + ' ' +  Global.arr1_Period[0] + ' '  +  Global.arr1_Period[1] + ' 누적판매량.png'" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[this.o_str_ImageTablePath = Global.str_InputFolderPath + Global.arr1_BrandNames[this.i_Index] + ' ' +  Global.arr1_Period[0] + ' '  +  Global.arr1_Period[1] + ' 누적판매량.png';]]></Script>
     </Step>
     <Step id="S66c73d11ac80400b8eedfc42cd48cd21" ver="311241220" createVer="311241220" type="Win" name="RightClick" dpName="RightClick" dpValue="recordMonth" dpValue2="자동차 판매실적 : 다나와 자동차 - Chrome" dpImage="Target_Capture" tag="" depth="3" stmttype="Normal" enabled="True" mainSet="0">
       <Properties id="9d1fc02f-ac81-4f1c-a0d1-478594608511" type="Win">
@@ -454,7 +476,7 @@
         <Property type="Win" key="Target_PointOnImage" controlType="String" valueType="System.String" formatType="String_Point" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="'33, 6.5'" />
       </Properties>
       <RelatedSteps />
-      <Script><![CDATA[StepPlayer.Run('Win.RightClick', this.rightclick_info_13);]]></Script>
+      <Script><![CDATA[StepPlayer.Run('Win.RightClick', this.rightclick_info_15);]]></Script>
     </Step>
     <Step id="S63601c69e66d4b5cb2a293fc6e5e5dbd" ver="311241220" createVer="311241220" type="Win" name="Click" dpName="Click" dpValue="Capture node screenshot" dpValue2="자동차 판매실적 : 다나와 자동차 - Chrome" dpImage="Target_Capture" tag="" depth="3" stmttype="Normal" enabled="True" mainSet="0">
       <Properties id="41631cdc-6af3-4527-aadc-57d6e67e3df4" type="Win">
@@ -521,9 +543,9 @@
         <Property type="Win" key="Target_PointOnImage" controlType="String" valueType="System.String" formatType="String_Point" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="'100, 50'" />
       </Properties>
       <RelatedSteps />
-      <Script><![CDATA[StepPlayer.Run('Win.Click', this.click_info_14);]]></Script>
+      <Script><![CDATA[StepPlayer.Run('Win.Click', this.click_info_16);]]></Script>
     </Step>
-    <Step id="Sd3fa3672cde84392b9e2c9d4dd9f2017" ver="311241220" createVer="311241220" type="Win" name="SetText" dpName="SetText" dpValue="Global.str_InputFolderPath + Global.arr1_BrandNames[this.i_Index] + ' ' +  Global.arr1_Period[0] + ' '  +  Global.arr1_Period[1] + ' 누적판매량.png'" dpValue2="자동차 판매실적 : 다나와 자동차 - Chrome" dpImage="Target_Capture" tag="" depth="3" stmttype="Normal" enabled="True" mainSet="0">
+    <Step id="Sd3fa3672cde84392b9e2c9d4dd9f2017" ver="311241220" createVer="311241220" type="Win" name="SetText" dpName="SetText" dpValue="this.o_str_ImageTablePath" dpValue2="자동차 판매실적 : 다나와 자동차 - Chrome" dpImage="Target_Capture" tag="" depth="3" stmttype="Normal" enabled="True" mainSet="0">
       <Properties id="dcb444ae-bcdd-4a2d-b00d-b94a6d2d2096" type="Win">
         <Property type="Win" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
         <Property type="Win" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
@@ -583,7 +605,7 @@
         <Property type="Win" key="Target_TimeStamp" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="2025-04-22 11:03:44.562" />
         <Property type="Win" key="Target_RelativePoint" controlType="String" valueType="System.String" formatType="String_Point" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="'0, 0'" order="13" />
         <Property type="Win" key="Target_RelativeOrigin" controlType="PropertyItemDropDownView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="Center" valuelist="Center;LeftTop;RightTop;LeftBottom;RightBottom" order="14" />
-        <Property type="Win" key="Keyboard_NewText" controlType="PropertyItemTextView" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="Global.str_InputFolderPath + Global.arr1_BrandNames[this.i_Index] + ' ' +  Global.arr1_Period[0] + ' '  +  Global.arr1_Period[1] + ' 누적판매량.png'" />
+        <Property type="Win" key="Keyboard_NewText" controlType="PropertyItemTextView" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="this.o_str_ImageTablePath" />
         <Property type="Win" key="Keyboard_UseDone" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" />
         <Property type="Win" key="Target_CapturedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="Designer" />
         <Property type="Win" key="Target_Capture" controlType="Bitmap" valueType="System.Drawing.Bitmap" formatType="Bitmap" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="iVBORw0KGgoAAAANSUhEUgAAAMgAAABkCAYAAADDhn8LAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAv8SURBVHhe7VxNi2RJFc0f4EL8ASIIggi9sGDAXOjO0YVuRJRcaAmSgwtRRBkVJHsxOn6BTxwEd+VGatMMKKTDKKUFIgPS4KLERUlr6ZQyQ4PNbLrtTRg3Pm/c+HjvZWVmZWWdA2c6X8SNGzfi3hPxsrumJmog7t+/vzIfPXrkvCj1+PFj9wkAdh8QCAA0AIEAQAMQCAA0sDcC+f6L31bfeP6rVVL/5eWlswaAYRgsECryq9BjUwIhETx9+rRKI5LvvgCRAKNwqwTyz4t/QCTAKNwagXzvxReMDfHu3W+5UQDQxq0RCCfZVnHeqelkqrpz97xtLOdqMu0Un/68m6rJfOmelmo+maiJ47Qn0OW8YENzBH/nqpuOWS/ZT1QYXoW1k2sx8Zs2WkdtXuqb6//K2JxPtv7+OFrw83Ckc+6lQJ752d/UO79zpt5998/qPd/8k3rf1/6oPnr3tWEC2QEkRW0E65OYF9WykwUoQOOTIi0VXa1QUxih6vnnc81BAplrW1nEXiDWX0ngsb0v1pbIhuCWCuS9z7+m7nzlD+r9X/ydeua5V9WDy/+qT3zptwMFwjfNfu5MYcQTyxZK4QQzxexOt3nXLDwSQTbWFzITRWKXFbsEJdfNzxKf+EhuDwIvCFu8S7a+WgEnLjRoDjMmxEd+dQxsLRZ2DrnOCB8PX4v3y2O18LH076fzk+TllgrkA59/RX3wc0v14Zf/pZ79+d/V7LnfqE8fvrqiQFiRUHGZTXZbmhQs2bLkGds0mQlEocqiM6eoTlT6imKLJimEANvHb57O24U48wKz43jBcFGINTlkAuFrOV9qUZgP2q/dR7MW7pOtqVjYoUHGm8cfYqnuZysv1NcSyHI/BfLxz/5afezl19VH/qLUwSv/U5/6yQP15cPfrygQvoFis3m/SFApmSm471hMEdRfEgPZ0mko7BOx5jCFOJcxEtKCkAWTFrdFUyABfE3cr/7M4xRjU8HIPRTPtGbut7Sfzbzk6036aaxt7Eep6MfQYxsC+eTxhXpWi+POr56ot/3gDfWun/5HfeGl8zUJhD+niUgLiW20SaS74lnRh2JITk2LUNDVoqdY2G1WLFIGEwMvNg9RMGK+QQLRoDZaW7Rle0MI8ck5aB21guWxEeg57qO8oYv72cpLNh8h9ps1udZelIp+DD22IZDP6MXd+aUWxw/fUG//0b/VO358oT70i9c3LpC0QMk2TWAGN6Z4IpsisgWR9Aks9RdmM0dBZClKxUBgayjYpCe6RUkgHtGe+yX4wtNzVETo/4zwY9xj9ixQ2s9mXkp7wtporGkbgFLRj6HHNgTSx40IxPTF5FGSmt9BDGzCp1khsaI0J7/r15/niUM+Zz4ufAcxkLE7kP9QsGSTfo/Jv0RTcyqQ805/sQ+ffZHzvXEgf/pWlAIx7dp2Xij+VKB2v6RNhI7f+OHztvNC/rmATL9/1nFBIBl4Icmiks+iCOjEcdf/VFdnO5kWsaAsZMIIvM0m2M5BTE0pPtcnizCL3dvyGHWbHtfRfFlfBMXQP29BIBpmLVlsrl2s28DvqRnTJxDrJ72FNJp5IZ+2L43fAgLZGGRBltCf8O3CCmRnwtkIhuQlYmWBHB4eZm2tdo/bIpDkqq4heb3ZBey/QAblheFKApFiKLV5emxKIH0/7s5JtusHe80oXNUS5pWi8gpzfdhHgYzLi8SVBeIFIZ8lPTYlEADYBK70HYSLoiUOogcEAtwkXPlL+hBxED0gEOAm4coCIfaJg+gBgQA3CWsRyBB6QCDATcLeCAS/tAHYBPZGICSC0r95eBqR4P9HB0biVgkEv7QBGItbIxD80oZVMe5HM9aD3fkHy0mpmEEQtIRAQLBBCAQEG4RAQLBBCAQEG4RAQLBBCAQEG4RAQLBBCAQEG4RAQLBBCAQEG5xMvv5XBYJghe5nsgAAKAACAYAG8IoFgi0WG0EQtCw2boUPVPfmE9V1pT5wP3mpluotNS/27SiLjU2uq7AhkPVw/fs4P1NqeczbqLDFHMdvKXV2yWyGEAIZQQhkPdzAPsri7x6qpZ6Di2Z68kSdnzyINoN4EwVCm+EQFqw35PzNh2oaDP3CKBnOmOBtyN41EdLTh5HbnT1ME1uKw83b6WR4JL4LY9LTT5x8fF3F+ST5elliq+stx0vF5FHdG89t5qNGMR/FvzzRbUE0QpS1+ZyfTufE7p+P2/vQzUNuocyPa6NHQuJjZM56fE+6E++cFZMblCeEPovN4ePo2Tjn/Z7CzhSCf9Y+S3GYz6JQeBylMdovt6eTLzyHvtp8nHajua/ObKqwT9Yr4vXF7hNItsm+SlbiysZR31Xz0WLqc35Gc2m/IQY+f2M+85kLNI6jgyzsUx+Lfnh8vm+FnPX4Tl6x5mds0NCEUBGIU8CcOGFCx8xOJjYyxJHMSxwwhsU+PdGnead9uHmj38pY3p7tgWNzvTJesdlZf5sbzUcPY9HpudzcSTx+jtZ8ZJfth7thxRiaL4Nfs/Qj59TPRhSr5KzPt2kIWC0h8iSgybPTIbMrJDbAt8uCGjKGbGhM7c/WWEbqF5vq2+vrlfGW4ufPBZbi2kQ++ujXr+deurG+qBJ/rfmKcRN69kBS+CH/GShWHzMfSxwTo7TlDjd6YmV25NP5EX3xRC8VWN8Yexotj/VY12/6jvWavH1jbCDtAbMJbK5XxluKv1Ectbg2kY9e6jn0nHM+1u1Jsl+t+Wpx05ikvYfSjx4vCz7YiVgMx8QobcNEZJic3HETyBlXfbx+c1vrp1QEJZ/2mT7X4+C+YjHUx2jSBmq70O+efczNsYE0F1untqu/z/oYZbyl+Et7Y9nehzin3bvoZ7V89NHuNe1b3Bvtm9qyNVbmo88lgejPZg2sEHtfsbgfuSZ9+Nn5V8hZMUZmG35jnjbq5MngcH6ir9kkINfHF2BbNGQgNZ+XodhtUA5JHHFDzXgmkPoY38eeZRy1sT12aYI8pD2PVz63BVKNi/rWkY+RNEXM161pClme0rX5qD0Zn+6H8SX8F5n50WT7kcYzMmc9vvGjJiDYYrER3DDZKRew+kk/jKU5S9h0HDeMxUYQBC3dsQEAQAEQCAA0AIEAQAMQCAA0gC/pINhi6XcBgSBoCYGAYIOTe/fuKRAEy5xcXFwoEATLhEBAsEEIBAQbhEBAsEEIBAQbhEBAsMHJ4mCiJpPI2ZHvPFWm72ChTpNBR2om204X6oD5OFicMntO8jlTR8W+a6ZZg49NxzmT694cj2Z838FdohbIgVqc+gZd/BP/bIt5liUvFcjp4kCLIi3608WM+eTcVYHIuLYrkN3dF1AIxBa8FYRLWnKyErlASFBjEssLwY5dGIHF28sKTt5mmkez0J7cUPz20kWdrCfpO4pjJLXv4JPNk81laNd/xOKMNuU1hbGtWHkM4M6wXyCuLSkCL5DRSZUCYcXlC9MXMhVTEKIet/AFTuN8zPyzpvFR7mu9xhzNhMi1n9lioVlam4g7i4f1JYdLK1bXz25mcDeYCiRJaH7ah88ukalw+OnPE89Z8+mfRcEk/ZFHM2dHRZbcDOS/0qefy2KO60mfeayceVxxH2RfIx7eF57L6wWvj+JLeiNhIcGxoKRAPEMBi/bUpyymUnGJ+WWcWdHHootiZUwK1DOuJ+8rMbcfKpBarL4tu8nAa2f2ihUpCjQklBVI8hoUuXaBiNO3foOQj9hXEm9Otp5BlHFSPP71rbSGAbEG29QveP0cIRBNEoQ+5XhBUXHIvwpet0CSm8q8Bnr/aZHZW8M9J6+Lmkf6S/HQdTZJc7a+Z8g1DIjVjx0lVHAbHCcQzZIgsteZ4qsMcTWB2D7nW8+94AKkk9n1Hegv8sl6WF89Jht/7Qu8oRSlicH5lUVeFYhmT6zDbjxwm9yzf0mXBTqUtuiHnd5jbFtMY63fuuB1cq8EYm6yxk3RZPYdocb1CITHSrcybo/d5A0XCJ3C/lVHcy0nex9XFch1xApelfhhRRBsEAIBwQYhEBBsEL/VBAQbxO/FAsEGIRAQbBACAcEGIRAQbBACAcEGIRAQbBACAcEGIRAQbBACAcEGIRAQbBACAcEGIRAQrPKR+j9CqFp/vPcAaQAAAABJRU5ErkJggg==" />
@@ -592,7 +614,7 @@
         <Property type="Win" key="Target_IsPassword" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
       </Properties>
       <RelatedSteps />
-      <Script><![CDATA[StepPlayer.Run('Win.SetText', this.settext_info_15);]]></Script>
+      <Script><![CDATA[StepPlayer.Run('Win.SetText', this.settext_info_17);]]></Script>
     </Step>
     <Step id="Sb2c13b18832342b58cae06037f9d5855" ver="311241220" createVer="311241220" type="Flow" name="EndDecisionThen" dpName="End-IfThen" dpValue="" dpValue2="" dpImage="" tag="" depth="3" stmttype="CloseBlock" enabled="True" mainSet="0">
       <Properties id="8829e63b-647f-426b-9e6b-e0fcc7a07886" type="Flow">
@@ -668,7 +690,7 @@
         <Property type="Win" key="Target_PointOnImage" controlType="String" valueType="System.String" formatType="String_Point" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="'44, 13'" />
       </Properties>
       <RelatedSteps />
-      <Script><![CDATA[StepPlayer.Run('Win.Click', this.click_info_17);]]></Script>
+      <Script><![CDATA[StepPlayer.Run('Win.Click', this.click_info_19);]]></Script>
     </Step>
     <Step id="Saa0c9da2bb2740b28db9bc8734f1de5b" ver="311241220" createVer="311241220" type="Flow" name="EndLoop" dpName="End-Foreach" dpValue="" dpValue2="" dpImage="" tag="" depth="2" stmttype="CloseBlock" enabled="True" mainSet="0">
       <Properties id="2f31e340-42dc-487a-b89d-1b786d7d421b" type="Flow">
@@ -690,20 +712,22 @@
         <Property type="Win" key="Keyboard_ClearKeyState" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="True" />
       </Properties>
       <RelatedSteps />
-      <Script><![CDATA[StepPlayer.Run('Win.KeyInput', this.keyinput_info_19);]]></Script>
+      <Script><![CDATA[StepPlayer.Run('Win.KeyInput', this.keyinput_info_21);]]></Script>
     </Step>
   </Steps>
   <JScript><![CDATA[function T_06_이미지추출및저장(args) {
 
+    this.o_str_ImageTablePath;
+    this.o_str_ImageGraphPath;
     this.str_SearchKeyword;
     this.arr1_SearchKeyword = ['recordBrand','recordMonth'];
     this.i_Index = (typeof args != 'undefined') ? args.i_Index : null;
 
     this.RPAGOTOENABLE = false;
     this.GotoStepRetryCntMap = {};
-    this.GotoBlockMap = {3:[18],7:[11],12:[16]};
-    this.GotoReverseBlockMap = {18:3,11:7,16:12};
-    this.GotoStepBlockTypeMap = {3:'Foreach',18:'EndLoop',7:'DecisionThen',11:'EndDecisionThen',12:'DecisionThen',16:'EndDecisionThen'};
+    this.GotoBlockMap = {3:[20],7:[12],13:[18]};
+    this.GotoReverseBlockMap = {20:3,12:7,18:13};
+    this.GotoStepBlockTypeMap = {3:'Foreach',20:'EndLoop',7:'DecisionThen',12:'EndDecisionThen',13:'DecisionThen',18:'EndDecisionThen'};
 
 
     this.run = function() {
@@ -737,52 +761,60 @@
             if (this.str_SearchKeyword=='recordBrand') {
 
                 //------------------------------------------------
-                STEP('S9f0c07664c094e49acb313df7166c6c4', '[8] RightClick');
-                StepPlayer.Run('Win.RightClick', this.rightclick_info_8);
+                STEP('Se40f6eda6c0143f9a8bf188c4d22246f', '[8] Assign');
+                this.o_str_ImageGraphPath = Global.str_InputFolderPath + Global.arr1_BrandNames[this.i_Index] + ' ' +  Global.arr1_Period[0] + ' '  +  Global.arr1_Period[1] + ' 그래프.png';
 
                 //------------------------------------------------
-                STEP('S341ad4a12665425588a29db15c70a99e', '[9] Click');
-                StepPlayer.Run('Win.Click', this.click_info_9);
+                STEP('S9f0c07664c094e49acb313df7166c6c4', '[9] RightClick');
+                StepPlayer.Run('Win.RightClick', this.rightclick_info_9);
 
                 //------------------------------------------------
-                STEP('Sbc7009c0dbd2465e927a3c6cdd482a41', '[10] SetText');
-                StepPlayer.Run('Win.SetText', this.settext_info_10);
+                STEP('S341ad4a12665425588a29db15c70a99e', '[10] Click');
+                StepPlayer.Run('Win.Click', this.click_info_10);
+
+                //------------------------------------------------
+                STEP('Sbc7009c0dbd2465e927a3c6cdd482a41', '[11] SetText');
+                StepPlayer.Run('Win.SetText', this.settext_info_11);
 
             //------------------------------------------------
             }
-            STEP('S9f399d5084e545af99876a98fe9bd9bd', '[11] End-IfThen');
+            STEP('S9f399d5084e545af99876a98fe9bd9bd', '[12] End-IfThen');
 
             //------------------------------------------------
-            STEP('S778026fd447141e98ff9380c98f4ee68', '[12] IfThen');
+            STEP('S778026fd447141e98ff9380c98f4ee68', '[13] IfThen');
             if (this.str_SearchKeyword=='recordMonth') {
 
                 //------------------------------------------------
-                STEP('S66c73d11ac80400b8eedfc42cd48cd21', '[13] RightClick');
-                StepPlayer.Run('Win.RightClick', this.rightclick_info_13);
+                STEP('S41c75a1d74e74839a79fad0d07cc9392', '[14] Assign');
+                this.o_str_ImageTablePath = Global.str_InputFolderPath + Global.arr1_BrandNames[this.i_Index] + ' ' +  Global.arr1_Period[0] + ' '  +  Global.arr1_Period[1] + ' 누적판매량.png';
 
                 //------------------------------------------------
-                STEP('S63601c69e66d4b5cb2a293fc6e5e5dbd', '[14] Click');
-                StepPlayer.Run('Win.Click', this.click_info_14);
+                STEP('S66c73d11ac80400b8eedfc42cd48cd21', '[15] RightClick');
+                StepPlayer.Run('Win.RightClick', this.rightclick_info_15);
 
                 //------------------------------------------------
-                STEP('Sd3fa3672cde84392b9e2c9d4dd9f2017', '[15] SetText');
-                StepPlayer.Run('Win.SetText', this.settext_info_15);
+                STEP('S63601c69e66d4b5cb2a293fc6e5e5dbd', '[16] Click');
+                StepPlayer.Run('Win.Click', this.click_info_16);
+
+                //------------------------------------------------
+                STEP('Sd3fa3672cde84392b9e2c9d4dd9f2017', '[17] SetText');
+                StepPlayer.Run('Win.SetText', this.settext_info_17);
 
             //------------------------------------------------
             }
-            STEP('Sb2c13b18832342b58cae06037f9d5855', '[16] End-IfThen');
+            STEP('Sb2c13b18832342b58cae06037f9d5855', '[18] End-IfThen');
 
             //------------------------------------------------
-            STEP('S9bb6cafa34ab4b78ad9710051ada2797', '[17] Click');
-            StepPlayer.Run('Win.Click', this.click_info_17);
+            STEP('S9bb6cafa34ab4b78ad9710051ada2797', '[19] Click');
+            StepPlayer.Run('Win.Click', this.click_info_19);
 
         //------------------------------------------------
         }
-        STEP('Saa0c9da2bb2740b28db9bc8734f1de5b', '[18] End-Foreach');
+        STEP('Saa0c9da2bb2740b28db9bc8734f1de5b', '[20] End-Foreach');
 
         //------------------------------------------------
-        STEP('S90ffd3bae51c4bac976fe4695c7d7db5', '[19] KeyInput');
-        StepPlayer.Run('Win.KeyInput', this.keyinput_info_19);
+        STEP('S90ffd3bae51c4bac976fe4695c7d7db5', '[21] KeyInput');
+        StepPlayer.Run('Win.KeyInput', this.keyinput_info_21);
 
 
     }
@@ -792,6 +824,7 @@
         result = this.run()
         if (result != null)
             return result;
+        return {'o_str_ImageTablePath':this.o_str_ImageTablePath, 'o_str_ImageGraphPath':this.o_str_ImageGraphPath};
     }
 }
 ]]></JScript>
@@ -804,14 +837,16 @@
       <StepNode step_id="Sfb013237310b4df48940cb848294de2b" group_name="1a6f0290-43eb-47ee-9d32-7f61cbc14f09_Untitled" folded="False" color="" />
       <StepNode step_id="S1d116dc87b7d4f858749d56a2fc5821d" group_name="1a6f0290-43eb-47ee-9d32-7f61cbc14f09_Untitled" folded="False" color="" />
       <StepNode step_id="Se39355b95cff4494bc6222725b8f2282" group_name="" folded="False" color="" />
+      <StepNode step_id="Se40f6eda6c0143f9a8bf188c4d22246f" group_name="c8f98081-2cfc-4b12-84a3-c47b54a67a48_Untitled" folded="False" color="" />
       <StepNode step_id="S9f0c07664c094e49acb313df7166c6c4" group_name="d6ffb89f-cc5b-4bbf-a976-7d5a48a6b172_Untitled" folded="False" color="" />
-      <StepNode step_id="S341ad4a12665425588a29db15c70a99e" group_name="c8cfe4a4-0cc8-4066-8136-3030c596b37c_Untitled" folded="False" color="" />
-      <StepNode step_id="Sbc7009c0dbd2465e927a3c6cdd482a41" group_name="845f4b80-ff70-45c7-b6bb-12f4de324fcf_Untitled" folded="False" color="" />
+      <StepNode step_id="S341ad4a12665425588a29db15c70a99e" group_name="d6ffb89f-cc5b-4bbf-a976-7d5a48a6b172_Untitled" folded="False" color="" />
+      <StepNode step_id="Sbc7009c0dbd2465e927a3c6cdd482a41" group_name="d6ffb89f-cc5b-4bbf-a976-7d5a48a6b172_Untitled" folded="False" color="" />
       <StepNode step_id="S9f399d5084e545af99876a98fe9bd9bd" group_name="" folded="False" color="" />
       <StepNode step_id="S778026fd447141e98ff9380c98f4ee68" group_name="" folded="False" color="" />
+      <StepNode step_id="S41c75a1d74e74839a79fad0d07cc9392" group_name="70590835-91fc-4b69-87c4-f13e7c40fdca_Untitled" folded="False" color="" />
       <StepNode step_id="S66c73d11ac80400b8eedfc42cd48cd21" group_name="609810a5-d9c9-4b0d-b0d3-a6242415e518_Untitled" folded="False" color="" />
-      <StepNode step_id="S63601c69e66d4b5cb2a293fc6e5e5dbd" group_name="4c558ddb-5db1-4f73-800e-2e7559b1d4c8_Untitled" folded="False" color="" />
-      <StepNode step_id="Sd3fa3672cde84392b9e2c9d4dd9f2017" group_name="bb60a1e0-6ede-4cc0-ae6b-ca3142286d4d_Untitled" folded="False" color="" />
+      <StepNode step_id="S63601c69e66d4b5cb2a293fc6e5e5dbd" group_name="609810a5-d9c9-4b0d-b0d3-a6242415e518_Untitled" folded="False" color="" />
+      <StepNode step_id="Sd3fa3672cde84392b9e2c9d4dd9f2017" group_name="609810a5-d9c9-4b0d-b0d3-a6242415e518_Untitled" folded="False" color="" />
       <StepNode step_id="Sb2c13b18832342b58cae06037f9d5855" group_name="" folded="False" color="" />
       <StepNode step_id="S9bb6cafa34ab4b78ad9710051ada2797" group_name="cb39b1e1-be99-4ead-8680-156a6e4a1c03_Untitled" folded="False" color="" />
       <StepNode step_id="Saa0c9da2bb2740b28db9bc8734f1de5b" group_name="" folded="False" color="" />

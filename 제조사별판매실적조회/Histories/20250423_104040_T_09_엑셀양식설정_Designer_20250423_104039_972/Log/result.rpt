@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Result id="2113ca58-c446-408b-ab7d-4a0df87ed1a7" name="T_09_엑셀양식설정" result="Pass" detail="{}" start="2025-04-23T01:40:42.654" end="2025-04-23T01:40:43.706" jobId="Designer_20250423_104039_972">
+  <Step id="S14ae424dbc5c45538177775ede1cd954" taskName="T_09_엑셀양식설정" type="Excel" name="GetDataRange" displayName="GetDataRange" callDepth="1" depth="1" num="3" result="Pass" start="2025-04-23T01:40:42.716" end="2025-04-23T01:40:43.556" displayTime="0.8s">
+    <Variables>
+      <Variable name="RESULT" scope="System" declareType="Any" isChanged="false" isChangable="true" runtimeType="Any" value="&lt;null&gt;" />
+    </Variables>
+    <Properties setIndex="0">
+      <Property value="" runtimeType="String" key="Options_OnError" displayKey="On Error" visible="true" required="false" />
+      <Property value="" runtimeType="String" key="Key_Description" displayKey="Description" visible="true" required="false" />
+      <Property value="&lt;ActiveExcel&gt;" runtimeType="Any" key="Input_InputExcel" displayKey="Excel" visible="true" required="true" />
+      <Property value="RESULT : 'A1:M25'" runtimeType="String" key="Output_OutputRange" displayKey="Range" visible="true" required="true" />
+      <Property value="&lt;ActiveSheet&gt;" runtimeType="Any" key="Sheet_SheetName" displayKey="SheetName" visible="true" required="true" />
+      <Property value="false" runtimeType="Boolean" key="Sheet_VisibleDataOnly" displayKey="Data Only" visible="true" required="false" />
+    </Properties>
+  </Step>
+  <Step id="Sff343b469c8244048b40ed47ce3831b5" taskName="T_09_엑셀양식설정" type="Excel" name="SetStyleRange" displayName="SetStyleRange" callDepth="1" depth="1" num="4" result="Pass" start="2025-04-23T01:40:43.572" end="2025-04-23T01:40:43.706" displayTime="0.1s">
+    <Variables>
+      <Variable name="RESULT" scope="System" declareType="Any" isChanged="false" isChangable="false" runtimeType="String" value="'A1:M25'" />
+    </Variables>
+    <Properties setIndex="0">
+      <Property value="" runtimeType="String" key="Options_OnError" displayKey="On Error" visible="true" required="false" />
+      <Property value="" runtimeType="String" key="Key_Description" displayKey="Description" visible="true" required="false" />
+      <Property value="&lt;ActiveExcel&gt;" runtimeType="Any" key="Input_InputExcel" displayKey="Excel" visible="true" required="true" />
+      <Property value="&lt;ActiveSheet&gt;" runtimeType="Any" key="Sheet_SheetName" displayKey="SheetName" visible="true" required="true" />
+      <Property value="'A1:M25'" runtimeType="String" key="Sheet_Range" displayKey="Range" visible="true" required="true" />
+      <Property value="" runtimeType="String" key="Cell_FontName" displayKey="FontName" visible="true" required="false" />
+      <Property value="Current" runtimeType="String" key="Cell_FontBold" displayKey="FontBold" visible="true" required="false" />
+      <Property value="Current" runtimeType="String" key="Cell_FontItalic" displayKey="FontItalic" visible="true" required="false" />
+      <Property value="Current" runtimeType="String" key="Cell_FontUnderline" displayKey="FontUnderline" visible="true" required="false" />
+      <Property value="0" runtimeType="Integer" key="Cell_FontSize" displayKey="FontSize" visible="true" required="false" />
+      <Property value="''" runtimeType="String" key="Cell_FontColor" displayKey="FontColor" visible="true" required="false" />
+      <Property value="'0,100,0'" runtimeType="String" key="Cell_BackgroundColor" displayKey="BackgroundColor" visible="true" required="false" />
+      <Property value="0" runtimeType="Double" key="Cell_Width" displayKey="Width" visible="true" required="false" />
+      <Property value="0" runtimeType="Double" key="Cell_Height" displayKey="Height" visible="true" required="false" />
+      <Property value="" runtimeType="String" key="Cell_AlignHorizontal" displayKey="AlignHorizontal" visible="true" required="false" />
+      <Property value="" runtimeType="String" key="Cell_AlignVertical" displayKey="AlignVertical" visible="true" required="false" />
+    </Properties>
+  </Step>
+  <JobInfo>
+    <Info name="Bot Version" value="3.1.125.00226" />
+    <Info name="Resolution" value="1920 x 1080" />
+    <Info name="Language" value="한국어 (대한민국)" />
+    <Info name="BotID" value="S-DESIGNER-X5673" />
+  </JobInfo>
+</Result>

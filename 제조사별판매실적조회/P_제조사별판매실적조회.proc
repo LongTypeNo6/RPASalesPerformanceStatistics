@@ -1,4 +1,4 @@
-<Process id="1129b78b-ed75-4df3-af8f-d08bae3583f3" type="process" workType="foreground" name="P_제조사별판매실적조회" version="" designerVersion="3.1.125.00226" lastPublishedServer="" readonly="false" isValid="true" DesignedBy="Designer" Template="" StepCount="13" Orientation="horizontal">
+<Process id="1129b78b-ed75-4df3-af8f-d08bae3583f3" type="process" workType="foreground" name="P_제조사별판매실적조회" version="" designerVersion="3.1.125.00226" lastPublishedServer="" readonly="false" isValid="true" DesignedBy="Designer" Template="" StepCount="14" Orientation="horizontal">
   <Properties>
     <Property key="Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="default process" enabled="True" />
     <Property key="onBefore" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
@@ -10,7 +10,7 @@
     <Property key="Resolution" controlType="String" valueType="System.String" formatType="String_Size" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="1920x1080" />
     <Property key="CreatedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2025-04-17 10:12:14" />
     <Property key="CreatedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
-    <Property key="LastModifiedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2025-04-23 10:17:41" />
+    <Property key="LastModifiedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2025-04-24 09:25:31" />
     <Property key="LastModifiedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="" />
     <Property key="LastPublishedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
     <Property key="LastPublishedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
@@ -155,6 +155,15 @@
       <RelatedSteps />
       <Script><![CDATA[RunTask(this, 'T_08_엑셀에데이터입력', {'i_arr2_EngineData':this.arr2_EngineData, 'i_arr2_ModelData':this.arr2_ModelData, 'i_str_ImageTablePath':this.str_ImageTablePath, 'i_str_ImageGraphPath':this.str_ImageGraphPath});]]></Script>
     </Step>
+    <Step id="Sc8401e0a7d594c2690d0b361dcc0d0c6" ver="311241220" createVer="311241220" type="Flow" name="RunTask" dpName="RunTask" dpValue="" dpValue2="" dpImage="" tag="" depth="2" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="97435871-3d94-4135-924a-19f2fdf95636" type="Flow">
+        <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_TaskName" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="T_09_엑셀양식설정" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[RunTask(this, 'T_09_엑셀양식설정', null);]]></Script>
+    </Step>
     <Step id="Se2ba6cbbc0024686944fc9e02ea5f657" ver="311241220" createVer="311241220" type="Flow" name="EndLoop" dpName="End-For" dpValue="" dpValue2="" dpImage="" tag="" depth="2" stmttype="CloseBlock" enabled="True" mainSet="0">
       <Properties id="d0c43e9a-39d6-45b3-acaa-b647fc71d343" type="Flow">
         <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
@@ -176,9 +185,9 @@
 
     this.RPAGOTOENABLE = false;
     this.GotoStepRetryCntMap = {};
-    this.GotoBlockMap = {8:[13]};
-    this.GotoReverseBlockMap = {13:8};
-    this.GotoStepBlockTypeMap = {8:'Loop',13:'EndLoop'};
+    this.GotoBlockMap = {8:[14]};
+    this.GotoReverseBlockMap = {14:8};
+    this.GotoStepBlockTypeMap = {8:'Loop',14:'EndLoop'};
 
 
     this.run = function() {
@@ -231,9 +240,13 @@
             STEP('Sa42936680124418989d9905c47dbc19f', '[12] RunTask');
             RunTask(this, 'T_08_엑셀에데이터입력', {'i_arr2_EngineData':this.arr2_EngineData, 'i_arr2_ModelData':this.arr2_ModelData, 'i_str_ImageTablePath':this.str_ImageTablePath, 'i_str_ImageGraphPath':this.str_ImageGraphPath});
 
+            //------------------------------------------------
+            STEP('Sc8401e0a7d594c2690d0b361dcc0d0c6', '[13] RunTask');
+            RunTask(this, 'T_09_엑셀양식설정', null);
+
         //------------------------------------------------
         }
-        STEP('Se2ba6cbbc0024686944fc9e02ea5f657', '[13] End-For');
+        STEP('Se2ba6cbbc0024686944fc9e02ea5f657', '[14] End-For');
 
 
     }
@@ -260,6 +273,7 @@
       <StepNode step_id="S6f12e2705b16421ebd8b8bac2ea5ca59" group_name="" folded="False" color="" />
       <StepNode step_id="S99f168d9565e4f389982971206a5f462" group_name="" folded="False" color="" />
       <StepNode step_id="Sa42936680124418989d9905c47dbc19f" group_name="" folded="False" color="" />
+      <StepNode step_id="Sc8401e0a7d594c2690d0b361dcc0d0c6" group_name="" folded="False" color="" />
       <StepNode step_id="Se2ba6cbbc0024686944fc9e02ea5f657" group_name="" folded="False" color="" />
     </StepNodes>
   </Diagram>

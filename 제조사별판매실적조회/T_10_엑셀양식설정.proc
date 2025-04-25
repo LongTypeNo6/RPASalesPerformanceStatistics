@@ -1,4 +1,4 @@
-<Process id="2113ca58-c446-408b-ab7d-4a0df87ed1a7" type="task" workType="foreground" name="T_10_엑셀양식설정" version="" designerVersion="3.1.125.00226" lastPublishedServer="" readonly="false" isValid="true" DesignedBy="Designer" Template="" StepCount="24" Orientation="horizontal">
+<Process id="2113ca58-c446-408b-ab7d-4a0df87ed1a7" type="task" workType="foreground" name="T_10_엑셀양식설정" version="" designerVersion="3.1.125.00226" lastPublishedServer="" readonly="false" isValid="true" DesignedBy="Designer" Template="" StepCount="25" Orientation="horizontal">
   <Properties>
     <Property key="Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
     <Property key="onBefore" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
@@ -10,7 +10,7 @@
     <Property key="Resolution" controlType="String" valueType="System.String" formatType="String_Size" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="1920x1080" />
     <Property key="CreatedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2025-04-23 10:30:39" />
     <Property key="CreatedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
-    <Property key="LastModifiedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2025-04-25 10:23:23" />
+    <Property key="LastModifiedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2025-04-25 11:15:00" />
     <Property key="LastModifiedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="" />
     <Property key="LastPublishedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
     <Property key="LastPublishedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
@@ -25,7 +25,7 @@
       <Properties id="0a3dfd09-b0ed-4dbe-8362-263c74e57706" type="Excel">
         <Property type="Excel" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
         <Property type="Excel" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
-        <Property type="Excel" key="Input_InputExcel" controlType="InputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="ACTIVE_EXCEL" />
+        <Property type="Excel" key="Input_InputExcel" controlType="InputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="Global.ExcelHandle" />
         <Property type="Excel" key="Sheet_SheetName" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="ACTIVE_SHEET" />
         <Property type="Excel" key="Sheet_Range" controlType="String" valueType="System.String" formatType="String_ExcelRange" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="'A1'" />
         <Property type="Excel" key="Sheet_InputString" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="Global.arr1_BrandNames[this.i_Index] + ' '&#xD;&#xA;+ Global.arr1_Period[0] + ' '&#xD;&#xA;+ Global.arr1_Period[1] + ' 판매실적'" />
@@ -38,7 +38,7 @@
       <Properties id="693aa680-2257-4a93-aec4-97c56359936b" type="Excel">
         <Property type="Excel" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
         <Property type="Excel" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
-        <Property type="Excel" key="Input_InputExcel" controlType="InputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="ACTIVE_EXCEL" />
+        <Property type="Excel" key="Input_InputExcel" controlType="InputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="Global.ExcelHandle" />
         <Property type="Excel" key="Sheet_SheetName" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="ACTIVE_SHEET" />
         <Property type="Excel" key="Sheet_Range" controlType="String" valueType="System.String" formatType="String_ExcelRange" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="'A4'" />
         <Property type="Excel" key="Sheet_MouseType" controlType="PropertyItemDropDownView" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="LeftClick" valuelist="None;LeftClick;RightClick;DoubleClick;Hover" />
@@ -73,11 +73,11 @@
       <RelatedSteps />
       <Script><![CDATA[StepPlayer.Run('Win.KeyInput', this.keyinput_info_4);]]></Script>
     </Step>
-    <Step id="S77123f5359b64336ae2ae2797c9dff9e" ver="311241220" createVer="311241220" type="Excel" name="GetSheetName" dpName="GetSheetName" dpValue="ACTIVE_EXCEL" dpValue2="" dpImage="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+    <Step id="S77123f5359b64336ae2ae2797c9dff9e" ver="311241220" createVer="311241220" type="Excel" name="GetSheetName" dpName="GetSheetName" dpValue="Global.ExcelHandle" dpValue2="" dpImage="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
       <Properties id="0e0fdb3c-1dfb-4662-a446-d9af6ae198fa" type="Excel">
         <Property type="Excel" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
         <Property type="Excel" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
-        <Property type="Excel" key="Input_InputExcel" controlType="InputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="ACTIVE_EXCEL" />
+        <Property type="Excel" key="Input_InputExcel" controlType="InputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="Global.ExcelHandle" />
         <Property type="Excel" key="Output_SheetName" controlType="OutputControlType" valueType="System.String" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="this.str_SheetName" />
         <Property type="Excel" key="Sheet_Position" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="1" />
       </Properties>
@@ -1289,6 +1289,19 @@
       <RelatedSteps />
       <Script><![CDATA[StepPlayer.Run('Win.Click', this.click_info_24);]]></Script>
     </Step>
+    <Step id="Se82a17f77b6c402d80a0453efc8f0112" ver="311241220" createVer="311241220" type="Excel" name="SelectRange" dpName="SelectRange" dpValue="A1" dpValue2="" dpImage="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="693aa680-2257-4a93-aec4-97c56359936b" type="Excel">
+        <Property type="Excel" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Excel" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Excel" key="Input_InputExcel" controlType="InputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="Global.ExcelHandle" />
+        <Property type="Excel" key="Sheet_SheetName" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="ACTIVE_SHEET" />
+        <Property type="Excel" key="Sheet_Range" controlType="String" valueType="System.String" formatType="String_ExcelRange" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="'A1'" />
+        <Property type="Excel" key="Sheet_MouseType" controlType="PropertyItemDropDownView" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="LeftClick" valuelist="None;LeftClick;RightClick;DoubleClick;Hover" />
+        <Property type="Excel" key="Sheet_MousePos" controlType="String" valueType="System.String" formatType="String_Point" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="'-1, -1'" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[StepPlayer.Run('Excel.SelectRange', this.selectrange_info_25);]]></Script>
+    </Step>
   </Steps>
   <JScript><![CDATA[function T_10_엑셀양식설정(args) {
 
@@ -1400,6 +1413,10 @@
         STEP('Sbf8ea27bfbdd44808deaac33d8e261b3', '[24] Click');
         StepPlayer.Run('Win.Click', this.click_info_24);
 
+        //------------------------------------------------
+        STEP('Se82a17f77b6c402d80a0453efc8f0112', '[25] SelectRange');
+        StepPlayer.Run('Excel.SelectRange', this.selectrange_info_25);
+
 
     }
 
@@ -1437,6 +1454,7 @@
       <StepNode step_id="S5801d2cb9c514ebe8afe023143b381b0" group_name="d592f56e-3512-4564-8d77-b102dd5d0996_Untitled" folded="False" color="" />
       <StepNode step_id="S2de020d2ea6140988c6d1dbc9a7a9d48" group_name="d592f56e-3512-4564-8d77-b102dd5d0996_Untitled" folded="False" color="" />
       <StepNode step_id="Sbf8ea27bfbdd44808deaac33d8e261b3" group_name="d592f56e-3512-4564-8d77-b102dd5d0996_Untitled" folded="False" color="" />
+      <StepNode step_id="Se82a17f77b6c402d80a0453efc8f0112" group_name="17312ba2-a12d-455f-8aa4-da602f5290f5_커서위치정리" folded="False" color="" />
     </StepNodes>
   </Diagram>
 </Process>

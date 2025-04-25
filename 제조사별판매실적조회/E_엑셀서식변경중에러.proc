@@ -1,0 +1,95 @@
+<Process id="2b03473f-42e8-4796-a0fb-a5de1d3262b3" type="event" workType="foreground" name="E_엑셀서식변경중에러" version="" designerVersion="3.1.125.00226" lastPublishedServer="" readonly="false" isValid="true" DesignedBy="Designer" Template="" StepCount="2" Orientation="horizontal">
+  <Properties>
+    <Property key="Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
+    <Property key="Timeout" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="0" />
+    <Property key="RunningTime" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="0" />
+    <Property key="Os" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="Microsoft Windows 10 Pro64비트" />
+    <Property key="Resolution" controlType="String" valueType="System.String" formatType="String_Size" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="1920x1080" />
+    <Property key="CreatedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2025-04-25 12:27:00" />
+    <Property key="CreatedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+    <Property key="LastModifiedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2025-04-25 12:30:02" />
+    <Property key="LastModifiedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="" />
+    <Property key="LastPublishedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+    <Property key="LastPublishedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+  </Properties>
+  <LinkItems />
+  <Variables>
+    <Variable name="sender" scope="Input" valueType="Any" formatType="Any" initValue="this" desc="Task Object" colorValue="#FF2DCDDF" showMarker="False" />
+    <Variable name="args" scope="Input" valueType="Any" formatType="Any" initValue="{message:'error message'}" desc="Exception Object" colorValue="#FF0E8388" showMarker="False" />
+    <Variable name="senderName" scope="Normal" valueType="Any" formatType="Any" initValue="this.sender.constructor.name" desc="Task Name" colorValue="#FF7DCE13" showMarker="False" />
+    <Variable name="errorMessage" scope="Normal" valueType="Any" formatType="Any" initValue="Bot.GetProgressInfo(this.senderName) + '\n' + this.args.message" desc="Default Message Format" colorValue="#FFE49393" showMarker="False" />
+  </Variables>
+  <Steps>
+    <Step id="S2402250cc67e486c9aed5f2139d4952e" ver="311241220" createVer="190131001" type="Desktop" name="MessageBox" dpName="MessageBox" dpValue="this.errorMessage" dpValue2="" dpImage="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="92e5a4bb-4f79-4e54-b07a-42c5c84f2714" type="Desktop">
+        <Property type="Desktop" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="False" />
+        <Property type="Desktop" key="Conditions_Arguments" controlType="Object" valueType="System.Object" formatType="Any" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="this.errorMessage" enabled="True" />
+        <Property type="Desktop" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[MsgBox(this.errorMessage);]]></Script>
+    </Step>
+    <Step id="Sb8663c1943e44cdc8dccc16a4d764084" ver="311241220" createVer="311241220" type="Flow" name="RetryTask" dpName="RetryTask" dpValue="" dpValue2="" dpImage="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="7832fbbe-4057-4e87-b33c-848d8a0ffbd7" type="Flow">
+        <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="--Ignore--" />
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_Result" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_RetryCmd" controlType="PropertyItemDropDownView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="ErrorStep" valuelist="ErrorStep;StepNo" />
+        <Property type="Flow" key="Conditions_RetryArgs" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="0" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[try{
+    return RetryTask(this.sender.constructor.name, 'ErrorStep', 0);
+}catch(e){
+    Warn('CatchException: ' + e.message);
+}
+]]></Script>
+    </Step>
+  </Steps>
+  <JScript><![CDATA[function E_엑셀서식변경중에러(args) {
+
+    this.sender = (typeof args != 'undefined') ? args.sender : this;
+    this.args = (typeof args != 'undefined') ? args.args : {message:'error message'};
+    this.senderName = this.sender.constructor.name;
+    this.errorMessage = Bot.GetProgressInfo(this.senderName) + '\n' + this.args.message;
+
+    this.RPAGOTOENABLE = false;
+    this.GotoStepRetryCntMap = {};
+    this.GotoBlockMap = {};
+    this.GotoReverseBlockMap = {};
+    this.GotoStepBlockTypeMap = {};
+
+
+    this.run = function() {
+
+        //------------------------------------------------
+        STEP('S2402250cc67e486c9aed5f2139d4952e', '[1] MessageBox');
+        MsgBox(this.errorMessage);
+
+        //------------------------------------------------
+        STEP('Sb8663c1943e44cdc8dccc16a4d764084', '[2] RetryTask');
+        try{
+            return RetryTask(this.sender.constructor.name, 'ErrorStep', 0);
+        }catch(e){
+            Warn('CatchException: ' + e.message);
+        }
+
+
+
+    }
+
+    this.execute = function() {
+        var result = null;
+        result = this.run()
+        if (result != null)
+            return result;
+    }
+}
+]]></JScript>
+  <Diagram version="1.300" nodesize="Normal">
+    <StepNodes>
+      <StepNode step_id="S2402250cc67e486c9aed5f2139d4952e" group_name="20533a44-1176-4b74-b282-76aa5b540d04_Untitled" folded="False" color="" />
+      <StepNode step_id="Sb8663c1943e44cdc8dccc16a4d764084" group_name="455e2fd4-cc8c-49d6-9e95-75874defcf5e_Untitled" folded="False" color="" />
+    </StepNodes>
+  </Diagram>
+</Process>

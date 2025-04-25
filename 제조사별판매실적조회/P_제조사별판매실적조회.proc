@@ -5,12 +5,12 @@
     <Property key="onAfter" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
     <Property key="onError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
     <Property key="Timeout" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="0" />
-    <Property key="RunningTime" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="20" />
+    <Property key="RunningTime" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="695" />
     <Property key="Os" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="Microsoft Windows 10 Pro64비트" />
     <Property key="Resolution" controlType="String" valueType="System.String" formatType="String_Size" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="1920x1080" />
     <Property key="CreatedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2025-04-17 10:12:14" />
     <Property key="CreatedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
-    <Property key="LastModifiedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2025-04-25 12:05:31" />
+    <Property key="LastModifiedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2025-04-25 12:54:00" />
     <Property key="LastModifiedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="" />
     <Property key="LastPublishedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
     <Property key="LastPublishedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
@@ -173,13 +173,20 @@
     </Step>
     <Step id="Sc8401e0a7d594c2690d0b361dcc0d0c6" ver="311241220" createVer="311241220" type="Flow" name="RunTask" dpName="RunTask" dpValue="this.i" dpValue2="" dpImage="" tag="" depth="2" stmttype="Normal" enabled="True" mainSet="0">
       <Properties id="97435871-3d94-4135-924a-19f2fdf95636" type="Flow">
-        <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="E_엑셀서식변경중에러" />
         <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
         <Property type="Flow" key="Conditions_TaskName" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="T_10_엑셀양식설정" />
         <Property type="Flow" key="Input_i_Index" controlType="InputControlType" valueType="System.Object" formatType="Variable" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="this.i" />
       </Properties>
       <RelatedSteps />
-      <Script><![CDATA[RunTask(this, 'T_10_엑셀양식설정', {'i_Index':this.i});]]></Script>
+      <Script><![CDATA[try{
+    RunTask(this, 'T_10_엑셀양식설정', {'i_Index':this.i});
+}catch(e){
+    Warn('CatchException: ' + e.message);
+    Warn('Call error handler: E_엑셀서식변경중에러');
+    RunEvent('E_엑셀서식변경중에러', {'sender':this, 'args':e});
+}
+]]></Script>
     </Step>
     <Step id="S7b73a9747402405d9099f69c2d2fc385" ver="311241220" createVer="311241220" type="Flow" name="RunTask" dpName="RunTask" dpValue="this.i" dpValue2="" dpImage="" tag="" depth="2" stmttype="Normal" enabled="True" mainSet="0">
       <Properties id="3c9606cb-33b8-4cc3-90f2-4d2b3aa7a3d6" type="Flow">
@@ -299,7 +306,14 @@
 
             //------------------------------------------------
             STEP('Sc8401e0a7d594c2690d0b361dcc0d0c6', '[14] RunTask');
-            RunTask(this, 'T_10_엑셀양식설정', {'i_Index':this.i});
+            try{
+                RunTask(this, 'T_10_엑셀양식설정', {'i_Index':this.i});
+            }catch(e){
+                Warn('CatchException: ' + e.message);
+                Warn('Call error handler: E_엑셀서식변경중에러');
+                RunEvent('E_엑셀서식변경중에러', {'sender':this, 'args':e});
+            }
+
 
             //------------------------------------------------
             STEP('S7b73a9747402405d9099f69c2d2fc385', '[15] RunTask');

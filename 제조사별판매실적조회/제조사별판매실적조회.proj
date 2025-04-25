@@ -45,7 +45,10 @@
     </LinkItem>
   </NormalTask>
   <Event isExpended="true">
-    <LinkItem id="c0a0e293-87ff-4323-b70e-44c56c6fe9aa" category="Event" isChanged="Y" desc="" stepCount="4" name="E_엑셀라이선스">
+    <LinkItem id="c0a0e293-87ff-4323-b70e-44c56c6fe9aa" category="Event" isChanged="Y" desc="" stepCount="3" name="E_엑셀라이선스">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="2b03473f-42e8-4796-a0fb-a5de1d3262b3" category="Event" isChanged="Y" desc="" stepCount="2" name="E_엑셀서식변경중에러">
       <Properties />
     </LinkItem>
   </Event>

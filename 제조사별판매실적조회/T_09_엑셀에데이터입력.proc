@@ -1,4 +1,4 @@
-<Process id="cac1c9bf-045f-49b6-9d07-f350c676b104" type="task" workType="foreground" name="T_09_엑셀에데이터입력" version="" designerVersion="3.1.125.00226" lastPublishedServer="" readonly="false" isValid="true" DesignedBy="Designer" Template="" StepCount="15" Orientation="horizontal">
+<Process id="cac1c9bf-045f-49b6-9d07-f350c676b104" type="task" workType="foreground" name="T_09_엑셀에데이터입력" version="" designerVersion="3.1.125.00226" lastPublishedServer="" readonly="false" isValid="true" DesignedBy="Designer" Template="" StepCount="19" Orientation="horizontal">
   <Properties>
     <Property key="Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
     <Property key="onBefore" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
@@ -10,13 +10,14 @@
     <Property key="Resolution" controlType="String" valueType="System.String" formatType="String_Size" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="1920x1080" />
     <Property key="CreatedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2025-04-22 12:12:06" />
     <Property key="CreatedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
-    <Property key="LastModifiedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2025-04-25 11:12:15" />
+    <Property key="LastModifiedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2025-04-28 10:30:12" />
     <Property key="LastModifiedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="" />
     <Property key="LastPublishedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
     <Property key="LastPublishedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
   </Properties>
   <LinkItems />
   <Variables>
+    <Variable name="is_ActiveExcel" scope="Normal" valueType="Any" formatType="Any" initValue="" desc="" colorValue="#FFFFACAC" showMarker="False" />
     <Variable name="i_str_ImageTablePath" scope="Input" valueType="Any" formatType="Any" initValue="" desc="" colorValue="#FF0E8388" showMarker="False" />
     <Variable name="i_str_ImageGraphPath" scope="Input" valueType="Any" formatType="Any" initValue="" desc="" colorValue="#FF3C79F5" showMarker="False" />
     <Variable name="i_arr2_EngineData" scope="Input" valueType="Any" formatType="Any" initValue="" desc="" colorValue="#FF9E4784" showMarker="False" />
@@ -42,6 +43,162 @@
       <RelatedSteps />
       <Script><![CDATA[Global.ExcelHandle = StepPlayer.Run('Excel.OpenExcel', this.openexcel_info_1);]]></Script>
     </Step>
+    <Step id="Se5a7190e60584af081f35bd3abb6d498" ver="311241220" createVer="311241220" type="Win" name="IsExist" dpName="IsExist" dpValue="편집 사용(E)" dpValue2="보고서_Template.xlsx  [제한된 보기] - Excel" dpImage="Target_Capture" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="8e1655ff-3f2d-4430-88e7-c364056f1d45" type="Win">
+        <Property type="Win" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Target_Timeout" controlType="Int32" valueType="System.Int32" formatType="Integer" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="1" />
+        <Property type="Win" key="Target_TargetNo" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" order="4" />
+        <Property type="Win" key="Target_UseName" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="True" />
+        <Property type="Win" key="Target_UseValue" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseLegacyName" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseLegacyValue" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseLegacyDesc" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseLegacyHelp" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseBounds" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseAppTitle" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseSetFocus" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="True" />
+        <Property type="Win" key="Target_UseClickBefore" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_DrawBounds" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="True" />
+        <Property type="Win" key="Target_UseObjectPath" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="True" />
+        <Property type="Win" key="Target_UseRelativePath" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_ObjectPathEx" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="'Window|XLMAIN||Win32|False||2|보고서_Template.xlsx  [제한된 보기] - Excel/Pane|EXCEL2||Win32|False||2|/ToolBar|MsoCommandBar||Win32|False||0|/Pane|MsoWorkPane||Win32|False||0|Business Bar/Pane|NUIPane||Win32|False||0|/Pane|NetUIHWNDElement||Win32|False||0|/Custom|NetUInetpane||Win32|False||0|메시지 표시줄/Group|NetUIElement||Win32|False||0|제한된 보기/Button|NetUISimpleButton||Win32|False||2|편집 사용(E)'" order="10" />
+        <Property type="Win" key="Target_RelativePath" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" order="11" />
+        <Property type="Win" key="Mouse_OffsetPoint" controlType="String" valueType="System.String" formatType="String_Point" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="'61, 10'" order="12" />
+        <Property type="Win" key="Mouse_Point" controlType="String" valueType="System.String" formatType="String_Point" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="'61, 10'" order="13" />
+        <Property type="Win" key="Mouse_OriginPoint" controlType="PropertyItemDropDownView" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="Center" valuelist="LeftTop;RightTop;LeftBottom;RightBottom;Center" order="14" />
+        <Property type="Win" key="Target_UseSearchAround" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseImageMatch" controlType="PropertyItemDropDownView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="NotUse" order="80" valuelist="NotUse;Always;WhenFailed" />
+        <Property type="Win" key="Target_ImageIndexMethod" controlType="PropertyItemDropDownView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="JustBest" order="81" valuelist="JustBest;RowFirst;ColumnFirst;ScoreOrderRow;ScoreOrderColumn" />
+        <Property type="Win" key="Target_SelectImageIndex" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="0" order="82" />
+        <Property type="Win" key="Target_SearchBounds" controlType="String" valueType="System.String" formatType="String_Rect" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Target_IgnoreOffScreen" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="True" />
+        <Property type="Win" key="Application_PID" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="1320" />
+        <Property type="Win" key="Application_ProcessName" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="True" encrypted="False" isChanged="N" value="EXCEL" order="2" />
+        <Property type="Win" key="Target_RemoteAppName" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="True" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Application_Title" controlType="PropertyItemTextFieldWithLikeSearchView" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="'보고서_Template.xlsx  [제한된 보기] - Excel'" />
+        <Property type="Win" key="Application_ClassName" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="XLMAIN" />
+        <Property type="Win" key="Application_ClassType" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="Window" />
+        <Property type="Win" key="Application_WindowHandle" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="1050158" />
+        <Property type="Win" key="Application_Bounds" controlType="Rect" valueType="System.Windows.Rect" formatType="Rect" required="False" visible="False" readonly="True" encrypted="False" isChanged="N" value="-8,-8,1936,1056" />
+        <Property type="Win" key="Target_SupportedPatterns" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="Invoke" />
+        <Property type="Win" key="Target_AutomationID" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Target_FrameworkID" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="Win32" />
+        <Property type="Win" key="Target_RuntimeID" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="42.4327162.4.-1727299152.738" />
+        <Property type="Win" key="Target_ClassName" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="NetUISimpleButton" />
+        <Property type="Win" key="Target_ClassType" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="True" encrypted="False" isChanged="N" value="Button" order="3" />
+        <Property type="Win" key="Target_Name" controlType="PropertyItemTextFieldWithLikeSearchView" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="'편집 사용(E)'" />
+        <Property type="Win" key="Target_ObjectPath" controlType="String" valueType="System.String" formatType="String" required="True" visible="False" readonly="False" encrypted="False" isChanged="N" value="'Window|XLMAIN||Win32/Pane|EXCEL2||Win32/ToolBar|MsoCommandBar||Win32/Pane|MsoWorkPane||Win32/Pane|NUIPane||Win32/Pane|NetUIHWNDElement||Win32/Custom|NetUInetpane||Win32/Group|NetUIElement||Win32/Button|NetUISimpleButton||Win32'" />
+        <Property type="Win" key="Target_Bounds" controlType="Rect" valueType="System.Windows.Rect" formatType="Rect" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="899,88,86,26" />
+        <Property type="Win" key="Mouse_WinPoint" controlType="Point" valueType="System.Windows.Point" formatType="Point" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="952,90" />
+        <Property type="Win" key="Mouse_AppPoint" controlType="Point" valueType="System.Windows.Point" formatType="Point" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="960,98" />
+        <Property type="Win" key="Target_Value" controlType="PropertyItemTextFieldWithLikeSearchView" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="''" />
+        <Property type="Win" key="Target_LegacyName" controlType="PropertyItemTextFieldWithLikeSearchView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="'편집 사용(E)'" />
+        <Property type="Win" key="Target_LegacyValue" controlType="PropertyItemTextFieldWithLikeSearchView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="''" />
+        <Property type="Win" key="Target_LegacyDesc" controlType="PropertyItemTextFieldWithLikeSearchView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="''" />
+        <Property type="Win" key="Target_LegacyHelp" controlType="PropertyItemTextFieldWithLikeSearchView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="''" />
+        <Property type="Win" key="Target_IsReadOnly" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_IsEditable" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="True" />
+        <Property type="Win" key="Target_SizeTolerance" controlType="Size" valueType="System.Windows.Size" formatType="Size" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="30,15" />
+        <Property type="Win" key="Target_TimeStamp" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="2025-04-28 09:55:21.203" />
+        <Property type="Win" key="Conditions_Result" controlType="OutputControlType" valueType="System.Boolean" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="this.is_ActiveExcel" />
+        <Property type="Win" key="Target_CapturedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="Designer" />
+        <Property type="Win" key="Target_Capture" controlType="Bitmap" valueType="System.Drawing.Bitmap" formatType="Bitmap" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="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" />
+        <Property type="Win" key="Target_ImageCompareBounds" controlType="Rect" valueType="System.Windows.Rect" formatType="Rect" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="39,40,86,26" />
+        <Property type="Win" key="Target_PointOnImage" controlType="String" valueType="System.String" formatType="String_Point" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="'43, 13'" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[this.is_ActiveExcel = StepPlayer.Run('Win.IsExist', this.isexist_info_2);]]></Script>
+    </Step>
+    <Step id="S0a581c343a4e4f339546a92831c7b275" ver="311241220" createVer="311241220" type="Flow" name="DecisionThen" dpName="IfThen" dpValue="this.is_ActiveExcel" dpValue2="" dpImage="" tag="" depth="1" stmttype="OpenBlock" enabled="True" mainSet="0">
+      <Properties id="f3dec0f6-5832-4289-806f-02e60b5e9306" type="Flow">
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_Expression" controlType="PropertyItemTextEditorView" valueType="System.Object" formatType="Condition" required="True" visible="False" readonly="True" encrypted="False" isChanged="N" value="this.is_ActiveExcel" order="1" />
+        <Property type="Flow" key="Conditions_CombineCondition" controlType="PropertyItemCombineConditionView" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="True" order="2" />
+        <Property type="Flow" key="Conditions_Expression1" controlType="PropertyItemExpressionView" valueType="System.Object" formatType="Condition" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="this.is_ActiveExcel" order="3" />
+        <Property type="Flow" key="Conditions_AddCondition" controlType="PropertyItemAddConditionView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+      </Properties>
+      <RelatedSteps>
+        <RelatedStep id="S0053b0ea799843dd9b84a9396ae8367a" type="Flow" name="EndDecisionThen" />
+      </RelatedSteps>
+      <Script><![CDATA[if (this.is_ActiveExcel) {]]></Script>
+    </Step>
+    <Step id="Sa5ae497e440d4ef290fc88e88eb78eca" ver="311241220" createVer="311241220" type="Win" name="Click" dpName="Click" dpValue="편집 사용(E)" dpValue2="보고서_Template.xlsx  [제한된 보기] - Excel" dpImage="Target_Capture" tag="" depth="2" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="4f800912-7e9d-4612-bb97-28bc7ea52404" type="Win">
+        <Property type="Win" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Target_Timeout" controlType="Int32" valueType="System.Int32" formatType="Integer" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="10" />
+        <Property type="Win" key="Target_TargetNo" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" order="4" />
+        <Property type="Win" key="Target_UseName" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="True" />
+        <Property type="Win" key="Target_UseValue" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseLegacyName" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseLegacyValue" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseLegacyDesc" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseLegacyHelp" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseBounds" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseAppTitle" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseSetFocus" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="True" />
+        <Property type="Win" key="Target_UseClickBefore" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_DrawBounds" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="True" />
+        <Property type="Win" key="Target_UseObjectPath" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="True" />
+        <Property type="Win" key="Target_UseRelativePath" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_ObjectPathEx" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="'Window|XLMAIN||Win32|False||2|보고서_Template.xlsx  [제한된 보기] - Excel/Pane|EXCEL2||Win32|False||2|/ToolBar|MsoCommandBar||Win32|False||0|/Pane|MsoWorkPane||Win32|False||0|Business Bar/Pane|NUIPane||Win32|False||0|/Pane|NetUIHWNDElement||Win32|False||0|/Custom|NetUInetpane||Win32|False||0|메시지 표시줄/Group|NetUIElement||Win32|False||0|제한된 보기/Button|NetUISimpleButton||Win32|False||2|편집 사용(E)'" order="10" />
+        <Property type="Win" key="Target_RelativePath" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" order="11" />
+        <Property type="Win" key="Mouse_OffsetPoint" controlType="String" valueType="System.String" formatType="String_Point" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="'44, 12'" order="12" />
+        <Property type="Win" key="Mouse_Point" controlType="String" valueType="System.String" formatType="String_Point" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="'44, 12'" order="13" />
+        <Property type="Win" key="Mouse_OriginPoint" controlType="PropertyItemDropDownView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="LeftTop" valuelist="LeftTop;RightTop;LeftBottom;RightBottom;Center" order="14" />
+        <Property type="Win" key="Target_UseSearchAround" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_UseImageMatch" controlType="PropertyItemDropDownView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="NotUse" order="80" valuelist="NotUse;Always;WhenFailed" />
+        <Property type="Win" key="Target_ImageIndexMethod" controlType="PropertyItemDropDownView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="JustBest" order="81" valuelist="JustBest;RowFirst;ColumnFirst;ScoreOrderRow;ScoreOrderColumn" />
+        <Property type="Win" key="Target_SelectImageIndex" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="0" order="82" />
+        <Property type="Win" key="Target_SearchBounds" controlType="String" valueType="System.String" formatType="String_Rect" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Target_IgnoreOffScreen" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="True" />
+        <Property type="Win" key="Application_PID" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="1320" />
+        <Property type="Win" key="Application_ProcessName" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="True" encrypted="False" isChanged="N" value="EXCEL" order="2" />
+        <Property type="Win" key="Target_RemoteAppName" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="True" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Application_Title" controlType="PropertyItemTextFieldWithLikeSearchView" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="'보고서_Template.xlsx  [제한된 보기] - Excel'" />
+        <Property type="Win" key="Application_ClassName" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="XLMAIN" />
+        <Property type="Win" key="Application_ClassType" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="Window" />
+        <Property type="Win" key="Application_WindowHandle" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="1050158" />
+        <Property type="Win" key="Application_Bounds" controlType="Rect" valueType="System.Windows.Rect" formatType="Rect" required="False" visible="False" readonly="True" encrypted="False" isChanged="N" value="-8,-8,1936,1056" />
+        <Property type="Win" key="Target_SupportedPatterns" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="Invoke" />
+        <Property type="Win" key="Target_AutomationID" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Win" key="Target_FrameworkID" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="Win32" />
+        <Property type="Win" key="Target_RuntimeID" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="42.4327162.4.-1727299152.738" />
+        <Property type="Win" key="Target_ClassName" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="NetUISimpleButton" />
+        <Property type="Win" key="Target_ClassType" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="True" encrypted="False" isChanged="N" value="Button" order="3" />
+        <Property type="Win" key="Target_Name" controlType="PropertyItemTextFieldWithLikeSearchView" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="'편집 사용(E)'" />
+        <Property type="Win" key="Target_ObjectPath" controlType="String" valueType="System.String" formatType="String" required="True" visible="False" readonly="False" encrypted="False" isChanged="N" value="'Window|XLMAIN||Win32/Pane|EXCEL2||Win32/ToolBar|MsoCommandBar||Win32/Pane|MsoWorkPane||Win32/Pane|NUIPane||Win32/Pane|NetUIHWNDElement||Win32/Custom|NetUInetpane||Win32/Group|NetUIElement||Win32/Button|NetUISimpleButton||Win32'" />
+        <Property type="Win" key="Target_Bounds" controlType="Rect" valueType="System.Windows.Rect" formatType="Rect" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="899,88,86,26" />
+        <Property type="Win" key="Mouse_WinPoint" controlType="Point" valueType="System.Windows.Point" formatType="Point" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="935,92" />
+        <Property type="Win" key="Mouse_AppPoint" controlType="Point" valueType="System.Windows.Point" formatType="Point" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="943,100" />
+        <Property type="Win" key="Target_Value" controlType="PropertyItemTextFieldWithLikeSearchView" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="''" />
+        <Property type="Win" key="Target_LegacyName" controlType="PropertyItemTextFieldWithLikeSearchView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="'편집 사용(E)'" />
+        <Property type="Win" key="Target_LegacyValue" controlType="PropertyItemTextFieldWithLikeSearchView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="''" />
+        <Property type="Win" key="Target_LegacyDesc" controlType="PropertyItemTextFieldWithLikeSearchView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="''" />
+        <Property type="Win" key="Target_LegacyHelp" controlType="PropertyItemTextFieldWithLikeSearchView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="''" />
+        <Property type="Win" key="Target_IsReadOnly" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
+        <Property type="Win" key="Target_IsEditable" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="True" />
+        <Property type="Win" key="Target_SizeTolerance" controlType="Size" valueType="System.Windows.Size" formatType="Size" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="30,15" />
+        <Property type="Win" key="Target_TimeStamp" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="2025-04-28 09:56:06.995" />
+        <Property type="Win" key="Mouse_UseInvoke" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" toggle="Invoke;Click" />
+        <Property type="Win" key="Target_CapturedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="Designer" />
+        <Property type="Win" key="Target_Capture" controlType="Bitmap" valueType="System.Drawing.Bitmap" formatType="Bitmap" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="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" />
+        <Property type="Win" key="Target_ImageCompareBounds" controlType="Rect" valueType="System.Windows.Rect" formatType="Rect" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="56,38,86,26" />
+        <Property type="Win" key="Target_PointOnImage" controlType="String" valueType="System.String" formatType="String_Point" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="'43, 13'" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[StepPlayer.Run('Win.Click', this.click_info_4);]]></Script>
+    </Step>
+    <Step id="S0053b0ea799843dd9b84a9396ae8367a" ver="311241220" createVer="311241220" type="Flow" name="EndDecisionThen" dpName="End-IfThen" dpValue="" dpValue2="" dpImage="" tag="" depth="2" stmttype="CloseBlock" enabled="True" mainSet="0">
+      <Properties id="db146af1-b679-47a1-b0ba-f5aec1ebb0c0" type="Flow">
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+      </Properties>
+      <RelatedSteps>
+        <RelatedStep id="S0a581c343a4e4f339546a92831c7b275" type="Flow" name="DecisionThen" />
+      </RelatedSteps>
+      <Script><![CDATA[}]]></Script>
+    </Step>
     <Step id="Sc20bf500ab934daab22fd379fa21ad49" ver="311241220" createVer="311241220" type="Excel" name="WriteRange" dpName="WriteRange" dpValue="ACTIVE_SHEET" dpValue2="" dpImage="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
       <Properties id="c70fb5f6-72f6-4b98-acd1-0f1b03d31d33" type="Excel">
         <Property type="Excel" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
@@ -53,7 +210,7 @@
         <Property type="Excel" key="File_AutoSave" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" />
       </Properties>
       <RelatedSteps />
-      <Script><![CDATA[StepPlayer.Run('Excel.WriteRange', this.writerange_info_2);]]></Script>
+      <Script><![CDATA[StepPlayer.Run('Excel.WriteRange', this.writerange_info_6);]]></Script>
     </Step>
     <Step id="Sdbd248a43e4349b6a9d62849aabaa4b3" ver="311241220" createVer="311241220" type="Excel" name="WriteRange" dpName="WriteRange" dpValue="ACTIVE_SHEET" dpValue2="" dpImage="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
       <Properties id="fdb92e5b-b302-4487-9d28-b06efda2cefe" type="Excel">
@@ -66,7 +223,7 @@
         <Property type="Excel" key="File_AutoSave" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="False" />
       </Properties>
       <RelatedSteps />
-      <Script><![CDATA[StepPlayer.Run('Excel.WriteRange', this.writerange_info_3);]]></Script>
+      <Script><![CDATA[StepPlayer.Run('Excel.WriteRange', this.writerange_info_7);]]></Script>
     </Step>
     <Step id="S39e9316401904368a22e72df64ae39be" ver="311241220" createVer="311241220" type="Excel" name="SelectRange" dpName="SelectRange" dpValue="H7" dpValue2="" dpImage="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
       <Properties id="6c2d22cc-1e2f-459e-8466-55df0a76bd91" type="Excel">
@@ -79,7 +236,7 @@
         <Property type="Excel" key="Sheet_MousePos" controlType="String" valueType="System.String" formatType="String_Point" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="'-1, -1'" />
       </Properties>
       <RelatedSteps />
-      <Script><![CDATA[StepPlayer.Run('Excel.SelectRange', this.selectrange_info_4);]]></Script>
+      <Script><![CDATA[StepPlayer.Run('Excel.SelectRange', this.selectrange_info_8);]]></Script>
     </Step>
     <Step id="S52ec4d613eb346d19c3202b4147b677b" ver="311241220" createVer="311241220" type="Win" name="Click" dpName="Click" dpValue="삽입" dpValue2="보고서_Template.xlsx - Excel" dpImage="Target_Capture" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
       <Properties id="4e5c8070-32e8-48d0-ba27-86ff48812505" type="Win">
@@ -146,7 +303,7 @@
         <Property type="Win" key="Target_PointOnImage" controlType="String" valueType="System.String" formatType="String_Point" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="'22, 15'" />
       </Properties>
       <RelatedSteps />
-      <Script><![CDATA[StepPlayer.Run('Win.Click', this.click_info_5);]]></Script>
+      <Script><![CDATA[StepPlayer.Run('Win.Click', this.click_info_9);]]></Script>
     </Step>
     <Step id="Sc0894bfd8b164378baf7e51191d33b12" ver="311241220" createVer="311241220" type="Win" name="Click" dpName="Click" dpValue="그림" dpValue2="보고서_Template.xlsx - Excel" dpImage="Target_Capture" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
       <Properties id="19fea94a-caee-4ca4-8e83-df404ad8218c" type="Win">
@@ -213,7 +370,7 @@
         <Property type="Win" key="Target_PointOnImage" controlType="String" valueType="System.String" formatType="String_Point" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="'21, 38'" />
       </Properties>
       <RelatedSteps />
-      <Script><![CDATA[StepPlayer.Run('Win.Click', this.click_info_6);]]></Script>
+      <Script><![CDATA[StepPlayer.Run('Win.Click', this.click_info_10);]]></Script>
     </Step>
     <Step id="Sb425a710a388418fb8be98c43de43bac" ver="311241220" createVer="311241220" type="Win" name="Click" dpName="Click" dpValue="이 디바이스..." dpValue2="보고서_Template.xlsx - Excel" dpImage="Target_Capture" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
       <Properties id="0da58efe-84d0-4c86-88ab-552d348548a3" type="Win">
@@ -280,7 +437,7 @@
         <Property type="Win" key="Target_PointOnImage" controlType="String" valueType="System.String" formatType="String_Point" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="'75, 14'" />
       </Properties>
       <RelatedSteps />
-      <Script><![CDATA[StepPlayer.Run('Win.Click', this.click_info_7);]]></Script>
+      <Script><![CDATA[StepPlayer.Run('Win.Click', this.click_info_11);]]></Script>
     </Step>
     <Step id="S340858679b5f44e18fc128d43f529424" ver="311241220" createVer="311241220" type="Win" name="TextInput" dpName="TextInput" dpValue="this.i_str_ImageGraphPath" dpValue2="보고서_Template.xlsx - Excel" dpImage="Target_Capture" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
       <Properties id="8d972d9b-049b-4f66-a7b2-9a794d366681" type="Win">
@@ -355,7 +512,7 @@
         <Property type="Win" key="Target_IsPassword" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
       </Properties>
       <RelatedSteps />
-      <Script><![CDATA[StepPlayer.Run('Win.TextInput', this.textinput_info_8);]]></Script>
+      <Script><![CDATA[StepPlayer.Run('Win.TextInput', this.textinput_info_12);]]></Script>
     </Step>
     <Step id="Sd7fd87705cc548bd834cb561ef525903" ver="311241220" createVer="311241220" type="Win" name="Click" dpName="Click" dpValue="삽입(S)" dpValue2="보고서_Template.xlsx - Excel" dpImage="Target_Capture" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
       <Properties id="0da58efe-84d0-4c86-88ab-552d348548a3" type="Win">
@@ -422,7 +579,7 @@
         <Property type="Win" key="Target_PointOnImage" controlType="String" valueType="System.String" formatType="String_Point" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="'44, 13'" />
       </Properties>
       <RelatedSteps />
-      <Script><![CDATA[StepPlayer.Run('Win.Click', this.click_info_9);]]></Script>
+      <Script><![CDATA[StepPlayer.Run('Win.Click', this.click_info_13);]]></Script>
     </Step>
     <Step id="Sb0bd8783e7194c929e25fbc74fcec2de" ver="311241220" createVer="311241220" type="Excel" name="SelectRange" dpName="SelectRange" dpValue="H16" dpValue2="" dpImage="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
       <Properties id="6c2d22cc-1e2f-459e-8466-55df0a76bd91" type="Excel">
@@ -435,7 +592,7 @@
         <Property type="Excel" key="Sheet_MousePos" controlType="String" valueType="System.String" formatType="String_Point" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="'-1, -1'" />
       </Properties>
       <RelatedSteps />
-      <Script><![CDATA[StepPlayer.Run('Excel.SelectRange', this.selectrange_info_10);]]></Script>
+      <Script><![CDATA[StepPlayer.Run('Excel.SelectRange', this.selectrange_info_14);]]></Script>
     </Step>
     <Step id="S9ec301a706564d7497c2446ff8839975" ver="311241220" createVer="311241220" type="Win" name="Click" dpName="Click" dpValue="삽입" dpValue2="보고서_Template.xlsx - Excel" dpImage="Target_Capture" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
       <Properties id="4e5c8070-32e8-48d0-ba27-86ff48812505" type="Win">
@@ -502,7 +659,7 @@
         <Property type="Win" key="Target_PointOnImage" controlType="String" valueType="System.String" formatType="String_Point" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="'22, 15'" />
       </Properties>
       <RelatedSteps />
-      <Script><![CDATA[StepPlayer.Run('Win.Click', this.click_info_11);]]></Script>
+      <Script><![CDATA[StepPlayer.Run('Win.Click', this.click_info_15);]]></Script>
     </Step>
     <Step id="S2e48591ea7c04d75a37f0ac2a015d27c" ver="311241220" createVer="311241220" type="Win" name="Click" dpName="Click" dpValue="그림" dpValue2="보고서_Template.xlsx - Excel" dpImage="Target_Capture" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
       <Properties id="19fea94a-caee-4ca4-8e83-df404ad8218c" type="Win">
@@ -569,7 +726,7 @@
         <Property type="Win" key="Target_PointOnImage" controlType="String" valueType="System.String" formatType="String_Point" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="'21, 38'" />
       </Properties>
       <RelatedSteps />
-      <Script><![CDATA[StepPlayer.Run('Win.Click', this.click_info_12);]]></Script>
+      <Script><![CDATA[StepPlayer.Run('Win.Click', this.click_info_16);]]></Script>
     </Step>
     <Step id="S4faebef086034c1db0a0d926be96679f" ver="311241220" createVer="311241220" type="Win" name="Click" dpName="Click" dpValue="이 디바이스..." dpValue2="보고서_Template.xlsx - Excel" dpImage="Target_Capture" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
       <Properties id="0da58efe-84d0-4c86-88ab-552d348548a3" type="Win">
@@ -636,7 +793,7 @@
         <Property type="Win" key="Target_PointOnImage" controlType="String" valueType="System.String" formatType="String_Point" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="'75, 14'" />
       </Properties>
       <RelatedSteps />
-      <Script><![CDATA[StepPlayer.Run('Win.Click', this.click_info_13);]]></Script>
+      <Script><![CDATA[StepPlayer.Run('Win.Click', this.click_info_17);]]></Script>
     </Step>
     <Step id="S9d27115ec8974c11811cc5a39c3dca7e" ver="311241220" createVer="311241220" type="Win" name="TextInput" dpName="TextInput" dpValue="this.i_str_ImageTablePath" dpValue2="보고서_Template.xlsx - Excel" dpImage="Target_Capture" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
       <Properties id="8d972d9b-049b-4f66-a7b2-9a794d366681" type="Win">
@@ -711,7 +868,7 @@
         <Property type="Win" key="Target_IsPassword" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
       </Properties>
       <RelatedSteps />
-      <Script><![CDATA[StepPlayer.Run('Win.TextInput', this.textinput_info_14);]]></Script>
+      <Script><![CDATA[StepPlayer.Run('Win.TextInput', this.textinput_info_18);]]></Script>
     </Step>
     <Step id="Sb55f00a54a2d497fafb8d35de4cc0591" ver="311241220" createVer="311241220" type="Win" name="Click" dpName="Click" dpValue="삽입(S)" dpValue2="보고서_Template.xlsx - Excel" dpImage="Target_Capture" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
       <Properties id="0da58efe-84d0-4c86-88ab-552d348548a3" type="Win">
@@ -778,11 +935,12 @@
         <Property type="Win" key="Target_PointOnImage" controlType="String" valueType="System.String" formatType="String_Point" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="'44, 13'" />
       </Properties>
       <RelatedSteps />
-      <Script><![CDATA[StepPlayer.Run('Win.Click', this.click_info_15);]]></Script>
+      <Script><![CDATA[StepPlayer.Run('Win.Click', this.click_info_19);]]></Script>
     </Step>
   </Steps>
   <JScript><![CDATA[function T_09_엑셀에데이터입력(args) {
 
+    this.is_ActiveExcel;
     this.i_str_ImageTablePath = (typeof args != 'undefined') ? args.i_str_ImageTablePath : null;
     this.i_str_ImageGraphPath = (typeof args != 'undefined') ? args.i_str_ImageGraphPath : null;
     this.i_arr2_EngineData = (typeof args != 'undefined') ? args.i_arr2_EngineData : null;
@@ -790,9 +948,9 @@
 
     this.RPAGOTOENABLE = false;
     this.GotoStepRetryCntMap = {};
-    this.GotoBlockMap = {};
-    this.GotoReverseBlockMap = {};
-    this.GotoStepBlockTypeMap = {};
+    this.GotoBlockMap = {3:[5]};
+    this.GotoReverseBlockMap = {5:3};
+    this.GotoStepBlockTypeMap = {3:'DecisionThen',5:'EndDecisionThen'};
 
 
     this.run = function() {
@@ -802,60 +960,76 @@
         Global.ExcelHandle = StepPlayer.Run('Excel.OpenExcel', this.openexcel_info_1);
 
         //------------------------------------------------
-        STEP('Sc20bf500ab934daab22fd379fa21ad49', '[2] WriteRange');
-        StepPlayer.Run('Excel.WriteRange', this.writerange_info_2);
+        STEP('Se5a7190e60584af081f35bd3abb6d498', '[2] IsExist');
+        this.is_ActiveExcel = StepPlayer.Run('Win.IsExist', this.isexist_info_2);
 
         //------------------------------------------------
-        STEP('Sdbd248a43e4349b6a9d62849aabaa4b3', '[3] WriteRange');
-        StepPlayer.Run('Excel.WriteRange', this.writerange_info_3);
+        STEP('S0a581c343a4e4f339546a92831c7b275', '[3] IfThen');
+        if (this.is_ActiveExcel) {
+
+            //------------------------------------------------
+            STEP('Sa5ae497e440d4ef290fc88e88eb78eca', '[4] Click');
+            StepPlayer.Run('Win.Click', this.click_info_4);
 
         //------------------------------------------------
-        STEP('S39e9316401904368a22e72df64ae39be', '[4] SelectRange');
-        StepPlayer.Run('Excel.SelectRange', this.selectrange_info_4);
+        }
+        STEP('S0053b0ea799843dd9b84a9396ae8367a', '[5] End-IfThen');
 
         //------------------------------------------------
-        STEP('S52ec4d613eb346d19c3202b4147b677b', '[5] Click');
-        StepPlayer.Run('Win.Click', this.click_info_5);
+        STEP('Sc20bf500ab934daab22fd379fa21ad49', '[6] WriteRange');
+        StepPlayer.Run('Excel.WriteRange', this.writerange_info_6);
 
         //------------------------------------------------
-        STEP('Sc0894bfd8b164378baf7e51191d33b12', '[6] Click');
-        StepPlayer.Run('Win.Click', this.click_info_6);
+        STEP('Sdbd248a43e4349b6a9d62849aabaa4b3', '[7] WriteRange');
+        StepPlayer.Run('Excel.WriteRange', this.writerange_info_7);
 
         //------------------------------------------------
-        STEP('Sb425a710a388418fb8be98c43de43bac', '[7] Click');
-        StepPlayer.Run('Win.Click', this.click_info_7);
+        STEP('S39e9316401904368a22e72df64ae39be', '[8] SelectRange');
+        StepPlayer.Run('Excel.SelectRange', this.selectrange_info_8);
 
         //------------------------------------------------
-        STEP('S340858679b5f44e18fc128d43f529424', '[8] TextInput');
-        StepPlayer.Run('Win.TextInput', this.textinput_info_8);
-
-        //------------------------------------------------
-        STEP('Sd7fd87705cc548bd834cb561ef525903', '[9] Click');
+        STEP('S52ec4d613eb346d19c3202b4147b677b', '[9] Click');
         StepPlayer.Run('Win.Click', this.click_info_9);
 
         //------------------------------------------------
-        STEP('Sb0bd8783e7194c929e25fbc74fcec2de', '[10] SelectRange');
-        StepPlayer.Run('Excel.SelectRange', this.selectrange_info_10);
+        STEP('Sc0894bfd8b164378baf7e51191d33b12', '[10] Click');
+        StepPlayer.Run('Win.Click', this.click_info_10);
 
         //------------------------------------------------
-        STEP('S9ec301a706564d7497c2446ff8839975', '[11] Click');
+        STEP('Sb425a710a388418fb8be98c43de43bac', '[11] Click');
         StepPlayer.Run('Win.Click', this.click_info_11);
 
         //------------------------------------------------
-        STEP('S2e48591ea7c04d75a37f0ac2a015d27c', '[12] Click');
-        StepPlayer.Run('Win.Click', this.click_info_12);
+        STEP('S340858679b5f44e18fc128d43f529424', '[12] TextInput');
+        StepPlayer.Run('Win.TextInput', this.textinput_info_12);
 
         //------------------------------------------------
-        STEP('S4faebef086034c1db0a0d926be96679f', '[13] Click');
+        STEP('Sd7fd87705cc548bd834cb561ef525903', '[13] Click');
         StepPlayer.Run('Win.Click', this.click_info_13);
 
         //------------------------------------------------
-        STEP('S9d27115ec8974c11811cc5a39c3dca7e', '[14] TextInput');
-        StepPlayer.Run('Win.TextInput', this.textinput_info_14);
+        STEP('Sb0bd8783e7194c929e25fbc74fcec2de', '[14] SelectRange');
+        StepPlayer.Run('Excel.SelectRange', this.selectrange_info_14);
 
         //------------------------------------------------
-        STEP('Sb55f00a54a2d497fafb8d35de4cc0591', '[15] Click');
+        STEP('S9ec301a706564d7497c2446ff8839975', '[15] Click');
         StepPlayer.Run('Win.Click', this.click_info_15);
+
+        //------------------------------------------------
+        STEP('S2e48591ea7c04d75a37f0ac2a015d27c', '[16] Click');
+        StepPlayer.Run('Win.Click', this.click_info_16);
+
+        //------------------------------------------------
+        STEP('S4faebef086034c1db0a0d926be96679f', '[17] Click');
+        StepPlayer.Run('Win.Click', this.click_info_17);
+
+        //------------------------------------------------
+        STEP('S9d27115ec8974c11811cc5a39c3dca7e', '[18] TextInput');
+        StepPlayer.Run('Win.TextInput', this.textinput_info_18);
+
+        //------------------------------------------------
+        STEP('Sb55f00a54a2d497fafb8d35de4cc0591', '[19] Click');
+        StepPlayer.Run('Win.Click', this.click_info_19);
 
 
     }
@@ -871,6 +1045,10 @@
   <Diagram version="1.300" nodesize="Normal">
     <StepNodes>
       <StepNode step_id="Se5a15c94a3d644cab674ba0ea2ce05e9" group_name="42db6d64-9ee2-4017-9276-aeb36d2f5839_Untitled" folded="False" color="" />
+      <StepNode step_id="Se5a7190e60584af081f35bd3abb6d498" group_name="fc50c231-5ba3-4990-a074-f265372327be_Untitled" folded="False" color="" />
+      <StepNode step_id="S0a581c343a4e4f339546a92831c7b275" group_name="" folded="False" color="" />
+      <StepNode step_id="Sa5ae497e440d4ef290fc88e88eb78eca" group_name="00110b2e-84e8-40b2-815b-2dec7ea480ad_Untitled" folded="False" color="" />
+      <StepNode step_id="S0053b0ea799843dd9b84a9396ae8367a" group_name="" folded="False" color="" />
       <StepNode step_id="Sc20bf500ab934daab22fd379fa21ad49" group_name="0ce07feb-7298-48f4-b22b-a5c39d33d746_Untitled" folded="False" color="" />
       <StepNode step_id="Sdbd248a43e4349b6a9d62849aabaa4b3" group_name="0ce07feb-7298-48f4-b22b-a5c39d33d746_Untitled" folded="False" color="" />
       <StepNode step_id="S39e9316401904368a22e72df64ae39be" group_name="93ffca5f-e435-4471-8efd-da5d11d9f79b_Untitled" folded="False" color="" />

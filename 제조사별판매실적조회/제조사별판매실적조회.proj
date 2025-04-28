@@ -1,7 +1,13 @@
-<Project id="15fc358a-8ea9-453c-894f-3247e2514f87" namespace="" name="제조사별판매실적조회" category="project" workType="foreground" version="1.00" lastPublishedDate="" lastPublishedBy="" createdDate="2025-04-17 10:12:14" createdBy="" latestProcess="P_제조사별판매실적조회" designerVersion="3.1.125.00226" DesignedBy="">
+<Project id="15fc358a-8ea9-453c-894f-3247e2514f87" namespace="" name="제조사별판매실적조회" category="project" workType="foreground" version="1.00" lastPublishedDate="" lastPublishedBy="" createdDate="2025-04-17 10:12:14" createdBy="" latestProcess="T_00_브랜드리스트" designerVersion="3.1.125.00226" DesignedBy="">
   <SharedTask isExpended="false" />
   <NormalTask isExpended="true">
     <LinkItem id="6da16fe6-8512-42fb-84d0-8acc0f2ca471" category="NormalTask" isChanged="Y" desc="" stepCount="5" name="T_00_Init">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="ad5c0437-1599-4090-ae63-f6a343c71676" category="NormalTask" isChanged="Y" desc="" stepCount="6" name="T_00_브랜드리스트">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="1a60cb9c-2a78-4f43-95d3-25e8173bacb6" category="NormalTask" isChanged="Y" desc="" stepCount="37" name="T_00_엑셀양식설정_2">
       <Properties />
     </LinkItem>
     <LinkItem id="dfb0b0f6-49d5-4cfd-be4f-115e2bcc71fe" category="NormalTask" isChanged="Y" desc="" stepCount="6" name="T_01_폴더및파일설정">
@@ -10,7 +16,7 @@
     <LinkItem id="affe1dc6-3022-423e-bf5c-e5648d3635c6" category="NormalTask" isChanged="Y" desc="" stepCount="2" name="T_02_추가조회조건입력">
       <Properties />
     </LinkItem>
-    <LinkItem id="e0cb2b4a-16a9-4bf0-8849-1eab1db3dccd" category="NormalTask" isChanged="Y" desc="" stepCount="6" name="T_03_작업조회조건설정">
+    <LinkItem id="e0cb2b4a-16a9-4bf0-8849-1eab1db3dccd" category="NormalTask" isChanged="Y" desc="" stepCount="10" name="T_03_작업조회조건설정">
       <Properties />
     </LinkItem>
     <LinkItem id="a06d3084-2a26-4094-996b-2cba08c14d49" category="NormalTask" isChanged="Y" desc="" stepCount="3" name="T_04_웹사이트접속">
@@ -28,10 +34,10 @@
     <LinkItem id="0fceb893-2120-4d30-b13f-298222c1c71e" category="NormalTask" isChanged="Y" desc="" stepCount="4" name="T_08_데이터추출및가공">
       <Properties />
     </LinkItem>
-    <LinkItem id="cac1c9bf-045f-49b6-9d07-f350c676b104" category="NormalTask" isChanged="Y" desc="" stepCount="15" name="T_09_엑셀에데이터입력">
+    <LinkItem id="cac1c9bf-045f-49b6-9d07-f350c676b104" category="NormalTask" isChanged="Y" desc="" stepCount="19" name="T_09_엑셀에데이터입력">
       <Properties />
     </LinkItem>
-    <LinkItem id="2113ca58-c446-408b-ab7d-4a0df87ed1a7" category="NormalTask" isChanged="Y" desc="" stepCount="25" name="T_10_엑셀양식설정">
+    <LinkItem id="2113ca58-c446-408b-ab7d-4a0df87ed1a7" category="NormalTask" isChanged="Y" desc="" stepCount="5" name="T_10_엑셀양식설정">
       <Properties />
     </LinkItem>
     <LinkItem id="6b80be41-d81d-430e-905e-44eb6af008f4" category="NormalTask" isChanged="Y" desc="" stepCount="2" name="T_11_엑셀저장및닫기">
@@ -45,15 +51,15 @@
     </LinkItem>
   </NormalTask>
   <Event isExpended="true">
-    <LinkItem id="c0a0e293-87ff-4323-b70e-44c56c6fe9aa" category="Event" isChanged="Y" desc="" stepCount="3" name="E_엑셀라이선스">
+    <LinkItem id="063adf1b-e33b-4762-9b53-8369f11ec38e" category="Event" isChanged="Y" desc="" stepCount="2" name="E_날짜형식오류">
       <Properties />
     </LinkItem>
-    <LinkItem id="2b03473f-42e8-4796-a0fb-a5de1d3262b3" category="Event" isChanged="Y" desc="" stepCount="2" name="E_엑셀서식변경중에러">
+    <LinkItem id="05e0d8d1-165a-455d-aafa-d86fc5781209" category="Event" isChanged="Y" desc="" stepCount="2" name="E_엑셀오류">
       <Properties />
     </LinkItem>
   </Event>
   <Process isExpended="true">
-    <LinkItem id="1129b78b-ed75-4df3-af8f-d08bae3583f3" category="Process" isChanged="Y" desc="default process" stepCount="18" name="P_제조사별판매실적조회">
+    <LinkItem id="1129b78b-ed75-4df3-af8f-d08bae3583f3" category="Process" isChanged="Y" desc="default process" stepCount="21" name="P_제조사별판매실적조회">
       <Properties />
     </LinkItem>
   </Process>
@@ -65,7 +71,7 @@
   <Asset />
   <Library />
   <Variables>
-    <Variable name="ExcelHandle" scope="Global" valueType="Any" formatType="Any" initValue="" desc="" colorValue="#FFF71204" showMarker="True" />
+    <Variable name="ExcelHandle" scope="Global" valueType="Any" formatType="Any" initValue="" desc="" colorValue="#FFF71204" showMarker="False" />
     <Variable name="ChromeBrowser" scope="Global" valueType="Any" formatType="Any" initValue="" desc="브라우저: 현재 작업중인 브라우저" colorValue="#FF6C00FF" showMarker="False" />
     <Variable name="str_TempFileName" scope="Global" valueType="Any" formatType="Any" initValue="" desc="파일이름: 양식파일" colorValue="#FF3C79F5" showMarker="False" />
     <Variable name="str_LocalFolderPath" scope="Global" valueType="Any" formatType="Any" initValue="" desc="폴더경로: 기준폴더" colorValue="#FF00E7FF" showMarker="False" />

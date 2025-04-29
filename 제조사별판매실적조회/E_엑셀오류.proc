@@ -7,7 +7,7 @@
     <Property key="Resolution" controlType="String" valueType="System.String" formatType="String_Size" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="1920x1080" />
     <Property key="CreatedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2025-04-28 17:56:06" />
     <Property key="CreatedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
-    <Property key="LastModifiedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2025-04-29 11:28:25" />
+    <Property key="LastModifiedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2025-04-29 17:23:29" />
     <Property key="LastModifiedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="" />
     <Property key="LastPublishedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
     <Property key="LastPublishedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
@@ -37,19 +37,14 @@
     </Step>
     <Step id="S7a99c898f22d4ce2819dfb5c1fb7a27c" ver="311241220" createVer="311241220" type="Flow" name="RetryTask" dpName="RetryTask" dpValue="" dpValue2="" dpImage="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
       <Properties id="c5d0bf5b-9275-463e-8f5b-e5460db5ae56" type="Flow">
-        <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="--Ignore--" />
+        <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
         <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
         <Property type="Flow" key="Conditions_Result" controlType="OutputControlType" valueType="System.Object" formatType="Variable" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
         <Property type="Flow" key="Conditions_RetryCmd" controlType="PropertyItemDropDownView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="StepNo" valuelist="ErrorStep;StepNo" />
-        <Property type="Flow" key="Conditions_RetryArgs" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="16" />
+        <Property type="Flow" key="Conditions_RetryArgs" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="15" />
       </Properties>
       <RelatedSteps />
-      <Script><![CDATA[try{
-    return RetryTask(this.sender.constructor.name, 'StepNo', 16);
-}catch(e){
-    Warn('CatchException: ' + e.message);
-}
-]]></Script>
+      <Script><![CDATA[return RetryTask(this.sender.constructor.name, 'StepNo', 15);]]></Script>
     </Step>
   </Steps>
   <JScript><![CDATA[function E_엑셀오류(args) {
@@ -79,12 +74,7 @@
 
         //------------------------------------------------
         STEP('S7a99c898f22d4ce2819dfb5c1fb7a27c', '[2] RetryTask');
-        try{
-            return RetryTask(this.sender.constructor.name, 'StepNo', 16);
-        }catch(e){
-            Warn('CatchException: ' + e.message);
-        }
-
+        return RetryTask(this.sender.constructor.name, 'StepNo', 15);
 
 
     }
@@ -99,8 +89,8 @@
 ]]></JScript>
   <Diagram version="1.300" nodesize="Normal">
     <StepNodes>
-      <StepNode step_id="Sf2004cac9dc742d69ff9e02b05f76d71" group_name="b5b31ea0-6b4e-4529-b8c8-87d371c6bc8b_Untitled" folded="False" color="" />
-      <StepNode step_id="S7a99c898f22d4ce2819dfb5c1fb7a27c" group_name="fb9c7569-d12d-478f-a070-b89f7117bd5a_Untitled" folded="False" color="" />
+      <StepNode step_id="Sf2004cac9dc742d69ff9e02b05f76d71" group_name="cf32d591-22f2-4702-ae18-f238487573ff_강제 종료" folded="False" color="" />
+      <StepNode step_id="S7a99c898f22d4ce2819dfb5c1fb7a27c" group_name="cc60691e-216f-40d9-83b2-4c7ae62ab4d6_재실핼" folded="False" color="" />
     </StepNodes>
   </Diagram>
 </Process>

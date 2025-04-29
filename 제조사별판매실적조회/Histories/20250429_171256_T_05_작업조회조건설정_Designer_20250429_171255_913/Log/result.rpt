@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Result id="e0cb2b4a-16a9-4bf0-8849-1eab1db3dccd" name="T_05_작업조회조건설정" result="Fail" detail="-- Recent Warning Messages --&#xA;Process: T_05_작업조회조건설정&#xA;Step: ExecuteScript (9/13)&#xA;&#xA;ReferenceError: arr1_RawPeriod is not defined&#xA;Process: T_05_작업조회조건설정&#xA;Task: E_날짜형식오류&#xA;&#xA;Error: Process: T_05_작업조회조건설정&#xA;Step: ExecuteScript (9/13)&#xA;ReferenceError: arr1_RawPeriod is not defined" start="2025-04-29T08:12:58.611" end="2025-04-29T08:13:26.694" jobId="Designer_20250429_171255_913">
+  <Step id="S0bcfededc5424d95835454caff362f8a" taskName="T_05_작업조회조건설정" type="Desktop" name="InputBox" displayName="InputBox" callDepth="1" depth="1" num="5" result="Pass" start="2025-04-29T08:12:58.681" end="2025-04-29T08:13:01.892" displayTime="3.2s">
+    <Variables>
+      <Variable name="i_str_InputPeriod" scope="Input" owner="T_05_작업조회조건설정" declareType="Any" isChanged="false" isChangable="true" runtimeType="Any" value="&lt;null&gt;" />
+    </Variables>
+    <Properties setIndex="0">
+      <Property value="" runtimeType="String" key="Options_OnError" displayKey="On Error" visible="true" required="false" />
+      <Property value="" runtimeType="String" key="Key_Description" displayKey="Description" visible="true" required="false" />
+      <Property value="this.i_str_InputPeriod : '2'" runtimeType="String" key="Conditions_Variable" displayKey="Variable" visible="true" required="true" />
+      <Property value="Text" runtimeType="String" key="Conditions_PromptType" displayKey="Prompt Type" visible="true" required="true" />
+      <Property value="''" runtimeType="String" key="Conditions_DefaultValue" displayKey="Default Value" visible="true" required="false" />
+      <Property value="''" runtimeType="String" key="Conditions_DefaultItem" displayKey="Default Value" visible="false" required="false" />
+      <Property value="''" runtimeType="String" key="Conditions_PromptMessage" displayKey="Guide Message" visible="true" required="false" />
+      <Property value="600" runtimeType="Integer" key="Conditions_TimeoutSec" displayKey="Timeout(Sec)" visible="true" required="true" />
+    </Properties>
+  </Step>
+  <Step id="S548b548d5b53477fb30cf5216c1cd226" taskName="T_05_작업조회조건설정" type="Flow" name="DecisionThen" displayName="IfThen" callDepth="1" depth="1" num="6" result="Pass" start="2025-04-29T08:13:01.904" end="2025-04-29T08:13:01.909" displayTime="0s">
+    <Variables>
+      <Variable name="i_str_InputPeriod" scope="Input" owner="T_05_작업조회조건설정" declareType="Any" isChanged="false" isChangable="false" runtimeType="String" value="'2'" />
+    </Variables>
+    <Properties setIndex="0">
+      <Property value="" runtimeType="String" key="Key_Description" displayKey="Description" visible="true" required="false" />
+      <Property value="this.i_str_InputPeriod!=''" runtimeType="String" key="Conditions_Expression" displayKey="IfThen Condition" visible="false" required="true" />
+      <Property value="true" runtimeType="Boolean" key="Conditions_CombineCondition" displayKey="Combine Condition" visible="false" required="false" />
+      <Property value="true" runtimeType="Boolean" key="Conditions_Expression1" displayKey="Condition" visible="true" required="true" />
+      <Property value="" runtimeType="String" key="Conditions_AddCondition" displayKey="Add Condition" visible="true" required="false" />
+    </Properties>
+  </Step>
+  <Step id="S3745203890be4c7ea6f1246b8d0689b5" taskName="T_05_작업조회조건설정" type="Flow" name="TryCatch" displayName="TryCatch" callDepth="1" depth="2" num="7" result="Pass" start="2025-04-29T08:13:01.920" end="2025-04-29T08:13:01.921" displayTime="0s">
+    <Variables />
+    <Properties setIndex="0">
+      <Property value="" runtimeType="String" key="Key_Description" displayKey="Description" visible="true" required="false" />
+    </Properties>
+  </Step>
+  <Step id="Sc17cfbe6752b43139f985a02f63eb57c" taskName="T_05_작업조회조건설정" type="Flow" name="Debugger" displayName="Debugger" callDepth="1" depth="3" num="8" result="Pass" start="2025-04-29T08:13:01.936" end="2025-04-29T08:13:06.791" displayTime="4.9s">
+    <Variables>
+      <Variable name="RESULT" scope="System" declareType="Any" isChanged="false" isChangable="true" runtimeType="Any" value="&lt;null&gt;" />
+    </Variables>
+    <Properties setIndex="0">
+      <Property value="" runtimeType="String" key="Options_OnError" displayKey="On Error" visible="true" required="false" />
+      <Property value="" runtimeType="String" key="Key_Description" displayKey="Description" visible="true" required="false" />
+      <Property runtimeType="String" key="Conditions_Message" displayKey="Message" visible="true" required="false" />
+    </Properties>
+  </Step>
+  <Step id="S2b0adf59227443c585a49e3f6e7a20ea" taskName="T_05_작업조회조건설정" type="Flow" name="ExecuteScript" displayName="ExecuteScript" callDepth="1" depth="3" num="9" result="OnError" detail="arr1_RawPeriod is not defined" start="2025-04-29T08:13:06.807" end="2025-04-29T08:13:08.439" displayTime="1.6s">
+    <Variables>
+      <Variable name="arr1_Period" scope="Global" declareType="Any" isChanged="false" isChangable="true" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="i_str_InputPeriod" scope="Input" owner="T_05_작업조회조건설정" declareType="Any" isChanged="false" isChangable="true" runtimeType="String" value="'2'" />
+    </Variables>
+    <Properties setIndex="0">
+      <Property value="" runtimeType="String" key="Options_OnError" displayKey="On Error" visible="true" required="false" />
+      <Property value="" runtimeType="String" key="Key_Description" displayKey="Description" visible="true" required="false" />
+      <Property value="인풋값으로 조회 조건 변경" runtimeType="String" key="Conditions_Title" displayKey="Title" visible="true" required="true" />
+      <Property value="&lt;Too Long&gt; &#xD;&#xA;this.i_str_InputPeriod = this.i_str_InputPeriod.trim(); //앞뒤 공백 제거&#xD;&#xA;&#xD;&#xA;if(this.i_str_InputPeriod.in ... 1184 more" runtimeType="String" key="Key_Script" displayKey="Script" visible="true" required="false" />
+    </Properties>
+  </Step>
+  <Step id="Sb3c947bfbb0d47e49c4aebd0ee4bfc94" taskName="T_05_작업조회조건설정" type="Flow" name="InternalData" displayName="OnError ('E_날짜형식오류') for '[10] ExecuteScript' of 'T_05_작업조회조건설정'" callDepth="1" depth="1" num="-" result="Internal" start="2025-04-29T08:13:08.455" end="2025-04-29T08:13:08.455" displayTime="0s" />
+  <Step id="S51fecc76de9b40498563c394634713c2" taskName="E_날짜형식오류" type="Flow" name="ExecuteScript" displayName="ExecuteScript" callDepth="2" depth="1" num="1" result="Pass" start="2025-04-29T08:13:08.470" end="2025-04-29T08:13:08.538" displayTime="0.1s">
+    <Variables>
+      <Variable name="sender" scope="Input" owner="E_날짜형식오류" declareType="Any" isChanged="false" isChangable="false" runtimeType="Any" value="&lt;Too Long&gt; {&quot;i_str_InputPeriod&quot;:&quot;2&quot;,&quot;i_str_InputBrandNames&quot;:null,&quot;RPAGOTOENABLE&quot;:false,&quot;GotoStepRetryCntMap&quot;:{} ... 189 more" />
+    </Variables>
+    <Properties setIndex="0">
+      <Property value="" runtimeType="String" key="Options_OnError" displayKey="On Error" visible="true" required="false" />
+      <Property value="" runtimeType="String" key="Key_Description" displayKey="Description" visible="true" required="false" />
+      <Property value="s" runtimeType="String" key="Conditions_Title" displayKey="Title" visible="true" required="true" />
+      <Property value="Bot.Warn('오류로 온 값');&#xD;&#xA;Bot.Warn(this.sender.i_str_InputPeriod);" runtimeType="String" key="Key_Script" displayKey="Script" visible="true" required="false" />
+    </Properties>
+  </Step>
+  <Step id="S9500682fcf4a47fcb7a35ce9936eb588" taskName="E_날짜형식오류" type="Desktop" name="InputBox" displayName="InputBox" callDepth="2" depth="1" num="2" result="Pass" start="2025-04-29T08:13:08.550" end="2025-04-29T08:13:14.182" displayTime="5.6s">
+    <Variables>
+      <Variable name="sender" scope="Input" owner="E_날짜형식오류" declareType="Any" isChanged="false" isChangable="false" runtimeType="Any" value="&lt;Too Long&gt; {&quot;i_str_InputPeriod&quot;:&quot;2&quot;,&quot;i_str_InputBrandNames&quot;:null,&quot;RPAGOTOENABLE&quot;:false,&quot;GotoStepRetryCntMap&quot;:{} ... 189 more" />
+    </Variables>
+    <Properties setIndex="0">
+      <Property value="" runtimeType="String" key="Options_OnError" displayKey="On Error" visible="true" required="false" />
+      <Property value="" runtimeType="String" key="Key_Description" displayKey="Description" visible="true" required="false" />
+      <Property value="this.sender.i_str_InputPeriod : &lt;undefined&gt;" runtimeType="Undefined" key="Conditions_Variable" displayKey="Variable" visible="true" required="true" />
+      <Property value="Text" runtimeType="String" key="Conditions_PromptType" displayKey="Prompt Type" visible="true" required="true" />
+      <Property value="''" runtimeType="String" key="Conditions_DefaultValue" displayKey="Default Value" visible="true" required="false" />
+      <Property value="''" runtimeType="String" key="Conditions_DefaultItem" displayKey="Default Value" visible="false" required="false" />
+      <Property value="'조회 기간을 형식에 맞게 다시 입력해주세요 예&gt; 2023년 02월'" runtimeType="String" key="Conditions_PromptMessage" displayKey="Guide Message" visible="true" required="false" />
+      <Property value="600" runtimeType="Integer" key="Conditions_TimeoutSec" displayKey="Timeout(Sec)" visible="true" required="true" />
+    </Properties>
+  </Step>
+  <Step id="Sf63f9a606f234ac9b84acacda3427739" taskName="E_날짜형식오류" type="Flow" name="RetryTask" displayName="RetryTask" callDepth="2" depth="1" num="3" result="Pass" start="2025-04-29T08:13:14.187" end="2025-04-29T08:13:14.204" displayTime="0s">
+    <Variables />
+    <Properties setIndex="0">
+      <Property value="" runtimeType="String" key="Options_OnError" displayKey="On Error" visible="true" required="false" />
+      <Property value="" runtimeType="String" key="Key_Description" displayKey="Description" visible="true" required="false" />
+      <Property value=" : '&lt;error-evaluate_debug_value:&gt;'" runtimeType="String" key="Conditions_Result" displayKey="Result" visible="true" required="false" />
+      <Property value="StepNo" runtimeType="String" key="Conditions_RetryCmd" displayKey="Position Type" visible="true" required="false" />
+      <Property value="8" runtimeType="Integer" key="Conditions_RetryArgs" displayKey="Position" visible="true" required="true" />
+      <Property value="0" runtimeType="Integer" key="Options_GotoStepRelativePosition" displayKey="GotoStep Relative Position" visible="false" required="false" />
+      <Property value="1" runtimeType="String" key="Options_GotoStepRetryCount" displayKey="GotoStep Retry Count" visible="false" required="false" />
+    </Properties>
+  </Step>
+  <Step id="Sc17cfbe6752b43139f985a02f63eb57c" taskName="T_05_작업조회조건설정" type="Flow" name="Debugger" displayName="Debugger" callDepth="3" depth="2" num="8" result="Pass" start="2025-04-29T08:13:14.213" end="2025-04-29T08:13:19.513" displayTime="5.3s">
+    <Variables>
+      <Variable name="RESULT" scope="System" declareType="Any" isChanged="false" isChangable="true" runtimeType="Any" value="&lt;null&gt;" />
+    </Variables>
+    <Properties setIndex="0">
+      <Property value="" runtimeType="String" key="Options_OnError" displayKey="On Error" visible="true" required="false" />
+      <Property value="" runtimeType="String" key="Key_Description" displayKey="Description" visible="true" required="false" />
+      <Property runtimeType="String" key="Conditions_Message" displayKey="Message" visible="true" required="false" />
+    </Properties>
+  </Step>
+  <Step id="S2b0adf59227443c585a49e3f6e7a20ea" taskName="T_05_작업조회조건설정" type="Flow" name="ExecuteScript" displayName="ExecuteScript" callDepth="3" depth="2" num="9" result="Fail" detail="ReferenceError: arr1_RawPeriod is not defined" start="2025-04-29T08:13:19.525" end="2025-04-29T08:13:26.676" displayTime="7.2s">
+    <Variables>
+      <Variable name="arr1_Period" scope="Global" declareType="Any" isChanged="false" isChangable="true" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="i_str_InputPeriod" scope="Input" owner="T_05_작업조회조건설정" declareType="Any" isChanged="false" isChangable="true" runtimeType="String" value="'2'" />
+    </Variables>
+    <Properties setIndex="0">
+      <Property value="" runtimeType="String" key="Options_OnError" displayKey="On Error" visible="true" required="false" />
+      <Property value="" runtimeType="String" key="Key_Description" displayKey="Description" visible="true" required="false" />
+      <Property value="인풋값으로 조회 조건 변경" runtimeType="String" key="Conditions_Title" displayKey="Title" visible="true" required="true" />
+      <Property value="&lt;Too Long&gt; &#xD;&#xA;this.i_str_InputPeriod = this.i_str_InputPeriod.trim(); //앞뒤 공백 제거&#xD;&#xA;&#xD;&#xA;if(this.i_str_InputPeriod.in ... 1184 more" runtimeType="String" key="Key_Script" displayKey="Script" visible="true" required="false" />
+    </Properties>
+  </Step>
+  <Step id="S1a2d606d9efe4b69baebbee6dc373a9b" taskName="E_날짜형식오류" type="Flow" name="InternalData" displayName="End-OnError ('E_날짜형식오류') for '[10] ExecuteScript' of 'T_05_작업조회조건설정'" callDepth="2" depth="1" num="" result="Internal" start="2025-04-29T08:13:26.693" end="2025-04-29T08:13:26.693" displayTime="0s" />
+  <JobInfo>
+    <Info name="Bot Version" value="3.1.125.00226" />
+    <Info name="Resolution" value="1920 x 1080" />
+    <Info name="Language" value="한국어 (대한민국)" />
+    <Info name="BotID" value="S-DESIGNER-OY53F" />
+  </JobInfo>
+</Result>

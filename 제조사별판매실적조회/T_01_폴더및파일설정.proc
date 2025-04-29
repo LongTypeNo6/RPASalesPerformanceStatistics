@@ -10,14 +10,14 @@
     <Property key="Resolution" controlType="String" valueType="System.String" formatType="String_Size" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="1920x1080" />
     <Property key="CreatedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2025-04-17 11:20:16" />
     <Property key="CreatedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
-    <Property key="LastModifiedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2025-04-25 11:09:31" />
+    <Property key="LastModifiedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2025-04-29 15:17:17" />
     <Property key="LastModifiedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="" />
     <Property key="LastPublishedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
     <Property key="LastPublishedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
   </Properties>
   <LinkItems />
   <Variables>
-    <Variable name="is_TempFileInTempFolder" scope="Normal" valueType="Any" formatType="Any" initValue="" desc="확인: 템프폴더 내 양식파일 있는 지 확인" colorValue="#FFFFB100" showMarker="False" />
+    <Variable name="is_TempFileInTempFolder" scope="Normal" valueType="Any" formatType="Any" initValue="" desc="확인: 템프폴더 내 기본양식파일 있는 지 확인" colorValue="#FFFFB100" showMarker="False" />
   </Variables>
   <Steps>
     <Step id="S798f45cec321464fadea346cd5c217c4" ver="311241220" createVer="311241220" type="Flow" name="ExecuteScript" dpName="ExecuteScript" dpValue="" dpValue2="" dpImage="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
@@ -171,11 +171,11 @@ Directory.CreateDirectory(Global.str_OutputFolderPath);
   <Diagram version="1.300" nodesize="Normal">
     <StepNodes>
       <StepNode step_id="S798f45cec321464fadea346cd5c217c4" group_name="74f8d8ba-ee48-4d91-9e25-95999ad3942f_작업 폴더 생성" folded="False" color="" />
-      <StepNode step_id="S1134970c004d4e28bca93f41f78bed1d" group_name="a70e76cb-884e-419b-856d-67f6af6417d4_Temp폴더 내 양식파일 확인" folded="False" color="" />
+      <StepNode step_id="S1134970c004d4e28bca93f41f78bed1d" group_name="3e071c91-2090-488d-bbb0-9aa4d9f9905c_Temp폴더 내 기본양식파일 확인" folded="False" color="" />
       <StepNode step_id="Se61b19c8c15b4592a60a8b53b6e546d6" group_name="" folded="False" color="" />
-      <StepNode step_id="S4f16b9c3ab234c9d8e54eb49131f58b7" group_name="1c276932-80b3-4a9f-9ad9-eace565ef04a_Temp폴더로 양식파일 이동" folded="False" color="" />
+      <StepNode step_id="S4f16b9c3ab234c9d8e54eb49131f58b7" group_name="d9c1229d-9fd4-4e2a-8ed1-334aa8961176_Temp폴더로 기본양식파일 이동" folded="False" color="" />
       <StepNode step_id="S2e16940931ab4a1599b75d6d0687dee8" group_name="" folded="False" color="" />
-      <StepNode step_id="S3bd987af43784501a293782d58f99659" group_name="d7905d8e-882c-4a01-84e1-2f70ce11fbec_양식파일경로설정" folded="False" color="" />
+      <StepNode step_id="S3bd987af43784501a293782d58f99659" group_name="44ce0cac-bacf-47aa-b0bb-11303caf6f9e_기본양식파일경로설정" folded="False" color="" />
     </StepNodes>
   </Diagram>
 </Process>

@@ -1,24 +1,22 @@
-<Process id="e0cb2b4a-16a9-4bf0-8849-1eab1db3dccd" type="task" workType="foreground" name="T_05_작업조회조건설정" version="" designerVersion="3.1.125.00226" lastPublishedServer="" readonly="false" isValid="true" DesignedBy="Designer" Template="" StepCount="11" Orientation="horizontal">
+<Process id="e0cb2b4a-16a9-4bf0-8849-1eab1db3dccd" type="task" workType="foreground" name="T_05_작업조회조건설정" version="" designerVersion="3.1.125.00226" lastPublishedServer="" readonly="false" isValid="true" DesignedBy="Designer" Template="" StepCount="10" Orientation="horizontal">
   <Properties>
     <Property key="Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
     <Property key="onBefore" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
     <Property key="onAfter" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
     <Property key="onError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" enabled="True" />
     <Property key="Timeout" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="0" />
-    <Property key="RunningTime" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="7" />
+    <Property key="RunningTime" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="25" />
     <Property key="Os" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="Microsoft Windows 10 Pro64비트" />
     <Property key="Resolution" controlType="String" valueType="System.String" formatType="String_Size" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="1920x1080" />
     <Property key="CreatedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2025-04-17 11:47:38" />
     <Property key="CreatedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
-    <Property key="LastModifiedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2025-04-29 13:54:44" />
+    <Property key="LastModifiedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2025-04-29 17:22:20" />
     <Property key="LastModifiedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="" />
     <Property key="LastPublishedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
     <Property key="LastPublishedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
   </Properties>
   <LinkItems />
   <Variables>
-    <Variable name="str_Remainders" scope="Normal" valueType="Any" formatType="Any" initValue="''" desc="" colorValue="#FF00E7FF" showMarker="False" />
-    <Variable name="is_PeriodCorrect" scope="Normal" valueType="Any" formatType="Any" initValue="" desc="" colorValue="#FF243763" showMarker="True" />
     <Variable name="i_str_InputPeriod" scope="Input" valueType="Any" formatType="Any" initValue="" desc="" colorValue="#FFE49393" showMarker="True" />
     <Variable name="i_str_InputBrandNames" scope="Input" valueType="Any" formatType="Any" initValue="" desc="" colorValue="#FF7AA874" showMarker="True" />
   </Variables>
@@ -108,7 +106,7 @@
         <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
         <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
         <Property type="Flow" key="Conditions_Title" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="중복확인 및 인풋값 조회조건에 추가" />
-        <Property type="Flow" key="Key_Script" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="arr1_InputBrandNames = this.i_str_InputBrandNames.split(',');&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;for(i=0;i&lt;arr1_InputBrandNames.length;i++){&#xD;&#xA;    str_InputBrandName=arr1_InputBrandNames[i].trim()&#xD;&#xA;    if(ToString(this.data).includes(str_InputBrandName)&amp;&amp;!(ToString(Global.arr1_BrandNames).includes(str_InputBrandName))){&#xD;&#xA;        Global.arr1_BrandNames.push(str_InputBrandName);&#xD;&#xA;    }else {&#xD;&#xA;        this.str_Remainders= this.str_Remainders+' '+str_InputBrandName&#xD;&#xA;        if(Global.str_ErrorReport==''){&#xD;&#xA;            Global.str_ErrorReport='중복되거나 찾을 수 없는 브랜드: ' + str_InputBrandName + ', '&#xD;&#xA;        }else {&#xD;&#xA;            Global.str_ErrorReport = Global.str_ErrorReport + str_InputBrandName + ', '&#xD;&#xA;        }&#xD;&#xA;    }&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;if(Global.str_ErrorReport!=''){&#xD;&#xA;    Global.str_ErrorReport=Global.str_ErrorReport.slice(0,(Global.str_ErrorReport.length-2))&#xD;&#xA;}" />
+        <Property type="Flow" key="Key_Script" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="arr1_InputBrandNames = this.i_str_InputBrandNames.split(',');&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;for(i=0;i&lt;arr1_InputBrandNames.length;i++){&#xD;&#xA;    str_InputBrandName=arr1_InputBrandNames[i].trim()&#xD;&#xA;    if(ToString(this.data).includes(str_InputBrandName)&amp;&amp;!(ToString(Global.arr1_BrandNames).includes(str_InputBrandName))){&#xD;&#xA;        Global.arr1_BrandNames.push(str_InputBrandName);&#xD;&#xA;    }else {&#xD;&#xA;        if(Global.str_ErrorReport==''){&#xD;&#xA;            Global.str_ErrorReport='중복되거나 찾을 수 없는 브랜드: ' + str_InputBrandName + ', '&#xD;&#xA;        }else {&#xD;&#xA;            Global.str_ErrorReport = Global.str_ErrorReport + str_InputBrandName + ', '&#xD;&#xA;        }&#xD;&#xA;    }&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;if(Global.str_ErrorReport!=''){&#xD;&#xA;    Global.str_ErrorReport=Global.str_ErrorReport.slice(0,(Global.str_ErrorReport.length-2))&#xD;&#xA;}" />
       </Properties>
       <RelatedSteps />
       <Script><![CDATA[arr1_InputBrandNames = this.i_str_InputBrandNames.split(',');
@@ -119,7 +117,6 @@ for(i=0;i<arr1_InputBrandNames.length;i++){
     if(ToString(this.data).includes(str_InputBrandName)&&!(ToString(Global.arr1_BrandNames).includes(str_InputBrandName))){
         Global.arr1_BrandNames.push(str_InputBrandName);
     }else {
-        this.str_Remainders= this.str_Remainders+' '+str_InputBrandName
         if(Global.str_ErrorReport==''){
             Global.str_ErrorReport='중복되거나 찾을 수 없는 브랜드: ' + str_InputBrandName + ', '
         }else {
@@ -131,16 +128,6 @@ for(i=0;i<arr1_InputBrandNames.length;i++){
 if(Global.str_ErrorReport!=''){
     Global.str_ErrorReport=Global.str_ErrorReport.slice(0,(Global.str_ErrorReport.length-2))
 }]]></Script>
-    </Step>
-    <Step id="Seded324c3a4b474d84cd29c6fb674b0f" ver="311241220" createVer="311241220" type="Desktop" name="MessageBox" dpName="MessageBox" dpValue=" '다음 값들은 중복되거나 찾을 수 없어, 제외하고 진행됩니다 &#xA;'+this.str_Remainders" dpValue2="" dpImage="" tag="" depth="2" stmttype="Normal" enabled="True" mainSet="0">
-      <Properties id="26d3164d-2a17-4617-a6a8-a49e9f1b64ad" type="Desktop">
-        <Property type="Desktop" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
-        <Property type="Desktop" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
-        <Property type="Desktop" key="Conditions_Arguments" controlType="Object" valueType="System.Object" formatType="Any" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value=" '다음 값들은 중복되거나 찾을 수 없어, 제외하고 진행됩니다 \n'+this.str_Remainders" />
-        <Property type="Desktop" key="Command_Timeout" controlType="Int32" valueType="System.Int32" formatType="Integer" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
-      </Properties>
-      <RelatedSteps />
-      <Script><![CDATA[MsgBox( '다음 값들은 중복되거나 찾을 수 없어, 제외하고 진행됩니다 \n'+this.str_Remainders);]]></Script>
     </Step>
     <Step id="Sf6a95bd3197e4d3998c5b5770375dd19" ver="311241220" createVer="311241220" type="Flow" name="EndDecisionThen" dpName="End-IfThen" dpValue="" dpValue2="" dpImage="" tag="" depth="2" stmttype="CloseBlock" enabled="True" mainSet="0">
       <Properties id="22b6312b-fb9e-4230-8839-52d08b696fdc" type="Flow">
@@ -178,13 +165,13 @@ if(Global.str_ErrorReport!=''){
         <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
         <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
         <Property type="Flow" key="Conditions_Title" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="인풋값으로 조회 조건 변경" />
-        <Property type="Flow" key="Key_Script" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="&#xD;&#xA;this.i_str_InputPeriod = this.i_str_InputPeriod.trim();&#xD;&#xA;&#xD;&#xA;if(this.i_str_InputPeriod.includes('년')){&#xD;&#xA;    arr1_RawPeriod=this.i_str_InputPeriod.split('년')&#xD;&#xA;}else if(this.i_str_InputPeriod.includes('-')){&#xD;&#xA;    arr1_RawPeriod=this.i_str_InputPeriod.split('-')&#xD;&#xA;}else if(this.i_str_InputPeriod.includes('/')){&#xD;&#xA;    arr1_RawPeriod=this.i_str_InputPeriod.split('/')&#xD;&#xA;}else if(this.i_str_InputPeriod.includes(' ')){&#xD;&#xA;    arr1_RawPeriod=this.i_str_InputPeriod.split(' ');&#xD;&#xA;}&#xD;&#xA;arr1_RawPeriod[0]=arr1_RawPeriod[0].trim();&#xD;&#xA;arr1_RawPeriod[1]=arr1_RawPeriod[1].trim();&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;if(arr1_RawPeriod[0].length!=4){&#xD;&#xA;    arr1_RawPeriod[0]='20'+arr1_RawPeriod[0];&#xD;&#xA;}&#xD;&#xA;arr1_RawPeriod[0]=arr1_RawPeriod[0]+'년';&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;if(!(arr1_RawPeriod[1].includes('월'))){&#xD;&#xA;    if(arr1_RawPeriod[1].length==1){&#xD;&#xA;        arr1_RawPeriod[1]='0'+arr1_RawPeriod[1];&#xD;&#xA;    }&#xD;&#xA;    arr1_RawPeriod[1]=arr1_RawPeriod[1]+'월';&#xD;&#xA;}else if(arr1_RawPeriod[1].langth==2){&#xD;&#xA;    arr1_RawPeriod[1]='0'+arr1_RawPeriod[1];&#xD;&#xA;}&#xD;&#xA;Global.arr1_Period=[];&#xD;&#xA;Global.arr1_Period.push(arr1_RawPeriod[0]);&#xD;&#xA;Global.arr1_Period.push(arr1_RawPeriod[1]);&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;Bot.Warn('여기야여기'+ToString(Global.arr1_Period))" />
+        <Property type="Flow" key="Key_Script" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="&#xD;&#xA;this.i_str_InputPeriod = this.i_str_InputPeriod.trim(); //앞뒤 공백 제거&#xD;&#xA;&#xD;&#xA;if(this.i_str_InputPeriod.includes('년')){ //연 월 나누기&#xD;&#xA;    arr1_RawPeriod=this.i_str_InputPeriod.split('년')&#xD;&#xA;}else if(this.i_str_InputPeriod.includes('-')){&#xD;&#xA;    arr1_RawPeriod=this.i_str_InputPeriod.split('-')&#xD;&#xA;}else if(this.i_str_InputPeriod.includes('/')){&#xD;&#xA;    arr1_RawPeriod=this.i_str_InputPeriod.split('/')&#xD;&#xA;}else if(this.i_str_InputPeriod.includes(' ')){&#xD;&#xA;    arr1_RawPeriod=this.i_str_InputPeriod.split(' ');&#xD;&#xA;}&#xD;&#xA;arr1_RawPeriod[0]=arr1_RawPeriod[0].trim();&#xD;&#xA;arr1_RawPeriod[1]=arr1_RawPeriod[1].trim(); //각 요소 다시 공백 제거&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;if(arr1_RawPeriod[0].length!=4){&#xD;&#xA;    arr1_RawPeriod[0]='20'+arr1_RawPeriod[0];&#xD;&#xA;}&#xD;&#xA;arr1_RawPeriod[0]=arr1_RawPeriod[0]+'년';&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;if (!arr1_RawPeriod[1].includes('월')) {&#xD;&#xA;    if (arr1_RawPeriod[1].length === 1) {&#xD;&#xA;        arr1_RawPeriod[1] = '0' + arr1_RawPeriod[1];&#xD;&#xA;    }&#xD;&#xA;    arr1_RawPeriod[1] += '월';&#xD;&#xA;} else {&#xD;&#xA;    arr1_RawPeriod[1] = arr1_RawPeriod[1].replace('월', ''); &#xD;&#xA;    if (arr1_RawPeriod[1].length === 1) {&#xD;&#xA;        arr1_RawPeriod[1] = '0' + arr1_RawPeriod[1];&#xD;&#xA;    }&#xD;&#xA;    arr1_RawPeriod[1] += '월';&#xD;&#xA;}&#xD;&#xA;Global.arr1_Period=[];&#xD;&#xA;Global.arr1_Period.push(arr1_RawPeriod[0]);&#xD;&#xA;Global.arr1_Period.push(arr1_RawPeriod[1]);&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;Bot.Warn('여기야여기'+ToString(Global.arr1_Period))" />
       </Properties>
       <RelatedSteps />
       <Script><![CDATA[
-this.i_str_InputPeriod = this.i_str_InputPeriod.trim();
+this.i_str_InputPeriod = this.i_str_InputPeriod.trim(); //앞뒤 공백 제거
 
-if(this.i_str_InputPeriod.includes('년')){
+if(this.i_str_InputPeriod.includes('년')){ //연 월 나누기
     arr1_RawPeriod=this.i_str_InputPeriod.split('년')
 }else if(this.i_str_InputPeriod.includes('-')){
     arr1_RawPeriod=this.i_str_InputPeriod.split('-')
@@ -194,7 +181,7 @@ if(this.i_str_InputPeriod.includes('년')){
     arr1_RawPeriod=this.i_str_InputPeriod.split(' ');
 }
 arr1_RawPeriod[0]=arr1_RawPeriod[0].trim();
-arr1_RawPeriod[1]=arr1_RawPeriod[1].trim();
+arr1_RawPeriod[1]=arr1_RawPeriod[1].trim(); //각 요소 다시 공백 제거
 
 
 if(arr1_RawPeriod[0].length!=4){
@@ -204,13 +191,17 @@ arr1_RawPeriod[0]=arr1_RawPeriod[0]+'년';
 
 
 
-if(!(arr1_RawPeriod[1].includes('월'))){
-    if(arr1_RawPeriod[1].length==1){
-        arr1_RawPeriod[1]='0'+arr1_RawPeriod[1];
+if (!arr1_RawPeriod[1].includes('월')) {
+    if (arr1_RawPeriod[1].length === 1) {
+        arr1_RawPeriod[1] = '0' + arr1_RawPeriod[1];
     }
-    arr1_RawPeriod[1]=arr1_RawPeriod[1]+'월';
-}else if(arr1_RawPeriod[1].langth==2){
-    arr1_RawPeriod[1]='0'+arr1_RawPeriod[1];
+    arr1_RawPeriod[1] += '월';
+} else {
+    arr1_RawPeriod[1] = arr1_RawPeriod[1].replace('월', ''); 
+    if (arr1_RawPeriod[1].length === 1) {
+        arr1_RawPeriod[1] = '0' + arr1_RawPeriod[1];
+    }
+    arr1_RawPeriod[1] += '월';
 }
 Global.arr1_Period=[];
 Global.arr1_Period.push(arr1_RawPeriod[0]);
@@ -218,6 +209,29 @@ Global.arr1_Period.push(arr1_RawPeriod[1]);
 
 
 Bot.Warn('여기야여기'+ToString(Global.arr1_Period))]]></Script>
+    </Step>
+    <Step id="S13a2701ae7a244e4ab4a122fa3bbd97f" ver="311241220" createVer="311241220" type="Flow" name="ExecuteScript" dpName="ExecuteScript" dpValue="" dpValue2="" dpImage="" tag="" depth="3" stmttype="Normal" enabled="True" mainSet="0">
+      <Properties id="c0b47155-6a45-4707-8c8b-220f5c7e2453" type="Flow">
+        <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
+        <Property type="Flow" key="Conditions_Title" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="가능 날짜 조회" />
+        <Property type="Flow" key="Key_Script" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="&#xD;&#xA;&#xD;&#xA;str_Period=Global.arr1_Period[0].slice(0,4)+'-'+Global.arr1_Period[1].slice(0,2);&#xD;&#xA;&#xD;&#xA;str_StartPeriod='2023-01';&#xD;&#xA;str_EndPeriod=DateTime.Now.ToString('yyyy')+'-'+DateTime.Now.AddMonths(-1).ToString('MM');&#xD;&#xA;&#xD;&#xA;Bot.Warn('나온 값들 내 기간'+str_Period+' 스타트기간'+str_StartPeriod+' 마지막기간'+str_EndPeriod);&#xD;&#xA;&#xD;&#xA;if(str_Period&lt;str_StartPeriod || str_EndPeriod&lt;str_Period){&#xD;&#xA;    period.trim();&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;" />
+      </Properties>
+      <RelatedSteps />
+      <Script><![CDATA[
+
+str_Period=Global.arr1_Period[0].slice(0,4)+'-'+Global.arr1_Period[1].slice(0,2);
+
+str_StartPeriod='2023-01';
+str_EndPeriod=DateTime.Now.ToString('yyyy')+'-'+DateTime.Now.AddMonths(-1).ToString('MM');
+
+Bot.Warn('나온 값들 내 기간'+str_Period+' 스타트기간'+str_StartPeriod+' 마지막기간'+str_EndPeriod);
+
+if(str_Period<str_StartPeriod || str_EndPeriod<str_Period){
+    period.trim();
+}
+
+]]></Script>
     </Step>
     <Step id="Sbce031d093b64ee78bfb3756c14505ff" ver="311241220" createVer="311241220" type="Flow" name="EndTryCatch" dpName="End-TryCatch" dpValue="" dpValue2="" dpImage="" tag="" depth="3" stmttype="CloseBlock" enabled="True" mainSet="0">
       <Properties id="f35c5bca-0057-4268-9bf1-ba16c5c42f3c" type="Flow">
@@ -233,30 +247,6 @@ Bot.Warn('여기야여기'+ToString(Global.arr1_Period))]]></Script>
     RunEvent('E_날짜형식오류', {'sender':this, 'args':e});
 }]]></Script>
     </Step>
-    <Step id="S13a2701ae7a244e4ab4a122fa3bbd97f" ver="311241220" createVer="311241220" type="Flow" name="ExecuteScript" dpName="ExecuteScript" dpValue="" dpValue2="" dpImage="" tag="" depth="2" stmttype="Normal" enabled="True" mainSet="0">
-      <Properties id="c0b47155-6a45-4707-8c8b-220f5c7e2453" type="Flow">
-        <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
-        <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
-        <Property type="Flow" key="Conditions_Title" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="가능 날짜 조회" />
-        <Property type="Flow" key="Key_Script" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="&#xD;&#xA;&#xD;&#xA;str_Period=Global.arr1_Period[0].slice(0,4)+'-'+Global.arr1_Period[1].slice(0,2);&#xD;&#xA;&#xD;&#xA;str_StartPeriod='2023-01';&#xD;&#xA;str_EndPeriod=DateTime.Now.ToString('yyyy')+'-'+DateTime.Now.AddMonths(-1).ToString('MM');&#xD;&#xA;&#xD;&#xA;Bot.Warn('나온 값들 내 기간'+str_Period+' 스타트기간'+str_StartPeriod+' 마지막기간'+str_EndPeriod);&#xD;&#xA;&#xD;&#xA;if(str_StartPeriod&lt;=str_Period &amp;&amp; str_Period&lt;=str_EndPeriod){&#xD;&#xA;    this.is_PeriodCorrect=true;&#xD;&#xA;}else{&#xD;&#xA;    this.is_PeriodCorrect=false;&#xD;&#xA;}&#xD;&#xA;" />
-      </Properties>
-      <RelatedSteps />
-      <Script><![CDATA[
-
-str_Period=Global.arr1_Period[0].slice(0,4)+'-'+Global.arr1_Period[1].slice(0,2);
-
-str_StartPeriod='2023-01';
-str_EndPeriod=DateTime.Now.ToString('yyyy')+'-'+DateTime.Now.AddMonths(-1).ToString('MM');
-
-Bot.Warn('나온 값들 내 기간'+str_Period+' 스타트기간'+str_StartPeriod+' 마지막기간'+str_EndPeriod);
-
-if(str_StartPeriod<=str_Period && str_Period<=str_EndPeriod){
-    this.is_PeriodCorrect=true;
-}else{
-    this.is_PeriodCorrect=false;
-}
-]]></Script>
-    </Step>
     <Step id="Sf64fd7057c1741788a68ca21916b18c3" ver="311241220" createVer="311241220" type="Flow" name="EndDecisionThen" dpName="End-IfThen" dpValue="" dpValue2="" dpImage="" tag="" depth="2" stmttype="CloseBlock" enabled="True" mainSet="0">
       <Properties id="22b6312b-fb9e-4230-8839-52d08b696fdc" type="Flow">
         <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
@@ -269,16 +259,14 @@ if(str_StartPeriod<=str_Period && str_Period<=str_EndPeriod){
   </Steps>
   <JScript><![CDATA[function T_05_작업조회조건설정(args) {
 
-    this.str_Remainders = '';
-    this.is_PeriodCorrect;
     this.i_str_InputPeriod = (typeof args != 'undefined') ? args.i_str_InputPeriod : null;
     this.i_str_InputBrandNames = (typeof args != 'undefined') ? args.i_str_InputBrandNames : null;
 
     this.RPAGOTOENABLE = false;
     this.GotoStepRetryCntMap = {};
-    this.GotoBlockMap = {1:[5],6:[11],7:[9]};
-    this.GotoReverseBlockMap = {5:1,11:6,9:7};
-    this.GotoStepBlockTypeMap = {1:'DecisionThen',5:'EndDecisionThen',6:'DecisionThen',11:'EndDecisionThen',7:'TryCatch',9:'EndTryCatch'};
+    this.GotoBlockMap = {1:[4],5:[10],6:[9]};
+    this.GotoReverseBlockMap = {4:1,10:5,9:6};
+    this.GotoStepBlockTypeMap = {1:'DecisionThen',4:'EndDecisionThen',5:'DecisionThen',10:'EndDecisionThen',6:'TryCatch',9:'EndTryCatch'};
 
 
     this.run = function() {
@@ -301,7 +289,6 @@ if(str_StartPeriod<=str_Period && str_Period<=str_EndPeriod){
                 if(ToString(this.data).includes(str_InputBrandName)&&!(ToString(Global.arr1_BrandNames).includes(str_InputBrandName))){
                     Global.arr1_BrandNames.push(str_InputBrandName);
                 }else {
-                    this.str_Remainders= this.str_Remainders+' '+str_InputBrandName
                     if(Global.str_ErrorReport==''){
                         Global.str_ErrorReport='중복되거나 찾을 수 없는 브랜드: ' + str_InputBrandName + ', '
                     }else {
@@ -314,28 +301,24 @@ if(str_StartPeriod<=str_Period && str_Period<=str_EndPeriod){
                 Global.str_ErrorReport=Global.str_ErrorReport.slice(0,(Global.str_ErrorReport.length-2))
             }
 
-            //------------------------------------------------
-            STEP('Seded324c3a4b474d84cd29c6fb674b0f', '[4] MessageBox');
-            MsgBox( '다음 값들은 중복되거나 찾을 수 없어, 제외하고 진행됩니다 \n'+this.str_Remainders);
-
         //------------------------------------------------
         }
-        STEP('Sf6a95bd3197e4d3998c5b5770375dd19', '[5] End-IfThen');
+        STEP('Sf6a95bd3197e4d3998c5b5770375dd19', '[4] End-IfThen');
 
         //------------------------------------------------
-        STEP('S548b548d5b53477fb30cf5216c1cd226', '[6] IfThen');
+        STEP('S548b548d5b53477fb30cf5216c1cd226', '[5] IfThen');
         if (this.i_str_InputPeriod!='') {
 
             //------------------------------------------------
-            STEP('S3745203890be4c7ea6f1246b8d0689b5', '[7] TryCatch');
+            STEP('S3745203890be4c7ea6f1246b8d0689b5', '[6] TryCatch');
             try {
 
                 //------------------------------------------------
-                STEP('S2b0adf59227443c585a49e3f6e7a20ea', '[8] ExecuteScript');
+                STEP('S2b0adf59227443c585a49e3f6e7a20ea', '[7] ExecuteScript');
 
-                this.i_str_InputPeriod = this.i_str_InputPeriod.trim();
+                this.i_str_InputPeriod = this.i_str_InputPeriod.trim(); //앞뒤 공백 제거
 
-                if(this.i_str_InputPeriod.includes('년')){
+                if(this.i_str_InputPeriod.includes('년')){ //연 월 나누기
                     arr1_RawPeriod=this.i_str_InputPeriod.split('년')
                 }else if(this.i_str_InputPeriod.includes('-')){
                     arr1_RawPeriod=this.i_str_InputPeriod.split('-')
@@ -345,7 +328,7 @@ if(str_StartPeriod<=str_Period && str_Period<=str_EndPeriod){
                     arr1_RawPeriod=this.i_str_InputPeriod.split(' ');
                 }
                 arr1_RawPeriod[0]=arr1_RawPeriod[0].trim();
-                arr1_RawPeriod[1]=arr1_RawPeriod[1].trim();
+                arr1_RawPeriod[1]=arr1_RawPeriod[1].trim(); //각 요소 다시 공백 제거
 
 
                 if(arr1_RawPeriod[0].length!=4){
@@ -355,13 +338,17 @@ if(str_StartPeriod<=str_Period && str_Period<=str_EndPeriod){
 
 
 
-                if(!(arr1_RawPeriod[1].includes('월'))){
-                    if(arr1_RawPeriod[1].length==1){
-                        arr1_RawPeriod[1]='0'+arr1_RawPeriod[1];
+                if (!arr1_RawPeriod[1].includes('월')) {
+                    if (arr1_RawPeriod[1].length === 1) {
+                        arr1_RawPeriod[1] = '0' + arr1_RawPeriod[1];
                     }
-                    arr1_RawPeriod[1]=arr1_RawPeriod[1]+'월';
-                }else if(arr1_RawPeriod[1].langth==2){
-                    arr1_RawPeriod[1]='0'+arr1_RawPeriod[1];
+                    arr1_RawPeriod[1] += '월';
+                } else {
+                    arr1_RawPeriod[1] = arr1_RawPeriod[1].replace('월', ''); 
+                    if (arr1_RawPeriod[1].length === 1) {
+                        arr1_RawPeriod[1] = '0' + arr1_RawPeriod[1];
+                    }
+                    arr1_RawPeriod[1] += '월';
                 }
                 Global.arr1_Period=[];
                 Global.arr1_Period.push(arr1_RawPeriod[0]);
@@ -370,6 +357,23 @@ if(str_StartPeriod<=str_Period && str_Period<=str_EndPeriod){
 
                 Bot.Warn('여기야여기'+ToString(Global.arr1_Period))
 
+                //------------------------------------------------
+                STEP('S13a2701ae7a244e4ab4a122fa3bbd97f', '[8] ExecuteScript');
+
+
+                str_Period=Global.arr1_Period[0].slice(0,4)+'-'+Global.arr1_Period[1].slice(0,2);
+
+                str_StartPeriod='2023-01';
+                str_EndPeriod=DateTime.Now.ToString('yyyy')+'-'+DateTime.Now.AddMonths(-1).ToString('MM');
+
+                Bot.Warn('나온 값들 내 기간'+str_Period+' 스타트기간'+str_StartPeriod+' 마지막기간'+str_EndPeriod);
+
+                if(str_Period<str_StartPeriod || str_EndPeriod<str_Period){
+                    period.trim();
+                }
+
+
+
             //------------------------------------------------
             } catch (e) {
                 Warn('TryCatch - RunEvent: E_날짜형식오류, Error: ' + e.toString());
@@ -377,27 +381,9 @@ if(str_StartPeriod<=str_Period && str_Period<=str_EndPeriod){
             }
             STEP('Sbce031d093b64ee78bfb3756c14505ff', '[9] End-TryCatch');
 
-            //------------------------------------------------
-            STEP('S13a2701ae7a244e4ab4a122fa3bbd97f', '[10] ExecuteScript');
-
-
-            str_Period=Global.arr1_Period[0].slice(0,4)+'-'+Global.arr1_Period[1].slice(0,2);
-
-            str_StartPeriod='2023-01';
-            str_EndPeriod=DateTime.Now.ToString('yyyy')+'-'+DateTime.Now.AddMonths(-1).ToString('MM');
-
-            Bot.Warn('나온 값들 내 기간'+str_Period+' 스타트기간'+str_StartPeriod+' 마지막기간'+str_EndPeriod);
-
-            if(str_StartPeriod<=str_Period && str_Period<=str_EndPeriod){
-                this.is_PeriodCorrect=true;
-            }else{
-                this.is_PeriodCorrect=false;
-            }
-
-
         //------------------------------------------------
         }
-        STEP('Sf64fd7057c1741788a68ca21916b18c3', '[11] End-IfThen');
+        STEP('Sf64fd7057c1741788a68ca21916b18c3', '[10] End-IfThen');
 
 
     }
@@ -413,15 +399,14 @@ if(str_StartPeriod<=str_Period && str_Period<=str_EndPeriod){
   <Diagram version="1.300" nodesize="Normal">
     <StepNodes>
       <StepNode step_id="S0981d1a661784412972f1d4850525c71" group_name="" folded="False" color="" />
-      <StepNode step_id="S1c02c9a31bc84f799687b1d14ee91da2" group_name="76a5eba8-8b76-4515-834b-91b96470e231_Untitled" folded="False" color="" />
-      <StepNode step_id="S18e044060a774fdf8348dc1effd42b97" group_name="9c3b5375-f514-4117-857d-4ac7f38fd2d9_Untitled" folded="False" color="" />
-      <StepNode step_id="Seded324c3a4b474d84cd29c6fb674b0f" group_name="e59d6c6f-b782-499a-b5af-ddce7bdb178f_Untitled" folded="False" color="" />
+      <StepNode step_id="S1c02c9a31bc84f799687b1d14ee91da2" group_name="c4f28712-8fa7-42f3-9e52-3b5080437c96_조회 가능한 브랜드 리스트 가져오기" folded="False" color="" />
+      <StepNode step_id="S18e044060a774fdf8348dc1effd42b97" group_name="ea079832-4b13-4845-8c86-d44d13b0463a_조회 조건 추가 - 브랜드명" folded="False" color="" />
       <StepNode step_id="Sf6a95bd3197e4d3998c5b5770375dd19" group_name="" folded="False" color="" />
       <StepNode step_id="S548b548d5b53477fb30cf5216c1cd226" group_name="" folded="False" color="" />
       <StepNode step_id="S3745203890be4c7ea6f1246b8d0689b5" group_name="" folded="False" color="" />
       <StepNode step_id="S2b0adf59227443c585a49e3f6e7a20ea" group_name="674dbd96-4a55-4406-a298-2cb80b658b4a_인풋값을 조회조건에 추가" folded="False" color="" />
+      <StepNode step_id="S13a2701ae7a244e4ab4a122fa3bbd97f" group_name="8b5dc540-ee68-4d74-b997-fab21f1bb42d_Untitled" folded="False" color="" />
       <StepNode step_id="Sbce031d093b64ee78bfb3756c14505ff" group_name="" folded="False" color="" />
-      <StepNode step_id="S13a2701ae7a244e4ab4a122fa3bbd97f" group_name="0c8880b8-767d-4f47-974d-39fccbbeb796_Untitled" folded="False" color="" />
       <StepNode step_id="Sf64fd7057c1741788a68ca21916b18c3" group_name="" folded="False" color="" />
     </StepNodes>
   </Diagram>

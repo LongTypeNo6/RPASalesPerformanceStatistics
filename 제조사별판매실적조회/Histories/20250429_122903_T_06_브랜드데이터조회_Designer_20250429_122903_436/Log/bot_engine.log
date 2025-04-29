@@ -1,0 +1,663 @@
+﻿2025-04-29 12:28:23,735 [T1] INFO  EngineStarter
+BOT Engine Start - v3.1.125.00226 at 2025-04-29 오후 12:28:23
+EngineID: D_20250429_122822_988
+PID : 12976
+PPID: 9384
+Working Directory: C:\Users\1Class_03\AppData\Roaming\Brity RPA Designer
+
+2025-04-29 12:28:23,759 [T1] INFO  EngineStarter
+System Language: ko-KR
+Resolution: 1920 x 1080
+
+2025-04-29 12:28:24,031 [T1] INFO  Config
+Initialize Config
+
+2025-04-29 12:28:24,076 [T1] DEBUG Config
+Config Loaded
+
+2025-04-29 12:28:24,078 [T1] DEBUG Config
+Backup config file.
+
+2025-04-29 12:28:24,088 [T1] INFO  Config
+Orchestrator Service => https://bwrpa.samsungsds.com:8777
+
+2025-04-29 12:28:24,093 [T1] INFO  Config
+Initialize Resource Config
+
+2025-04-29 12:28:24,127 [T1] DEBUG Config
+Refresh Language Information
+
+2025-04-29 12:28:24,262 [T1] INFO  Config
+All Config Initialized.
+
+2025-04-29 12:28:24,269 [T1] DEBUG KeyManager
+Initialize KeyManager
+
+2025-04-29 12:28:24,272 [T1] DEBUG KeyManager
+Load device unique id.
+
+2025-04-29 12:28:24,281 [T1] DEBUG KeyManager
+Device ID is initialized.
+
+2025-04-29 12:28:24,285 [T1] INFO  Config
+Activated License Type : StandAloneDesigner
+
+2025-04-29 12:28:24,384 [T4] DEBUG JobService
+Connect to agent service
+
+2025-04-29 12:28:24,413 [T4] DEBUG JobService
+JobService URL : net.tcp://127.0.0.1:59001/rpa/agent
+
+2025-04-29 12:28:24,415 [T4] DEBUG JobService
+Open connection
+
+2025-04-29 12:28:24,418 [T1] DEBUG ApplicationInitializer
+InitMode: Thread
+
+2025-04-29 12:28:24,431 [T4] DEBUG JobService
+Register engine to agent
+
+2025-04-29 12:28:24,435 [T1] INFO  LibraryManager
+Load Libraries - Started
+
+2025-04-29 12:28:24,445 [T4] DEBUG JobService
+Engine is connected to agent service.
+
+2025-04-29 12:28:24,445 [T4] DEBUG JobService
+Owner Process PID: 9384
+
+2025-04-29 12:28:24,448 [T1] DEBUG AddInLoader
+Load Assembly : IPA.Lib.Abbyy
+
+2025-04-29 12:28:24,448 [T4] INFO  JobService
+Start monitoring owner process is terminated.
+
+2025-04-29 12:28:24,541 [T1] DEBUG AddInLoader
+Load Assembly : IPA.Lib.Chrome
+
+2025-04-29 12:28:24,731 [T1] DEBUG AddInLoader
+Load Assembly : IPA.Lib.Desktop
+
+2025-04-29 12:28:24,919 [T1] DEBUG AddInLoader
+Load Assembly : IPA.Lib.Excel
+
+2025-04-29 12:28:25,098 [T1] DEBUG AddInLoader
+Load Assembly : IPA.Lib.Flow
+
+2025-04-29 12:28:25,225 [T1] DEBUG AddInLoader
+Load Assembly : IPA.Lib.IE
+
+2025-04-29 12:28:25,317 [T1] DEBUG AddInLoader
+Load Assembly : IPA.Lib.ImageConverter
+
+2025-04-29 12:28:25,384 [T1] DEBUG AddInLoader
+Load Assembly : IPA.Lib.ImageRecognition
+
+2025-04-29 12:28:25,573 [T1] DEBUG AddInLoader
+Load Assembly : IPA.Lib.KnoxPortal
+
+2025-04-29 12:28:25,636 [T1] DEBUG AddInLoader
+Load Assembly : IPA.Lib.MicrosoftOCR
+
+2025-04-29 12:28:25,702 [T1] DEBUG AddInLoader
+Load Assembly : IPA.Lib.Net
+
+2025-04-29 12:28:25,803 [T1] DEBUG AddInLoader
+Load Assembly : IPA.Lib.Orchestra
+
+2025-04-29 12:28:25,898 [T1] DEBUG AddInLoader
+Load Assembly : IPA.Lib.ProcessFlow
+
+2025-04-29 12:28:26,028 [T1] DEBUG AddInLoader
+Load Assembly : IPA.Lib.PushMessage
+
+2025-04-29 12:28:26,101 [T1] DEBUG AddInLoader
+Load Assembly : IPA.Lib.SAP
+
+2025-04-29 12:28:26,221 [T1] DEBUG AddInLoader
+Load Assembly : IPA.Lib.Web
+
+2025-04-29 12:28:26,386 [T1] DEBUG AddInLoader
+Load Assembly : IPA.Lib.Win
+
+2025-04-29 12:28:26,536 [T1] INFO  ScreenCapture
+Default Screen Capture Bounds: 0,0,1920,1080
+
+2025-04-29 12:28:26,572 [T1] DEBUG AddInLoader
+Load Assembly : BrityRPA.AddIn.Android
+
+2025-04-29 12:28:26,643 [T1] DEBUG AddInLoader
+Load Assembly : BrityRPA.AddIn.HancomEx
+
+2025-04-29 12:28:26,794 [T1] DEBUG AddInLoader
+Load Assembly : BrityRPA.AddIn.NativeApp
+
+2025-04-29 12:28:26,861 [T1] DEBUG AddInLoader
+Load Assembly : BrityRPA.AddIn.Python
+
+2025-04-29 12:28:26,866 [T1] DEBUG AddInLoader
+Load Assembly : BrityRPA.AddIn.SynapOCR
+
+2025-04-29 12:28:26,906 [T1] DEBUG AddInLoader
+Load Assembly : BrityWorks.AddIn.CognitiveLibrary
+
+2025-04-29 12:28:26,964 [T1] DEBUG AddInLoader
+Load Assembly : BrityWorks.AddIn.Drive
+
+2025-04-29 12:28:27,012 [T1] DEBUG ActivityLibraryItem
+Drive.FindDriveItem - No resource for property description : REQUEST_REQUEST_SpreadsheetIDd
+
+2025-04-29 12:28:27,015 [T1] DEBUG ActivityLibraryItem
+Drive.CreateDriveFolder - No resource for property description : REQUEST_REQUEST_SpreadsheetIDd
+
+2025-04-29 12:28:27,018 [T1] DEBUG ActivityLibraryItem
+Drive.DownloadDriveFile - No resource for property description : REQUEST_REQUEST_SpreadsheetIDd
+
+2025-04-29 12:28:27,021 [T1] DEBUG ActivityLibraryItem
+Drive.UploadDriveFile - No resource for property description : REQUEST_REQUEST_SpreadsheetIDd
+
+2025-04-29 12:28:27,024 [T1] DEBUG ActivityLibraryItem
+Drive.CopyDriveItem - No resource for property description : REQUEST_REQUEST_SpreadsheetIDd, REQUEST_REQUEST_SpreadsheetIDdTarget
+
+2025-04-29 12:28:27,028 [T1] DEBUG ActivityLibraryItem
+Drive.MoveDriveItem - No resource for property description : REQUEST_REQUEST_SpreadsheetIDd, REQUEST_REQUEST_SpreadsheetIDdTarget
+
+2025-04-29 12:28:27,030 [T1] DEBUG ActivityLibraryItem
+Drive.DeleteDriveItem - No resource for property description : REQUEST_REQUEST_SpreadsheetIDd
+
+2025-04-29 12:28:27,034 [T1] DEBUG ActivityLibraryItem
+Drive.ShareDriveItem - No resource for property description : REQUEST_REQUEST_SpreadsheetIDd
+
+2025-04-29 12:28:27,034 [T1] DEBUG AddInLoader
+Load Assembly : BrityWorks.AddIn.FTP
+
+2025-04-29 12:28:27,081 [T1] DEBUG AddInLoader
+Load Assembly : BrityWorks.AddIn.GoogleCalendar
+
+2025-04-29 12:28:27,139 [T1] DEBUG ActivityLibraryItem
+GoogleCalendar.CreateEvent - No resource for property description : REQUEST_UpdateEndsOccurences, REQUEST_UpdateEndsDate
+
+2025-04-29 12:28:27,151 [T1] DEBUG ActivityLibraryItem
+GoogleCalendar.UpdateEvent - No resource for property description : REQUEST_UpdateEvent, REQUEST_UpdateStartDate, REQUEST_UpdateEndDate, REQUEST_UpdateEndsOccurences, REQUEST_UpdateEndsDate, REQUEST_UpdateAttendeeList, REQUEST_UpdateDescription
+
+2025-04-29 12:28:27,162 [T1] DEBUG AddInLoader
+Load Assembly : BrityWorks.AddIn.GoogleDocs
+
+2025-04-29 12:28:27,217 [T1] DEBUG ActivityLibraryItem
+GoogleDocs.CreateGoogleDocs - No resource for property description : REQUEST_Dummy
+
+2025-04-29 12:28:27,220 [T1] DEBUG ActivityLibraryItem
+GoogleDocs.OpenGoogleDocs - No resource for property description : REQUEST_Dummy
+
+2025-04-29 12:28:27,223 [T1] DEBUG ActivityLibraryItem
+GoogleDocs.GetTextIndex - No resource for property description : REQUEST_Dummy
+
+2025-04-29 12:28:27,226 [T1] DEBUG ActivityLibraryItem
+GoogleDocs.InsertText - No resource for property description : REQUEST_Dummy
+
+2025-04-29 12:28:27,228 [T1] DEBUG ActivityLibraryItem
+GoogleDocs.ReadAllText - No resource for property description : REQUEST_Dummy
+
+2025-04-29 12:28:27,232 [T1] DEBUG ActivityLibraryItem
+GoogleDocs.ReplaceText - No resource for property description : REQUEST_Dummy
+
+2025-04-29 12:28:27,232 [T1] DEBUG AddInLoader
+Load Assembly : BrityWorks.AddIn.GoogleSheet
+
+2025-04-29 12:28:27,282 [T1] DEBUG ActivityLibraryItem
+GoogleSheet.CreateSpreadsheet - No resource for property description : REQUEST_FOlderIDD
+
+2025-04-29 12:28:27,285 [T1] DEBUG ActivityLibraryItem
+GoogleSheet.OpenSpreadSheet - No resource for property description : REQUEST_SpreadsheetIdd
+
+2025-04-29 12:28:27,290 [T1] DEBUG ActivityLibraryItem
+GoogleSheet.ReadRange - No resource for property description : REQUEST_SpreadsheetIdd
+
+2025-04-29 12:28:27,310 [T1] DEBUG ActivityLibraryItem
+GoogleSheet.WriteRange - No resource for property description : REQUEST_SpreadsheetIdd
+
+2025-04-29 12:28:27,320 [T1] DEBUG ActivityLibraryItem
+GoogleSheet.CopySheet - No resource for property description : REQUEST_SpreadsheetIdd
+
+2025-04-29 12:28:27,324 [T1] DEBUG ActivityLibraryItem
+GoogleSheet.DeleteRange - No resource for property description : REQUEST_SpreadsheetIdd
+
+2025-04-29 12:28:27,330 [T1] DEBUG AddInLoader
+Load Assembly : BrityWorks.AddIn.Jira
+
+2025-04-29 12:28:27,386 [T1] DEBUG AddInLoader
+Load Assembly : BrityWorks.AddIn.OpenAI
+
+2025-04-29 12:28:27,426 [T1] DEBUG AddInLoader
+Load Assembly : BrityWorks.AddIn.Outlook
+
+2025-04-29 12:28:27,501 [T1] DEBUG AddInLoader
+Load Assembly : BrityWorks.AddIn.Pdf
+
+2025-04-29 12:28:27,574 [T1] DEBUG AddInLoader
+Load Assembly : BrityWorks.AddIn.Powerpoint
+
+2025-04-29 12:28:27,630 [T1] DEBUG AddInLoader
+Load Assembly : BrityWorks.AddIn.Word
+
+2025-04-29 12:28:27,720 [T1] DEBUG LibraryManager
+Load Library - Abbyy
+
+2025-04-29 12:28:27,736 [T1] DEBUG LibraryManager
+Load Library - Android
+
+2025-04-29 12:28:27,752 [T1] DEBUG LibraryManager
+Load Library - Chrome
+
+2025-04-29 12:28:27,767 [T1] DEBUG LibraryManager
+Load Library - CognitiveLibrary
+
+2025-04-29 12:28:27,783 [T1] DEBUG LibraryManager
+Load Library - Desktop
+
+2025-04-29 12:28:27,799 [T1] DEBUG LibraryManager
+Load Library - Drive
+
+2025-04-29 12:28:27,814 [T1] DEBUG LibraryManager
+Load Library - Excel
+
+2025-04-29 12:28:27,830 [T1] DEBUG LibraryManager
+Load Library - Flow
+
+2025-04-29 12:28:27,845 [T1] DEBUG LibraryManager
+Load Library - FTP
+
+2025-04-29 12:28:27,860 [T1] DEBUG LibraryManager
+Load Library - GoogleCalendar
+
+2025-04-29 12:28:27,875 [T1] DEBUG LibraryManager
+Load Library - GoogleDocs
+
+2025-04-29 12:28:27,891 [T1] DEBUG LibraryManager
+Load Library - GoogleSheet
+
+2025-04-29 12:28:27,907 [T1] DEBUG LibraryManager
+Load Library - HancomEx
+
+2025-04-29 12:28:27,923 [T1] DEBUG LibraryManager
+Load Library - IE
+
+2025-04-29 12:28:27,938 [T1] DEBUG LibraryManager
+Load Library - ImageConverter
+
+2025-04-29 12:28:27,954 [T1] DEBUG LibraryManager
+Load Library - ImageRecognition
+
+2025-04-29 12:28:27,970 [T1] DEBUG LibraryManager
+Load Library - Jira
+
+2025-04-29 12:28:27,986 [T1] DEBUG LibraryManager
+Load Library - KnoxPortal
+
+2025-04-29 12:28:28,002 [T1] DEBUG LibraryManager
+Load Library - MicrosoftOCR
+
+2025-04-29 12:28:28,018 [T1] DEBUG LibraryManager
+Load Library - NativeApp
+
+2025-04-29 12:28:28,034 [T1] DEBUG LibraryManager
+Load Library - Net
+
+2025-04-29 12:28:28,049 [T1] DEBUG LibraryManager
+Load Library - OpenAI
+
+2025-04-29 12:28:28,065 [T1] DEBUG LibraryManager
+Load Library - Orchestra
+
+2025-04-29 12:28:28,081 [T1] DEBUG LibraryManager
+Load Library - Outlook
+
+2025-04-29 12:28:28,097 [T1] DEBUG LibraryManager
+Load Library - Pdf
+
+2025-04-29 12:28:28,113 [T1] DEBUG LibraryManager
+Load Library - Powerpoint
+
+2025-04-29 12:28:28,129 [T1] DEBUG LibraryManager
+Load Library - PushMessage
+
+2025-04-29 12:28:28,145 [T1] DEBUG LibraryManager
+Load Library - Python
+
+2025-04-29 12:28:28,161 [T1] DEBUG LibraryManager
+Load Library - SAP
+
+2025-04-29 12:28:28,177 [T1] DEBUG LibraryManager
+Load Library - SynapOCR
+
+2025-04-29 12:28:28,193 [T1] DEBUG LibraryManager
+Load Library - Web
+
+2025-04-29 12:28:28,209 [T1] DEBUG LibraryManager
+Load Library - Win
+
+2025-04-29 12:28:28,224 [T1] DEBUG LibraryManager
+Load Library - Word
+
+2025-04-29 12:28:28,240 [T1] DEBUG LibraryManager
+Load Library - WorkFlow
+
+2025-04-29 12:28:28,245 [T1] DEBUG LibraryManager
+Load built-in script libraries
+
+2025-04-29 12:28:28,544 [T1] INFO  LibraryManager
+Load Libraries - Completed.
+
+2025-04-29 12:28:28,558 [T1] INFO  App
+Launch Arguments: Total: 6 |  -eid D_20250429_122822_988 -runtype ProcRunner -ppid 9384
+
+2025-04-29 12:28:28,559 [T1] DEBUG Config
+Refresh Language Information
+
+2025-04-29 12:28:28,560 [T1] DEBUG LibraryManager
+LibraryManager Initialized.
+
+2025-04-29 12:29:03,870 [T9] INFO  JobService
+Start Job: T_06_브랜드데이터조회 (Foreground)
+{
+  "JobType": 1,
+  "State": 0,
+  "IsRunning": false,
+  "ResultMessage": null,
+  "StartTime": "2025-04-29 12:29:03",
+  "EndTime": null,
+  "JobId": "Designer_20250429_122903_436",
+  "UserAuthentication": null,
+  "ProcessPath": "C:\\Users\\1Class_03\\Documents\\Brity RPA Projects\\RPASalesPerformanceStatistics\\제조사별판매실적조회\\T_06_브랜드데이터조회.proc",
+  "ProcessId": "2d0c4bb8-5b51-4cb3-83fd-ae89737d3adb",
+  "ProcessVer": "",
+  "ProcessArgs": null,
+  "RequesterType": 3,
+  "RequesterId": "designer",
+  "RequesterPID": 9384,
+  "OptionsJsonString": null,
+  "TimeoutSec": 0,
+  "EngineID": "D_20250429_122822_988",
+  "EnginePID": 0,
+  "EngineRecommededVersion": "",
+  "JobWorkDir": "C:\\Users\\1Class_03\\Documents\\Brity RPA Projects\\RPASalesPerformanceStatistics\\제조사별판매실적조회\\Histories\\20250429_122903_T_06_브랜드데이터조회_Designer_20250429_122903_436",
+  "JobLogDir": "C:\\Users\\1Class_03\\Documents\\Brity RPA Projects\\RPASalesPerformanceStatistics\\제조사별판매실적조회\\Histories\\20250429_122903_T_06_브랜드데이터조회_Designer_20250429_122903_436\\Log",
+  "JobScreenshotDir": "C:\\Users\\1Class_03\\Documents\\Brity RPA Projects\\RPASalesPerformanceStatistics\\제조사별판매실적조회\\Histories\\20250429_122903_T_06_브랜드데이터조회_Designer_20250429_122903_436\\Log\\Screenshot"
+}
+
+2025-04-29 12:29:04,018 [T11] DEBUG JobService
+Waiting library loading...
+
+2025-04-29 12:29:04,021 [T11] DEBUG Config
+Reload User Settings
+
+2025-04-29 12:29:04,029 [T11] INFO  JobService
+Config Loading Completed.
+
+2025-04-29 12:29:04,029 [T11] DEBUG JobService
+Config Loading Time: 10 ms.
+
+2025-04-29 12:29:04,034 [T11] DEBUG JobService
+Check Shared Token
+
+2025-04-29 12:29:04,039 [T11] DEBUG TokenManager
+Load connection token
+
+2025-04-29 12:29:04,040 [T11] DEBUG TokenManager
+Clear Connection Token - No Shared Token
+
+2025-04-29 12:29:04,051 [T11] DEBUG ServerInformationClient
+get server features for engine bot from config.
+
+2025-04-29 12:29:04,053 [T11] INFO  Config
+Try to load server features from config.
+
+2025-04-29 12:29:04,056 [T11] INFO  TokenManager
+SecurityType : v2
+
+2025-04-29 12:29:04,059 [T11] INFO  JobService
+Shared Token - No Token
+
+2025-04-29 12:29:04,070 [T11] INFO  JobManager
+Create JobManager instance for job T_06_브랜드데이터조회(Designer_20250429_122903_436)
+
+2025-04-29 12:29:04,077 [T11] INFO  JobRequest
+Job ID : Designer_20250429_122903_436
+Project Path  : C:\Users\1Class_03\Documents\Brity RPA Projects\RPASalesPerformanceStatistics\제조사별판매실적조회\제조사별판매실적조회.proj
+Process Name  : T_06_브랜드데이터조회
+Engine Mode   : Designer
+Requester Type: Designer
+Requester PID : 9384
+
+2025-04-29 12:29:04,086 [T10] INFO  JobRequest
+Start Callback Sender
+
+2025-04-29 12:29:04,086 [T10] DEBUG JobRequest
+Step Callback Interval: 500
+
+2025-04-29 12:29:04,136 [T11] DEBUG ProjectManager
+Set Project Information
+
+2025-04-29 12:29:04,163 [T11] INFO  PlayOptionManager
+PlayOption
+- Step Interval : 1
+- Disable DrawBounds : False
+- Invoke First : False
+- Allow Upload of DumpScreen results : False
+
+2025-04-29 12:29:04,165 [T11] INFO  JobRunner
+Initialize Script Engine
+
+2025-04-29 12:29:04,182 [T13-ScriptEngine] INFO  JobRequest
+##############################################################
+### STATE: Initializing
+##############################################################
+
+
+2025-04-29 12:29:04,208 [T10] DEBUG JobRequest
+Callback - State: Initializing
+
+
+2025-04-29 12:29:05,151 [T13-ScriptEngine] INFO  JobRequest
+##############################################################
+### STATE: Ready
+##############################################################
+
+
+2025-04-29 12:29:05,163 [T10] DEBUG JobRequest
+Callback - State: Ready
+
+
+2025-04-29 12:29:05,165 [T11] INFO  JobRunnerHook
+HotKey Hook Started
+
+2025-04-29 12:29:05,166 [T11] INFO  JobRequest
+##############################################################
+### STATE: Starting
+##############################################################
+
+
+2025-04-29 12:29:05,168 [T13-ScriptEngine] INFO  JobRunner
+RunProcess start
+
+2025-04-29 12:29:05,170 [T13-ScriptEngine] INFO  JobRequest
+##############################################################
+### STATE: Running
+##############################################################
+
+
+2025-04-29 12:29:05,170 [T13-ScriptEngine] INFO  JobRequest
+Last job life cycle state: Running
+
+2025-04-29 12:29:05,179 [T10] DEBUG JobRequest
+Callback - State: Starting
+
+
+2025-04-29 12:29:05,184 [T10] DEBUG JobRequest
+Callback - State: Running
+
+
+2025-04-29 12:29:06,209 [T13-ScriptEngine] DEBUG ScreenCapture
+DirectX Screen Capture Initialized.
+
+2025-04-29 12:29:06,245 [T13-ScriptEngine] DEBUG JobRunner
+DirectX ScreenCapture Checked.
+
+2025-04-29 12:29:06,276 [T13-ScriptEngine] INFO  JobRequest
+##############################################################
+### STATE: StartProcess - T_06_브랜드데이터조회
+##############################################################
+2d0c4bb8-5b51-4cb3-83fd-ae89737d3adb
+T_06_브랜드데이터조회
+
+
+2025-04-29 12:29:06,335 [T13-ScriptEngine] INFO  JobRequest
+**************************************************************
+*** TASK: T_06_브랜드데이터조회
+**************************************************************
+ - STEP 1: S9b1518850e504f86a0976e6e1efbe767 (2/3) - (1/2)
+ - [2] ChromeIsExist
+
+
+2025-04-29 12:29:06,639 [T13-ScriptEngine] DEBUG PageManager
+Driver : 생성된 브라우저를 찾을 수 없습니다.
+이전 실행의 ChromeOpen을 통해 생성된 브라우저에 연결하는 경우 동일한 프로세스에서 생성된 브라우저만 연결하여 사용할 수 있습니다.
+ChromeOpen을 통해 브라우저를 다시 생성 해주세요.
+
+2025-04-29 12:29:06,642 [T13-ScriptEngine] DEBUG ChromePlayer
+Chrome Set Report Page Image Fail : page or result is null
+
+2025-04-29 12:29:06,642 [T13-ScriptEngine] DEBUG ChromeIsExist
+Driver : 생성된 브라우저를 찾을 수 없습니다.
+이전 실행의 ChromeOpen을 통해 생성된 브라우저에 연결하는 경우 동일한 프로세스에서 생성된 브라우저만 연결하여 사용할 수 있습니다.
+ChromeOpen을 통해 브라우저를 다시 생성 해주세요.
+
+2025-04-29 12:29:06,657 [T13-ScriptEngine] INFO  JobRequest
+ - STEP 2: S1acccd3424ca45d9ab86468c66cf9877 (3/3) - (2/2)
+ - [3] Debugger
+
+
+2025-04-29 12:29:06,698 [T13-ScriptEngine] INFO  JobRunner
+Try Pause
+
+2025-04-29 12:29:06,698 [T13-ScriptEngine] INFO  JobRequest
+##############################################################
+### STATE: Paused
+##############################################################
+
+
+2025-04-29 12:29:06,698 [T13-ScriptEngine] INFO  JobRequest
+Last job life cycle state: Paused
+
+2025-04-29 12:29:06,719 [T10] DEBUG JobRequest
+Callback - State: Paused
+
+
+2025-04-29 12:29:14,618 [T9] INFO  JobService
+Stop Job
+
+2025-04-29 12:29:14,621 [T9] INFO  JobRunner
+Stop Job Runner - Cause: LocalUser / Message: stop by user
+
+2025-04-29 12:29:14,621 [T9] INFO  JobRequest
+##############################################################
+### STATE: Stopping
+##############################################################
+stop by user
+
+
+2025-04-29 12:29:14,629 [T10] DEBUG JobRequest
+Callback - State: Stopping
+stop by user
+
+2025-04-29 12:29:14,631 [T13-ScriptEngine] DEBUG JobRunner
+RunTask Interrupted. TASK: T_06_브랜드데이터조회 => Script execution interrupted by host
+
+2025-04-29 12:29:14,656 [T13-ScriptEngine] DEBUG JobManager
+Set Result State: Stopped
+
+2025-04-29 12:29:14,661 [T13-ScriptEngine] INFO  JobRunner
+Make report.
+
+2025-04-29 12:29:14,709 [T13-ScriptEngine] INFO  JobRunner
+Start to clean up resources.
+
+2025-04-29 12:29:14,711 [T12] DEBUG JobRunner
+Start timer for checking the job to be completed.
+
+2025-04-29 12:29:14,711 [T13-ScriptEngine] DEBUG JobRunner
+OnProcessCompleted
+
+2025-04-29 12:29:14,713 [T13-ScriptEngine] INFO  JobRunner
+Start to clean up resources.
+
+2025-04-29 12:29:14,714 [T13-ScriptEngine] DEBUG JobRunner
+Remove all Process Stack: 1
+
+2025-04-29 12:29:14,718 [T13-ScriptEngine] INFO  JobRequest
+##############################################################
+### STATE: EndProcess - T_06_브랜드데이터조회
+##############################################################
+2d0c4bb8-5b51-4cb3-83fd-ae89737d3adb
+T_06_브랜드데이터조회
+
+
+2025-04-29 12:29:14,719 [T13-ScriptEngine] DEBUG JobRunner
+Remove all libraries
+
+2025-04-29 12:29:14,731 [T13-ScriptEngine] DEBUG NetPlayer
+WebPlayer OnDispose
+
+2025-04-29 12:29:14,733 [T13-ScriptEngine] DEBUG WebPlayer
+WebPlayer OnDispose : Do Nothing
+
+2025-04-29 12:29:14,737 [T13-ScriptEngine] DEBUG UiaAppHelper
+WinHelper DisposeAppList Count: 0
+
+2025-04-29 12:29:14,737 [T13-ScriptEngine] INFO  JobRunner
+All Resources Clear
+
+2025-04-29 12:29:14,740 [T13-ScriptEngine] DEBUG JobRunner
+OnCompleted
+
+2025-04-29 12:29:14,741 [T13-ScriptEngine] DEBUG JobRunner
+SendJobResult: Stopped
+
+2025-04-29 12:29:14,741 [T13-ScriptEngine] INFO  JobRequest
+##############################################################
+### STATE: Stopped
+##############################################################
+Process: T_06_브랜드데이터조회
+Step: Debugger (3/3)
+
+Stopped by User
+
+
+2025-04-29 12:29:14,741 [T13-ScriptEngine] INFO  JobRequest
+Last job life cycle state: Stopped
+
+2025-04-29 12:29:14,741 [T13-ScriptEngine] INFO  JobRequest
+Update skipped current step informations.
+
+2025-04-29 12:29:14,749 [T13-ScriptEngine] INFO  JobRequest
+##############################################################
+### JOB COMPLETED
+##############################################################
+
+
+2025-04-29 12:29:14,756 [T10] DEBUG JobRequest
+Callback - State: Stopped
+Process: T_06_브랜드데이터조회
+Step: Debugger (3/3)
+
+Stopped by User
+
+2025-04-29 12:29:14,757 [T10] INFO  JobRequest
+Callback - EngineClosed
+
+2025-04-29 12:29:14,758 [T10] INFO  JobService
+Disconnect agent service
+
+2025-04-29 12:29:14,759 [T10] DEBUG JobRequest
+End of Callback Sender
+

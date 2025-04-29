@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Result id="2d0c4bb8-5b51-4cb3-83fd-ae89737d3adb" name="T_06_브랜드데이터조회" result="Stop" detail="Process: T_06_브랜드데이터조회&#xA;Step: Debugger (3/3)&#xA;&#xA;Stopped by User" start="2025-04-29T03:29:06.271" end="2025-04-29T03:29:14.658" jobId="Designer_20250429_122903_436">
+  <Step id="S9b1518850e504f86a0976e6e1efbe767" taskName="T_06_브랜드데이터조회" type="Chrome" name="ChromeIsExist" displayName="ChromeIsExist" callDepth="1" depth="1" num="2" result="Pass" start="2025-04-29T03:29:06.337" end="2025-04-29T03:29:06.645" displayTime="0.3s">
+    <Variables>
+      <Variable name="ExcelHandle" scope="Global" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="o_is_DataExsist" scope="Output" owner="T_06_브랜드데이터조회" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+    </Variables>
+    <Properties setIndex="0">
+      <Property value="" runtimeType="String" key="Options_OnError" displayKey="On Error" visible="true" required="false" />
+      <Property value="" runtimeType="String" key="Key_Description" displayKey="Description" visible="true" required="false" />
+      <Property value="&lt;undefined&gt;" runtimeType="Undefined" key="CHROME_Browser" displayKey="Browser" visible="true" required="true" />
+      <Property value="3" runtimeType="Integer" key="CHROME_WaitTimeSec" displayKey="Page Load Timeout" visible="true" required="true" />
+      <Property value="'https://auto.danawa.com/auto/'" runtimeType="String" key="CHROME_PageUrl" displayKey="Page Url" visible="true" required="false" />
+      <Property value="false" runtimeType="Boolean" key="CHROME_UsePageUrl" displayKey="UsePageUrl" visible="false" required="false" />
+      <Property value="https://auto.danawa.com/auto/?Work=record&amp;Tab=Top10&amp;Brand=307&amp;Month=2023-04-00&amp;MonthTo=" runtimeType="String" key="CHROME_FullPageUrl" displayKey="FullPageUrl" visible="false" required="false" />
+      <Property value="" runtimeType="String" key="CHROME_IframeSrc" displayKey="Iframe Source" visible="true" required="false" />
+      <Property value="" runtimeType="String" key="CHROME_IframeIndexes" displayKey="Iframe Index" visible="true" required="false" />
+      <Property value="'/html/body/div[1]/section/div/div/div[3]/article/main/div'" runtimeType="String" key="CHROME_ElementPath" displayKey="Element Path" visible="true" required="false" />
+      <Property value="'//div[@id=\'autodanawa_gridC\']/div[3]/article/main/div'" runtimeType="String" key="CHROME_ExecuteQuery" displayKey="ExecuteQuery" visible="true" required="true" />
+      <Property value="true" runtimeType="Boolean" key="CHROME_QueryType" displayKey="Query Type" visible="true" required="false" />
+      <Property value="&lt;Too Long&gt; H4sIAAAAAAAEAOy9a5fb1pUo+Nn9K3jVq6/tYZXwBghHUobv9/vN1WtVQAAkQYIACYDPu24v2S57yZYSO91SojiSuzwtx06uMl2x ... 49848 more" runtimeType="String" key="CHROME_FullHTML" displayKey="FullHTML" visible="false" required="false" />
+      <Property value="this.o_is_DataExsist : false" runtimeType="Boolean" key="CHROME_Result" displayKey="Result" visible="true" required="true" />
+      <Property value="&lt;Too Long&gt; [{&quot;Index&quot;:0,&quot;Tag&quot;:&quot;DIV&quot;,&quot;Data&quot;:[{&quot;Name&quot;:&quot;index&quot;,&quot;Value&quot;:&quot;&quot;,&quot;IsUse&quot;:false},{&quot;Name&quot;:&quot;class&quot;,&quot;Value&quot;:&quot;r ... 1119 more" runtimeType="String" key="CHROME_ChromeElements" displayKey="ChromeElements" visible="false" required="false" />
+      <Property value="''" runtimeType="String" key="CHROME_SingleQueryForMultiple" displayKey="SingleQueryForMultiple" visible="false" required="false" />
+      <Property value="https://auto.danawa.com/auto/?Work=record&amp;Tab=Top10&amp;Brand=307&amp;Month=2023-04-00&amp;MonthTo=" runtimeType="String" key="CHROME_PagesearchUrl" displayKey="PagesearchUrl" visible="false" required="false" />
+      <Property value="" runtimeType="String" key="CHROME_IframeFullSrc" displayKey="IframeFullSrc" visible="false" required="false" />
+      <Property value="" runtimeType="String" key="CHROME_IframeSearchSrc" displayKey="IframeSearchSrc" visible="false" required="false" />
+      <Property value="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" runtimeType="Bitmap" key="Target_Capture" displayKey="Image" visible="true" required="false" />
+      <Property value="false" runtimeType="Boolean" key="CHROME_IsTextEdit" displayKey="IsTextEdit" visible="false" required="false" />
+      <Property value="DIV" runtimeType="String" key="CHROME_HTMLTagName" displayKey="HTMLTagName" visible="false" required="false" />
+      <Property value="'0, 0'" runtimeType="String" key="Mouse_OffsetPoint" displayKey="OffsetPoint" visible="false" required="false" />
+      <Property value="Center" runtimeType="String" key="Mouse_OriginPoint" displayKey="Origin Point" visible="false" required="false" />
+      <Property value="'48, 192'" runtimeType="String" key="Mouse_Point" displayKey="Click Point" visible="false" required="false" />
+      <Property value="644,784" runtimeType="Point" key="Mouse_AppPoint" displayKey="AppPoint" visible="false" required="false" />
+      <Property value="636,776" runtimeType="Point" key="Mouse_WinPoint" displayKey="WinPoint" visible="false" required="false" />
+      <Property value="" runtimeType="String" key="Target_RemoteAppName" displayKey="RemoteAppName" visible="false" required="false" />
+      <Property value="Invoke;ScrollItem;LegacyIAccessible" runtimeType="String" key="Target_SupportedPatterns" displayKey="SupportedPatterns" visible="true" required="false" />
+      <Property value="127,142" runtimeType="Size" key="Target_SizeTolerance" displayKey="SizeTolerance" visible="false" required="false" />
+      <Property value="0" runtimeType="Integer" key="Target_SelectImageIndex" displayKey="SelectImageIndex" visible="true" required="false" />
+      <Property value="JustBest" runtimeType="String" key="Target_ImageIndexMethod" displayKey="ImageIndexMethod" visible="true" required="false" />
+      <Property value="NotUse" runtimeType="String" key="Target_UseImageMatch" displayKey="UseImageMatch" visible="true" required="false" />
+      <Property value="false" runtimeType="Boolean" key="Target_UseSearchAround" displayKey="UseSearchAround" visible="false" required="false" />
+      <Property value="42.12388010.4.-12156" runtimeType="String" key="Target_RuntimeID" displayKey="RuntimeID" visible="false" required="false" />
+      <Property value="Chrome" runtimeType="String" key="Target_FrameworkID" displayKey="FrameworkID" visible="false" required="false" />
+      <Property value="" runtimeType="String" key="Target_AutomationID" displayKey="AutomationID" visible="false" required="false" />
+      <Property value="" runtimeType="String" key="Target_ClassName" displayKey="ClassName" visible="false" required="false" />
+      <Property value="''" runtimeType="String" key="Target_LegacyHelp" displayKey="LegacyHelp" visible="true" required="false" />
+      <Property value="''" runtimeType="String" key="Target_LegacyDesc" displayKey="LegacyDesc" visible="true" required="false" />
+      <Property value="''" runtimeType="String" key="Target_LegacyValue" displayKey="LegacyValue" visible="true" required="false" />
+      <Property value="''" runtimeType="String" key="Target_LegacyName" displayKey="LegacyName" visible="true" required="false" />
+      <Property value="''" runtimeType="String" key="Target_Value" displayKey="Value" visible="true" required="true" />
+      <Property value="''" runtimeType="String" key="Target_Name" displayKey="Name" visible="true" required="true" />
+      <Property value="596,592,639,1425" runtimeType="Rect" key="Target_Bounds" displayKey="Bounds" visible="true" required="false" />
+      <Property value="Group" runtimeType="String" key="Target_ClassType" displayKey="ClassType" visible="true" required="true" />
+      <Property value="" runtimeType="String" key="Target_RelativePath" displayKey="RelativePath" visible="true" required="false" />
+      <Property value="&lt;Too Long&gt; 'Pane|Chrome_WidgetWin_1||Win32|False||1|자동차 판매실적 : 다나와 자동차 - Chrome/Document|Chrome_RenderWidgetHos ... 278 more" runtimeType="String" key="Target_ObjectPathEx" displayKey="ObjectPathEx" visible="true" required="true" />
+      <Property value="&lt;Too Long&gt; 'Pane|Chrome_WidgetWin_1||Win32/Document|Chrome_RenderWidgetHostHWND|104402720|Chrome/Group|||Chrome ... 143 more" runtimeType="String" key="Target_ObjectPath" displayKey="ObjectPath" visible="false" required="true" />
+      <Property value="Chrome_WidgetWin_1" runtimeType="String" key="Application_ClassName" displayKey="ClassName" visible="false" required="false" />
+      <Property value="-8,-8,1936,1056" runtimeType="Rect" key="Application_Bounds" displayKey="Bounds" visible="false" required="false" />
+      <Property value="Pane" runtimeType="String" key="Application_ClassType" displayKey="ClassType" visible="false" required="false" />
+      <Property value="'자동차 판매실적 : 다나와 자동차 - Chrome'" runtimeType="String" key="Application_Title" displayKey="Title" visible="true" required="true" />
+      <Property value="chrome" runtimeType="String" key="Application_ProcessName" displayKey="ProcessName" visible="true" required="true" />
+      <Property value="10452" runtimeType="Integer" key="Application_PID" displayKey="PID" visible="false" required="false" />
+      <Property value="Designer" runtimeType="String" key="Target_CapturedBy" displayKey="CapturedBy" visible="false" required="false" />
+    </Properties>
+  </Step>
+  <Step id="S1acccd3424ca45d9ab86468c66cf9877" taskName="T_06_브랜드데이터조회" type="Flow" name="Debugger" displayName="Debugger" callDepth="1" depth="1" num="3" result="Stop" start="2025-04-29T03:29:06.657" end="2025-04-29T03:29:14.658" displayTime="8s">
+    <Variables>
+      <Variable name="RESULT" scope="System" declareType="Any" isChanged="false" isChangable="true" runtimeType="Any" value="&lt;null&gt;" />
+    </Variables>
+    <Properties setIndex="0">
+      <Property value="" runtimeType="String" key="Options_OnError" displayKey="On Error" visible="true" required="false" />
+      <Property value="" runtimeType="String" key="Key_Description" displayKey="Description" visible="true" required="false" />
+      <Property runtimeType="String" key="Conditions_Message" displayKey="Message" visible="true" required="false" />
+    </Properties>
+  </Step>
+  <JobInfo>
+    <Info name="Bot Version" value="3.1.125.00226" />
+    <Info name="Resolution" value="1920 x 1080" />
+    <Info name="Language" value="한국어 (대한민국)" />
+    <Info name="BotID" value="S-DESIGNER-OY53F" />
+  </JobInfo>
+</Result>

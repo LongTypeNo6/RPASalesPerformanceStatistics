@@ -7,7 +7,7 @@
     <Property key="Resolution" controlType="String" valueType="System.String" formatType="String_Size" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="1920x1080" />
     <Property key="CreatedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2025-04-28 11:38:28" />
     <Property key="CreatedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
-    <Property key="LastModifiedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2025-04-29 17:36:04" />
+    <Property key="LastModifiedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2025-04-30 04:20:54" />
     <Property key="LastModifiedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="" />
     <Property key="LastPublishedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
     <Property key="LastPublishedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
@@ -28,7 +28,7 @@
         <Property type="Desktop" key="Conditions_PromptType" controlType="PropertyItemDropDownView" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="Text" valuelist="OK;OK/Cancel;Yes/No;Yes/No/Cancel;Abort/Retry/Ignore;Retry/Cancel;Text" />
         <Property type="Desktop" key="Conditions_DefaultValue" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="''" />
         <Property type="Desktop" key="Conditions_DefaultItem" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="''" />
-        <Property type="Desktop" key="Conditions_PromptMessage" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="'조회기간을 다시 확인해 주세요.\n'&#xD;&#xA;+'예: '&#xD;&#xA;+DateTime.Now.AddYears(-1).ToString('yyyy')+'년 '&#xD;&#xA;+DateTime.Now.ToString('MM')+'월\n'&#xD;&#xA;+'조회 가능 기간: 2023년 1월 ~'&#xD;&#xA;+DateTime.Now.ToString('yyyy')+'년 '&#xD;&#xA;+DateTime.Now.AddMonths(-1).ToString('MM')+'월'" />
+        <Property type="Desktop" key="Conditions_PromptMessage" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="'조회기간을 다시 확인해 주세요.\n'&#xD;&#xA;+'예: '&#xD;&#xA;+DateTime.Now.AddYears(-1).ToString('yyyy')+'년 '&#xD;&#xA;+DateTime.Now.ToString('MM')+'월\n'&#xD;&#xA;+'조회 가능 기간: 2023년 01월 ~'&#xD;&#xA;+DateTime.Now.ToString('yyyy')+'년 '&#xD;&#xA;+DateTime.Now.AddMonths(-1).ToString('MM')+'월'" />
         <Property type="Desktop" key="Conditions_TimeoutSec" controlType="Int32" valueType="System.Int32" formatType="Integer" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="600" />
       </Properties>
       <RelatedSteps />
@@ -36,7 +36,7 @@
 +'예: '
 +DateTime.Now.AddYears(-1).ToString('yyyy')+'년 '
 +DateTime.Now.ToString('MM')+'월\n'
-+'조회 가능 기간: 2023년 1월 ~'
++'조회 가능 기간: 2023년 01월 ~'
 +DateTime.Now.ToString('yyyy')+'년 '
 +DateTime.Now.AddMonths(-1).ToString('MM')+'월', 600);]]></Script>
     </Step>
@@ -76,7 +76,7 @@
         +'예: '
         +DateTime.Now.AddYears(-1).ToString('yyyy')+'년 '
         +DateTime.Now.ToString('MM')+'월\n'
-        +'조회 가능 기간: 2023년 1월 ~'
+        +'조회 가능 기간: 2023년 01월 ~'
         +DateTime.Now.ToString('yyyy')+'년 '
         +DateTime.Now.AddMonths(-1).ToString('MM')+'월', 600);
 

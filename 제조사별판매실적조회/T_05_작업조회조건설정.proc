@@ -10,15 +10,15 @@
     <Property key="Resolution" controlType="String" valueType="System.String" formatType="String_Size" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="1920x1080" />
     <Property key="CreatedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2025-04-17 11:47:38" />
     <Property key="CreatedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
-    <Property key="LastModifiedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2025-04-29 17:22:20" />
+    <Property key="LastModifiedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2025-04-30 10:15:24" />
     <Property key="LastModifiedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="" />
     <Property key="LastPublishedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
     <Property key="LastPublishedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
   </Properties>
   <LinkItems />
   <Variables>
-    <Variable name="i_str_InputPeriod" scope="Input" valueType="Any" formatType="Any" initValue="" desc="" colorValue="#FFE49393" showMarker="True" />
-    <Variable name="i_str_InputBrandNames" scope="Input" valueType="Any" formatType="Any" initValue="" desc="" colorValue="#FF7AA874" showMarker="True" />
+    <Variable name="i_str_InputPeriod" scope="Input" valueType="Any" formatType="Any" initValue="" desc="조회데이터: 입력받은 조회기간" colorValue="#FFE49393" showMarker="True" />
+    <Variable name="i_str_InputBrandNames" scope="Input" valueType="Any" formatType="Any" initValue="" desc="조회데이터: 입력받은 브랜드 명들" colorValue="#FF7AA874" showMarker="True" />
   </Variables>
   <Steps>
     <Step id="S0981d1a661784412972f1d4850525c71" ver="311241220" createVer="311241220" type="Flow" name="DecisionThen" dpName="IfThen" dpValue="this.i_str_InputBrandNames!=''" dpValue2="" dpImage="" tag="" depth="1" stmttype="OpenBlock" enabled="True" mainSet="0">
@@ -38,7 +38,7 @@
       <Properties id="de783fa1-de92-422d-b627-25828f6d79d3" type="Chrome">
         <Property type="Chrome" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
         <Property type="Chrome" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
-        <Property type="Chrome" key="CHROME_Browser" controlType="InputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="LATEST_BROWSER" />
+        <Property type="Chrome" key="CHROME_Browser" controlType="InputControlType" valueType="System.Object" formatType="Variable" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="Global.ChromeBrowser" />
         <Property type="Chrome" key="CHROME_WaitTimeSec" controlType="Int32" valueType="System.Int32" formatType="Integer" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="10" />
         <Property type="Chrome" key="CHROME_PageUrl" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="'https://auto.danawa.com/auto/'" />
         <Property type="Chrome" key="CHROME_UsePageUrl" controlType="Boolean" valueType="System.Boolean" formatType="Boolean" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="False" />
@@ -164,7 +164,7 @@ if(Global.str_ErrorReport!=''){
       <Properties id="e0055ac1-0641-40bc-80a4-9a7257fae692" type="Flow">
         <Property type="Flow" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
         <Property type="Flow" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
-        <Property type="Flow" key="Conditions_Title" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="인풋값으로 조회 조건 변경" />
+        <Property type="Flow" key="Conditions_Title" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="인풋값 조회 조건에 맞게 변경" />
         <Property type="Flow" key="Key_Script" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="&#xD;&#xA;this.i_str_InputPeriod = this.i_str_InputPeriod.trim(); //앞뒤 공백 제거&#xD;&#xA;&#xD;&#xA;if(this.i_str_InputPeriod.includes('년')){ //연 월 나누기&#xD;&#xA;    arr1_RawPeriod=this.i_str_InputPeriod.split('년')&#xD;&#xA;}else if(this.i_str_InputPeriod.includes('-')){&#xD;&#xA;    arr1_RawPeriod=this.i_str_InputPeriod.split('-')&#xD;&#xA;}else if(this.i_str_InputPeriod.includes('/')){&#xD;&#xA;    arr1_RawPeriod=this.i_str_InputPeriod.split('/')&#xD;&#xA;}else if(this.i_str_InputPeriod.includes(' ')){&#xD;&#xA;    arr1_RawPeriod=this.i_str_InputPeriod.split(' ');&#xD;&#xA;}&#xD;&#xA;arr1_RawPeriod[0]=arr1_RawPeriod[0].trim();&#xD;&#xA;arr1_RawPeriod[1]=arr1_RawPeriod[1].trim(); //각 요소 다시 공백 제거&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;if(arr1_RawPeriod[0].length!=4){&#xD;&#xA;    arr1_RawPeriod[0]='20'+arr1_RawPeriod[0];&#xD;&#xA;}&#xD;&#xA;arr1_RawPeriod[0]=arr1_RawPeriod[0]+'년';&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;if (!arr1_RawPeriod[1].includes('월')) {&#xD;&#xA;    if (arr1_RawPeriod[1].length === 1) {&#xD;&#xA;        arr1_RawPeriod[1] = '0' + arr1_RawPeriod[1];&#xD;&#xA;    }&#xD;&#xA;    arr1_RawPeriod[1] += '월';&#xD;&#xA;} else {&#xD;&#xA;    arr1_RawPeriod[1] = arr1_RawPeriod[1].replace('월', ''); &#xD;&#xA;    if (arr1_RawPeriod[1].length === 1) {&#xD;&#xA;        arr1_RawPeriod[1] = '0' + arr1_RawPeriod[1];&#xD;&#xA;    }&#xD;&#xA;    arr1_RawPeriod[1] += '월';&#xD;&#xA;}&#xD;&#xA;Global.arr1_Period=[];&#xD;&#xA;Global.arr1_Period.push(arr1_RawPeriod[0]);&#xD;&#xA;Global.arr1_Period.push(arr1_RawPeriod[1]);&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;Bot.Warn('여기야여기'+ToString(Global.arr1_Period))" />
       </Properties>
       <RelatedSteps />
@@ -404,8 +404,8 @@ if(str_Period<str_StartPeriod || str_EndPeriod<str_Period){
       <StepNode step_id="Sf6a95bd3197e4d3998c5b5770375dd19" group_name="" folded="False" color="" />
       <StepNode step_id="S548b548d5b53477fb30cf5216c1cd226" group_name="" folded="False" color="" />
       <StepNode step_id="S3745203890be4c7ea6f1246b8d0689b5" group_name="" folded="False" color="" />
-      <StepNode step_id="S2b0adf59227443c585a49e3f6e7a20ea" group_name="674dbd96-4a55-4406-a298-2cb80b658b4a_인풋값을 조회조건에 추가" folded="False" color="" />
-      <StepNode step_id="S13a2701ae7a244e4ab4a122fa3bbd97f" group_name="8b5dc540-ee68-4d74-b997-fab21f1bb42d_Untitled" folded="False" color="" />
+      <StepNode step_id="S2b0adf59227443c585a49e3f6e7a20ea" group_name="aa89cb03-a755-4594-af22-6e114f5d90ce_인풋값 조회 조건에 맞게 변경" folded="False" color="" />
+      <StepNode step_id="S13a2701ae7a244e4ab4a122fa3bbd97f" group_name="9c035c95-f297-441f-b908-8d5f95844474_가능 날짜 조회" folded="False" color="" />
       <StepNode step_id="Sbce031d093b64ee78bfb3756c14505ff" group_name="" folded="False" color="" />
       <StepNode step_id="Sf64fd7057c1741788a68ca21916b18c3" group_name="" folded="False" color="" />
     </StepNodes>

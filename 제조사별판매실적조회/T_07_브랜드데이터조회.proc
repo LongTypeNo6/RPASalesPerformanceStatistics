@@ -10,15 +10,15 @@
     <Property key="Resolution" controlType="String" valueType="System.String" formatType="String_Size" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="1920x1080" />
     <Property key="CreatedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2025-04-17 12:36:40" />
     <Property key="CreatedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
-    <Property key="LastModifiedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2025-04-29 13:55:04" />
+    <Property key="LastModifiedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2025-04-30 10:21:24" />
     <Property key="LastModifiedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="" />
     <Property key="LastPublishedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
     <Property key="LastPublishedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
   </Properties>
   <LinkItems />
   <Variables>
-    <Variable name="o_is_DataExsist" scope="Output" valueType="Any" formatType="Any" initValue="" desc="" colorValue="#FF97DEFF" showMarker="False" />
-    <Variable name="i_Index" scope="Input" valueType="Any" formatType="Any" initValue="" desc="" colorValue="#FFD27685" showMarker="False" />
+    <Variable name="o_is_DataExsist" scope="Output" valueType="Any" formatType="Any" initValue="" desc="확인: 조회한 브랜드의 데이터값" colorValue="#FF97DEFF" showMarker="False" />
+    <Variable name="i_Index" scope="Input" valueType="Any" formatType="Any" initValue="" desc="인덱스" colorValue="#FFD27685" showMarker="False" />
   </Variables>
   <Steps>
     <Step id="S2755d8d6d9214c6f8bab1979f7c2e591" ver="311241220" createVer="311241220" type="Chrome" name="ChromeClick" dpName="ChromeClick" dpValue="Global.ChromeBrowser" dpValue2="자동차 판매실적 : 다나와 자동차 - Chrome" dpImage="Target_Capture" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
@@ -184,7 +184,7 @@
   <Diagram version="1.300" nodesize="Normal">
     <StepNodes>
       <StepNode step_id="S2755d8d6d9214c6f8bab1979f7c2e591" group_name="5086db62-2218-4429-bd0f-60fcbe169c0e_조회 브랜드 설정 test" folded="False" color="" />
-      <StepNode step_id="S9b1518850e504f86a0976e6e1efbe767" group_name="8d029484-94c3-4fec-973e-a73ec524e33c_Untitled" folded="False" color="" />
+      <StepNode step_id="S9b1518850e504f86a0976e6e1efbe767" group_name="41d4a038-1a76-4476-b818-75437272e70e_조회한 브랜드의 데이터가 있는지 확인" folded="False" color="" />
     </StepNodes>
   </Diagram>
 </Process>

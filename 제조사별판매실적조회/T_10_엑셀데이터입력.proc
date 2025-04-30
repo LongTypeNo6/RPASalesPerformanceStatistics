@@ -10,19 +10,19 @@
     <Property key="Resolution" controlType="String" valueType="System.String" formatType="String_Size" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="1920x1080" />
     <Property key="CreatedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2025-04-22 12:12:06" />
     <Property key="CreatedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
-    <Property key="LastModifiedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2025-04-29 15:18:24" />
+    <Property key="LastModifiedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2025-04-30 10:34:02" />
     <Property key="LastModifiedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="" />
     <Property key="LastPublishedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
     <Property key="LastPublishedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
   </Properties>
   <LinkItems />
   <Variables>
-    <Variable name="is_LisenceExcel" scope="Normal" valueType="Any" formatType="Any" initValue="" desc="" colorValue="#FFFB2576" showMarker="False" />
-    <Variable name="is_ActiveExcel" scope="Normal" valueType="Any" formatType="Any" initValue="" desc="" colorValue="#FFFFACAC" showMarker="False" />
-    <Variable name="i_str_ImageTablePath" scope="Input" valueType="Any" formatType="Any" initValue="" desc="" colorValue="#FF0E8388" showMarker="False" />
-    <Variable name="i_str_ImageGraphPath" scope="Input" valueType="Any" formatType="Any" initValue="" desc="" colorValue="#FF3C79F5" showMarker="False" />
-    <Variable name="i_arr2_EngineData" scope="Input" valueType="Any" formatType="Any" initValue="" desc="" colorValue="#FF9E4784" showMarker="False" />
-    <Variable name="i_arr2_ModelData" scope="Input" valueType="Any" formatType="Any" initValue="" desc="" colorValue="#FF38E54D" showMarker="False" />
+    <Variable name="is_LisenceExcel" scope="Normal" valueType="Any" formatType="Any" initValue="" desc="확인: 라이선스 팝업창" colorValue="#FFFB2576" showMarker="False" />
+    <Variable name="is_ActiveExcel" scope="Normal" valueType="Any" formatType="Any" initValue="" desc="확인: 편집 활성화 버튼" colorValue="#FFFFACAC" showMarker="False" />
+    <Variable name="i_str_ImageTablePath" scope="Input" valueType="Any" formatType="Any" initValue="" desc="파일경로: 누적판매량이미지" colorValue="#FF0E8388" showMarker="False" />
+    <Variable name="i_str_ImageGraphPath" scope="Input" valueType="Any" formatType="Any" initValue="" desc="파일경로: 그래프이미지" colorValue="#FF3C79F5" showMarker="False" />
+    <Variable name="i_arr2_EngineData" scope="Input" valueType="Any" formatType="Any" initValue="" desc="데이터: 내연기관별 판매량 가공된 데이터" colorValue="#FF9E4784" showMarker="False" />
+    <Variable name="i_arr2_ModelData" scope="Input" valueType="Any" formatType="Any" initValue="" desc="데이터: 모델별 판매량 가공된 데이터" colorValue="#FF38E54D" showMarker="False" />
   </Variables>
   <Steps>
     <Step id="Se5a15c94a3d644cab674ba0ea2ce05e9" ver="311241220" createVer="311241220" type="Excel" name="OpenExcel" dpName="OpenExcel" dpValue="Global.str_TempFilePath" dpValue2="" dpImage="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
@@ -1180,29 +1180,29 @@
 ]]></JScript>
   <Diagram version="1.300" nodesize="Normal">
     <StepNodes>
-      <StepNode step_id="Se5a15c94a3d644cab674ba0ea2ce05e9" group_name="42db6d64-9ee2-4017-9276-aeb36d2f5839_Untitled" folded="False" color="" />
+      <StepNode step_id="Se5a15c94a3d644cab674ba0ea2ce05e9" group_name="eb39c330-4654-467d-a312-9771e97341e8_엑셀창 열기" folded="False" color="" />
       <StepNode step_id="Sd1918532ea5f4e53b41bcfe50abf8b27" group_name="5eb3d139-e9a2-4485-b36e-ec044684de1a_라이선스 팝업창 확인" folded="False" color="" />
       <StepNode step_id="S775b1ebd1b0b491bb6ba05358b3c4f16" group_name="" folded="False" color="" />
       <StepNode step_id="Sbce293cb3e014de3982da7f5d6935767" group_name="6da7ff7d-2891-42d0-b1c8-f944cf4278a7_라이선스 팝업창 닫기" folded="False" color="" />
       <StepNode step_id="Sf1e95457f1bd481782677686fcc1cdf6" group_name="" folded="False" color="" />
-      <StepNode step_id="Se5a7190e60584af081f35bd3abb6d498" group_name="fc50c231-5ba3-4990-a074-f265372327be_Untitled" folded="False" color="" />
+      <StepNode step_id="Se5a7190e60584af081f35bd3abb6d498" group_name="d57e1b1b-8211-4bae-ac13-d7976e0d3a12_편집사용 버튼 확인" folded="False" color="" />
       <StepNode step_id="S0a581c343a4e4f339546a92831c7b275" group_name="" folded="False" color="" />
-      <StepNode step_id="Sa5ae497e440d4ef290fc88e88eb78eca" group_name="00110b2e-84e8-40b2-815b-2dec7ea480ad_Untitled" folded="False" color="" />
+      <StepNode step_id="Sa5ae497e440d4ef290fc88e88eb78eca" group_name="acac0ada-c816-4c5c-b3da-8c6b256485fb_편집 사용 활성화" folded="False" color="" />
       <StepNode step_id="S0053b0ea799843dd9b84a9396ae8367a" group_name="" folded="False" color="" />
-      <StepNode step_id="Sc20bf500ab934daab22fd379fa21ad49" group_name="0ce07feb-7298-48f4-b22b-a5c39d33d746_Untitled" folded="False" color="" />
-      <StepNode step_id="Sdbd248a43e4349b6a9d62849aabaa4b3" group_name="0ce07feb-7298-48f4-b22b-a5c39d33d746_Untitled" folded="False" color="" />
-      <StepNode step_id="S39e9316401904368a22e72df64ae39be" group_name="93ffca5f-e435-4471-8efd-da5d11d9f79b_Untitled" folded="False" color="" />
-      <StepNode step_id="S52ec4d613eb346d19c3202b4147b677b" group_name="93ffca5f-e435-4471-8efd-da5d11d9f79b_Untitled" folded="False" color="" />
-      <StepNode step_id="Sc0894bfd8b164378baf7e51191d33b12" group_name="93ffca5f-e435-4471-8efd-da5d11d9f79b_Untitled" folded="False" color="" />
-      <StepNode step_id="Sb425a710a388418fb8be98c43de43bac" group_name="93ffca5f-e435-4471-8efd-da5d11d9f79b_Untitled" folded="False" color="" />
-      <StepNode step_id="S340858679b5f44e18fc128d43f529424" group_name="93ffca5f-e435-4471-8efd-da5d11d9f79b_Untitled" folded="False" color="" />
-      <StepNode step_id="Sd7fd87705cc548bd834cb561ef525903" group_name="93ffca5f-e435-4471-8efd-da5d11d9f79b_Untitled" folded="False" color="" />
-      <StepNode step_id="Sb0bd8783e7194c929e25fbc74fcec2de" group_name="644dd66d-c033-4a65-ab23-099a6072f705_Untitled" folded="False" color="" />
-      <StepNode step_id="S9ec301a706564d7497c2446ff8839975" group_name="644dd66d-c033-4a65-ab23-099a6072f705_Untitled" folded="False" color="" />
-      <StepNode step_id="S2e48591ea7c04d75a37f0ac2a015d27c" group_name="644dd66d-c033-4a65-ab23-099a6072f705_Untitled" folded="False" color="" />
-      <StepNode step_id="S4faebef086034c1db0a0d926be96679f" group_name="644dd66d-c033-4a65-ab23-099a6072f705_Untitled" folded="False" color="" />
-      <StepNode step_id="S9d27115ec8974c11811cc5a39c3dca7e" group_name="644dd66d-c033-4a65-ab23-099a6072f705_Untitled" folded="False" color="" />
-      <StepNode step_id="Sb55f00a54a2d497fafb8d35de4cc0591" group_name="644dd66d-c033-4a65-ab23-099a6072f705_Untitled" folded="False" color="" />
+      <StepNode step_id="Sc20bf500ab934daab22fd379fa21ad49" group_name="fc8f0b09-baa4-48ad-8a3c-7d6678924054_모델별, 내연기관별 데이터 입력" folded="False" color="" />
+      <StepNode step_id="Sdbd248a43e4349b6a9d62849aabaa4b3" group_name="fc8f0b09-baa4-48ad-8a3c-7d6678924054_모델별, 내연기관별 데이터 입력" folded="False" color="" />
+      <StepNode step_id="S39e9316401904368a22e72df64ae39be" group_name="f8a14cce-2d3b-41ad-9b2e-77abe4929509_그래프 이미지 삽입" folded="False" color="" />
+      <StepNode step_id="S52ec4d613eb346d19c3202b4147b677b" group_name="f8a14cce-2d3b-41ad-9b2e-77abe4929509_그래프 이미지 삽입" folded="False" color="" />
+      <StepNode step_id="Sc0894bfd8b164378baf7e51191d33b12" group_name="f8a14cce-2d3b-41ad-9b2e-77abe4929509_그래프 이미지 삽입" folded="False" color="" />
+      <StepNode step_id="Sb425a710a388418fb8be98c43de43bac" group_name="f8a14cce-2d3b-41ad-9b2e-77abe4929509_그래프 이미지 삽입" folded="False" color="" />
+      <StepNode step_id="S340858679b5f44e18fc128d43f529424" group_name="f8a14cce-2d3b-41ad-9b2e-77abe4929509_그래프 이미지 삽입" folded="False" color="" />
+      <StepNode step_id="Sd7fd87705cc548bd834cb561ef525903" group_name="f8a14cce-2d3b-41ad-9b2e-77abe4929509_그래프 이미지 삽입" folded="False" color="" />
+      <StepNode step_id="Sb0bd8783e7194c929e25fbc74fcec2de" group_name="f3a4c30d-9e59-4f7d-8a1d-05323627c41a_누적판매량 이미지 삽입" folded="False" color="" />
+      <StepNode step_id="S9ec301a706564d7497c2446ff8839975" group_name="f3a4c30d-9e59-4f7d-8a1d-05323627c41a_누적판매량 이미지 삽입" folded="False" color="" />
+      <StepNode step_id="S2e48591ea7c04d75a37f0ac2a015d27c" group_name="f3a4c30d-9e59-4f7d-8a1d-05323627c41a_누적판매량 이미지 삽입" folded="False" color="" />
+      <StepNode step_id="S4faebef086034c1db0a0d926be96679f" group_name="f3a4c30d-9e59-4f7d-8a1d-05323627c41a_누적판매량 이미지 삽입" folded="False" color="" />
+      <StepNode step_id="S9d27115ec8974c11811cc5a39c3dca7e" group_name="f3a4c30d-9e59-4f7d-8a1d-05323627c41a_누적판매량 이미지 삽입" folded="False" color="" />
+      <StepNode step_id="Sb55f00a54a2d497fafb8d35de4cc0591" group_name="f3a4c30d-9e59-4f7d-8a1d-05323627c41a_누적판매량 이미지 삽입" folded="False" color="" />
     </StepNodes>
   </Diagram>
 </Process>

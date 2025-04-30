@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Result id="063adf1b-e33b-4762-9b53-8369f11ec38e" name="E_날짜형식오류" result="Stop" detail="No 6 is not available.&#xA;'No' must be &gt;= 1 and &lt;= step count&#xA;&#xA;Process: E_날짜형식오류&#xA;&#xA;Process: E_날짜형식오류&#xA;Step: RetryTask (2/2)&#xA;No 6 is not available.&#xA;'No' must be &gt;= 1 and &lt;= step count&#xA;&#xA;-- Recent Warning Messages --&#xA;Process: E_날짜형식오류&#xA;Step: RetryTask (2/2)&#xA;&#xA;Error: No 6 is not available.&#xA;'No' must be &gt;= 1 and &lt;= step count" start="2025-04-29T19:18:02.749" end="2025-04-29T19:18:20.912" jobId="Designer_20250430_041754_961">
+  <Step id="S9500682fcf4a47fcb7a35ce9936eb588" taskName="E_날짜형식오류" type="Desktop" name="InputBox" displayName="InputBox" callDepth="1" depth="1" num="1" result="Pass" start="2025-04-29T19:18:02.814" end="2025-04-29T19:18:18.342" displayTime="15.5s">
+    <Variables>
+      <Variable name="sender" scope="Input" owner="E_날짜형식오류" declareType="Any" isChanged="false" isChangable="false" runtimeType="Any" value="&lt;Too Long&gt; {&quot;sender&quot;:&quot;&lt;ReferenceLoop&gt; Microsoft.ClearScript.V8.V8ScriptItem&quot;,&quot;args&quot;:&quot;&lt;ReferenceLoop&gt; Microsoft. ... 1188 more" />
+    </Variables>
+    <Properties setIndex="0">
+      <Property value="" runtimeType="String" key="Options_OnError" displayKey="On Error" visible="true" required="false" />
+      <Property value="" runtimeType="String" key="Key_Description" displayKey="Description" visible="true" required="false" />
+      <Property value="this.sender.i_str_InputPeriod : &lt;undefined&gt;" runtimeType="Undefined" key="Conditions_Variable" displayKey="Variable" visible="true" required="true" />
+      <Property value="Text" runtimeType="String" key="Conditions_PromptType" displayKey="Prompt Type" visible="true" required="true" />
+      <Property value="''" runtimeType="String" key="Conditions_DefaultValue" displayKey="Default Value" visible="true" required="false" />
+      <Property value="''" runtimeType="String" key="Conditions_DefaultItem" displayKey="Default Value" visible="false" required="false" />
+      <Property value="&lt;Too Long&gt; '조회기간을 다시 확인해 주세요.\\n\'\n+\'예: \'\n+DateTime.Now.AddYears(-1).ToString(\'yyyy\')+\'년 \'\n+DateTime.N ... 148 more" runtimeType="String" key="Conditions_PromptMessage" displayKey="Guide Message" visible="true" required="false" />
+      <Property value="600" runtimeType="Integer" key="Conditions_TimeoutSec" displayKey="Timeout(Sec)" visible="true" required="true" />
+    </Properties>
+  </Step>
+  <Step id="Sf63f9a606f234ac9b84acacda3427739" taskName="E_날짜형식오류" type="Flow" name="RetryTask" displayName="RetryTask" callDepth="1" depth="1" num="2" result="Fail" start="2025-04-29T19:18:18.360" end="2025-04-29T19:18:20.868" displayTime="2.5s">
+    <Variables />
+    <Properties setIndex="0">
+      <Property value="" runtimeType="String" key="Options_OnError" displayKey="On Error" visible="true" required="false" />
+      <Property value="" runtimeType="String" key="Key_Description" displayKey="Description" visible="true" required="false" />
+      <Property value=" : '&lt;error-evaluate_debug_value:&gt;'" runtimeType="String" key="Conditions_Result" displayKey="Result" visible="true" required="false" />
+      <Property value="StepNo" runtimeType="String" key="Conditions_RetryCmd" displayKey="Position Type" visible="true" required="false" />
+      <Property value="6" runtimeType="Integer" key="Conditions_RetryArgs" displayKey="Position" visible="true" required="true" />
+      <Property value="0" runtimeType="Integer" key="Options_GotoStepRelativePosition" displayKey="GotoStep Relative Position" visible="false" required="false" />
+      <Property value="1" runtimeType="String" key="Options_GotoStepRetryCount" displayKey="GotoStep Retry Count" visible="false" required="false" />
+    </Properties>
+  </Step>
+  <JobInfo>
+    <Info name="Bot Version" value="3.1.125.00226" />
+    <Info name="Resolution" value="1920 x 1080" />
+    <Info name="Language" value="한국어 (대한민국)" />
+    <Info name="BotID" value="S-DESIGNER-TX80A" />
+  </JobInfo>
+</Result>

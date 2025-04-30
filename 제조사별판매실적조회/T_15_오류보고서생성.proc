@@ -10,15 +10,14 @@
     <Property key="Resolution" controlType="String" valueType="System.String" formatType="String_Size" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="1920x1080" />
     <Property key="CreatedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2025-04-29 10:25:05" />
     <Property key="CreatedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
-    <Property key="LastModifiedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2025-04-29 13:59:19" />
+    <Property key="LastModifiedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2025-04-30 10:33:41" />
     <Property key="LastModifiedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="" />
     <Property key="LastPublishedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
     <Property key="LastPublishedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
   </Properties>
   <LinkItems />
   <Variables>
-    <Variable name="변경" scope="Normal" valueType="Any" formatType="Any" initValue="" desc="" colorValue="#FFEBB02D" showMarker="False" />
-    <Variable name="str_ErrorReportFilePath" scope="Normal" valueType="Any" formatType="Any" initValue="" desc="" colorValue="#FFFFB100" showMarker="False" />
+    <Variable name="str_ErrorReportFilePath" scope="Normal" valueType="Any" formatType="Any" initValue="" desc="파일경로: 에러보고서" colorValue="#FFFFB100" showMarker="False" />
   </Variables>
   <Steps>
     <Step id="S074eb65507764c52bb4234634e4ffe3f" ver="311241220" createVer="311241220" type="Flow" name="Assign" dpName="Assign" dpValue="this.str_ErrorReportFilePath=Global.str_OutputFolderPath+Global.arr1_Period[0]+Global.arr1_Period[1]+'조회오류보고서.txt'" dpValue2="" dpImage="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
@@ -69,7 +68,6 @@ if(Global.str_ErrorReport.includes('데이터가 없는 브랜드')){
   </Steps>
   <JScript><![CDATA[function T_15_오류보고서생성() {
 
-    this.변경;
     this.str_ErrorReportFilePath;
 
     this.RPAGOTOENABLE = false;
@@ -113,10 +111,10 @@ if(Global.str_ErrorReport.includes('데이터가 없는 브랜드')){
 ]]></JScript>
   <Diagram version="1.300" nodesize="Normal">
     <StepNodes>
-      <StepNode step_id="S074eb65507764c52bb4234634e4ffe3f" group_name="c92ab870-6f49-413f-a8a9-c464582a73c8_Untitled" folded="False" color="" />
-      <StepNode step_id="S72bc9739a7dc4dff820d51c1a110497d" group_name="87571cf6-cbed-48a6-ba0a-7fea6d75d3b9_Untitled" folded="False" color="" />
-      <StepNode step_id="S7e41d65c6f92450a9c4de0889cd51d27" group_name="b656984f-0ee1-42b1-b350-478e14fa9ec9_Untitled" folded="False" color="" />
-      <StepNode step_id="S354ab95e37a446f8b81e98b638e34b8d" group_name="fdba9f83-84fa-4df8-bff1-a1a3be1d1ae2_Untitled" folded="False" color="" />
+      <StepNode step_id="S074eb65507764c52bb4234634e4ffe3f" group_name="f383163c-d136-4e4b-8b38-40bab0abace4_에러보고서 경로 설정" folded="False" color="" />
+      <StepNode step_id="S72bc9739a7dc4dff820d51c1a110497d" group_name="155caf7f-9771-4096-bfa0-ef39c0d68095_에러보고서 파일 생성" folded="False" color="" />
+      <StepNode step_id="S7e41d65c6f92450a9c4de0889cd51d27" group_name="ded6751d-265e-4a8a-b300-d12d7969a35f_에러보고서 내용 정리" folded="False" color="" />
+      <StepNode step_id="S354ab95e37a446f8b81e98b638e34b8d" group_name="604da6ee-ab54-4fd8-932c-590b00e6b712_에러보고서 내용 삽입" folded="False" color="" />
     </StepNodes>
   </Diagram>
 </Process>

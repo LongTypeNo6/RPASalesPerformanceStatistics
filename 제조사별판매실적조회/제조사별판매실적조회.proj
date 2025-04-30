@@ -62,7 +62,7 @@
     </LinkItem>
   </Event>
   <Process isExpended="true">
-    <LinkItem id="1129b78b-ed75-4df3-af8f-d08bae3583f3" category="Process" isChanged="Y" desc="default process" stepCount="26" name="P_제조사별판매실적조회">
+    <LinkItem id="1129b78b-ed75-4df3-af8f-d08bae3583f3" category="Process" isChanged="Y" desc="default process" stepCount="28" name="P_제조사별판매실적조회">
       <Properties />
     </LinkItem>
   </Process>

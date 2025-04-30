@@ -10,17 +10,17 @@
     <Property key="Resolution" controlType="String" valueType="System.String" formatType="String_Size" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="1920x1080" />
     <Property key="CreatedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2025-04-22 11:38:02" />
     <Property key="CreatedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
-    <Property key="LastModifiedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2025-04-29 13:55:33" />
+    <Property key="LastModifiedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2025-04-30 10:28:27" />
     <Property key="LastModifiedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="" />
     <Property key="LastPublishedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
     <Property key="LastPublishedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
   </Properties>
   <LinkItems />
   <Variables>
-    <Variable name="o_arr2_EngineData" scope="Output" valueType="Any" formatType="Any" initValue="[]" desc="" colorValue="#FF98DFD6" showMarker="False" />
-    <Variable name="o_arr2_ModelData" scope="Output" valueType="Any" formatType="Any" initValue="[]" desc="" colorValue="#FFE49393" showMarker="False" />
-    <Variable name="arr1_EngineRawData" scope="Normal" valueType="Any" formatType="Any" initValue="" desc="" colorValue="#FF9E4784" showMarker="False" />
-    <Variable name="arr2_ModelRawData" scope="Normal" valueType="Any" formatType="Any" initValue="" desc="" colorValue="#FF38E54D" showMarker="False" />
+    <Variable name="o_arr2_EngineData" scope="Output" valueType="Any" formatType="Any" initValue="[]" desc="데이터: 내연기관별 판매량 가공된 데이터" colorValue="#FF98DFD6" showMarker="False" />
+    <Variable name="o_arr2_ModelData" scope="Output" valueType="Any" formatType="Any" initValue="[]" desc="데이터: 모델별 판매량 가공된 데이터" colorValue="#FFE49393" showMarker="False" />
+    <Variable name="arr1_EngineRawData" scope="Normal" valueType="Any" formatType="Any" initValue="" desc="데이터: 내연기관별 판매량 원본 데이터" colorValue="#FF9E4784" showMarker="False" />
+    <Variable name="arr2_ModelRawData" scope="Normal" valueType="Any" formatType="Any" initValue="" desc="데이터: 모델별 판매량 원본 데이터" colorValue="#FF38E54D" showMarker="False" />
   </Variables>
   <Steps>
     <Step id="S0cccce61f2d84480b991d7643f8bfcfa" ver="311241220" createVer="311241220" type="Win" name="GetGridItems" dpName="GetGridItems" dpValue="1" dpValue2="자동차 판매실적 : 다나와 자동차 - Chrome" dpImage="Target_Capture" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
@@ -254,10 +254,10 @@ this.o_arr2_EngineData=[ToJson(this.arr1_EngineRawData)]]]></Script>
 ]]></JScript>
   <Diagram version="1.300" nodesize="Normal">
     <StepNodes>
-      <StepNode step_id="S0cccce61f2d84480b991d7643f8bfcfa" group_name="82231de5-892e-405d-a940-d798a497279b_Untitled" folded="False" color="" />
-      <StepNode step_id="Sfa103e47800d4740b1ba9b6dced88ca0" group_name="0bb54f06-e571-4685-a91b-42265c6f730f_Untitled" folded="False" color="" />
-      <StepNode step_id="Sc4b1014c695843a0b766136ce0c3a000" group_name="30291ff1-81bd-443e-adac-2a8dbbd60b97_Untitled" folded="False" color="" />
-      <StepNode step_id="S0ae2cdf45c014ee9a7450d6142e76315" group_name="bda53006-0735-483d-9908-168226566afe_Untitled" folded="False" color="" />
+      <StepNode step_id="S0cccce61f2d84480b991d7643f8bfcfa" group_name="325dfc9d-e132-4b14-8f95-b510fece0fde_모델별 판매량 데이터 추출" folded="False" color="" />
+      <StepNode step_id="Sfa103e47800d4740b1ba9b6dced88ca0" group_name="afad60be-26ac-480f-8347-74afa9163e6d_모델별 판매량 데이터 가공" folded="False" color="" />
+      <StepNode step_id="Sc4b1014c695843a0b766136ce0c3a000" group_name="1b56ab4a-8ef0-420a-98ce-03caf250e89f_내연기관별 판매량 데이터 추출" folded="False" color="" />
+      <StepNode step_id="S0ae2cdf45c014ee9a7450d6142e76315" group_name="d9112182-6d5c-40d4-99c5-9cfef63415c8_내연기관별 판매량 데이터 가공" folded="False" color="" />
     </StepNodes>
   </Diagram>
 </Process>

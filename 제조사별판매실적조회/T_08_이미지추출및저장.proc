@@ -10,19 +10,19 @@
     <Property key="Resolution" controlType="String" valueType="System.String" formatType="String_Size" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="1920x1080" />
     <Property key="CreatedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2025-04-17 15:40:05" />
     <Property key="CreatedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
-    <Property key="LastModifiedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2025-04-29 13:55:25" />
+    <Property key="LastModifiedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="2025-04-30 10:26:14" />
     <Property key="LastModifiedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="" />
     <Property key="LastPublishedDate" controlType="String" valueType="System.String" formatType="String_DateTime" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
     <Property key="LastPublishedBy" controlType="String" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
   </Properties>
   <LinkItems />
   <Variables>
-    <Variable name="is_FileExist" scope="Normal" valueType="Any" formatType="Any" initValue="" desc="" colorValue="#FFD864A9" showMarker="False" />
-    <Variable name="o_str_ImageTablePath" scope="Output" valueType="Any" formatType="Any" initValue="" desc="" colorValue="#FF0E8388" showMarker="False" />
-    <Variable name="o_str_ImageGraphPath" scope="Output" valueType="Any" formatType="Any" initValue="" desc="" colorValue="#FF3C79F5" showMarker="False" />
-    <Variable name="str_SearchKeyword" scope="Normal" valueType="Any" formatType="Any" initValue="" desc="" colorValue="#FFD27685" showMarker="False" />
-    <Variable name="arr1_SearchKeyword" scope="Normal" valueType="Any" formatType="Any" initValue="['recordBrand','recordMonth']" desc="" colorValue="#FF62B6B7" showMarker="False" />
-    <Variable name="i_Index" scope="Input" valueType="Any" formatType="Any" initValue="" desc="" colorValue="#FFF07DEA" showMarker="False" />
+    <Variable name="is_FileExist" scope="Normal" valueType="Any" formatType="Any" initValue="" desc="확인: 중복된 파일 있는지 확인" colorValue="#FFD864A9" showMarker="False" />
+    <Variable name="o_str_ImageTablePath" scope="Output" valueType="Any" formatType="Any" initValue="" desc="파일경로: 누적판매량이미지" colorValue="#FF0E8388" showMarker="False" />
+    <Variable name="o_str_ImageGraphPath" scope="Output" valueType="Any" formatType="Any" initValue="" desc="파일경로: 그래프 이미지" colorValue="#FF3C79F5" showMarker="False" />
+    <Variable name="str_SearchKeyword" scope="Normal" valueType="Any" formatType="Any" initValue="" desc="키워드: 개발자도구에 검색할 키워드" colorValue="#FFD27685" showMarker="False" />
+    <Variable name="arr1_SearchKeyword" scope="Normal" valueType="Any" formatType="Any" initValue="['recordBrand','recordMonth']" desc="키워드리스트 : 개발자도구에 검색할 키워드 리스트" colorValue="#FF62B6B7" showMarker="False" />
+    <Variable name="i_Index" scope="Input" valueType="Any" formatType="Any" initValue="" desc="인덱스" colorValue="#FFF07DEA" showMarker="False" />
   </Variables>
   <Steps>
     <Step id="S0baf62232e214672a877a0eabcc8333c" ver="311241220" createVer="311241220" type="Flow" name="Delay" dpName="Delay" dpValue="3 sec" dpValue2="" dpImage="" tag="" depth="1" stmttype="Normal" enabled="True" mainSet="0">
@@ -177,7 +177,7 @@
       <RelatedSteps />
       <Script><![CDATA[this.o_str_ImageGraphPath = Global.str_InputFolderPath + Global.arr1_BrandNames[this.i_Index] + ' ' +  Global.arr1_Period[0] + ' '  +  Global.arr1_Period[1] + ' 그래프.png';]]></Script>
     </Step>
-    <Step id="S9f0c07664c094e49acb313df7166c6c4" ver="311241220" createVer="311241220" type="Win" name="RightClick" dpName="RightClick" dpValue="recordBrand" dpValue2="자동차 판매실적 : 다나와 자동차 - Chrome" dpImage="Target_Capture" tag="" depth="3" stmttype="Normal" enabled="True" mainSet="0">
+    <Step id="S9f0c07664c094e49acb313df7166c6c4" ver="311241220" createVer="311241220" type="Win" name="RightClick" dpName="RightClick" dpValue="this.str_SearchKeyword" dpValue2="자동차 판매실적 : 다나와 자동차 - Chrome" dpImage="Target_Capture" tag="" depth="3" stmttype="Normal" enabled="True" mainSet="0">
       <Properties id="9d1fc02f-ac81-4f1c-a0d1-478594608511" type="Win">
         <Property type="Win" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
         <Property type="Win" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
@@ -221,7 +221,7 @@
         <Property type="Win" key="Target_RuntimeID" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="42.13961290.4.-94377" />
         <Property type="Win" key="Target_ClassName" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="" />
         <Property type="Win" key="Target_ClassType" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="True" encrypted="False" isChanged="N" value="Text" order="3" />
-        <Property type="Win" key="Target_Name" controlType="PropertyItemTextFieldWithLikeSearchView" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="'recordBrand'" />
+        <Property type="Win" key="Target_Name" controlType="PropertyItemTextFieldWithLikeSearchView" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="this.str_SearchKeyword" />
         <Property type="Win" key="Target_ObjectPath" controlType="String" valueType="System.String" formatType="String" required="True" visible="False" readonly="False" encrypted="False" isChanged="N" value="'Pane|Chrome_WidgetWin_1||Win32/Document|Chrome_RenderWidgetHostHWND|63279056|Chrome/Group||-blink-dev-tools|Chrome/Group|||Chrome/Group|||Chrome/Group|||Chrome/Group|||Chrome/Group|||Chrome/Group|||Chrome/Group|||Chrome/Group|||Chrome/Group|||Chrome/Group|||Chrome/Group|||Chrome/Custom|||Chrome/Group|||Chrome/Group|||Chrome/Group|||Chrome/Group|||Chrome/Group|||Chrome/Group|||Chrome/Group||main-content|Chrome/Group||elements-content|Chrome/Group|||Chrome/Group|||Chrome/Tree|||Chrome/Group|||Chrome/Group|||Chrome/Group|||Chrome/Group|||Chrome/Group|||Chrome/Group|||Chrome/Group|||Chrome/Group|||Chrome/Group|||Chrome/Group|||Chrome/TreeItem|||Chrome/Group|||Chrome/Group|||Chrome/Text|||Chrome'" />
         <Property type="Win" key="Target_Bounds" controlType="Rect" valueType="System.Windows.Rect" formatType="Rect" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="1141,515,66,13" />
         <Property type="Win" key="Mouse_WinPoint" controlType="Point" valueType="System.Windows.Point" formatType="Point" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="1178,512" />
@@ -413,7 +413,7 @@
       <RelatedSteps />
       <Script><![CDATA[this.o_str_ImageTablePath = Global.str_InputFolderPath + Global.arr1_BrandNames[this.i_Index] + ' ' +  Global.arr1_Period[0] + ' '  +  Global.arr1_Period[1] + ' 누적판매량.png';]]></Script>
     </Step>
-    <Step id="S66c73d11ac80400b8eedfc42cd48cd21" ver="311241220" createVer="311241220" type="Win" name="RightClick" dpName="RightClick" dpValue="recordMonth" dpValue2="자동차 판매실적 : 다나와 자동차 - Chrome" dpImage="Target_Capture" tag="" depth="3" stmttype="Normal" enabled="True" mainSet="0">
+    <Step id="S66c73d11ac80400b8eedfc42cd48cd21" ver="311241220" createVer="311241220" type="Win" name="RightClick" dpName="RightClick" dpValue="this.str_SearchKeyword" dpValue2="자동차 판매실적 : 다나와 자동차 - Chrome" dpImage="Target_Capture" tag="" depth="3" stmttype="Normal" enabled="True" mainSet="0">
       <Properties id="9d1fc02f-ac81-4f1c-a0d1-478594608511" type="Win">
         <Property type="Win" key="Options_OnError" controlType="PropertyItemEventHandlerView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
         <Property type="Win" key="Key_Description" controlType="PropertyItemTextEditorView" valueType="System.String" formatType="String" required="False" visible="True" readonly="False" encrypted="False" isChanged="N" value="" />
@@ -457,7 +457,7 @@
         <Property type="Win" key="Target_RuntimeID" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="42.13961290.4.-94402" />
         <Property type="Win" key="Target_ClassName" controlType="String" valueType="System.String" formatType="String" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="" />
         <Property type="Win" key="Target_ClassType" controlType="String" valueType="System.String" formatType="String" required="True" visible="True" readonly="True" encrypted="False" isChanged="N" value="Text" order="3" />
-        <Property type="Win" key="Target_Name" controlType="PropertyItemTextFieldWithLikeSearchView" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="'recordMonth'" />
+        <Property type="Win" key="Target_Name" controlType="PropertyItemTextFieldWithLikeSearchView" valueType="System.String" formatType="String" required="True" visible="True" readonly="False" encrypted="False" isChanged="N" value="this.str_SearchKeyword" />
         <Property type="Win" key="Target_ObjectPath" controlType="String" valueType="System.String" formatType="String" required="True" visible="False" readonly="False" encrypted="False" isChanged="N" value="'Pane|Chrome_WidgetWin_1||Win32/Document|Chrome_RenderWidgetHostHWND|63279056|Chrome/Group||-blink-dev-tools|Chrome/Group|||Chrome/Group|||Chrome/Group|||Chrome/Group|||Chrome/Group|||Chrome/Group|||Chrome/Group|||Chrome/Group|||Chrome/Group|||Chrome/Group|||Chrome/Group|||Chrome/Custom|||Chrome/Group|||Chrome/Group|||Chrome/Group|||Chrome/Group|||Chrome/Group|||Chrome/Group|||Chrome/Group||main-content|Chrome/Group||elements-content|Chrome/Group|||Chrome/Group|||Chrome/Tree|||Chrome/Group|||Chrome/Group|||Chrome/Group|||Chrome/Group|||Chrome/Group|||Chrome/Group|||Chrome/Group|||Chrome/Group|||Chrome/Group|||Chrome/Group|||Chrome/TreeItem|||Chrome/Group|||Chrome/Group|||Chrome/Text|||Chrome'" />
         <Property type="Win" key="Target_Bounds" controlType="Rect" valueType="System.Windows.Rect" formatType="Rect" required="False" visible="True" readonly="True" encrypted="False" isChanged="N" value="1153,549,66,13" />
         <Property type="Win" key="Mouse_WinPoint" controlType="Point" valueType="System.Windows.Point" formatType="Point" required="False" visible="False" readonly="False" encrypted="False" isChanged="N" value="1206,549" />
@@ -966,29 +966,29 @@
 ]]></JScript>
   <Diagram version="1.300" nodesize="Normal">
     <StepNodes>
-      <StepNode step_id="S0baf62232e214672a877a0eabcc8333c" group_name="6935ca1b-73fe-4995-9d3d-949eeae8cb56_Untitled" folded="False" color="" />
-      <StepNode step_id="S65769974399f460385e011efcbf98c98" group_name="422d40c0-2f4b-4fbf-8bac-262d8ff1c164_Untitled" folded="False" color="" />
+      <StepNode step_id="S0baf62232e214672a877a0eabcc8333c" group_name="d8728b56-2da9-4fd8-963e-e29b1bfd5ae9_페이지 로딩 대기" folded="False" color="" />
+      <StepNode step_id="S65769974399f460385e011efcbf98c98" group_name="5e84d196-15b3-4766-baf6-469fa35fbbea_개발자 도구 열기" folded="False" color="" />
       <StepNode step_id="Sda04fa7cbb704886b3a5c738054a57ac" group_name="" folded="False" color="" />
-      <StepNode step_id="Sccb235ea67924a33aed08675a0dade38" group_name="1a6f0290-43eb-47ee-9d32-7f61cbc14f09_Untitled" folded="False" color="" />
-      <StepNode step_id="Sfb013237310b4df48940cb848294de2b" group_name="1a6f0290-43eb-47ee-9d32-7f61cbc14f09_Untitled" folded="False" color="" />
-      <StepNode step_id="S1d116dc87b7d4f858749d56a2fc5821d" group_name="1a6f0290-43eb-47ee-9d32-7f61cbc14f09_Untitled" folded="False" color="" />
+      <StepNode step_id="Sccb235ea67924a33aed08675a0dade38" group_name="10cc92a0-e656-4d70-a0bd-c5282a1b6ed9_개발자 도구에서 검색창 열기" folded="False" color="" />
+      <StepNode step_id="Sfb013237310b4df48940cb848294de2b" group_name="10cc92a0-e656-4d70-a0bd-c5282a1b6ed9_개발자 도구에서 검색창 열기" folded="False" color="" />
+      <StepNode step_id="S1d116dc87b7d4f858749d56a2fc5821d" group_name="10cc92a0-e656-4d70-a0bd-c5282a1b6ed9_개발자 도구에서 검색창 열기" folded="False" color="" />
       <StepNode step_id="Se39355b95cff4494bc6222725b8f2282" group_name="" folded="False" color="" />
-      <StepNode step_id="Se40f6eda6c0143f9a8bf188c4d22246f" group_name="c8f98081-2cfc-4b12-84a3-c47b54a67a48_Untitled" folded="False" color="" />
-      <StepNode step_id="S9f0c07664c094e49acb313df7166c6c4" group_name="d6ffb89f-cc5b-4bbf-a976-7d5a48a6b172_Untitled" folded="False" color="" />
-      <StepNode step_id="S341ad4a12665425588a29db15c70a99e" group_name="d6ffb89f-cc5b-4bbf-a976-7d5a48a6b172_Untitled" folded="False" color="" />
-      <StepNode step_id="Sbc7009c0dbd2465e927a3c6cdd482a41" group_name="d6ffb89f-cc5b-4bbf-a976-7d5a48a6b172_Untitled" folded="False" color="" />
+      <StepNode step_id="Se40f6eda6c0143f9a8bf188c4d22246f" group_name="a075ea65-e97f-4acc-bda5-e9eb6ab491ad_그래프 이미지 파일 경로 설정" folded="False" color="" />
+      <StepNode step_id="S9f0c07664c094e49acb313df7166c6c4" group_name="23df310a-a3b7-4bc1-9c53-253dfe0ab801_그래프 이미지 파일 저장 경로 입력" folded="False" color="" />
+      <StepNode step_id="S341ad4a12665425588a29db15c70a99e" group_name="23df310a-a3b7-4bc1-9c53-253dfe0ab801_그래프 이미지 파일 저장 경로 입력" folded="False" color="" />
+      <StepNode step_id="Sbc7009c0dbd2465e927a3c6cdd482a41" group_name="23df310a-a3b7-4bc1-9c53-253dfe0ab801_그래프 이미지 파일 저장 경로 입력" folded="False" color="" />
       <StepNode step_id="S9f399d5084e545af99876a98fe9bd9bd" group_name="" folded="False" color="" />
       <StepNode step_id="S778026fd447141e98ff9380c98f4ee68" group_name="" folded="False" color="" />
-      <StepNode step_id="S41c75a1d74e74839a79fad0d07cc9392" group_name="70590835-91fc-4b69-87c4-f13e7c40fdca_Untitled" folded="False" color="" />
-      <StepNode step_id="S66c73d11ac80400b8eedfc42cd48cd21" group_name="609810a5-d9c9-4b0d-b0d3-a6242415e518_Untitled" folded="False" color="" />
-      <StepNode step_id="S63601c69e66d4b5cb2a293fc6e5e5dbd" group_name="609810a5-d9c9-4b0d-b0d3-a6242415e518_Untitled" folded="False" color="" />
-      <StepNode step_id="Sd3fa3672cde84392b9e2c9d4dd9f2017" group_name="609810a5-d9c9-4b0d-b0d3-a6242415e518_Untitled" folded="False" color="" />
+      <StepNode step_id="S41c75a1d74e74839a79fad0d07cc9392" group_name="91f254e2-b50e-4701-856d-8befccb08742_누적판매량 이미지 파일 경로 설정" folded="False" color="" />
+      <StepNode step_id="S66c73d11ac80400b8eedfc42cd48cd21" group_name="5a87e7a9-acb6-4526-abc0-653cb6ae6462_누적판매량 이미지 파일 저장 경로 입력" folded="False" color="" />
+      <StepNode step_id="S63601c69e66d4b5cb2a293fc6e5e5dbd" group_name="5a87e7a9-acb6-4526-abc0-653cb6ae6462_누적판매량 이미지 파일 저장 경로 입력" folded="False" color="" />
+      <StepNode step_id="Sd3fa3672cde84392b9e2c9d4dd9f2017" group_name="5a87e7a9-acb6-4526-abc0-653cb6ae6462_누적판매량 이미지 파일 저장 경로 입력" folded="False" color="" />
       <StepNode step_id="Sb2c13b18832342b58cae06037f9d5855" group_name="" folded="False" color="" />
-      <StepNode step_id="S5c40142416ea4f3281f79f21532ded53" group_name="613c9d39-8dce-423f-bf13-cb7cf3fafd9c_Untitled" folded="False" color="" />
+      <StepNode step_id="S5c40142416ea4f3281f79f21532ded53" group_name="5c695009-1a99-469b-b045-44897ef78b13_중복된 이미지 파일 확인" folded="False" color="" />
       <StepNode step_id="S05853f28db0e4bb1b020ded31fd9e9d3" group_name="" folded="False" color="" />
-      <StepNode step_id="S5ea95f275ad64b178a79433ec8b8083d" group_name="e0aeb969-8ab0-46af-8a0d-7364978bff60_Untitled" folded="False" color="" />
+      <StepNode step_id="S5ea95f275ad64b178a79433ec8b8083d" group_name="bedbb173-9b5e-4ec0-a3ee-86f10bb739a2_중복된 이미지 파일 있으면 덮어쓰기" folded="False" color="" />
       <StepNode step_id="S901be68bc2c64959a23046125eb91338" group_name="" folded="False" color="" />
-      <StepNode step_id="S9bb6cafa34ab4b78ad9710051ada2797" group_name="cb39b1e1-be99-4ead-8680-156a6e4a1c03_Untitled" folded="False" color="" />
+      <StepNode step_id="S9bb6cafa34ab4b78ad9710051ada2797" group_name="2fc2d6f7-66c5-45d8-a9ff-0e1aed244acb_이미지 파일 저장" folded="False" color="" />
       <StepNode step_id="Saa0c9da2bb2740b28db9bc8734f1de5b" group_name="" folded="False" color="" />
       <StepNode step_id="S90ffd3bae51c4bac976fe4695c7d7db5" group_name="b3fec2e7-863f-4fb2-8729-8fc3f703c538_Untitled" folded="False" color="" />
     </StepNodes>
